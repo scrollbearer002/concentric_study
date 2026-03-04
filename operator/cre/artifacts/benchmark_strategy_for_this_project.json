@@ -1,0 +1,133 @@
+{
+  "environment_basis": {
+    "repo_root": "/Users/christianpardo/Desktop/concentric_study",
+    "test_baseline": {
+      "passed": 193,
+      "skipped": 3,
+      "warnings": 5
+    },
+    "architecture_conformance": {
+      "mode": "check",
+      "enforcement_passed": true,
+      "graph_digest": "baba844c630282c619b7184e7de120bc6283a11c85fdddb91882abedb120716b"
+    },
+    "host_tool_health": {
+      "all_required_ready": true,
+      "selected": {
+        "browser_target": "safari_bundle",
+        "credential_backend": "security_cli",
+        "macos_ui_automation": "osascript_system_events",
+        "native_event_backend": "pyobjc_native_stack",
+        "runtime_python_selected": "operator_venv_python",
+        "screen_capture": "screencapture_cli"
+      }
+    }
+  },
+  "enhance_definition": "A measurable reliability, recovery, verification, generalization, artifact-truthfulness, or debugging-speed improvement that does not weaken the strong current Safari/macOS runtime core.",
+  "candidates": [
+    {
+      "name": "Wikipedia",
+      "class": "live_smoke_site",
+      "fit_for_repo": "very_high",
+      "use_now": true,
+      "why": "Low-risk real site that directly exercises the current Safari/macOS runtime for navigation, extraction, and verification.",
+      "tests": [
+        "page search and navigation",
+        "section targeting",
+        "reading/extraction",
+        "citation lookup"
+      ]
+    },
+    {
+      "name": "Hacker News",
+      "class": "live_smoke_site",
+      "fit_for_repo": "high",
+      "use_now": true,
+      "why": "Simple text-heavy live site that is ideal for clean navigation and DOM/a11y/screenshot agreement tests.",
+      "tests": [
+        "thread navigation",
+        "reading/extraction",
+        "story ranking checks"
+      ]
+    },
+    {
+      "name": "Google Maps",
+      "class": "live_dynamic_site",
+      "fit_for_repo": "medium_high",
+      "use_now": false,
+      "why": "Good dynamic-site stress test after Wikipedia and HN, but more volatile and JS-heavy.",
+      "tests": [
+        "location search",
+        "route lookup",
+        "hours/address extraction"
+      ]
+    },
+    {
+      "name": "VisualWebArena",
+      "class": "benchmark_branch",
+      "fit_for_repo": "very_high",
+      "use_now": false,
+      "why": "Best benchmark family match for this repo because the project is already screenshot/vision heavy.",
+      "tests": [
+        "vision-grounded task completion",
+        "recovery and step-efficiency benchmarking",
+        "hybrid perception evaluation"
+      ]
+    },
+    {
+      "name": "WebArena",
+      "class": "benchmark_branch",
+      "fit_for_repo": "high",
+      "use_now": false,
+      "why": "Strong repeatable browser-agent benchmark, but should be kept separate from the current OS-native runtime path.",
+      "tests": [
+        "shopping tasks",
+        "forum tasks",
+        "GitLab-style tasks",
+        "CMS tasks"
+      ]
+    },
+    {
+      "name": "BrowserGym",
+      "class": "benchmark_harness",
+      "fit_for_repo": "medium_high",
+      "use_now": false,
+      "why": "Useful as a harness once benchmark integration becomes a real branch, not as the first operational target.",
+      "tests": [
+        "standardized benchmark orchestration",
+        "multi-benchmark evaluation loops"
+      ]
+    },
+    {
+      "name": "Mind2Web",
+      "class": "offline_generalization_benchmark",
+      "fit_for_repo": "high",
+      "use_now": false,
+      "why": "Strong for offline generalization and plan-quality evaluation, not the first live Safari integration target.",
+      "tests": [
+        "generalization evaluation",
+        "plan decomposition quality",
+        "cross-site abstraction stress test"
+      ]
+    },
+    {
+      "name": "Surf.new",
+      "class": "playground",
+      "fit_for_repo": "low",
+      "use_now": false,
+      "why": "Useful for inspiration or quick experimentation, but weak as a scientific benchmark for this repo.",
+      "tests": [
+        "informal exploratory demos"
+      ]
+    }
+  ],
+  "recommended_order": [
+    "Wikipedia",
+    "Hacker News",
+    "Google Maps",
+    "VisualWebArena",
+    "WebArena",
+    "BrowserGym",
+    "Mind2Web"
+  ]
+}

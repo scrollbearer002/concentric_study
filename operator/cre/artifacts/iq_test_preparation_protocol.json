@@ -1,0 +1,77 @@
+{
+  "system_of_interest": "concentric_study live Safari IQ-test runs",
+  "environment": {
+    "repo": "/Users/christianpardo/Desktop/concentric_study",
+    "browser": "Safari",
+    "host": "macOS arm64",
+    "artifact_log": "operator/cre/IQ_TEST_LIVE_RUN_LOG.md"
+  },
+  "mistakes": [
+    {
+      "id": "M1",
+      "mistake": "Completion was prioritized over reasoning",
+      "evidence": [
+        "operator/cre/IQ_TEST_LIVE_RUN_LOG.md"
+      ],
+      "countermeasure": "Require explicit rule hypothesis before answer selection"
+    },
+    {
+      "id": "M2",
+      "mistake": "Option selection occurred before matrix structure was modeled",
+      "evidence": [
+        "operator/cre/IQ_TEST_LIVE_RUN_LOG.md"
+      ],
+      "countermeasure": "Use constructive matching: inspect matrix first, options second"
+    },
+    {
+      "id": "M3",
+      "mistake": "No confidence tracking or revisit discipline",
+      "evidence": [
+        "operator/cre/IQ_TEST_LIVE_RUN_LOG.md"
+      ],
+      "countermeasure": "Log high/medium/low confidence and revisit low-confidence items once if allowed"
+    },
+    {
+      "id": "M4",
+      "mistake": "Score mode and demo mode were not distinguished",
+      "evidence": [
+        "operator/cre/IQ_TEST_LIVE_RUN_LOG.md"
+      ],
+      "countermeasure": "Declare score_mode or demo_mode before starting"
+    }
+  ],
+  "protocol": {
+    "default_mode": "score_mode",
+    "preflight": [
+      "Prefer untimed or weakly timed test",
+      "Safari full screen",
+      "Stable page load",
+      "Start item ledger"
+    ],
+    "per_item_loop": [
+      "Inspect problem before answers",
+      "State candidate rule",
+      "Predict missing output",
+      "Compare options against prediction",
+      "Select answer",
+      "Assign confidence",
+      "Log result"
+    ],
+    "revisit_policy": "Revisit low-confidence items once if the test supports review"
+  },
+  "references": [
+    "https://www.sciencedirect.com/science/article/pii/S0160289615001269",
+    "https://pubmed.ncbi.nlm.nih.gov/36547510/",
+    "https://doi.org/10.1207/S15430421TIP4102_2",
+    "https://pubmed.ncbi.nlm.nih.gov/19254083/",
+    "https://pubmed.ncbi.nlm.nih.gov/34265097/",
+    "https://pubmed.ncbi.nlm.nih.gov/16507066/",
+    "https://pubmed.ncbi.nlm.nih.gov/26173288/",
+    "https://pubmed.ncbi.nlm.nih.gov/24821756/",
+    "https://pubmed.ncbi.nlm.nih.gov/32038429/",
+    "https://pubmed.ncbi.nlm.nih.gov/25844240/",
+    "https://pubmed.ncbi.nlm.nih.gov/16750606/",
+    "https://pubmed.ncbi.nlm.nih.gov/40330965/",
+    "https://pubmed.ncbi.nlm.nih.gov/37079951/"
+  ]
+}

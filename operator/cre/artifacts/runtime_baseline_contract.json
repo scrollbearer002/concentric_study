@@ -1,0 +1,46 @@
+{
+  "baseline_name": "concentric_runtime_baseline_v1",
+  "system_of_interest": "concentric_study",
+  "environment": {
+    "os": "macOS",
+    "runtime_family": "arm64",
+    "browser_target": "Safari",
+    "python_runtime": "./operator/venv/bin/python"
+  },
+  "layers": [
+    {
+      "name": "global_runtime_baseline",
+      "status": "partially_implemented",
+      "implemented_by": [
+        "operator/agent_infra/host_tool_health.py",
+        "operator/agent_infra/tool_health_catalog.json",
+        "operator/agent.py",
+        "operator/cre/test_host_tool_health.py"
+      ],
+      "required_invariants": [
+        "selected runtime is the repo venv",
+        "native pyobjc event stack imports succeed",
+        "AppleScript/System Events path is callable",
+        "screenshot path is callable",
+        "Safari is available for URL-bearing tasks"
+      ]
+    },
+    {
+      "name": "task_surface_baseline",
+      "status": "distributed_not_unified",
+      "implemented_by": [
+        "operator/agent_infra/startup.py",
+        "operator/agent_infra/recovery.py",
+        "operator/agent_infra/action_contracts.py",
+        "operator/agent_infra/action_handlers.py"
+      ],
+      "required_invariants": [
+        "target surface is usable",
+        "no blocking dialog or stale overlay prevents action",
+        "visible surface matches intended task context",
+        "site-specific reset contracts can restore the surface"
+      ]
+    }
+  ],
+  "next_branch_goal": "unify the two baseline layers into explicit check/reset entrypoints without degrading the current web-agent hot path"
+}

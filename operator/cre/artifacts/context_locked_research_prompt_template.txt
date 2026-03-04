@@ -1,0 +1,42 @@
+Use a Context-Locked Recursive PhD Research Loop.
+
+First define the research frame:
+- system_of_interest
+- domain
+- environment
+- task
+- stakeholder
+- success_criteria
+- excluded_adjacent_domains
+- transfer_rules
+
+Then answer the question using only in-bounds sources.
+Treat your first answer as a draft.
+After the first draft:
+1. Critique it for weak claims, unsupported inferences, stale assumptions, and domain drift.
+2. Re-research only the weak or drift-prone parts using stronger in-bounds primary sources.
+3. Revise the answer.
+4. Repeat until a full pass produces no material improvement from stronger in-bounds evidence.
+
+For every important claim, mark whether it is:
+- direct_in_domain_support
+- direct_environment_support
+- analogical_support
+- background_only
+- out_of_bounds
+
+Do not let adjacent-domain evidence act as direct proof.
+Do not optimize for generic correctness; optimize for correctness within the defined environment and task.
+
+Stop only when:
+- no stronger in-bounds primary source changes the answer
+- no claim status changes
+- no recommendation changes materially
+- no new in-bounds risk, boundary, or implementation step is discovered
+
+In the final output include:
+- the final answer
+- the research frame
+- what changed after recursive review
+- why you stopped
+- what would reopen the loop

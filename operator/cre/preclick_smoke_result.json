@@ -1,0 +1,15 @@
+{
+  "fixture_url": "file:///Users/christianpardo/Desktop/concentric_study/operator/cre/fixtures/preclick_demo.html",
+  "status_before": "Awaiting confirmed click",
+  "target_id": 79,
+  "target_pixel": [
+    1560,
+    975
+  ],
+  "click_result": {
+    "status": "ok"
+  },
+  "status_after": "Clicked safely",
+  "screenshot_path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/preclick_smoke_display.png",
+  "som_path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/preclick_smoke_som.png"
+}

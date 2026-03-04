@@ -1,0 +1,39 @@
+{
+  "schema": "reference_board_v1",
+  "purpose": "Reference-grounded drawing and visual planning before substantive art execution",
+  "lanes": [
+    {
+      "name": "subject_identity",
+      "description": "Brand, object, or character identity cues",
+      "references": []
+    },
+    {
+      "name": "real_world_anatomy_or_form",
+      "description": "Ground-truth structure, anatomy, silhouette, or material references",
+      "references": []
+    },
+    {
+      "name": "costume_or_style_family",
+      "description": "Clothing, era, movement, or stylistic references",
+      "references": []
+    }
+  ],
+  "subject_brief": {
+    "one_sentence_goal": "",
+    "must_have_parts": [],
+    "must_avoid": [],
+    "style_notes": []
+  },
+  "composition_plan": {
+    "primary_subject_bbox_goal": "occupy 35%-60% of drawable area unless task says otherwise",
+    "pose": "",
+    "camera_angle": "",
+    "passes": [
+      "silhouette",
+      "structure",
+      "detail",
+      "color",
+      "verification"
+    ]
+  }
+}

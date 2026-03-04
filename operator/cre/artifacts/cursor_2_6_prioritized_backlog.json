@@ -1,0 +1,146 @@
+{
+  "generated_on": "2026-03-04",
+  "cursor_version_local": "2.6.11",
+  "priorities": [
+    {
+      "rank": 1,
+      "item_id": "BKLG-001",
+      "name": "Cursor operating layer",
+      "tier": "Tier 1",
+      "status": "implemented",
+      "scope": [
+        ".cursor/plans",
+        ".cursor/rules",
+        "project-fit and operating memos"
+      ],
+      "why_now": "Highest immediate leverage with low risk."
+    },
+    {
+      "rank": 2,
+      "item_id": "BKLG-002",
+      "name": "concentric-health MCP",
+      "tier": "Tier 1",
+      "status": "implemented_and_registered",
+      "scope": [
+        "operator/cursor_integration/mcp/health_server.py",
+        ".cursor/mcp.json"
+      ],
+      "why_now": "Environment readiness is a first-order failure mode in this repo."
+    },
+    {
+      "rank": 3,
+      "item_id": "BKLG-003",
+      "name": "concentric-trace MCP",
+      "tier": "Tier 1",
+      "status": "implemented_and_registered",
+      "scope": [
+        "operator/cursor_integration/mcp/trace_server.py",
+        ".cursor/mcp.json"
+      ],
+      "why_now": "Trace forensics are the strongest repo-native debugging surface."
+    },
+    {
+      "rank": 4,
+      "item_id": "BKLG-004",
+      "name": "External MCP governance",
+      "tier": "Tier 1",
+      "status": "implemented",
+      "scope": [
+        "EXTERNAL_MCP_GOVERNANCE_PHD.md",
+        "external_mcp_rollout_policy.json"
+      ],
+      "why_now": "Needed before broadening the tool surface beyond Context7."
+    },
+    {
+      "rank": 5,
+      "item_id": "BKLG-005",
+      "name": "Context7 pilot completion",
+      "tier": "Tier 1",
+      "status": "in_progress",
+      "scope": [
+        "existing pilot rubric and results template"
+      ],
+      "why_now": "Context7 is the first external MCP pattern for this repo."
+    },
+    {
+      "rank": 6,
+      "item_id": "BKLG-006",
+      "name": "concentric-benchmark MCP",
+      "tier": "Tier 2",
+      "status": "implemented_not_registered",
+      "scope": [
+        "operator/cursor_integration/mcp/benchmark_server.py"
+      ],
+      "why_now": "Ready in code, but should stay inactive until the smaller default tool surface proves stable."
+    },
+    {
+      "rank": 7,
+      "item_id": "BKLG-007",
+      "name": "concentric-research MCP",
+      "tier": "Tier 2",
+      "status": "implemented_not_registered",
+      "scope": [
+        "operator/cursor_integration/mcp/research_server.py"
+      ],
+      "why_now": "High-value later, but should follow the health and trace rollout."
+    },
+    {
+      "rank": 8,
+      "item_id": "BKLG-008",
+      "name": "Parallel MCP pilot",
+      "tier": "Tier 2",
+      "status": "planned",
+      "scope": [
+        "external MCP adoption after Context7 verdict"
+      ],
+      "why_now": "Strong research fit, but should not leapfrog the current pilot."
+    },
+    {
+      "rank": 9,
+      "item_id": "BKLG-009",
+      "name": "Playwright MCP pilot",
+      "tier": "Tier 2",
+      "status": "planned",
+      "scope": [
+        "browser augmentation pilot"
+      ],
+      "why_now": "Useful after the governance pattern is proven."
+    },
+    {
+      "rank": 10,
+      "item_id": "BKLG-010",
+      "name": "Plugin packaging preparation",
+      "tier": "Tier 3",
+      "status": "deferred",
+      "scope": [
+        "future bundle of rules, commands, agents, hooks, MCP registrations"
+      ],
+      "why_now": "Deferred until internal primitives are stable and git exists."
+    },
+    {
+      "rank": 11,
+      "item_id": "BKLG-011",
+      "name": "MCP Apps for trace and benchmark surfaces",
+      "tier": "Tier 3",
+      "status": "deferred",
+      "scope": [
+        "future interactive trace and evaluation UIs"
+      ],
+      "why_now": "Deferred until internal MCP data surfaces are stable."
+    },
+    {
+      "rank": 12,
+      "item_id": "BKLG-012",
+      "name": "Cloud and team features track",
+      "tier": "Tier 3",
+      "status": "deferred",
+      "scope": [
+        "cloud agents",
+        "Bugbot Autofix",
+        "team marketplaces",
+        "enterprise analytics"
+      ],
+      "why_now": "Real product features, but not first-wave repo implementation work."
+    }
+  ]
+}

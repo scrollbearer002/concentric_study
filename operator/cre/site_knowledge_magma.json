@@ -1,0 +1,245 @@
+{
+  "site_name": "Magma",
+  "site_url": "https://magma.com",
+  "tools": {
+    "Move": {
+      "tool_name": "Move",
+      "shortcut": null,
+      "interaction_mode": "click_drag",
+      "description": "Move selections or canvas. Crosshair icon in left toolbar.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Selection": {
+      "tool_name": "Selection",
+      "shortcut": null,
+      "interaction_mode": "bounding_box",
+      "description": "Rectangular selection. Dotted rectangle icon; drag to define selection box.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Lasso": {
+      "tool_name": "Lasso",
+      "shortcut": null,
+      "interaction_mode": "path_trace",
+      "description": "Freehand selection. Draw closed path to select.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Magic Wand": {
+      "tool_name": "Magic Wand",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Select areas of similar color. Click on canvas.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Brush": {
+      "tool_name": "Brush",
+      "shortcut": null,
+      "interaction_mode": "path_trace",
+      "description": "Primary drawing tool. Paintbrush icon in left toolbar. Renders strokes with current color and Brush Settings (size, opacity, hardness). MUST be selected before drawing for realistic artwork.",
+      "preconditions": ["Select color from Color Palette first", "Optionally open Brush Settings to set size/opacity"],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Pencil": {
+      "tool_name": "Pencil",
+      "shortcut": null,
+      "interaction_mode": "path_trace",
+      "description": "Pencil/pen tool. Often harder edge, good for linework. Alternative to Brush.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Eraser": {
+      "tool_name": "Eraser",
+      "shortcut": null,
+      "interaction_mode": "path_trace",
+      "description": "Makes pixels transparent. Like a brush that erases.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Paint Bucket": {
+      "tool_name": "Paint Bucket",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Fills contiguous area of similar color with current color. Set color first.",
+      "preconditions": ["Set current color in Color Palette"],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Eyedropper": {
+      "tool_name": "Eyedropper",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Picks color from canvas and sets as current color.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Hand": {
+      "tool_name": "Hand",
+      "shortcut": null,
+      "interaction_mode": "click_drag",
+      "description": "Pan canvas without drawing.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Color Palette": {
+      "tool_name": "Color Palette",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Right panel: color swatch + brush icon. Select current drawing color (saturation/value + hue). Essential for realistic drawing — set black/dark gray for outlines, mid-tones for shading.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Brush Settings": {
+      "tool_name": "Brush Settings",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Right panel: three lines/sliders icon. Adjust brush size, opacity, hardness. Critical for realistic art: thin size for lines, larger + lower opacity for soft shadows.",
+      "preconditions": ["Brush or Pencil tool selected"],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Layers": {
+      "tool_name": "Layers",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Right panel: stacked squares. Layer list; add/delete/visibility. Use separate layers for outline vs shading.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "New Document": {
+      "tool_name": "New Document",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Top toolbar: sheet with plus. New canvas; may open dialog for size/orientation.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Save": {
+      "tool_name": "Save",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Top toolbar: floppy disk. Save current work.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Zoom In": {
+      "tool_name": "Zoom In",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Top toolbar: magnifier with plus.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Zoom Out": {
+      "tool_name": "Zoom Out",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Top toolbar: magnifier with minus.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Add Layer": {
+      "tool_name": "Add Layer",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Bottom left: + button next to layer thumbnail. Creates new layer.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "rules": [
+    {
+      "rule": "To draw realistically on Magma: (1) Go to magma.com/app → My artworks. (2) Click 'New canvas' then 'Landscape drawing' to open canvas. (3) Click Brush tool in left toolbar. (4) Click Color Palette on right and set black or dark gray. (5) Click Brush Settings and set size (small for lines) and opacity (100% for outline). (6) Then draw_path on canvas for outline, wheels, details.",
+      "source": "exploration",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Select Brush (or Pencil) BEFORE drawing. Otherwise strokes may not appear or may use wrong tool.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Set color in Color Palette before drawing. Brush uses current color.",
+      "source": "exploration",
+      "confidence": 0.9,
+      "supporting_runs": []
+    },
+    {
+      "rule": "From homepage, 'Landscape drawing' click may not open canvas. Navigate to magma.com/app first (redirects to My artworks), then use 'New canvas' → 'Landscape drawing' (JS click works).",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To zoom in on canvas: click Zoom In (magnifier +) in top toolbar; repeat to step in. Zoom level shown bottom-left (e.g. Q 13%). To zoom out: click Zoom Out (magnifier −). After zooming, use Hand tool to pan then select Brush again to draw.",
+      "source": "exploration",
+      "confidence": 0.9,
+      "supporting_runs": []
+    }
+  ],
+  "shortcuts": {},
+  "modal_patterns": [
+    {
+      "trigger": "Click 'New canvas' on My artworks.",
+      "handler": "Dropdown opens with Landscape drawing, Vertical, etc. Click 'Landscape drawing' to create and open canvas."
+    }
+  ],
+  "button_map": {},
+  "research_notes": "See MAGMA_TOOLS_PHD_RESEARCH.md for full tool inventory. Left toolbar: Move, Selection, Lasso, Magic Wand, Brush (primary), Pencil, Eraser, Paint Bucket, Eyedropper, Hand, Undo, Redo, More. Right toolbar: Color Palette, Brush Settings (size/opacity/hardness), Layers, Reference, Settings. Zoom: Zoom In / Zoom Out in top toolbar; readout bottom-left (e.g. Q 13%). Pan after zoom with Hand then reselect Brush. For realistic car: select Brush → set Color → set Brush Settings → optionally Zoom In → draw_path outline and wheels. Canvas path: magma.com/app → New canvas → Landscape drawing. Exact sizes and presets: MAGMA_REALISM_PRESETS.md."
+}

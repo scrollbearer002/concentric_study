@@ -1,0 +1,170 @@
+{
+  "generated_on": "2026-03-03",
+  "system_of_interest": "concentric_study",
+  "environment": {
+    "host_os": "macOS 26.3",
+    "architecture": "arm64",
+    "editor": "Cursor 2.5.26",
+    "browser": "Safari",
+    "repo": "/Users/christianpardo/Desktop/concentric_study"
+  },
+  "decision": {
+    "host_tool_health_layer_warranted": true,
+    "status": "recommended_first_implementation_item",
+    "reason": "Current runtime assumptions about macOS automation, screen capture, Safari, and selected Python substrate are implicit and should be made explicit as capability-class health checks with backend selection."
+  },
+  "local_findings": {
+    "system_tools": {
+      "open": true,
+      "osascript": true,
+      "screencapture": true,
+      "security": true,
+      "git": true,
+      "rg": true,
+      "safari_app": true,
+      "cursor_app": true,
+      "system_events_probe": true,
+      "screencapture_probe": true
+    },
+    "system_python": {
+      "AppKit": false,
+      "Quartz": false,
+      "PIL": false,
+      "pydantic": true,
+      "google.genai": true,
+      "requests": true,
+      "numpy": false,
+      "scipy": false,
+      "imagehash": false,
+      "sentence_transformers": false,
+      "macapptree": false,
+      "pyax": false,
+      "openai": false
+    },
+    "venv_python": {
+      "AppKit": true,
+      "Quartz": true,
+      "PIL": true,
+      "pydantic": true,
+      "google.genai": true,
+      "requests": true,
+      "numpy": true,
+      "scipy": true,
+      "imagehash": true,
+      "sentence_transformers": false,
+      "macapptree": false,
+      "pyax": false,
+      "openai": false
+    }
+  },
+  "recommended_capability_classes": [
+    {
+      "id": "runtime_python_selected",
+      "required": true,
+      "preferred_backend": "./operator/venv/bin/python",
+      "checks": [
+        "interpreter exists",
+        "imports AppKit",
+        "imports Quartz",
+        "imports PIL",
+        "imports pydantic",
+        "imports google.genai"
+      ]
+    },
+    {
+      "id": "macos_ui_automation",
+      "required": true,
+      "preferred_backend": "osascript_system_events",
+      "checks": [
+        "command -v osascript",
+        "System Events probe returns true"
+      ]
+    },
+    {
+      "id": "native_event_backend",
+      "required": true,
+      "preferred_backend": "pyobjc_quartz_cocoa",
+      "checks": [
+        "selected runtime imports AppKit",
+        "selected runtime imports Quartz"
+      ]
+    },
+    {
+      "id": "screen_capture",
+      "required": true,
+      "preferred_backend": "screencapture",
+      "checks": [
+        "command -v screencapture",
+        "temporary screenshot succeeds"
+      ]
+    },
+    {
+      "id": "browser_target",
+      "required": true,
+      "preferred_backend": "Safari",
+      "checks": [
+        "Safari.app exists",
+        "open -a Safari callable"
+      ]
+    },
+    {
+      "id": "credential_backend",
+      "required": false,
+      "preferred_backend": "security_cli",
+      "checks": [
+        "command -v security"
+      ]
+    },
+    {
+      "id": "a11y_semantic_backend",
+      "required": false,
+      "preferred_backend": "macapptree_then_pyax_then_applescript_fallback",
+      "checks": [
+        "macapptree import OR pyax import OR applescript fallback available"
+      ]
+    },
+    {
+      "id": "semantic_skill_embeddings",
+      "required": false,
+      "preferred_backend": "sentence_transformers",
+      "checks": [
+        "sentence_transformers import"
+      ]
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Apple Support - Allow accessibility apps to access your Mac",
+      "url": "https://support.apple.com/guide/mac-help/allow-accessibility-apps-to-access-your-mac-mh43185/mac"
+    },
+    {
+      "title": "Apple Support - Control access to screen and system audio recording on Mac",
+      "url": "https://support.apple.com/guide/mac-help/control-access-to-screen-and-system-audio-recording-on-mac-mchld6aa7d23/mac"
+    },
+    {
+      "title": "NIST SSDF SP 800-218",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final"
+    },
+    {
+      "title": "NIST SCAP / USGCB baseline configuration use case",
+      "url": "https://csrc.nist.gov/projects/security-content-automation-protocol/specifications/use-cases/usgcb"
+    },
+    {
+      "title": "Google SRE Book - Monitoring Distributed Systems",
+      "url": "https://sre.google/sre-book/monitoring-distributed-systems/"
+    },
+    {
+      "title": "OSWorld",
+      "url": "https://arxiv.org/abs/2404.07972"
+    },
+    {
+      "title": "UI-Hawk",
+      "url": "https://aclanthology.org/2025.emnlp-main.920/"
+    },
+    {
+      "title": "ShowUI",
+      "url": "https://arxiv.org/abs/2411.17465"
+    }
+  ],
+  "stopping_rule": "Current evidence is saturated for the decision boundary: the host-health layer is justified, the relevant local substrate is identified, and the remaining work is implementation detail rather than warrant."
+}

@@ -1,0 +1,61 @@
+{
+  "generated_on": "2026-03-03",
+  "environment": {
+    "host_os": "macOS 26.3",
+    "architecture": "arm64",
+    "editor": "Cursor 2.5.26",
+    "browser": "Safari",
+    "repo": "/Users/christianpardo/Desktop/concentric_study"
+  },
+  "phase_1": [
+    {
+      "id": "host_tool_health_discovery",
+      "status": "recommended_first_wave",
+      "benefit_type": "directly_supported",
+      "why_it_benefits_environment": [
+        "makes host capability classes explicit",
+        "detects unhealthy or missing operational backends before task start",
+        "reduces hidden failures caused by permissions or degraded tooling",
+        "improves startup diagnostics and degraded-mode reporting"
+      ],
+      "local_gap": "capability_router activates logical capabilities but does not prove host substrate health",
+      "supporting_sources": [
+        "https://csrc.nist.gov/pubs/sp/800/218/final",
+        "https://csrc.nist.gov/projects/security-content-automation-protocol/specifications/use-cases/usgcb",
+        "https://sre.google/sre-book/monitoring-distributed-systems/",
+        "https://support.apple.com/guide/mac-help/allow-accessibility-apps-to-access-your-mac-mh43185/mac"
+      ]
+    },
+    {
+      "id": "canonical_runtime_baseline_reset",
+      "status": "recommended_first_wave",
+      "benefit_type": "directly_supported",
+      "why_it_benefits_environment": [
+        "creates one named known-good runtime state",
+        "gives recovery a concrete target instead of ad hoc local fixes",
+        "improves deterministic preflight and demo stability",
+        "separates baseline drift from site-level task failure"
+      ],
+      "local_gap": "startup and recovery exist but no whole-system canonical baseline doctrine exists",
+      "supporting_sources": [
+        "https://csrc.nist.gov/projects/security-content-automation-protocol/specifications/use-cases/usgcb",
+        "https://sre.google/sre-book/monitoring-distributed-systems/",
+        "https://arxiv.org/abs/2404.07972",
+        "https://aclanthology.org/2025.emnlp-main.920/"
+      ]
+    }
+  ],
+  "sequencing_judgment": {
+    "recommended_order": [
+      "host_tool_health_discovery",
+      "canonical_runtime_baseline_reset",
+      "bounded_curiosity_action_inventories"
+    ],
+    "reason": "Exploration should only run on a verified machine substrate and a machine-verifiable baseline state.",
+    "double_check_revision": {
+      "phase_1_still_valid": true,
+      "main_refinement": "canonical baseline should be implemented as a two-layer baseline: global runtime baseline plus task-surface baseline",
+      "reason": "concentric_study is centered on macOS + Safari/site runtime control, not the parent project's Cursor-specific layout baseline"
+    }
+  }
+}

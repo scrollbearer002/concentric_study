@@ -1,0 +1,132 @@
+{
+  "environment_basis": "concentric_study visual branch on macOS Safari runtime with saved IQ and drawing artifacts",
+  "problem_focus": [
+    "pattern recognition",
+    "spatial reasoning",
+    "reference-grounded drawing",
+    "pre-action visual planning"
+  ],
+  "what_others_use": [
+    {
+      "name": "reference_boards",
+      "type": "workflow_tool",
+      "evidence_strength": "high",
+      "sources": [
+        "https://www.pureref.com/",
+        "https://www.pureref.com/handbook/"
+      ],
+      "repo_fit": "high",
+      "recommended_local_transfer": [
+        "reference_board.json",
+        "reference_images/",
+        "subject_brief.json"
+      ]
+    },
+    {
+      "name": "constructive_matching",
+      "type": "reasoning_strategy",
+      "evidence_strength": "high",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/2394421/",
+        "https://pubmed.ncbi.nlm.nih.gov/38059964/",
+        "https://pubmed.ncbi.nlm.nih.gov/31318256/"
+      ],
+      "repo_fit": "high",
+      "recommended_local_transfer": [
+        "PuzzleFamily",
+        "VisualHypothesis",
+        "OptionElimination"
+      ]
+    },
+    {
+      "name": "think_aloud_reasoning",
+      "type": "protocol",
+      "evidence_strength": "medium_high",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/19657761/"
+      ],
+      "repo_fit": "high",
+      "recommended_local_transfer": [
+        "reasoning_trace field",
+        "rule-before-answer protocol"
+      ]
+    },
+    {
+      "name": "benchmark_corpora_and_replay_harnesses",
+      "type": "evaluation_practice",
+      "evidence_strength": "high",
+      "sources": [
+        "https://arxiv.org/abs/1903.02741",
+        "https://github.com/WellyZhang/RAVEN",
+        "https://arxiv.org/abs/1807.04225",
+        "https://arcprize.org/",
+        "https://docs.arcprize.org/benchmarking-agent",
+        "https://github.com/arcprize/arc-agi-benchmarking"
+      ],
+      "repo_fit": "high",
+      "recommended_local_transfer": [
+        "visual_reasoning_fixtures",
+        "fixture replays",
+        "benchmark claims"
+      ]
+    },
+    {
+      "name": "structured_visual_search",
+      "type": "strategy",
+      "evidence_strength": "medium",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/33584470/",
+        "https://pubmed.ncbi.nlm.nih.gov/40330965/"
+      ],
+      "repo_fit": "medium_high",
+      "recommended_local_transfer": [
+        "scan-order protocol",
+        "global-then-local inspection"
+      ]
+    },
+    {
+      "name": "targeted_spatial_training",
+      "type": "training_practice",
+      "evidence_strength": "high",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/23875923/",
+        "https://pubmed.ncbi.nlm.nih.gov/38108595/",
+        "https://pubmed.ncbi.nlm.nih.gov/31705741/"
+      ],
+      "repo_fit": "medium_high",
+      "recommended_local_transfer": [
+        "rotation/reflection drills",
+        "net folding fixtures",
+        "projection/top-view drills"
+      ]
+    },
+    {
+      "name": "observational_multi_pass_drawing",
+      "type": "art_practice",
+      "evidence_strength": "medium_high",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/37118527/",
+        "https://pubmed.ncbi.nlm.nih.gov/39078592/",
+        "https://mitpress.mit.edu/9780262544320/drawing-thought/"
+      ],
+      "repo_fit": "high",
+      "recommended_local_transfer": [
+        "silhouette pass",
+        "anatomy/costume pass",
+        "detail/color pass",
+        "mid-pass verification"
+      ]
+    }
+  ],
+  "best_synthesis_for_repo": [
+    "ReferenceBoard",
+    "VisualHypothesis",
+    "LocalBenchmarkHarness"
+  ],
+  "recommended_next_steps": [
+    "Add reference-board branch to art workflow",
+    "Add visual_reasoning_support.py with puzzle family and scratchpad types",
+    "Create local visual benchmark from saved IQ artifacts",
+    "Score classification/rule/answer/confidence using benchmark_evaluator"
+  ]
+}

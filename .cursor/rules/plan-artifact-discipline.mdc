@@ -1,0 +1,18 @@
+---
+description: Save durable plans for non-trivial work and prefer explicit plan artifacts
+globs:
+alwaysApply: true
+---
+
+# Plan Artifact Discipline
+
+For non-trivial work, start in `/plan` rather than editing immediately.
+
+Required behavior:
+- save durable plans in `.cursor/plans/` when the task spans multiple steps
+- keep the plan tied to the actual repo objective, not a generic template
+- prefer Mermaid diagrams for workflows, branching logic, or multi-stage rollouts
+- update the saved plan when the branch meaningfully changes
+
+Use `/ask` instead of `/plan` only when the task is purely exploratory and no
+implementation branch has started yet.

@@ -1,0 +1,196 @@
+[
+  {
+    "source_id": "SRC-01",
+    "title": "Model Context Protocol (MCP) | Cursor Docs",
+    "url": "https://cursor.com/docs/context/mcp",
+    "source_class": "official_docs_page",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Canonical Cursor source for MCP transport support, config locations, OAuth notes, MCP Apps, and the built-in MCP server directory.",
+    "claims_supported": [
+      "CAP-01",
+      "CAP-02",
+      "CAP-03",
+      "CAP-04",
+      "external:Playwright",
+      "external:GitHub",
+      "external:Context7"
+    ]
+  },
+  {
+    "source_id": "SRC-02",
+    "title": "Plugins | Cursor Docs",
+    "url": "https://cursor.com/docs/plugins",
+    "source_class": "official_docs_page",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Canonical Cursor source for plugin packaging, marketplace behavior, team marketplaces, and security review claims.",
+    "claims_supported": [
+      "CAP-05",
+      "CAP-06",
+      "plugin:Context7",
+      "plugin:Runlayer",
+      "plugin:Langfuse",
+      "plugin:1Password"
+    ]
+  },
+  {
+    "source_id": "SRC-03",
+    "title": "MCP Apps and Team Marketplaces for Plugins",
+    "url": "https://cursor.com/changelog/2-6",
+    "source_class": "official_changelog_entry",
+    "published_date": "2026-03-03",
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Primary release note for Cursor 2.6 additions including MCP Apps and team marketplaces.",
+    "claims_supported": [
+      "CAP-06",
+      "plugin:Figma",
+      "plugin:tldraw",
+      "plugin:Amplitude"
+    ]
+  },
+  {
+    "source_id": "SRC-04",
+    "title": "Cursor 2.5",
+    "url": "https://cursor.com/blog/cursor-2-5",
+    "source_class": "official_blog_post",
+    "published_date": "2026-02-17",
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Primary source that plugins already existed before 2.6; critical for separating plugin support from newer 2.6-only surfaces.",
+    "claims_supported": [
+      "CAP-05",
+      "LOCAL-01"
+    ]
+  },
+  {
+    "source_id": "SRC-05",
+    "title": "Cursor Marketplace",
+    "url": "https://cursor.com/marketplace",
+    "source_class": "official_marketplace",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Official Cursor directory for marketplace plugins and their current descriptions.",
+    "claims_supported": [
+      "plugin:Context7",
+      "plugin:Parallel",
+      "plugin:Runlayer",
+      "plugin:Langfuse",
+      "plugin:1Password",
+      "plugin:Sentry",
+      "plugin:Cursor Team Kit",
+      "plugin:Figma",
+      "plugin:tldraw",
+      "plugin:Amplitude"
+    ]
+  },
+  {
+    "source_id": "SRC-06",
+    "title": "MCP Apps extension overview",
+    "url": "https://modelcontextprotocol.io/extensions/apps/overview",
+    "source_class": "official_protocol_docs",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Protocol-level definition of MCP Apps that Cursor references for interactive UI support.",
+    "claims_supported": [
+      "CAP-06"
+    ]
+  },
+  {
+    "source_id": "SRC-07",
+    "title": "GitHub MCP Server",
+    "url": "https://github.com/github/github-mcp-server",
+    "source_class": "official_github_repo",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Canonical upstream repository for the GitHub MCP server referenced by Cursor docs.",
+    "claims_supported": [
+      "external:GitHub"
+    ]
+  },
+  {
+    "source_id": "SRC-08",
+    "title": "microsoft/playwright-mcp",
+    "url": "https://github.com/microsoft/playwright-mcp",
+    "source_class": "official_github_repo",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Canonical upstream repository for the Playwright MCP server used as the main browser-augmentation candidate.",
+    "claims_supported": [
+      "external:Playwright"
+    ]
+  },
+  {
+    "source_id": "SRC-09",
+    "title": "Langfuse Docs",
+    "url": "https://langfuse.com/docs",
+    "source_class": "official_provider_docs",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Canonical provider docs for Langfuse tracing and evaluation capabilities.",
+    "claims_supported": [
+      "plugin:Langfuse"
+    ]
+  },
+  {
+    "source_id": "SRC-10",
+    "title": "Parallel Docs",
+    "url": "https://docs.parallel.ai/home",
+    "source_class": "official_provider_docs",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Canonical provider docs for Parallel's research and extraction platform.",
+    "claims_supported": [
+      "plugin:Parallel"
+    ]
+  },
+  {
+    "source_id": "SRC-11",
+    "title": "Runlayer Docs",
+    "url": "https://docs.runlayer.com/",
+    "source_class": "official_provider_docs",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Canonical provider docs for Runlayer's MCP management and governance product.",
+    "claims_supported": [
+      "plugin:Runlayer"
+    ]
+  },
+  {
+    "source_id": "SRC-12",
+    "title": "Context7",
+    "url": "https://context7.com/",
+    "source_class": "official_provider_docs",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Canonical provider home for Context7, which Cursor exposes directly in both docs and marketplace surfaces.",
+    "claims_supported": [
+      "plugin:Context7",
+      "external:Context7"
+    ]
+  },
+  {
+    "source_id": "SRC-13",
+    "title": "1Password Developer Docs",
+    "url": "https://developer.1password.com/",
+    "source_class": "official_provider_docs",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Canonical 1Password developer source for secret and auth tooling context.",
+    "claims_supported": [
+      "plugin:1Password"
+    ]
+  },
+  {
+    "source_id": "SRC-14",
+    "title": "Sentry Docs",
+    "url": "https://docs.sentry.io/",
+    "source_class": "official_provider_docs",
+    "published_date": null,
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Canonical provider docs for Sentry error tracking and monitoring.",
+    "claims_supported": [
+      "plugin:Sentry",
+      "external:Sentry"
+    ]
+  }
+]

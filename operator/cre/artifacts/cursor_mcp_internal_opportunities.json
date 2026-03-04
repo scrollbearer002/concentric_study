@@ -1,0 +1,129 @@
+[
+  {
+    "candidate_id": "INT-MCP-001",
+    "name": "concentric-trace-mcp",
+    "problem_filled": "Expose run manifests, traces, and causal failure summaries directly inside Cursor instead of requiring file-by-file inspection.",
+    "repo_modules_exposed": [
+      "operator/agent_infra/trace_writer.py",
+      "operator/agent_infra/diagnostic_reader.py",
+      "operator/agent_infra/decision_graph.py",
+      "operator/agent_infra/healing_orchestrator.py"
+    ],
+    "tool_surface": [
+      "list_recent_runs",
+      "read_run_manifest",
+      "full_diagnostic",
+      "summarize_failure_chain"
+    ],
+    "target_user": "researcher",
+    "expected_upgrade": "transformational",
+    "build_complexity": "medium",
+    "security_notes": "Keep the surface read-only by default and redact any credentials or sensitive payloads before tool return.",
+    "why_cursor_mcp": "This converts one of the repo's strongest native assets into an interactive Cursor tool loop.",
+    "prototype_priority": "immediate"
+  },
+  {
+    "candidate_id": "INT-MCP-002",
+    "name": "concentric-benchmark-mcp",
+    "problem_filled": "Expose claims-based evaluation, run scoring, and regression comparison directly inside Cursor.",
+    "repo_modules_exposed": [
+      "operator/agent_infra/benchmark_evaluator.py"
+    ],
+    "tool_surface": [
+      "evaluate_run",
+      "compare_runs",
+      "get_aggregate_report",
+      "list_registered_claims"
+    ],
+    "target_user": "researcher",
+    "expected_upgrade": "transformational",
+    "build_complexity": "medium",
+    "security_notes": "Read-only by default; keep any run metadata scoped to the repo and avoid leaking unrelated local paths.",
+    "why_cursor_mcp": "The repo already has benchmark science; MCP would make it a live reasoning surface rather than a passive artifact.",
+    "prototype_priority": "immediate"
+  },
+  {
+    "candidate_id": "INT-MCP-003",
+    "name": "concentric-research-mcp",
+    "problem_filled": "Expose research briefs, source registers, and pre-execution method/tool mappings as reusable Cursor tools.",
+    "repo_modules_exposed": [
+      "operator/agent_infra/research_agent.py",
+      "operator/agent_infra/summarizer.py"
+    ],
+    "tool_surface": [
+      "run_research_brief",
+      "get_research_context",
+      "list_reference_images",
+      "summarize_research_artifact"
+    ],
+    "target_user": "researcher",
+    "expected_upgrade": "substantial",
+    "build_complexity": "medium",
+    "security_notes": "Scope outbound research carefully and keep prompt budgets explicit to avoid uncontrolled web retrieval.",
+    "why_cursor_mcp": "This preserves the repo's research-first method inside Cursor instead of duplicating it manually.",
+    "prototype_priority": "immediate"
+  },
+  {
+    "candidate_id": "INT-MCP-004",
+    "name": "concentric-health-mcp",
+    "problem_filled": "Expose host-tool readiness, environment drift, and baseline status before live tasks begin.",
+    "repo_modules_exposed": [
+      "operator/agent_infra/host_tool_health.py",
+      "operator/agent_infra/tool_health_catalog.json",
+      "operator/cre/tools/cursor_environment_snapshot.py"
+    ],
+    "tool_surface": [
+      "health_summary",
+      "check_tool_class",
+      "compare_environment_baselines",
+      "explain_unhealthy_capability"
+    ],
+    "target_user": "operator",
+    "expected_upgrade": "substantial",
+    "build_complexity": "low",
+    "security_notes": "Avoid exposing unnecessary host details; return readiness judgments and narrow diagnostics, not raw environment dumps by default.",
+    "why_cursor_mcp": "This gives Cursor an explicit environment model for a project where environment readiness is a first-order concern.",
+    "prototype_priority": "immediate"
+  },
+  {
+    "candidate_id": "INT-MCP-005",
+    "name": "concentric-skill-mcp",
+    "problem_filled": "Expose semantic skill retrieval and maturity-gated reuse inside Cursor.",
+    "repo_modules_exposed": [
+      "operator/agent_infra/skill_library.py"
+    ],
+    "tool_surface": [
+      "retrieve_skills",
+      "get_skill_summary",
+      "inspect_skill",
+      "find_master_skills"
+    ],
+    "target_user": "operator",
+    "expected_upgrade": "substantial",
+    "build_complexity": "low",
+    "security_notes": "Read-only exposure is safest; write-paths should remain opt-in and separately reviewed.",
+    "why_cursor_mcp": "This turns the repo's episodic and semantic reuse layer into a native planning aid inside Cursor.",
+    "prototype_priority": "high"
+  },
+  {
+    "candidate_id": "INT-MCP-006",
+    "name": "concentric-visual-monitor-mcp",
+    "problem_filled": "Expose screenshot timelines, reference comparisons, and drift alerts to Cursor.",
+    "repo_modules_exposed": [
+      "operator/agent_infra/visual_monitor.py",
+      "operator/agent_infra/verification_gate.py"
+    ],
+    "tool_surface": [
+      "last_n_timeline",
+      "compare_against_reference",
+      "latest_snapshot_metadata",
+      "describe_recent_drift"
+    ],
+    "target_user": "reviewer",
+    "expected_upgrade": "substantial",
+    "build_complexity": "medium",
+    "security_notes": "Screenshots are sensitive; require explicit workspace scoping and make storage/retention visible.",
+    "why_cursor_mcp": "The repo already has a temporal visual-memory subsystem that would become much more useful if Cursor could query it directly.",
+    "prototype_priority": "high"
+  }
+]

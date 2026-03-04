@@ -1,0 +1,38 @@
+{
+  "system_of_interest": "concentric_study Safari/macOS visual web-agent runtime",
+  "environment": {
+    "browser": "Safari",
+    "capture": "front-window plus cursor-visible screencapture",
+    "judger": "Gemini Flash structured output",
+    "click_execution": "Quartz HID through MacOSAgentCore"
+  },
+  "problem_statement": "Reduce risky wrong-surface and popup-interference clicks without degrading the strong current runtime path.",
+  "recommended_shape": {
+    "move_cursor_first": true,
+    "capture_cursor_visible_window": true,
+    "structured_go_no_go": true,
+    "opt_in_scope": [
+      "direct coordinate clicks",
+      "risky labeled clicks",
+      "dialog buttons",
+      "submit or continue buttons",
+      "tool changes on unfamiliar sites"
+    ],
+    "not_global_every_click": true
+  },
+  "local_evidence": [
+    "operator/window_capture.py",
+    "operator/agent_core.py",
+    "operator/agent_infra/action_handlers.py",
+    "operator/agent_infra/recovery.py",
+    "operator/agent_infra/visual_monitor.py"
+  ],
+  "references": [
+    "https://arxiv.org/abs/2404.07972",
+    "https://arxiv.org/abs/2401.01614",
+    "https://arxiv.org/abs/2411.17465",
+    "https://aclanthology.org/2025.emnlp-main.920/",
+    "https://ai.google.dev/gemini-api/docs/image-understanding",
+    "https://ai.google.dev/gemini-api/docs/structured-output"
+  ]
+}

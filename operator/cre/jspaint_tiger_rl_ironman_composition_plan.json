@@ -1,0 +1,11 @@
+{
+  "primary_subject_bbox_goal": "occupy 35%-60% of drawable area unless task says otherwise",
+  "pose": "heroic front-facing standing pose with broad shoulders and grounded boots",
+  "camera_angle": "straight-on poster composition",
+  "passes": [
+    "base color masses",
+    "armor fills",
+    "outline and stripes",
+    "detail verification"
+  ]
+}

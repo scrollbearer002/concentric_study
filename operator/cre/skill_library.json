@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "updated_at": "2026-02-27T07:51:50.453Z",
+  "num_skills": 2,
+  "skills": [
+    {
+      "skill_id": "4cf2a5095cf8",
+      "task_id": "CONCENTRIC_TRIANGLES_CLEAN",
+      "task_description": "Clear canvas and draw 4 nested concentric triangles",
+      "action_plan": [
+        {
+          "step": 1,
+          "action": {
+            "type": "clear_canvas",
+            "parameters": {}
+          },
+          "thought": "Erase all drawings (Cmd+Backspace)",
+          "duration_ms": 6632
+        },
+        {
+          "step": 2,
+          "action": {
+            "type": "keystroke",
+            "parameters": {
+              "key": 36
+            }
+          },
+          "thought": "Confirm clear canvas dialog (Enter)",
+          "duration_ms": 1460
+        },
+        {
+          "step": 3,
+          "action": {
+            "type": "sleep",
+            "parameters": {
+              "seconds": 1.0
+            }
+          },
+          "thought": "Pause for dialog to close and canvas to clear",
+          "duration_ms": 1000
+        },
+        {
+          "step": 4,
+          "action": {
+            "type": "sleep",
+            "parameters": {
+              "seconds": 0
+            }
+          },
+          "thought": "Verify canvas is empty (state-based oracle)",
+          "duration_ms": 0
+        },
+        {
+          "step": 5,
+          "action": {
+            "type": "sleep",
+            "parameters": {
+              "seconds": 0.5
+            }
+          },
+          "thought": "Pause after clear so canvas is ready",
+          "duration_ms": 502
+        },
+        {
+          "step": 6,
+          "action": {
+            "type": "refresh_canvas_center",
+            "parameters": {}
+          },
+          "thought": "Re-capture and get exact canvas center for drawing in middle",
+          "duration_ms": 1834
+        },
+        {
+          "step": 7,
+          "action": {
+            "type": "sleep",
+            "parameters": {
+              "seconds": 0.5
+            }
+          },
+          "thought": "Brief pause before selecting pen",
+          "duration_ms": 500
+        },
+        {
+          "step": 8,
+          "action": {
+            "type": "keystroke",
+            "parameters": {
+              "key": "p"
+            }
+          },
+          "thought": "Select pen tool (p)",
+          "duration_ms": 1462
+        },
+        {
+          "step": 9,
+          "action": {
+            "type": "keystroke",
+            "parameters": {
+              "key": "S"
+            }
+          },
+          "thought": "Open stroke color picker (S)",
+          "duration_ms": 1457
+        },
+        {
+          "step": 10,
+          "action": {
+            "type": "set_stroke_color",
+            "parameters": {
+              "color": "black"
+            }
+          },
+          "thought": "Set stroke to black",
+          "duration_ms": 1862,
+          "resolved_coords": {
+            "box_id": 37,
+            "x": 120,
+            "y": 525,
+            "action": "set_stroke_color",
+            "color": "black",
+            "source": "cache"
+          }
+        },
+        {
+          "step": 11,
+          "action": {
+            "type": "sleep",
+            "parameters": {
+              "seconds": 0.5
+            }
+          },
+          "thought": "Pause before drawing",
+          "duration_ms": 500
+        },
+        {
+          "step": 12,
+          "action": {
+            "type": "draw_concentric_triangles",
+            "parameters": {
+              "sizes": [
+                220,
+                160,
+                100,
+                50
+              ],
+              "inter_triangle_delay": 0.6
+            }
+          },
+          "thought": "Draw 4 concentric triangles at center (release at each corner)",
+          "duration_ms": 8433
+        }
+      ],
+      "performance": {
+        "total_duration_ms": 55765,
+        "num_steps": 12,
+        "success_rate": 1.0
+      },
+      "provenance": {
+        "run_id": "09c7aa55f402",
+        "timestamp": "2026-02-22T08:21:01.735Z",
+        "manifest_hash": "7e741357edcf0e97",
+        "trace_hash": "491f7635f946cfb9",
+        "agent_config": {
+          "mode": "enterprise",
+          "model": "gemini-2.5-pro"
+        },
+        "environment": {
+          "os": "macos",
+          "platform": "Darwin 25.3.0 (arm64)"
+        }
+      },
+      "maturity": {
+        "tier": "master",
+        "success_count": 26,
+        "failure_count": 0,
+        "evidence_run_ids": [
+          "64f991f80d39",
+          "872786bff9c7",
+          "a1acc4bfad67",
+          "f895b3a9ea88",
+          "af7ab6315993",
+          "984b2843d08c",
+          "9be417e6d1c8",
+          "6d81c88a0aba",
+          "570654eb34ab",
+          "e5f83e47e017",
+          "ff9cbb3fb684",
+          "61654e3436ce",
+          "19dc71c8b483",
+          "09c7aa55f402",
+          "b32181b6106c",
+          "f967c6591f02",
+          "ac32b65761cd",
+          "3b8ffc636dc3",
+          "f580ac516d3e",
+          "0c1063de5c32",
+          "a66228445af7"
+        ]
+      },
+      "created_at": "2026-02-22T00:40:49.510Z",
+      "updated_at": "2026-02-23T06:04:06.958Z",
+      "last_validated_at": "2026-02-23T06:04:06.958Z",
+      "ui_fingerprint_hash": null
+    },
+    {
+      "skill_id": "ed705af9c829",
+      "task_id": "MAGMA_BMW_E30_REALISM",
+      "task_description": "Open Magma in Safari and draw a realistic 1991 BMW M3 E30 (realism / PhD arts)",
+      "action_plan": [
+        {
+          "step": 1,
+          "action": {
+            "type": "magma_open_url",
+            "parameters": {}
+          },
+          "thought": "Open Safari to www.magma.com",
+          "duration_ms": 7866
+        },
+        {
+          "step": 2,
+          "action": {
+            "type": "magma_navigate_app",
+            "parameters": {}
+          },
+          "thought": "Navigate to magma.com/app (My artworks)",
+          "duration_ms": 6976
+        },
+        {
+          "step": 3,
+          "action": {
+            "type": "magma_click_new_canvas",
+            "parameters": {}
+          },
+          "thought": "Click 'New canvas' to open dropdown",
+          "duration_ms": 1174
+        },
+        {
+          "step": 4,
+          "action": {
+            "type": "magma_click_landscape",
+            "parameters": {}
+          },
+          "thought": "Click 'Landscape drawing' to create canvas",
+          "duration_ms": 730
+        },
+        {
+          "step": 5,
+          "action": {
+            "type": "magma_draw_bmw_e30",
+            "parameters": {}
+          },
+          "thought": "Draw realistic 1991 BMW M3 E30 on canvas",
+          "duration_ms": 9958
+        }
+      ],
+      "performance": {
+        "total_duration_ms": 36445,
+        "num_steps": 5,
+        "success_rate": 1.0
+      },
+      "provenance": {
+        "run_id": "a397b0a85d5e",
+        "timestamp": "2026-02-27T07:51:14.001Z",
+        "manifest_hash": "d15c1f2740ed5271",
+        "trace_hash": "442fe56f3788b42d",
+        "agent_config": {
+          "mode": "magma_traced",
+          "task": "bmw_e30"
+        },
+        "environment": {
+          "os": "macos",
+          "platform": "Darwin 25.3.0 (arm64)"
+        }
+      },
+      "maturity": {
+        "tier": "candidate",
+        "success_count": 1,
+        "failure_count": 0,
+        "evidence_run_ids": [
+          "a397b0a85d5e"
+        ]
+      },
+      "created_at": "2026-02-27T07:51:50.453Z",
+      "updated_at": "2026-02-27T07:51:50.453Z",
+      "last_validated_at": "2026-02-27T07:51:50.453Z",
+      "ui_fingerprint_hash": null
+    }
+  ]
+}

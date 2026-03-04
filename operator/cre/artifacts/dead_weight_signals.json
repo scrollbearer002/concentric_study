@@ -1,0 +1,97 @@
+[
+  {
+    "path_or_family": "checked-in __pycache__ artifacts",
+    "signal_type": "cache_artifacts",
+    "evidence": [
+      "operator/__pycache__/a11y_engine.cpython-314.pyc",
+      "operator/__pycache__/action_space.cpython-314.pyc",
+      "operator/__pycache__/agent.cpython-314.pyc",
+      "operator/__pycache__/agent_core.cpython-314.pyc",
+      "operator/__pycache__/capability_router.cpython-314.pyc",
+      "operator/__pycache__/codex_client.cpython-314.pyc",
+      "operator/__pycache__/diagnostic_reader.cpython-314.pyc",
+      "operator/__pycache__/element_map.cpython-314.pyc",
+      "operator/__pycache__/healing_orchestrator.cpython-314.pyc",
+      "operator/__pycache__/inference_router.cpython-314.pyc",
+      "operator/__pycache__/screenshot_preprocessor.cpython-314.pyc",
+      "operator/__pycache__/skill_library.cpython-314.pyc",
+      "operator/__pycache__/test_router_dryrun.cpython-314-pytest-9.0.2.pyc",
+      "operator/__pycache__/test_router_dryrun.cpython-314.pyc",
+      "operator/__pycache__/trace_writer.cpython-314.pyc",
+      "operator/__pycache__/visual_engine.cpython-314.pyc",
+      "operator/__pycache__/vlm_coordinator.cpython-314.pyc",
+      "operator/__pycache__/web_primitives.cpython-314.pyc",
+      "operator/__pycache__/window_capture.cpython-314.pyc",
+      "operator/agent_infra/__pycache__/__init__.cpython-314.pyc"
+    ],
+    "confidence": "high",
+    "why_not_core": "Bytecode caches are not source of truth.",
+    "why_not_legacy": "They are generated caches, not deliberate legacy surfaces.",
+    "why_not_generated": "They are generated, but not current evidence anchors.",
+    "review_recommendation": "Remove from repo in a later cleanup branch; keep out of future audits by default."
+  },
+  {
+    "path_or_family": "top-level report/summary memo sprawl",
+    "signal_type": "duplicate_documentation",
+    "evidence": [
+      "operator/cre/COMPLETION_SUMMARY.md",
+      "operator/cre/EXECUTIVE_SUMMARY_VERIFICATION.md",
+      "operator/cre/FINAL_TEST_SUMMARY.md"
+    ],
+    "confidence": "medium",
+    "why_not_core": "These files are not primary runtime or governance surfaces.",
+    "why_not_legacy": "They are not required compatibility layers.",
+    "why_not_generated": "They are hand-written but weakly authoritative.",
+    "review_recommendation": "Consolidate into canonical docs or downgrade to historical/supporting in a later branch."
+  },
+  {
+    "path_or_family": "orphaned screenshots/demo artifacts",
+    "signal_type": "weak_artifact_linkage",
+    "evidence": [
+      "operator/agent_infra/som_button_map.png",
+      "operator/agent_infra/som_kleki_brush.png",
+      "operator/agent_infra/som_kleki_opacity.png",
+      "operator/agent_infra/som_kleki_panel.png",
+      "operator/agent_infra/som_panel.png",
+      "operator/agent_infra/som_stroke.png",
+      "operator/cre/_bmw_center.png",
+      "operator/cre/_bmw_center2.png",
+      "operator/cre/_bmw_center3.png",
+      "operator/cre/_bmw_center4.png",
+      "operator/cre/_bmw_center5.png",
+      "operator/cre/_checkpoint_00_start.png",
+      "operator/cre/_checkpoint_01_sky.png",
+      "operator/cre/_checkpoint_01_sky_ground.png",
+      "operator/cre/_checkpoint_02_buildings.png",
+      "operator/cre/_checkpoint_02_ground.png",
+      "operator/cre/_checkpoint_03_buildings.png",
+      "operator/cre/_checkpoint_03_tower_upper.png",
+      "operator/cre/_checkpoint_04_tower_lattice.png",
+      "operator/cre/_checkpoint_05_tower_done.png"
+    ],
+    "confidence": "medium",
+    "why_not_core": "These artifacts are not part of the hot path.",
+    "why_not_legacy": "They are not established legacy compatibility surfaces.",
+    "why_not_generated": "Many are manually retained evidence artifacts, but weakly linked.",
+    "review_recommendation": "Review artifact families and retain only those linked from canonical docs or active tests."
+  },
+  {
+    "path_or_family": "one-off operational/demo scripts",
+    "signal_type": "weak_script_linkage",
+    "evidence": [
+      "operator/cre/build_reference_board_artifact.py",
+      "operator/cre/jspaint_draw_polo_bear_panther_enhanced.py",
+      "operator/cre/jspaint_draw_tiger_rl_ironman.py",
+      "operator/cre/jspaint_draw_tiger_rl_ironman_v2.py",
+      "operator/cre/jspaint_draw_tiger_rl_ironman_v3.py",
+      "operator/cre/magma_draw_polo_bear_panther.py",
+      "operator/cre/magma_draw_tiger_rl_ironman.py",
+      "operator/cre/run_preclick_smoke.py"
+    ],
+    "confidence": "medium",
+    "why_not_core": "They are not on the universal-agent hot path.",
+    "why_not_legacy": "Some are not required for compatibility.",
+    "why_not_generated": "They are hand-written scripts, but lightly justified.",
+    "review_recommendation": "Separate true lineage/legacy scripts from one-off demos before any cleanup."
+  }
+]

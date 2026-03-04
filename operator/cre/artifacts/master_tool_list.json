@@ -1,0 +1,471 @@
+[
+  {
+    "tool": "TraceWriter",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/trace_writer.py"
+  },
+  {
+    "tool": "DiagnosticReader",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/diagnostic_reader.py"
+  },
+  {
+    "tool": "HealingOrchestrator",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/healing_orchestrator.py"
+  },
+  {
+    "tool": "SkillLibrary",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/skill_library.py"
+  },
+  {
+    "tool": "SemanticSkillIndex",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/skill_library.py"
+  },
+  {
+    "tool": "OuterLoop",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/outer_loop.py"
+  },
+  {
+    "tool": "ReflectionJournal",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/outer_loop.py"
+  },
+  {
+    "tool": "RulesStore",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/outer_loop.py"
+  },
+  {
+    "tool": "ActionTrustTracker",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/action_trust.py"
+  },
+  {
+    "tool": "Summarizer",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/summarizer.py"
+  },
+  {
+    "tool": "ResearchAgent",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/research_agent.py"
+  },
+  {
+    "tool": "HostToolHealth",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/host_tool_health.py"
+  },
+  {
+    "tool": "VisualMonitor",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/visual_monitor.py"
+  },
+  {
+    "tool": "VerificationGate",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/verification_gate.py"
+  },
+  {
+    "tool": "DecisionDependenceAnalyzer",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/decision_graph.py"
+  },
+  {
+    "tool": "BenchmarkEvaluator",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/benchmark_evaluator.py"
+  },
+  {
+    "tool": "TaskClaim",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/benchmark_evaluator.py"
+  },
+  {
+    "tool": "SiteKnowledge",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/site_knowledge.py"
+  },
+  {
+    "tool": "ExplorationLoop",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/site_knowledge.py"
+  },
+  {
+    "tool": "ToolAffordance",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/site_knowledge.py"
+  },
+  {
+    "tool": "InteractionRule",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/site_knowledge.py"
+  },
+  {
+    "tool": "ButtonMapEntry",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_infra/site_knowledge.py"
+  },
+  {
+    "tool": "agent.py",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent.py"
+  },
+  {
+    "tool": "agent_core.py",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_core.py"
+  },
+  {
+    "tool": "action_space.py",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/action_space.py"
+  },
+  {
+    "tool": "capability_router.py",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/capability_router.py"
+  },
+  {
+    "tool": "window_capture.py",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/window_capture.py"
+  },
+  {
+    "tool": "visual_engine.py",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/visual_engine.py"
+  },
+  {
+    "tool": "a11y_engine.py",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/a11y_engine.py"
+  },
+  {
+    "tool": "element_map.py",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/element_map.py"
+  },
+  {
+    "tool": "web_primitives.py",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/web_primitives.py"
+  },
+  {
+    "tool": "inference_router.py",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/inference_router.py"
+  },
+  {
+    "tool": "InputSanitizer",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/security/sanitizer.py"
+  },
+  {
+    "tool": "CredentialVault",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/security/credential_vault.py"
+  },
+  {
+    "tool": "HITLGuard",
+    "category": "internal_module",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/security/credential_vault.py"
+  },
+  {
+    "tool": "pyobjc-framework-Cocoa",
+    "category": "python_dependency",
+    "status": "current",
+    "requirements_coverage": "pinned_in_requirements",
+    "location": "operator/requirements.txt"
+  },
+  {
+    "tool": "pyobjc-framework-Quartz",
+    "category": "python_dependency",
+    "status": "current",
+    "requirements_coverage": "pinned_in_requirements",
+    "location": "operator/requirements.txt"
+  },
+  {
+    "tool": "google-genai",
+    "category": "python_dependency",
+    "status": "current",
+    "requirements_coverage": "pinned_in_requirements",
+    "location": "operator/requirements.txt"
+  },
+  {
+    "tool": "pydantic",
+    "category": "python_dependency",
+    "status": "current",
+    "requirements_coverage": "pinned_in_requirements",
+    "location": "operator/requirements.txt"
+  },
+  {
+    "tool": "Pillow",
+    "category": "python_dependency",
+    "status": "current",
+    "requirements_coverage": "pinned_in_requirements",
+    "location": "operator/requirements.txt"
+  },
+  {
+    "tool": "requests",
+    "category": "python_dependency",
+    "status": "current",
+    "requirements_coverage": "pinned_in_requirements",
+    "location": "operator/requirements.txt"
+  },
+  {
+    "tool": "imagehash",
+    "category": "python_dependency",
+    "status": "optional",
+    "requirements_coverage": "missing_from_requirements",
+    "location": "operator/agent.py; operator/agent_infra/skill_library.py"
+  },
+  {
+    "tool": "numpy",
+    "category": "python_dependency",
+    "status": "optional",
+    "requirements_coverage": "missing_from_requirements",
+    "location": "operator/agent_infra/verification_gate.py; operator/agent_infra/visual_monitor.py"
+  },
+  {
+    "tool": "scipy",
+    "category": "python_dependency",
+    "status": "optional",
+    "requirements_coverage": "missing_from_requirements",
+    "location": "operator/agent_infra/action_trust.py"
+  },
+  {
+    "tool": "sentence_transformers",
+    "category": "python_dependency",
+    "status": "optional",
+    "requirements_coverage": "missing_from_requirements",
+    "location": "operator/agent_infra/skill_library.py"
+  },
+  {
+    "tool": "macapptree",
+    "category": "python_dependency",
+    "status": "optional",
+    "requirements_coverage": "missing_from_requirements",
+    "location": "operator/a11y_engine.py"
+  },
+  {
+    "tool": "pyax",
+    "category": "python_dependency",
+    "status": "optional",
+    "requirements_coverage": "missing_from_requirements",
+    "location": "operator/a11y_engine.py"
+  },
+  {
+    "tool": "openai",
+    "category": "python_dependency",
+    "status": "optional",
+    "requirements_coverage": "missing_from_requirements",
+    "location": "operator/vlm_coordinator.py"
+  },
+  {
+    "tool": "open",
+    "category": "system_tool",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "subprocess usage in operator/agent.py and startup modules"
+  },
+  {
+    "tool": "osascript",
+    "category": "system_tool",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "subprocess usage in operator/agent.py, handlers, and startup"
+  },
+  {
+    "tool": "screencapture",
+    "category": "system_tool",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "subprocess usage across runtime modules"
+  },
+  {
+    "tool": "security CLI",
+    "category": "system_tool",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/security/credential_vault.py"
+  },
+  {
+    "tool": "Quartz/CoreGraphics",
+    "category": "system_tool",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_core.py; operator/window_capture.py"
+  },
+  {
+    "tool": "Cocoa/AppKit",
+    "category": "system_tool",
+    "status": "current",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/agent_core.py; operator/window_capture.py"
+  },
+  {
+    "tool": "CodexClient",
+    "category": "legacy_runtime",
+    "status": "legacy",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/codex_client.py"
+  },
+  {
+    "tool": "VLMCoordinator",
+    "category": "legacy_runtime",
+    "status": "legacy",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/vlm_coordinator.py"
+  },
+  {
+    "tool": "Hammerspoon kernel",
+    "category": "legacy_runtime",
+    "status": "legacy",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/cre/codex_kernel.lua"
+  },
+  {
+    "tool": "operator/cre/codex_kernel.lua",
+    "category": "operational_script",
+    "status": "legacy",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/cre/codex_kernel.lua"
+  },
+  {
+    "tool": "operator/cre/showcase.sh",
+    "category": "operational_script",
+    "status": "legacy",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/cre/showcase.sh"
+  },
+  {
+    "tool": "operator/cre/verify_kernel.sh",
+    "category": "operational_script",
+    "status": "legacy",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/cre/verify_kernel.sh"
+  },
+  {
+    "tool": "operator/cre/run_agent.sh",
+    "category": "operational_script",
+    "status": "legacy",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/cre/run_agent.sh"
+  },
+  {
+    "tool": "operator/cre/run_ultimate_tests.sh",
+    "category": "operational_script",
+    "status": "legacy",
+    "requirements_coverage": "not_applicable",
+    "location": "operator/cre/run_ultimate_tests.sh"
+  },
+  {
+    "tool": "cliclick",
+    "category": "historical_reference",
+    "status": "historical_reference",
+    "requirements_coverage": "not_applicable",
+    "location": "historical docs under operator/cre/"
+  },
+  {
+    "tool": "hs.eventtap",
+    "category": "historical_reference",
+    "status": "historical_reference",
+    "requirements_coverage": "not_applicable",
+    "location": "historical docs under operator/cre/"
+  },
+  {
+    "tool": "hs.axuielement",
+    "category": "historical_reference",
+    "status": "historical_reference",
+    "requirements_coverage": "not_applicable",
+    "location": "historical docs under operator/cre/"
+  },
+  {
+    "tool": "hs.screen",
+    "category": "historical_reference",
+    "status": "historical_reference",
+    "requirements_coverage": "not_applicable",
+    "location": "historical docs under operator/cre/"
+  },
+  {
+    "tool": "cursor_ocr_map.py",
+    "category": "historical_reference",
+    "status": "historical_reference",
+    "requirements_coverage": "not_applicable",
+    "location": "referenced in docs only"
+  }
+]

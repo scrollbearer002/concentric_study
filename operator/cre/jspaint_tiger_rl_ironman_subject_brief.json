@@ -1,0 +1,21 @@
+{
+  "one_sentence_goal": "Draw a tiger wearing Ralph Lauren everything inspired by Iron Man from Marvel comics.",
+  "must_have_parts": [
+    "full tiger figure",
+    "recognizable tiger face and stripes",
+    "Ralph Lauren style cue or badge",
+    "red and gold Iron Man inspired armor tailoring",
+    "full body inside canvas"
+  ],
+  "must_avoid": [
+    "canvas clipping",
+    "generic cat drift",
+    "non-tiger facial structure",
+    "missing red/gold Iron Man palette"
+  ],
+  "style_notes": [
+    "Use tiger anatomy first, fashion/armor second.",
+    "Keep the silhouette readable from a distance.",
+    "Use red-gold armor fashion cues, not a literal Iron Man copy."
+  ]
+}

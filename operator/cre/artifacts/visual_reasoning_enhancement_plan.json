@@ -1,0 +1,144 @@
+{
+  "environment_basis": {
+    "repo": "/Users/christianpardo/Desktop/concentric_study",
+    "run_log": "operator/cre/IQ_TEST_LIVE_RUN_LOG.md",
+    "result_artifact": "operator/cre/iq_test_freewww_result.png",
+    "weak_categories": {
+      "pattern_recognition": "6/8",
+      "spatial_reasoning": "6/8"
+    }
+  },
+  "local_evidence": [
+    {
+      "type": "score_profile",
+      "path": "operator/cre/IQ_TEST_LIVE_RUN_LOG.md",
+      "facts": [
+        "IQ 135",
+        "36/40 correct",
+        "Pattern Recognition 6/8",
+        "Spatial Reasoning 6/8",
+        "Logical Reasoning 8/8",
+        "Mathematical Ability 8/8",
+        "Verbal Skills 8/8"
+      ]
+    },
+    {
+      "type": "saved_visual_artifacts",
+      "paths": [
+        "operator/cre/iq_test_freewww_q29/montage.png",
+        "operator/cre/iq_test_freewww_q32/montage.png",
+        "operator/cre/iq_test_freewww_q25/montage.png",
+        "operator/cre/iq_test_freewww_q30/montage.png"
+      ],
+      "families": [
+        "matrix_progression",
+        "projection_top_view",
+        "net_folding",
+        "shape_to_solid_mapping"
+      ]
+    }
+  ],
+  "current_repo_strengths": [
+    {
+      "module": "operator/visual_engine.py",
+      "capability": "screenshot grid grounding and adaptive SoM"
+    },
+    {
+      "module": "operator/element_map.py",
+      "capability": "fused visual and accessibility element map"
+    },
+    {
+      "module": "operator/web_primitives.py",
+      "capability": "semantic click/type/scroll/read primitives"
+    },
+    {
+      "module": "operator/agent_infra/research_agent.py",
+      "capability": "pre-execution intelligence gathering"
+    },
+    {
+      "module": "operator/agent_infra/verification_gate.py",
+      "capability": "structured post-execution verification"
+    },
+    {
+      "module": "operator/agent_infra/benchmark_evaluator.py",
+      "capability": "claims-based evaluation"
+    }
+  ],
+  "current_repo_gaps": [
+    "no explicit puzzle-family classifier",
+    "no visual reasoning scratchpad",
+    "no option-elimination ledger for visual tasks",
+    "no confidence-aware revisit logic for visual questions",
+    "no dedicated visual-reasoning benchmark claim family"
+  ],
+  "external_research": [
+    {
+      "title": "What one intelligence test measures: A theoretical account of the processing in the Raven Progressive Matrices Test",
+      "year": 1990,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2394421/",
+      "why_it_matters": "supports explicit rule induction and structured matrix reasoning"
+    },
+    {
+      "title": "Strategy use fully mediates the relationship between working memory capacity and performance on Raven's matrices",
+      "year": 2015,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25844240/",
+      "why_it_matters": "supports strategy-structure as the improvement lever"
+    },
+    {
+      "title": "The malleability of spatial skills: A meta-analysis of training studies",
+      "year": 2013,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23875923/",
+      "why_it_matters": "supports trainability of spatial reasoning"
+    },
+    {
+      "title": "Measuring Abstract Reasoning in Neural Networks",
+      "year": 2018,
+      "url": "https://arxiv.org/abs/1807.04225",
+      "why_it_matters": "supports relation-centric abstract visual reasoning benchmarks"
+    },
+    {
+      "title": "RAVEN: A Dataset for Relational and Analogical Visual REasoNing",
+      "year": 2019,
+      "url": "https://arxiv.org/abs/1903.02741",
+      "why_it_matters": "supports matrix-style relation reasoning benchmark design"
+    },
+    {
+      "title": "A simple neural network module for relational reasoning",
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1706.01427",
+      "why_it_matters": "supports relational-comparison structure rather than raw pixel matching"
+    },
+    {
+      "title": "On the Measure of Intelligence",
+      "year": 2019,
+      "url": "https://arxiv.org/abs/1911.01547",
+      "why_it_matters": "supports broad abstraction and generalization framing via ARC"
+    }
+  ],
+  "recommended_branch": {
+    "name": "visual_reasoning_support",
+    "isolation_rationale": "improves evidenced weak spots without weakening the strong current runtime",
+    "proposed_module": "operator/agent_infra/visual_reasoning_support.py",
+    "first_taxonomy": [
+      "matrix_progression",
+      "rotation_reflection",
+      "count_shape_progression",
+      "net_folding",
+      "projection_top_view"
+    ]
+  },
+  "implementation_order": [
+    "Add puzzle-family classifier and scratchpad schema",
+    "Add family-specific templates for matrix/net/projection tasks",
+    "Add confidence and one-pass revisit support",
+    "Run first against saved IQ montage artifacts",
+    "Only then replay on a new live external test"
+  ],
+  "do_not_change": [
+    "operator/visual_engine.py core SoM behavior",
+    "operator/element_map.py fusion path",
+    "operator/web_primitives.py existing semantic primitives",
+    "current pointer/runtime substrate",
+    "strong existing live-browser workflow"
+  ]
+}

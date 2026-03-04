@@ -1,0 +1,19 @@
+{
+  "one_sentence_goal": "Draw a tiger wearing Ralph Lauren-inspired fashion with Iron Man from Marvel comic design cues.",
+  "must_have_parts": [
+    "tiger face with stripes and muzzle",
+    "Ralph Lauren-inspired badge or fashion cue",
+    "Iron Man-style chest reactor and armor seams",
+    "full body visible on canvas"
+  ],
+  "must_avoid": [
+    "clipped figure",
+    "generic bear silhouette",
+    "unstyled plain black clothing"
+  ],
+  "style_notes": [
+    "Ground the drawing in references before adding detail.",
+    "Keep the full subject inside calibrated canvas margins.",
+    "Use a multi-pass build: silhouette, structure, detail, color, verification."
+  ]
+}

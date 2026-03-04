@@ -1,0 +1,867 @@
+Video: Cursor 2.0 - Full Tutorial for Beginners
+Channel: Tech With Tim
+Upload date: 2025-12-05
+URL: https://www.youtube.com/watch?v=l30Eb76Tk5s
+
+In this video, I'll give you a full
+beginner's guide to using cursor 2.0.
+This is an Aentic AI code editor. It is
+a fork of a popular editor called VS
+Code, which means it shares all of the
+same core features except it adds AI on
+top, meaning you can generate massive
+amounts of code, files, projects, etc.
+using AI models. You can use this for
+free. You can also pay for premium
+subscriptions or you have more credits
+and you can just generate more code. So,
+with that said, let's get into it. Okay,
+so first of all, I'm going to assume
+that you've downloaded Cursor on your
+computer. If you haven't, go to the
+Cursor website, simply download it, and
+then sign into your account. Now, once
+you open up Cursor, you may or may not
+see a view that looks similar to this.
+You may see one that looks something
+like this. You may see something with
+the pane closed. Don't worry too much
+about it. What we want to start by
+doing, though, is just opening up some
+kind of folder where we can start
+writing some code and we can store all
+of the code for our project. So
+regardless what view you're seeing or
+what your cursor looks like because it
+will probably look different than mine.
+Find this file menu here. Go to open
+folder and then simply create a new
+folder on your desktop and open it. So
+in my case I had a folder called demo.
+So let me just find it right here. And
+actually I think I called it demo 2. So
+I just pressed on it and did select
+folder. And then when I did that I'm now
+inside of this folder which you can kind
+of see from the top here. So all of the
+code that I generate will be stored here
+and I'll be able to find it later on.
+Just make sure you don't lose all of
+your code, of course. Okay, now we'll go
+through the rest of the features here
+inside of Cursor in just a minute, but I
+do want to quickly note some of the new
+things that they released in case you've
+used this before because it has changed
+a lot. So, Cursor has been around now, I
+think, for maybe 2 years. It's very,
+very popular and they've constantly
+changed the user interface, you know,
+added a bunch of features, made it
+better, etc. Now, about a month ago from
+when I'm filming this video, they
+released their own model called
+Composer. Now the reason this is
+important is you can change the
+different models that you use inside of
+cursor. And previously you could use
+something like GPT, you could use
+Gemini, you could use Claude, but now
+they have their own model which claims
+to be four times faster than kind of
+those similar, you know, comparison
+models. And if we keep going down here,
+they also have released a feature that
+allows you to run multiple agents at the
+same time, which is very cool and it
+increases kind of the efficiency or the
+amount of code you can generate with
+this tool. Overall, everything else, if
+you've used this before, is mostly the
+same, but they have drastically
+redesigned the interface, which is why
+I'm making this video because it can be
+very confusing to understand how to
+navigate it. Okay, so those are the
+major changes. Now, let's go into cursor
+and let's start writing some code. So,
+first things first, you're going to
+notice that in the editor, yours might
+look different than mine. The reason why
+mine looks like this is because I've
+applied a theme. So if you want to
+change the theme of your code editor,
+you can use the keyboard shortcut
+controlshiftp
+or commandshiftp.
+Now this is going to open up something
+called the command pallet. Okay. Now
+this is going to allow you to kind of
+get a shortcut to various different
+commands. And if you're looking for
+something and you don't know where to
+find it, you can search for it inside of
+here. So if you want to change the
+theme, for example, you can type in
+theme and then you'll be able to go
+preferences, color theme, and then
+change it to whatever you want. So the
+default one I believe is just like
+cursor light or cursor dark or
+something. I'm using monokai because
+that's my favorite. But overall nothing
+changes. It just, you know, looks a
+little bit different, right? I'll also
+note that there's a bunch of settings
+you can play with that will also help
+you understand the tool a little bit
+better. If you press on this settings
+wheel right here in the top right hand
+corner, this will open for you the
+cursor settings. And keep in mind all of
+these windows that you see on the
+screen, you can usually resize them all.
+So if you want to make something a
+little bit larger, you can do that. And
+if you see this tab here, it works just
+like a Chrome tab where you can drag it
+around. You can move it to different
+places in the editor and you can
+rightclick it and pin it or split it to
+the left or open in a new window. So
+feel free to, you know, make this look
+however you like. Everyone has different
+preferences. So there's a bunch of
+settings here. We'll go through some of
+them later on. Just wanted to note that
+those do exist and they're worth kind of
+reading through. Okay. So once you're in
+this kind of view here, you're going to
+notice that there's a lot of different
+ways that you can view this editor. Now,
+what they've done is they've centered a
+lot of the focus around this kind of
+agentic chat window, which is this right
+here, where you can type a prompt just
+like you would to something like chat
+GBT, and it can start generating code
+for you immediately. So, we could do
+that, but I want to show you all of the
+different views that you have so you
+know kind of how to get between them,
+especially if yours looks a little bit
+different. So, you'll see that we have
+agents up here, and then we have editor.
+Now, if you switch between these views
+here, you'll see that in the editor
+view, it will actually show you any
+files that you have. So, you can
+directly view the code like you would in
+a more traditional editor. Whereas, if
+you go to the agent view, you'll be able
+to view all of the running agents that
+you have and kind of work directly with
+the model. So, this is a major change
+that they've made, but you can just
+switch between them really easily like
+this. Now, you're also going to notice
+that there's some of these kind of
+toggle buttons at the top left. So, for
+example, if I toggle this left bar here,
+it toggles the agent sidebar where I can
+see all of my agents. If I toggle again,
+you see that now I'll get kind of like a
+code editor view and I can untoggle that
+like that. If I go with this, I can
+toggle, for example, the terminal to
+appear here. If I toggle on the right
+side, I can now open up my editors
+again. So, feel free to play around with
+these and kind of toggle or untoggle
+windows based on what you want. If we go
+back to the editor view, I know this is
+a lot here. You'll see that we also have
+this chat window here which allows you
+to interface with one agent. But if you
+wanted to remove that and just fully
+view the files, you can press this
+button right here and it will kind of
+get rid of the AI pane. Okay, so that's
+the overall like UI outline. Don't be
+too intimidated by it. Where we're
+usually going to want to start is right
+here in this agent pane. So this is
+where we can actually start getting the
+model to generate some code for us. But
+I do want to warn you that before you
+just start going crazy and asking it to
+do stuff, you really should have a
+general sense of what it is that you
+actually want to do. Do you want to
+build a website? Do you want to build a
+game? Do you want to make a back-end
+tool? What is it that you want? What is
+the final outcome that you're looking
+for? The more that you can plan that out
+on your own and really understand what
+it is that you want, the better results
+you're going to get from these agents.
+Because ultimately, these agents just
+try to guess what you mean based on the
+prompts that you give them. So the more
+information, the more context and the
+more discreet and specific you are, the
+better the results are. So first of all,
+ask yourself what like medium do I want
+my application to be in? Is it even an
+app? Is it a website? Is it some backend
+tool? Is it running on a server?
+Understand that first. Then if it's
+something visual, you probably want to
+have a general sense of what you want it
+to look like in terms of maybe a
+wireframe or a mockup. And if it has
+some features, you probably want to know
+what those features are because if you
+just let this thing go crazy, it will go
+crazy and it will generate a lot of
+stuff that is very hard to review and
+that you probably do not want. So
+anyways, let's get into all of that
+after just a quick word from our
+sponsor. Now, you're going to see in
+this video that AI agents can talk all
+day, but actually getting them to do
+something real is a whole different
+story and sometimes not even possible in
+tools like this. Now, that's where
+Arcade MCP comes in. Now, it's the
+missing layer that gives your AI agents
+real power. Arcade MCP is a tool calling
+platform that lets your AI securely act
+on your behalf. It can call APIs, access
+data, trigger workflows, all through a
+unified SDK. Now, it takes you from an
+idea for a tool to running an MCP server
+to actually chatting with it right
+inside of Cursor or another MCP client
+in just minutes. So instead of manually
+writing up dozens of APIs or worrying
+about permissions, Arcade handles all of
+that for you. Authentication, tool
+registration, and security. So your
+agents can just focus on getting work
+done. And the best part is it's open,
+simple to set up, and built for
+developers who actually ship real AI
+features, not just demos. So if you're
+building AI agents, co-pilots, or
+autonomous dev tools, Arcade MCP is how
+you make them actually do things. Check
+it out from the link in the description
+below and start building your first MCP
+server today. You'll be surprised how
+fast you can go from concept to working
+integration. Okay, so let's continue
+here. And like I was saying, we want to
+start generating a plan. So from this
+window here, you're going to see that
+you have agent plan and ask modes. Okay,
+so what we're going to do is go to the
+plan mode. And I just want to quickly
+ask this to generate a plan for some
+kind of in this case, let's go website
+that we want to build. Now, I actually
+want to build a game because I think
+games are kind of fun. So, I'm going to
+ask it to build like Tetris for me. Hey,
+can you build a Tetris application for
+me and generate a plan for a simple
+front-end website that anyone could run
+in their browser that allows them to
+play the game of Tetris? Keep it really
+simple. We don't need any advanced
+features. I just want basic Tetris with
+the score, the ability for the shapes to
+move around, and just like the most MVP
+version you can think of. So, what I
+just did there is I used a voice tool
+that I have on my computer called
+Whisper Flow to dictate myself and just
+talk directly into the model. This also
+has a built-in voice mode. It's not
+available right now, but if I didn't
+have something, you could use the voice
+mode and kind of just input directly in
+the window. And I'm kind of streaming my
+thought process and telling it what I
+want to do. And then I'm going to get it
+to start generating this plan. So, I'm
+going to go ahead and press enter. I've
+just left the default model as composer,
+which you can change down here to
+anything that you want. And you're going
+to see that it will take a second now
+and it will start writing up this plan
+for me. So you can see on the right hand
+side it shows me the plan that it's
+writing. I'm just going to close the
+terminal here and it's giving me what's
+called a markdown file. Now for all of
+the plans inside of here typically it
+uses this MD file or markdown file. And
+you can see that it's just generated
+this plan really quickly and it's came
+up with nine to-do list items that we
+need to complete in order. So now what
+we're able to do that we have the plan
+is we can view it by just pressing this
+button, right? It's going to show us the
+plan. If we didn't like the plan, we
+could ask the model to adjust the plan
+or change something around in there. We
+also could manually change it oursel.
+You can see that I can just type, you
+know, directly inside of this window if
+I wanted to do that. So, I would go
+here. I would review the plan, make sure
+that it's good, and then I'm going to
+press this build button either from here
+or from here. Now, if you click this
+little down arrow, you'll see that you
+can actually build this in the cloud.
+I'm not going to do that right now
+because that's a little bit more
+advanced. But for now, we're just going
+to go build locally or just the default
+build. And when we do that, it's going
+to spin up a new AI agent now that's
+going to start actually executing these
+steps and building the plan for us,
+right? We're building this application.
+Now, while this runs, what we'll do is
+we'll just open a new agent so I can
+show you kind of the multi- aent feature
+and some other stuff that's interesting
+here. So, from this side, if you can't
+see this, you can just toggle it, right?
+So, toggle the agent sidebar. You'll be
+able to make a new agent. If you go to
+new agent, same thing here. You're able
+to write in your prompt and ask it to
+start doing something. You also see that
+voice mode button I was talking about
+right here. Now, what's interesting is
+that you can change the modes, right?
+So, we have a plan mode, which is what
+we used previously. We have an agent
+mode, which means it can just go and
+start building stuff and generating a
+bunch of code, or we have an ask mode.
+Now, an ask mode is something that won't
+actually touch any files or modify
+anything. It will just give you a
+response, like a textbased response. So,
+if you want to know how to run your
+project, for example, you can just ask
+it in ask mode and it will tell you how
+to do that. If you want to ask a
+question about something unrelated or
+you want to ask a question about a file,
+but you don't want it to change
+something, use this ask mode is kind of
+the most safe mode that you have. If you
+do use this agent mode, just be prepared
+that the model can make a lot of wild
+changes. And especially if you're trying
+to do small targeted changes, it might
+not always be what you want. And it can
+be a little bit messy to kind of fix
+that and revert it and go back to the
+things that has changed and potentially
+broke. Now, also, like I said, we have
+the models. I'm just going to leave it
+on the composer model, but you could
+change it if you want, but generally now
+just use the composer model. And then
+you have a few other features like the
+ability to upload image, for example.
+So, if you had like a mockup of what you
+wanted the app to look like, you could
+just put it here and tell it build this,
+right? You have this web browser feature
+now, which is something new, which
+allows um what is it? cursor to actually
+use a web browser to test the
+application for you, which is really
+cool, and it will just automatically do
+that as long as you have that enabled.
+You can also add other tools, which we
+won't talk about right now. And then you
+have this context, which allows you to
+actually refer to specific files,
+folders, terminals, browsers, all kinds
+of stuff. So, you can explain to the
+model more in depth what it is that
+you're looking for. So, I'll show you
+that in one second, but let's go back to
+this agent here. And we can see that I
+believe it has finished. and we'll know
+that it's finished because we now have
+this awaiting review tab which tells us
+that we need to review the code that
+it's generated and see if this code is
+good. So there's a little review button
+here. So I'm going to press on review.
+When we do that, it's going to open up
+something called a diff. Now a diff is
+essentially a list of all of the changes
+that have been made by this agent.
+Cursors kind of change the way that it's
+shown the diffs now. And you can see
+that it's in this kind of file. And we
+can collapse them or open up the
+individual file by pressing into it. So
+here I'm just looking at one file. I can
+click between the files or I can go back
+to this view and I can kind of scroll
+through them and just see everything
+that's changed. So what I typically
+suggest that you do rather than just
+pressing, you know, keep all is test
+your code first, make sure it works, and
+then press accept all. The reason for
+this is that the way the cursor makes
+changes is when you see them here,
+they're effectively already made. So
+they already exist in your files. the
+code is already here and it's going to
+stay there unless you press this undo
+all button. This is kind of an important
+distinction because a lot of people get
+confused by this. Once you ask the model
+to do something, the code it's generated
+is just there. Like if I close the file
+right now or close the project, reopen
+it, this code is still here. If I wanted
+to remove it because maybe it made a
+mistake or it did something I don't
+want, I need to press this undo all
+button. but it can sometimes go away or
+you can lose this undo all button
+especially if you get further into the
+project or you keep using this agent. So
+that's why I'm saying before we press
+this keep all button we want to make
+sure that we actually review the code.
+So in my opinion reviewing the code from
+here is a little bit difficult. I don't
+really like this view myself. So what
+I'm going to do is switch over to the
+editor view. Now, from the editor view,
+you're going to see now that in my
+opinion, it's a little bit easier to
+read the code, and you can actually view
+the different files that have been
+written in the left hand side here. So,
+it's going to show you all of the files
+and the directory structure. So, from
+here, you can review the code, press
+keep, write, or undo if you know what
+the code is doing. But what I'm going to
+suggest is that you actually run the
+project, see what the output is, and
+then ask the model either to make some
+changes or to keep it if it's working.
+So, what I'm going to do is I'm going to
+change the agent here to ask mode. And
+I'm going to say, how can I test and run
+this code?
+And I'm going to see what it tells me.
+And notice that because I'm in ask mode,
+it's not going to generate any files for
+me. So, it simply says, okay, install
+live server and then rightclick
+index.html.
+Okay, so if I didn't know how to do
+that, I would ask it how to install
+liveerver. But I know that if you go to
+this extensions tab
+and you type live server. So this is
+extensions here inside of VS Code or
+inside of cursor you can install this
+thing called live server which I already
+have installed. Once it's installed then
+I can go back to my files. Notice
+there's some buttons up here right that
+I'm pressing that allow you to toggle
+between different features. See there's
+a bunch of them. Extensions, source
+control, searching, right? Probably
+pretty intuitive. So I'm going to go
+back to the explorer and I'm going to
+rightclick index.html html and press
+open with live server just like it told
+me, right? So, I'm going to open that
+with the live server. And now this goes
+into my browser. I'm going to press
+start game. And I can see that I can
+kind of move this around and that I can
+play Tetris.
+Okay. And it seems to be working pretty
+well. If I press the enter key, I can
+pause it. Okay. Pretty cool. So, that's
+all good. So, because that's good, what
+I'm going to do is I'm going to go back
+here and I'm going to go to my review
+page. So, either I can do it right here
+by just pressing keep all or I can go
+back to agents. And let's just close
+these. And I can press keep individual
+files or keep all. And I'm going to
+press keep all. And now I've kept all of
+the files. And now the changes that you
+see here, it's just showing me the
+changes that were made, but I can't
+really like undo them very easily. So
+that's why you want to be really careful
+when you do this review and you keep it
+or you undo it. I hope that kind of
+makes sense. But that is how you review
+the code, which is probably the most
+confusing part to be honest of this
+tool. So what I'm going to do now is
+show you a few other features that are
+definitely worth noting. So once I've
+made kind of some major changes, I do
+like to go into the editor mode. Now
+from the editor mode, maybe I want to
+like read through the code and maybe I
+want to make a change to a specific
+function. You know, if I actually know
+what I'm doing, right? I know how to
+code. So if I like highlight this
+function for example, you'll see that I
+actually have a few uh little things
+that pop up directly for me. Now I have
+this quick edit which I can access with
+control K or command K. This will allow
+me to just make a really small change
+directly in the file. So I can say you
+know clean up this code or something and
+add comments. Okay. And if I do that
+then it will just change whatever I've
+highlighted. So I'm doing like a really
+targeted precise change. And then of
+course if I don't want that I can just
+reject it and get rid of it. Right. I
+also have the ability to reference this
+directly in my agent. So maybe I'm going
+to hit this button, right? Control L.
+And now it's going to reference this
+code directly. And I could ask the
+agent, you know, what does this code do?
+Okay, I just spelled that wrong. But now
+I'm in ask mode. So it's going to read
+through this and it's going to explain
+it to me kind of line by line so I can
+understand what it's doing. And you can
+see it's quite fast. And if I didn't
+want to do that and maybe I wanted to
+just reference an entire file or
+something, I can use this at symbol and
+then I can reference individual files. I
+can reference documentation. So I could
+add like my own documentation here, for
+example, and reference that or I could
+just reference a file. So let's
+reference like game.js. Is this, you
+know, good code? I don't know, random,
+right? I'm just showing you that you can
+kind of add the context to the chat
+window. And these are useful things that
+I always do as a developer. I'm like
+looking at a specific function where
+maybe I don't quite understand it or I
+don't know know why it was generated and
+I'll ask the model you know explain this
+or fix it or make this really targeted
+change. So at the beginning you start
+doing a lot of changes and as the code
+gets larger and larger you do smaller
+amounts of changes that are a lot more
+targeted so you get a more predictable
+result that you're actually able to
+reveal. Now, for some reason you are
+planning on actually writing your own
+code. I just want to quickly show you
+that if you do start writing, you will
+get autocomplete by default inside of
+cursor. So notice that it's just like
+predicting the next line that I'm going
+to write. If you want to accept this
+prediction, you can simply hit the tab
+key on your keyboard. By doing that, it
+will just complete the line. So you can
+see like I'm just typing something and
+then if I hit tab, it just does the
+completion. Just wanted to show you
+that. That's another way to kind of use
+the AI. like we have the chat window, we
+have kind of that quick inline edit that
+you saw that was like you know the
+precise change to a highlighted portion
+and then we have the autocomplete if you
+are actually writing your own code
+directly inside of the file. Okay, so
+that's most of the usage of the AI and
+just keep in mind that I can run
+multiple of these agents at the same
+time if I wanted to and I can kind of
+have an agent running in the background
+while I go and do something else. So
+let's actually do that. Let's open up a
+new agent. And just so you're aware
+here, you should make a new agent when
+you want to do a different task. So if I
+still wanted to continue working on my
+game and I wanted to just kind of go
+based off the code that was just written
+here, I would do it in this agent, the
+one that currently exists, because it
+knows all of the decisions it just made.
+It has access to all of this context. So
+it's going to probably give me a better
+result if I put it directly inside of
+this agent, right? But if I want to do
+another discrete separate task, I make a
+new agent. And then in this agent, I ask
+it what I want it to do. So in this
+case, I'm going to say the following.
+Please create a simple landing page that
+is decoupled from the game that just
+kind of advertises Tetris and has a
+button that says play and then redirects
+me to the game where I can actually
+start playing. So I'm just asking it for
+a landing page. Again, this is a
+separate thing kind of detached from the
+game. So I'm putting in a new agent. I'm
+going to go ahead and press on start.
+And then it's going to start actually
+generating the code. Now, if I wanted
+to, I could have asked it to come up
+with a plan for this first, but because
+this is a relatively simple task, I've
+decided just to go ahead and press enter
+and let it kind of do a more simple plan
+itself because it will automatically
+plan if it needs to and then start
+generating the code. Okay, so this
+agent's running. What I'm going to do
+now is I'm going to go back into the
+editor and I'm just going to start doing
+some other stuff. So, for example, I'm
+going to open this. I'm going to close
+all these files. I'm going to start kind
+of cleaning up the tabs and I'm going to
+show you some other features that cursor
+has. So if you go to the settings wheel
+here, what I want to show you is that
+you can change first of all all of the
+settings for like the agents for the
+tabs for the various models. You can
+enable, disable, add your own models
+here. And you also have access to
+various tools and MCP servers which you
+can put in here or you can go to rules,
+memories and commands. Now this is the
+one that I want to show you now. So
+inside of cursor you have the ability to
+add project rules or global rules.
+Global rules are also user rules. Now,
+these rules are things that are going to
+be applied whenever you write code
+either globally if you're using a user
+rule or within this project if you're
+using a project rule. Now, rules are
+really smart to set up if you want the
+agent to follow a consistent kind of
+format or pattern or you just have
+something you don't want it to do or
+that you want it to always do. For
+example, if your boss tells you, hey,
+you can only write in this style of code
+or you have to use, you know, C++ 14,
+you can't use a newer version. You can
+just make a rule in cursor and tell it,
+hey, always do this thing, always do
+this thing, follow this rule. And
+without you having to repeat that
+multiple times, it will just
+automatically follow it. So, for
+example, I can go to add rule for a
+project cuz I just want it for this
+specific project. And I'm going to say,
+you know, let's go just general for the
+name of the rule file. And I'm able to
+just write in the rules here that I want
+to be followed. And you'll notice that
+there's this thing that says always
+apply, apply intelligently, apply to
+specific files. So you can be really
+targeted with your rules. Like in a
+specific file, maybe you never want it
+to touch it. You can just do this and
+say, okay, you know, for any.tsx file, I
+don't want anything to be touched. I
+don't want you to change anything. In my
+case, I'm just going to go always apply.
+And I'm just going to put a rule. And
+I'm going to say always generate doc
+strings
+for functions. Okay. And now that I have
+this in the rule file, you'll see this
+folder gets created that stores the rule
+for me in this markdown C file, which is
+markdown cursor rules file. And if I
+start writing code now, this rule will
+just automatically be applied. And it
+should, if it writes a function, follow
+that rule. Now, a few other things to go
+over, but let's quickly go back and
+check our agent. So, I'm going to go to
+the agents tab, and we can see that this
+agent is awaiting review. So, it says
+that it's kind of done the landing page.
+The landing page is here. I can press on
+review. I can see all the files. In this
+case, I'm just going to kind of blindly
+press on keep all because I can just
+trust that it's done that. And then we
+can check out the landing page and see
+if that works. So, let's quickly check
+out the landing page. I'm going to go
+back to the editor again because this is
+kind of the view that I prefer. I want
+to understand how to run the landing
+page. So, I'm going to say, okay, let's
+go to ask mode. You know, how do I open
+the landing page? And then let's see if
+it gives me the instructions. And okay,
+it says that I can just rightclick it
+and open it. So, let's go to I think
+it's index.html. Let's right click it.
+I'm just going to open it with the live
+server. And you see now that we get the
+Tetris landing page. And if I press
+play, it runs it and brings me into the
+game. Boom. Right there you go. All of
+that's working. Pretty simple for it to
+do, but you can see kind of how I'm
+following along with this process. Now,
+let's keep going and I want to show you
+a few other features that are worth
+noting. So, first of all, version
+control. Okay. So if you go to kind of
+this view again, go into the editor,
+you'll see that you have this kind of
+like branch looking thing which is your
+version control window. Now if you also
+go here, you can just press on source
+control or version control. Now this
+uses something called git. If you don't
+have git installed on your computer, you
+will need to install it. And this is
+something that allows you to essentially
+track and store all of the code changes
+that you're making so that if something
+goes wrong in the future, you can kind
+of revert back to a previous version.
+It's kind of like checkpointing your
+code or like saving your work in a more
+permanent way so that if the model goes
+and like makes all these wild changes
+and it does something really really bad,
+you can at least get back to a state
+that was working previously. Now, I'm
+not going to explain Git in depth, but
+what I'm going to highly suggest you do
+is watch this video that I'm going to
+put on screen right here, which explains
+Git and how to use it. Now, even though
+the AI can do the source control for
+you, I would highly, highly, highly
+recommend that you understand this
+version control concept because it will
+save you probably a lot of nightmares
+that will come up if you are building
+especially a large project. Now, if you
+just want to kind of cheat through this,
+what I'm going to ask you to do is just
+pretty much tell the agent to use git.
+So, I'm going to tell it, hey, use
+source control /git and save this work.
+Okay? Okay, so that it's going to just
+run the commands automatically for me to
+essentially save the work for me. Okay,
+and this is something I would suggest
+doing. So you can see that it's now
+showing me, okay, it's running this
+command. It's seeing that there's no,
+you know, git repository here. It's
+creating a git repository for me. And
+this is something the model's capable of
+doing is automatically running commands
+for you. Now, sometimes it may ask you
+to approve a command that's intended.
+You can approve it, you can reject it.
+In my case, I have it set to just always
+allow. So it always runs the commands.
+And you can see that what it's done is
+it's initialized a new git repo, added
+the files, created a commit which is
+like a save or a checkpoint, and then
+actually just saved the work for me. And
+now if I go to my source control, you
+see that this kind of new window
+appears. And in the bottom left, you see
+that it shows me actually the commit
+that just occurred. And the more commits
+that you have, you'll kind of get this
+timeline of all of the changes that have
+been made. You may not understand it
+100%, but this is a really useful thing
+to use for your projects. and I highly
+suggest that you do it. So that's pretty
+much it. Just the last thing I will
+mention is that you can use MCP servers
+as I kind of briefly touched on before.
+So you have something called tools/mcp.
+You have the ability here to add MCP
+servers by pressing this new MCP server
+button. Now I'm not going to really walk
+through this, but you can see this is an
+MCP server that I have that allows me to
+run something called Tiger Data, which
+is a pretty cool kind of forkable AI
+database. And if you add different MCP
+servers here, your agent now has the
+ability to call those servers and kind
+of connect to external tools and just
+has more functionality. So just kind of
+be aware that, you know, if you've heard
+of MCP before, model context protocol,
+you can add that in here. In my case,
+I've got four tools in mine and you can
+see kind of what some of the tools are
+and some of the things that it can run.
+You get the idea, okay? And you can kind
+of toggle it on and off. I'm just
+mentioning it exists. Look into it if
+it's interesting to you. Not going to be
+in the scope of this tutorial. So that's
+it guys for this video. If you enjoyed,
+make sure to leave a like, subscribe to
+the channel, and I will see you in
+another video.

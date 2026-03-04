@@ -1,0 +1,755 @@
+{
+  "site_name": "Kleki",
+  "site_url": "https://kleki.com",
+  "tools": {
+    "Brush": {
+      "tool_name": "Brush",
+      "shortcut": "B",
+      "interaction_mode": "path_trace",
+      "description": "Primary tool for drawing and painting on the canvas. Its properties (size, opacity, scatter, etc.) can be adjusted in the right-hand panel. Different brush types like Pen, Sketchy, and Pixel are available.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Eraser": {
+      "tool_name": "Eraser",
+      "shortcut": "E",
+      "interaction_mode": "path_trace",
+      "description": "Removes pixels from the active layer. It functions like a brush but makes pixels transparent.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Smudge Tool": {
+      "tool_name": "Smudge Tool",
+      "shortcut": null,
+      "interaction_mode": "path_trace",
+      "description": "Blends and pushes existing colors on the canvas without adding new color. [5]",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Hand/Pan Tool": {
+      "tool_name": "Hand/Pan Tool",
+      "shortcut": "Spacebar (hold) or Middle Mouse Button",
+      "interaction_mode": "click_drag",
+      "description": "Moves the entire canvas view without altering the artwork. Useful for navigating a zoomed-in image. [1, 5]",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Eyedropper": {
+      "tool_name": "Eyedropper",
+      "shortcut": "Alt (hold) or Right Mouse Button",
+      "interaction_mode": "click_place",
+      "description": "Selects a color from any pixel on the canvas and sets it as the current brush color. [1, 7]",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Paint Bucket": {
+      "tool_name": "Paint Bucket",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Fills a contiguous area of similar color with the currently selected color. Settings like 'Tolerance' and 'Grow' can be adjusted. [1]",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Gradient Tool": {
+      "tool_name": "Gradient Tool",
+      "shortcut": null,
+      "interaction_mode": "path_trace",
+      "description": "Creates a gradient fill by dragging a line on the canvas. The gradient transitions from the primary color to transparent by default. [5]",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Shape Tool": {
+      "tool_name": "Shape Tool",
+      "shortcut": null,
+      "interaction_mode": "bounding_box",
+      "description": "Draws geometric shapes like rectangles, ellipses, and lines. [5]",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Text Tool": {
+      "tool_name": "Text Tool",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Adds text to the canvas. Clicking on the canvas opens a dialog to type and format the text. [5]",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Transform Tool": {
+      "tool_name": "Transform Tool",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Allows for resizing, rotating, and moving the content of the active layer. [1]",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Zoom": {
+      "tool_name": "Zoom",
+      "shortcut": "Z (hold) + drag, or + / - keys",
+      "interaction_mode": "click_drag",
+      "description": "Zooms the canvas view in or out. Can be activated by holding Z and dragging horizontally, using the + and - keys, or using the mouse scroll wheel. [1]",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "brush_tool": {
+      "tool_name": "brush_tool",
+      "shortcut": null,
+      "interaction_mode": "path_trace",
+      "description": "Draws strokes on the canvas using the current color and brush settings.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "pan_tool": {
+      "tool_name": "pan_tool",
+      "shortcut": null,
+      "interaction_mode": "path_trace",
+      "description": "Moves or pans the canvas view without drawing.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "add_layer_button": {
+      "tool_name": "add_layer_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Adds a new layer to the document.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "undo_button": {
+      "tool_name": "undo_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Reverts the last action performed.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "redo_button": {
+      "tool_name": "redo_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Re-applies the last action that was undone.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "layer_visibility_toggle": {
+      "tool_name": "layer_visibility_toggle",
+      "shortcut": null,
+      "interaction_mode": "toggle",
+      "description": "Shows or hides the contents of the associated layer.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "color_picker": {
+      "tool_name": "color_picker",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Selects the active drawing color from a saturation/value field and a hue slider.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "eyedropper_tool": {
+      "tool_name": "eyedropper_tool",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Picks a color from the canvas and sets it as the active color.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "brush_type_selector": {
+      "tool_name": "brush_type_selector",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Selects from a set of different brush rendering styles.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "brush_size_control": {
+      "tool_name": "brush_size_control",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Adjusts the size of the brush tip.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "brush_opacity_control": {
+      "tool_name": "brush_opacity_control",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Adjusts the opacity of the brush strokes.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "brush_scatter_control": {
+      "tool_name": "brush_scatter_control",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Adjusts the scatter effect of the brush strokes.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "brush_shape_selector": {
+      "tool_name": "brush_shape_selector",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Selects the shape of the brush tip from a set of presets.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "lock_alpha_toggle": {
+      "tool_name": "lock_alpha_toggle",
+      "shortcut": null,
+      "interaction_mode": "toggle",
+      "description": "Toggles locking of the layer's alpha channel, preventing drawing on transparent pixels.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "open_file_button": {
+      "tool_name": "open_file_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Opens an existing image file.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "save_file_button": {
+      "tool_name": "save_file_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Saves or exports the current image.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "share_button": {
+      "tool_name": "share_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Opens a dialog to share the image.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "rules": [
+    {
+      "rule": "To draw a line: First, select a color from the color picker. Second, select the Brush tool ('B'). Third, adjust brush settings like Size ('[', ']') and Opacity. Finally, click and drag the mouse on the canvas.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To clear the entire canvas: Click the 'New' icon in the top right toolbar. In the subsequent dialog, confirm the desired canvas size and background color, then click 'OK'. Be aware this action is destructive and will replace the current image.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To save your work with layers: Click the 'Save' icon. From the dropdown menu, select 'Save PSD'. This will download a .psd file that preserves all layer information for future editing in Kleki or other compatible software. [1, 5]",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To fill an area with color: First, select the desired color. Second, select the Paint Bucket tool. Third, adjust 'Tolerance' and 'Grow' settings as needed. Finally, click on the area of the canvas you wish to fill. For clean fills on line art, it is recommended to have the line art on a separate layer above the fill layer. [1]",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To change a layer's opacity: Select the desired layer in the layers panel. Click on the 'Opacity' value (e.g., '100%') to reveal a slider. Drag the slider to the desired opacity level.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Kleki does not have a traditional auto-save feature to the cloud. It uses browser storage for recovery, which is device-specific. [5, 6] Use 'Ctrl+S' to save a PNG or 'Ctrl+Shift+S' to save to browser storage frequently to avoid losing work. [1, 3]",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Saving as a PNG will flatten the image and discard all layer information. To preserve layers, you must save as a PSD file. [5]",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Browser shortcuts (like Ctrl+W to close tab) can interfere with the application. Be mindful of which shortcuts are for the app versus the browser.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Some browsers have a 'memory saver' mode that can cause the tab to refresh when you switch away from it, potentially losing recent, unsaved changes. It's recommended to add kleki.com to the memory saver's exception list. [1]",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Pressure sensitivity for styluses is supported but may require configuration in your browser or system settings to work correctly. [1]",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Select a color from the color picker before drawing with the brush tool.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Adjust brush settings like size, opacity, and scatter before drawing to affect the stroke's appearance.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Select a target layer from the layers panel before drawing.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "For architectural linework in Kleki, normalize render state first: brush tool, scatter 0, low stabilizer, very thin size, and full opacity before structural strokes.",
+      "source": "official_help",
+      "confidence": 0.9,
+      "supporting_runs": [
+        "2b70a9a006b0"
+      ]
+    },
+    {
+      "rule": "Kleki documents Shift while drawing as a line tool; prefer this or a shape/line mode for straight architectural segments instead of unconstrained freehand brush strokes.",
+      "source": "official_help",
+      "confidence": 0.9,
+      "supporting_runs": [
+        "2b70a9a006b0"
+      ]
+    }
+  ],
+  "shortcuts": {
+    "Ctrl+Z": "Undo last action. [1]",
+    "Ctrl+Y": "Redo last action. [1]",
+    "Ctrl+S": "Save image as a PNG file. [1, 5]",
+    "Ctrl+Shift+S": "Save image to browser's local storage. [1, 5]",
+    "B": "Select Brush tool. [7]",
+    "E": "Select Eraser tool. [7]",
+    "Spacebar": "Hold to temporarily activate Hand/Pan tool. [5]",
+    "Alt": "Hold to temporarily activate Eyedropper tool. [7]",
+    "[": "Decrease brush size. [1]",
+    "]": "Increase brush size. [1]",
+    "R": "Hold and drag to rotate the canvas view. [1]",
+    "Z": "Hold and drag horizontally to zoom. [1]",
+    "+": "Zoom in. [1]",
+    "-": "Zoom out. [1]",
+    "Delete": "Clear the active layer. [5]",
+    "Backspace": "Clear the active layer. [5]",
+    "Enter": "Fill the active layer with the current color. [5]",
+    "Ctrl+Alt": "Show HUD Color Picker overlay near the cursor. [1]"
+  },
+  "modal_patterns": [
+    {
+      "trigger": "Clicking the 'New' icon (document with plus sign).",
+      "handler": "A dialog appears asking for canvas dimensions (width, height) and background color. Options include presets and a transparent background toggle. Click 'OK' to create the new canvas. This will replace the current work, so save first."
+    },
+    {
+      "trigger": "Clicking the 'Save' icon (blue downward arrow).",
+      "handler": "A dialog appears with options to save as 'PNG', 'PSD', or 'Layers (PNG)'. Selecting an option initiates a browser file download. No system 'Save As' dialog is shown directly; the file is typically saved to the browser's default 'Downloads' folder. [5, 9]"
+    },
+    {
+      "trigger": "Clicking the 'Import' icon (folder).",
+      "handler": "The standard operating system file picker dialog appears, allowing the user to select an image file to import onto a new layer. [10]"
+    },
+    {
+      "trigger": "Using the Text Tool.",
+      "handler": "After clicking on the canvas with the Text Tool, a modal dialog appears. This dialog contains a text input field, and options for font, size, color, and formatting. The text updates on the canvas in real-time as you type. [5]"
+    }
+  ],
+  "button_map": {
+    "undo_button": {
+      "element_name": "undo_button",
+      "pixel_x": 2520,
+      "pixel_y": 225,
+      "som_zone_id": 23,
+      "element_type": "button",
+      "description": "Reverts the last action."
+    },
+    "redo_button": {
+      "element_name": "redo_button",
+      "pixel_x": 2760,
+      "pixel_y": 225,
+      "som_zone_id": 24,
+      "element_type": "button",
+      "description": "Re-applies the last undone action."
+    },
+    "download_button": {
+      "element_name": "download_button",
+      "pixel_x": 2760,
+      "pixel_y": 225,
+      "som_zone_id": 24,
+      "element_type": "button",
+      "description": "Opens options to save or download the image."
+    },
+    "help_button": {
+      "element_name": "help_button",
+      "pixel_x": 2760,
+      "pixel_y": 225,
+      "som_zone_id": 24,
+      "element_type": "button",
+      "description": "Opens the help or information panel."
+    },
+    "brush_tool": {
+      "element_name": "brush_tool",
+      "pixel_x": 2520,
+      "pixel_y": 375,
+      "som_zone_id": 35,
+      "element_type": "tool",
+      "description": "Selects the brush tool for drawing."
+    },
+    "pan_tool": {
+      "element_name": "pan_tool",
+      "pixel_x": 2520,
+      "pixel_y": 375,
+      "som_zone_id": 35,
+      "element_type": "tool",
+      "description": "Selects the hand/pan tool to move the canvas."
+    },
+    "add_layer_button": {
+      "element_name": "add_layer_button",
+      "pixel_x": 2520,
+      "pixel_y": 375,
+      "som_zone_id": 35,
+      "element_type": "button",
+      "description": "Adds a new layer to the canvas."
+    },
+    "layer_1_button": {
+      "element_name": "layer_1_button",
+      "pixel_x": 2520,
+      "pixel_y": 375,
+      "som_zone_id": 35,
+      "element_type": "button",
+      "description": "Selects 'Layer 1' for editing."
+    },
+    "layer_opacity_slider": {
+      "element_name": "layer_opacity_slider",
+      "pixel_x": 2760,
+      "pixel_y": 375,
+      "som_zone_id": 36,
+      "element_type": "slider",
+      "description": "Adjusts the opacity of the selected layer."
+    },
+    "layer_options_button": {
+      "element_name": "layer_options_button",
+      "pixel_x": 2760,
+      "pixel_y": 375,
+      "som_zone_id": 36,
+      "element_type": "button",
+      "description": "Opens a menu with more layer options."
+    },
+    "file_menu_button": {
+      "element_name": "file_menu_button",
+      "pixel_x": 2520,
+      "pixel_y": 525,
+      "som_zone_id": 47,
+      "element_type": "button",
+      "description": "Opens the file menu (e.g., New, Open, Save)."
+    },
+    "brush_settings_toggle": {
+      "element_name": "brush_settings_toggle",
+      "pixel_x": 2520,
+      "pixel_y": 525,
+      "som_zone_id": 47,
+      "element_type": "toggle",
+      "description": "Shows or hides the brush settings panel."
+    },
+    "options_menu_button": {
+      "element_name": "options_menu_button",
+      "pixel_x": 2760,
+      "pixel_y": 525,
+      "som_zone_id": 48,
+      "element_type": "button",
+      "description": "Opens the application options or settings menu."
+    },
+    "color_picker_box": {
+      "element_name": "color_picker_box",
+      "pixel_x": 2520,
+      "pixel_y": 675,
+      "som_zone_id": 59,
+      "element_type": "swatch",
+      "description": "Selects the saturation and brightness of the current color."
+    },
+    "hue_slider": {
+      "element_name": "hue_slider",
+      "pixel_x": 2520,
+      "pixel_y": 975,
+      "som_zone_id": 83,
+      "element_type": "slider",
+      "description": "Selects the hue of the current color."
+    },
+    "eyedropper_tool": {
+      "element_name": "eyedropper_tool",
+      "pixel_x": 2520,
+      "pixel_y": 975,
+      "som_zone_id": 83,
+      "element_type": "tool",
+      "description": "Selects a color from the canvas."
+    },
+    "hex_color_input": {
+      "element_name": "hex_color_input",
+      "pixel_x": 2520,
+      "pixel_y": 975,
+      "som_zone_id": 83,
+      "element_type": "button",
+      "description": "Displays and allows editing of the current color's hex code."
+    },
+    "stabilizer_setting": {
+      "element_name": "stabilizer_setting",
+      "pixel_x": 2760,
+      "pixel_y": 975,
+      "som_zone_id": 84,
+      "element_type": "button",
+      "description": "Adjusts the brush stroke stabilization level."
+    },
+    "s_tool": {
+      "element_name": "s_tool",
+      "pixel_x": 2280,
+      "pixel_y": 1125,
+      "som_zone_id": 94,
+      "element_type": "tool",
+      "description": "Selects the 'S' tool, likely for selection or smudge."
+    },
+    "brush_size_slider": {
+      "element_name": "brush_size_slider",
+      "pixel_x": 2520,
+      "pixel_y": 1125,
+      "som_zone_id": 95,
+      "element_type": "slider",
+      "description": "Adjusts the size of the current brush."
+    },
+    "pixel_brush_tool": {
+      "element_name": "pixel_brush_tool",
+      "pixel_x": 2520,
+      "pixel_y": 1125,
+      "som_zone_id": 95,
+      "element_type": "tool",
+      "description": "Selects the pixel brush tool."
+    },
+    "smudge_tool": {
+      "element_name": "smudge_tool",
+      "pixel_x": 2520,
+      "pixel_y": 1125,
+      "som_zone_id": 95,
+      "element_type": "tool",
+      "description": "Selects the smudge tool to blend colors."
+    },
+    "eraser_tool": {
+      "element_name": "eraser_tool",
+      "pixel_x": 2520,
+      "pixel_y": 1125,
+      "som_zone_id": 95,
+      "element_type": "tool",
+      "description": "Selects the eraser tool."
+    },
+    "brush_preview_button": {
+      "element_name": "brush_preview_button",
+      "pixel_x": 2760,
+      "pixel_y": 1125,
+      "som_zone_id": 96,
+      "element_type": "button",
+      "description": "Opens a menu to select different brush types or presets."
+    },
+    "size_pressure_toggle": {
+      "element_name": "size_pressure_toggle",
+      "pixel_x": 2760,
+      "pixel_y": 1125,
+      "som_zone_id": 96,
+      "element_type": "toggle",
+      "description": "Toggles pressure sensitivity for brush size."
+    },
+    "brush_opacity_slider": {
+      "element_name": "brush_opacity_slider",
+      "pixel_x": 2520,
+      "pixel_y": 1275,
+      "som_zone_id": 107,
+      "element_type": "slider",
+      "description": "Adjusts the opacity of the current brush."
+    },
+    "brush_scatter_slider": {
+      "element_name": "brush_scatter_slider",
+      "pixel_x": 2520,
+      "pixel_y": 1350,
+      "som_zone_id": 107,
+      "element_type": "slider",
+      "description": "Adjusts the scatter effect of the current brush; architectural work should keep this near zero."
+    },
+    "opacity_pressure_toggle": {
+      "element_name": "opacity_pressure_toggle",
+      "pixel_x": 2760,
+      "pixel_y": 1275,
+      "som_zone_id": 108,
+      "element_type": "toggle",
+      "description": "Toggles pressure sensitivity for brush opacity."
+    },
+    "scatter_pressure_toggle": {
+      "element_name": "scatter_pressure_toggle",
+      "pixel_x": 2760,
+      "pixel_y": 1275,
+      "som_zone_id": 108,
+      "element_type": "toggle",
+      "description": "Toggles pressure sensitivity for brush scatter."
+    },
+    "brush_shape_round": {
+      "element_name": "brush_shape_round",
+      "pixel_x": 2520,
+      "pixel_y": 1425,
+      "som_zone_id": 119,
+      "element_type": "button",
+      "description": "Selects a round brush shape."
+    },
+    "brush_shape_textured": {
+      "element_name": "brush_shape_textured",
+      "pixel_x": 2520,
+      "pixel_y": 1425,
+      "som_zone_id": 119,
+      "element_type": "button",
+      "description": "Selects a textured brush shape."
+    },
+    "brush_shape_oval": {
+      "element_name": "brush_shape_oval",
+      "pixel_x": 2520,
+      "pixel_y": 1425,
+      "som_zone_id": 119,
+      "element_type": "button",
+      "description": "Selects an oval brush shape."
+    },
+    "brush_shape_square": {
+      "element_name": "brush_shape_square",
+      "pixel_x": 2520,
+      "pixel_y": 1425,
+      "som_zone_id": 119,
+      "element_type": "button",
+      "description": "Selects a square brush shape."
+    },
+    "lock_alpha_toggle": {
+      "element_name": "lock_alpha_toggle",
+      "pixel_x": 2520,
+      "pixel_y": 1425,
+      "som_zone_id": 119,
+      "element_type": "toggle",
+      "description": "Toggles alpha lock for the current layer, preventing drawing on transparent areas."
+    },
+    "swap_colors_button": {
+      "element_name": "swap_colors_button",
+      "pixel_x": 2520,
+      "pixel_y": 1575,
+      "som_zone_id": 131,
+      "element_type": "button",
+      "description": "Swaps the primary and secondary colors."
+    },
+    "brush_tool_button": {
+      "element_name": "brush_tool_button",
+      "pixel_x": 2520,
+      "pixel_y": 375,
+      "som_zone_id": 35,
+      "element_type": "tool",
+      "description": "Selects the brush tool for drawing architectural structure."
+    },
+    "brush_stabilizer_control": {
+      "element_name": "brush_stabilizer_control",
+      "pixel_x": 2760,
+      "pixel_y": 975,
+      "som_zone_id": 84,
+      "element_type": "button",
+      "description": "Numeric stabilizer control for the current brush."
+    },
+    "shape_tool_button": {
+      "element_name": "shape_tool_button",
+      "pixel_x": 0,
+      "pixel_y": 0,
+      "som_zone_id": null,
+      "element_type": "tool",
+      "description": "No stable on-screen anchor learned yet; prefer shortcut U for Kleki shape/line mode."
+    }
+  },
+  "research_notes": "COLOR WORKFLOW: To change the active drawing color, use the color picker panel on the right. Click and drag within the large saturation/brightness square to pick a shade. Then, drag the slider below it to select the hue. Alternatively, click the '#' button to manually input a hex color code. The Eyedropper tool (shortcut: 'Alt') can also be used to pick a color directly from the canvas. Kleki uses a single-color system for its raster tools; there is no separate concept of 'stroke' and 'fill' colors like in vector applications. The selected color applies to the currently active tool (Brush, Paint Bucket, Shape, etc.).\nGOTCHA: Kleki does not have a traditional auto-save feature to the cloud. It uses browser storage for recovery, which is device-specific. [5, 6] Use 'Ctrl+S' to save a PNG or 'Ctrl+Shift+S' to save to browser storage frequently to avoid losing work. [1, 3]\nGOTCHA: Saving as a PNG will flatten the image and discard all layer information. To preserve layers, you must save as a PSD file. [5]\nGOTCHA: Browser shortcuts (like Ctrl+W to close tab) can interfere with the application. Be mindful of which shortcuts are for the app versus the browser.\nGOTCHA: Some browsers have a 'memory saver' mode that can cause the tab to refresh when you switch away from it, potentially losing recent, unsaved changes. It's recommended to add kleki.com to the memory saver's exception list. [1]\nGOTCHA: Pressure sensitivity for styluses is supported but may require configuration in your browser or system settings to work correctly. [1]"
+}

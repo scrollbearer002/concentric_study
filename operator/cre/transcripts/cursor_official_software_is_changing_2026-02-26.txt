@@ -1,0 +1,18 @@
+To build software, you've always had to
+break down your ideas into [music] small
+bits of logic a computer could
+understand. If this, then that, run this
+loop.
+Even today, [music] as agents write code
+for you, your constant attention is
+required.
+Micromanagement is not the [music]
+future of software engineering.
+What if you could trust agents to take
+an idea and run with it?
+if they were free to explore [music] and
+try things in their own computers.
+What if your ideas came back as live
+features and reviewing [music] changes
+was as easy as hitting I
+[music]

@@ -1,0 +1,4 @@
+# Legacy dependencies for the older Hammerspoon/OpenAI stack.
+
+requests>=2.31.0
+openai>=1.0.0

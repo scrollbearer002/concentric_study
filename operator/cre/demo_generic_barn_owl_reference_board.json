@@ -1,0 +1,83 @@
+{
+  "schema": "reference_board_v1",
+  "purpose": "Reference-grounded drawing and visual planning before substantive art execution",
+  "lanes": [
+    {
+      "name": "subject_identity",
+      "description": "Brand, object, or character identity cues",
+      "references": [
+        {
+          "title": "barn owl identity references",
+          "url": null,
+          "rationale": "Use authoritative or canonical images to lock the subject identity before drawing.",
+          "source_type": "search_query",
+          "query": "barn owl official reference images"
+        },
+        {
+          "title": "aviator fashion style identity references",
+          "url": null,
+          "rationale": "Use the named brand, franchise, or identity source to ground distinctive visual cues.",
+          "source_type": "search_query",
+          "query": "aviator fashion official design reference"
+        }
+      ]
+    },
+    {
+      "name": "real_world_anatomy_or_form",
+      "description": "Ground-truth structure, anatomy, silhouette, or material references",
+      "references": [
+        {
+          "title": "barn owl anatomy/form references",
+          "url": null,
+          "rationale": "Use real-world structure, silhouette, and proportions as the grounding layer.",
+          "source_type": "search_query",
+          "query": "barn owl anatomy reference"
+        }
+      ]
+    },
+    {
+      "name": "costume_or_style_family",
+      "description": "Clothing, era, movement, or stylistic references",
+      "references": [
+        {
+          "title": "vintage aviator jacket costume/style references",
+          "url": null,
+          "rationale": "Use the requested clothing, era, or style family to ground wardrobe and accessories.",
+          "source_type": "search_query",
+          "query": "vintage aviator jacket clothing reference"
+        }
+      ]
+    }
+  ],
+  "subject_brief": {
+    "one_sentence_goal": "Draw a realistic barn owl wearing a vintage aviator jacket at sunset.",
+    "must_have_parts": [
+      "full barn owl body",
+      "owl face disk",
+      "aviator jacket"
+    ],
+    "must_avoid": [
+      "canvas clipping",
+      "generic costume drift",
+      "unreadable silhouette"
+    ],
+    "style_notes": [
+      "Ground the drawing in references before adding detail.",
+      "Keep the full subject inside calibrated canvas margins.",
+      "Use a multi-pass build: silhouette, structure, detail, color, verification."
+    ]
+  },
+  "composition_plan": {
+    "primary_subject_bbox_goal": "occupy 35%-60% of drawable area unless task says otherwise",
+    "pose": "perched three-quarter pose with readable wings and jacket silhouette",
+    "camera_angle": "slight three-quarter view",
+    "passes": [
+      "silhouette",
+      "anatomy",
+      "costume",
+      "detail",
+      "color",
+      "verification"
+    ]
+  }
+}

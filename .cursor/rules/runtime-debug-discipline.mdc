@@ -1,0 +1,21 @@
+---
+description: Classify runtime failures before editing and capture the right diagnostics
+globs:
+alwaysApply: true
+---
+
+# Runtime Debug Discipline
+
+When debugging:
+- capture the Request ID for Cursor or MCP failures
+- use DevTools console only when the failure looks Cursor-level
+- separate repo/runtime bugs from MCP-routing bugs and sandbox policy issues
+- prefer the smallest reproducible case before changing code
+
+Failure classes to distinguish:
+- repo code or configuration
+- MCP connection, routing, or server behavior
+- sandbox or network policy
+- Cursor product behavior
+
+Do not start patching until the failure class is explicit.

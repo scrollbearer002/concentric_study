@@ -1,0 +1,84 @@
+{
+  "schema": "reference_board_v1",
+  "purpose": "Reference-grounded drawing and visual planning before substantive art execution",
+  "lanes": [
+    {
+      "name": "subject_identity",
+      "description": "Brand, object, or character identity cues",
+      "references": [
+        {
+          "title": "tiger identity references",
+          "url": null,
+          "rationale": "Use authoritative or canonical images to lock the subject identity before drawing.",
+          "source_type": "search_query",
+          "query": "tiger official reference images"
+        },
+        {
+          "title": "Ralph Lauren Polo visual identity style identity references",
+          "url": null,
+          "rationale": "Use the named brand, franchise, or identity source to ground distinctive visual cues.",
+          "source_type": "search_query",
+          "query": "Ralph Lauren Polo visual identity official design reference"
+        }
+      ]
+    },
+    {
+      "name": "real_world_anatomy_or_form",
+      "description": "Ground-truth structure, anatomy, silhouette, or material references",
+      "references": [
+        {
+          "title": "tiger anatomy/form references",
+          "url": null,
+          "rationale": "Use real-world structure, silhouette, and proportions as the grounding layer.",
+          "source_type": "search_query",
+          "query": "tiger anatomy anatomy reference"
+        }
+      ]
+    },
+    {
+      "name": "costume_or_style_family",
+      "description": "Clothing, era, movement, or stylistic references",
+      "references": [
+        {
+          "title": "Iron Man armor from Marvel comics costume/style references",
+          "url": null,
+          "rationale": "Use the requested clothing, era, or style family to ground wardrobe and accessories.",
+          "source_type": "search_query",
+          "query": "Iron Man armor from Marvel comics clothing reference"
+        }
+      ]
+    }
+  ],
+  "subject_brief": {
+    "one_sentence_goal": "Draw a Tiger Wearing Ralph Lauren everything inspired by Iron Man from Marvel comics.",
+    "must_have_parts": [
+      "full tiger figure",
+      "recognizable tiger face and stripes",
+      "Ralph Lauren cue",
+      "red and gold armor tailoring",
+      "smaller figure centered on canvas"
+    ],
+    "must_avoid": [
+      "canvas clipping",
+      "generic cat drift",
+      "scanline fill artifacts",
+      "missing armor color contrast"
+    ],
+    "style_notes": [
+      "Use tiger anatomy first, armor fashion second.",
+      "Keep the figure comfortably inside the canvas with generous margins.",
+      "Use JSPaint fill tool for solid color masses, then add outline/detail."
+    ]
+  },
+  "composition_plan": {
+    "primary_subject_bbox_goal": "occupy 35%-60% of drawable area unless task says otherwise",
+    "pose": "heroic smaller full-body standing pose with centered composition",
+    "camera_angle": "straight-on character poster view",
+    "passes": [
+      "outline",
+      "fill masses",
+      "detail/stripes",
+      "verification"
+    ]
+  }
+}

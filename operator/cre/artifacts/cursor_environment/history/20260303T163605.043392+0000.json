@@ -1,0 +1,98 @@
+{
+  "app": {
+    "author": {
+      "provenance": "direct_package_json",
+      "value": "Anysphere, Inc."
+    },
+    "build_date": {
+      "provenance": "direct_product_json",
+      "value": "2026-02-26T04:57:56.825Z"
+    },
+    "build_type": {
+      "provenance": "inferred_from_quality",
+      "value": "Stable"
+    },
+    "bundle_identifier": {
+      "provenance": "direct_bundle",
+      "value": "com.todesktop.230313mzl4w4u92"
+    },
+    "bundle_version": {
+      "provenance": "direct_bundle",
+      "value": "2.5.26"
+    },
+    "commit": {
+      "provenance": "direct_product_json",
+      "value": "7d96c2a03bb088ad367615e9da1a3fe20fbbc6a0"
+    },
+    "name": {
+      "provenance": "direct_bundle",
+      "value": "Cursor"
+    },
+    "path": "/Applications/Cursor.app",
+    "quality": {
+      "provenance": "direct_product_json",
+      "value": "stable"
+    },
+    "release_notes_url": {
+      "provenance": "direct_product_json",
+      "value": "https://www.cursor.com/changelog"
+    },
+    "release_track": {
+      "provenance": "inferred_from_quality_and_absence_of_channel_metadata",
+      "value": "Default"
+    },
+    "version": {
+      "provenance": "direct_product_json",
+      "value": "2.5.26"
+    },
+    "vscode_version": {
+      "provenance": "direct_product_json",
+      "value": "1.105.1"
+    }
+  },
+  "captured_at_utc": "2026-03-03T16:36:05.043392+00:00",
+  "host": {
+    "architecture": {
+      "provenance": "direct_platform",
+      "value": "arm64"
+    },
+    "kernel": {
+      "provenance": "direct_platform",
+      "value": "25.3.0"
+    },
+    "os": {
+      "provenance": "direct_sw_vers",
+      "value": "macOS"
+    },
+    "os_build": {
+      "provenance": "direct_sw_vers",
+      "value": "25D125"
+    },
+    "os_version": {
+      "provenance": "direct_sw_vers",
+      "value": "26.3"
+    },
+    "shell": {
+      "provenance": "not_captured",
+      "value": null
+    }
+  },
+  "runtime": {
+    "chromium": {
+      "provenance": "direct_runtime",
+      "value": "142.0.7444.265"
+    },
+    "electron": {
+      "provenance": "direct_runtime",
+      "value": "39.4.0"
+    },
+    "node_js": {
+      "provenance": "direct_runtime",
+      "value": "22.22.0"
+    },
+    "v8": {
+      "provenance": "direct_runtime",
+      "value": "14.2.231.22-electron.0"
+    }
+  }
+}

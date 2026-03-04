@@ -1,0 +1,19 @@
+{
+  "url": "https://www.youtube.com/watch?v=2SkrTnGMsr0",
+  "capture": {
+    "mode": "display",
+    "owner_name": "Safari",
+    "window_id": null,
+    "bounds": null,
+    "path": "cre/demo_showoff/front_window.png"
+  },
+  "som_zones": 144,
+  "a11y_backend": "applescript",
+  "a11y_total_elements": 6,
+  "a11y_interactive_elements": 3,
+  "a11y_sample_labels": [
+    "close button",
+    "full screen button",
+    "minimize button"
+  ]
+}

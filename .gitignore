@@ -1,0 +1,47 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+operator/venv/
+
+# Test caches
+.pytest_cache/
+operator/.pytest_cache/
+
+# Local execution artifacts
+operator/cre/runs/
+operator/operator/cre/runs/
+*.log
+operator/cre/project_understanding/artifacts/
+operator/cre/artifacts/full_repo_files_by_mtime.json
+operator/cre/artifacts/whole_project_truth_inventory.json
+operator/cre/artifacts/environment_answer_compliance_log.jsonl
+
+# Generated visual artifacts
+operator/agent_infra/som_*.png
+operator/som_*.png
+operator/cre/**/*.png
+
+# Curated visual assets kept in version control
+!operator/cre/evidence_concentric_clean/*.png
+!operator/cre/evidence_kreska_statue.png
+!operator/cre/reddit_research_demo/home.png
+!operator/cre/reddit_research_demo/home_som.png
+!operator/cre/reddit_research_demo/submit.png
+!operator/cre/reddit_research_demo/submit_som.png
+!operator/cre/reddit_research_demo/draft_filled.png
+!operator/cre/reddit_research_demo/draft_filled_final.png
+!operator/cre/demo_showoff/front_window.png
+!operator/cre/demo_showoff/front_window_som.png
+!operator/cre/iq_test_freewww_result.png
+!operator/cre/iq_test_123test_result.png
+!operator/cre/iq_test_freewww_q*/montage*.png
+!operator/cre/jspaint_*_final.png
+!operator/cre/jspaint_*_canvas.png
+!operator/cre/magma_*_final.png
+
+# macOS
+.DS_Store

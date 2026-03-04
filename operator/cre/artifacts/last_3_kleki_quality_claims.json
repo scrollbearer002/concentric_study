@@ -1,0 +1,45 @@
+{
+  "task_family": "kleki_architectural_art",
+  "baseline_run": "2b70a9a006b0",
+  "claims": [
+    {
+      "check": "check_art_composition_coverage",
+      "description": "Drawing fills a substantial portion of the canvas.",
+      "why": "Final verification explicitly failed coverage."
+    },
+    {
+      "check": "check_art_recognizable_subject",
+      "description": "A recognizable tall skyscraper is present.",
+      "why": "Final verification rejected subject recognizability."
+    },
+    {
+      "check": "check_art_perspective_coherence",
+      "description": "Major structural edges obey one-point perspective.",
+      "why": "Final verification rejected perspective coherence."
+    },
+    {
+      "check": "check_art_facade_legibility",
+      "description": "Facade subdivisions are visible and coherent.",
+      "why": "Final verification rejected facade structure."
+    },
+    {
+      "check": "check_art_detail_density",
+      "description": "Detail density is rich rather than sparse or patchy.",
+      "why": "Final verification explicitly failed detail richness and exhaustiveness."
+    },
+    {
+      "check": "check_art_render_state_normalized",
+      "description": "Render state shows controlled brush settings without scatter contamination.",
+      "why": "Final screenshot showed scatter-driven noise."
+    }
+  ],
+  "references": [
+    "https://kleki.com/help/",
+    "https://arxiv.org/abs/2404.07972",
+    "https://aclanthology.org/2025.emnlp-main.920/",
+    "https://arxiv.org/abs/2411.17465",
+    "https://showlab.github.io/showui-pi",
+    "https://arxiv.org/abs/2602.00933",
+    "https://arxiv.org/abs/2512.20362"
+  ]
+}

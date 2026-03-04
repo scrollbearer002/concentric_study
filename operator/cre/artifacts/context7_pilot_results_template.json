@@ -1,0 +1,381 @@
+{
+  "pilot_id": "context7-pilot-2026-03-04",
+  "status": "not_started",
+  "operator": null,
+  "started_at": null,
+  "completed_at": null,
+  "preflight": {
+    "context7_api_key_present": false,
+    "cursor_relaunched_from_shell": false,
+    "context7_server_visible": false,
+    "fixed_model_name": null,
+    "other_mcps_disabled": null,
+    "notes": ""
+  },
+  "phase_a_selective_invocation": [
+    {
+      "question_id": "Q1",
+      "auto_invoked": null,
+      "invocation_was_appropriate": null,
+      "latency_seconds": null,
+      "score": null,
+      "severe_hallucination": null,
+      "source_trace": [],
+      "answer_excerpt": "",
+      "notes": ""
+    },
+    {
+      "question_id": "Q2",
+      "auto_invoked": null,
+      "invocation_was_appropriate": null,
+      "latency_seconds": null,
+      "score": null,
+      "severe_hallucination": null,
+      "source_trace": [],
+      "answer_excerpt": "",
+      "notes": ""
+    },
+    {
+      "question_id": "Q3",
+      "auto_invoked": null,
+      "invocation_was_appropriate": null,
+      "latency_seconds": null,
+      "score": null,
+      "severe_hallucination": null,
+      "source_trace": [],
+      "answer_excerpt": "",
+      "notes": ""
+    },
+    {
+      "question_id": "Q4",
+      "auto_invoked": null,
+      "invocation_was_appropriate": null,
+      "latency_seconds": null,
+      "score": null,
+      "severe_hallucination": null,
+      "source_trace": [],
+      "answer_excerpt": "",
+      "notes": ""
+    },
+    {
+      "question_id": "Q5",
+      "auto_invoked": null,
+      "invocation_was_appropriate": null,
+      "latency_seconds": null,
+      "score": null,
+      "severe_hallucination": null,
+      "source_trace": [],
+      "answer_excerpt": "",
+      "notes": ""
+    },
+    {
+      "question_id": "Q6",
+      "auto_invoked": null,
+      "invocation_was_appropriate": null,
+      "latency_seconds": null,
+      "score": null,
+      "severe_hallucination": null,
+      "source_trace": [],
+      "answer_excerpt": "",
+      "notes": ""
+    },
+    {
+      "question_id": "Q7",
+      "auto_invoked": null,
+      "invocation_was_appropriate": null,
+      "latency_seconds": null,
+      "score": null,
+      "severe_hallucination": null,
+      "source_trace": [],
+      "answer_excerpt": "",
+      "notes": ""
+    },
+    {
+      "question_id": "Q8",
+      "auto_invoked": null,
+      "invocation_was_appropriate": null,
+      "latency_seconds": null,
+      "score": null,
+      "severe_hallucination": null,
+      "source_trace": [],
+      "answer_excerpt": "",
+      "notes": ""
+    },
+    {
+      "question_id": "Q9",
+      "auto_invoked": null,
+      "invocation_was_appropriate": null,
+      "latency_seconds": null,
+      "score": null,
+      "severe_hallucination": null,
+      "source_trace": [],
+      "answer_excerpt": "",
+      "notes": ""
+    },
+    {
+      "question_id": "Q10",
+      "auto_invoked": null,
+      "invocation_was_appropriate": null,
+      "latency_seconds": null,
+      "score": null,
+      "severe_hallucination": null,
+      "source_trace": [],
+      "answer_excerpt": "",
+      "notes": ""
+    }
+  ],
+  "phase_b_paired_value": [
+    {
+      "question_id": "Q1",
+      "order": [
+        "A",
+        "B"
+      ],
+      "arm_a": {
+        "latency_seconds": null,
+        "score": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_b": {
+        "latency_seconds": null,
+        "score": null,
+        "auto_invoked": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_r_optional": {
+        "executed": false,
+        "latency_seconds": null,
+        "score": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "notes": ""
+    },
+    {
+      "question_id": "Q2",
+      "order": [
+        "B",
+        "A"
+      ],
+      "arm_a": {
+        "latency_seconds": null,
+        "score": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_b": {
+        "latency_seconds": null,
+        "score": null,
+        "auto_invoked": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_r_optional": {
+        "executed": false,
+        "latency_seconds": null,
+        "score": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "notes": ""
+    },
+    {
+      "question_id": "Q3",
+      "order": [
+        "B",
+        "A"
+      ],
+      "arm_a": {
+        "latency_seconds": null,
+        "score": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_b": {
+        "latency_seconds": null,
+        "score": null,
+        "auto_invoked": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_r_optional": {
+        "executed": false,
+        "latency_seconds": null,
+        "score": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "notes": ""
+    },
+    {
+      "question_id": "Q4",
+      "order": [
+        "A",
+        "B"
+      ],
+      "arm_a": {
+        "latency_seconds": null,
+        "score": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_b": {
+        "latency_seconds": null,
+        "score": null,
+        "auto_invoked": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_r_optional": {
+        "executed": false,
+        "latency_seconds": null,
+        "score": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "notes": ""
+    },
+    {
+      "question_id": "Q5",
+      "order": [
+        "A",
+        "B"
+      ],
+      "arm_a": {
+        "latency_seconds": null,
+        "score": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_b": {
+        "latency_seconds": null,
+        "score": null,
+        "auto_invoked": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_r_optional": {
+        "executed": false,
+        "latency_seconds": null,
+        "score": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "notes": ""
+    },
+    {
+      "question_id": "Q6",
+      "order": [
+        "B",
+        "A"
+      ],
+      "arm_a": {
+        "latency_seconds": null,
+        "score": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_b": {
+        "latency_seconds": null,
+        "score": null,
+        "auto_invoked": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_r_optional": {
+        "executed": false,
+        "latency_seconds": null,
+        "score": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "notes": ""
+    },
+    {
+      "question_id": "Q7",
+      "order": [
+        "B",
+        "A"
+      ],
+      "arm_a": {
+        "latency_seconds": null,
+        "score": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_b": {
+        "latency_seconds": null,
+        "score": null,
+        "auto_invoked": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_r_optional": {
+        "executed": false,
+        "latency_seconds": null,
+        "score": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "notes": ""
+    },
+    {
+      "question_id": "Q8",
+      "order": [
+        "A",
+        "B"
+      ],
+      "arm_a": {
+        "latency_seconds": null,
+        "score": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_b": {
+        "latency_seconds": null,
+        "score": null,
+        "auto_invoked": null,
+        "severe_hallucination": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "arm_r_optional": {
+        "executed": false,
+        "latency_seconds": null,
+        "score": null,
+        "source_trace": [],
+        "answer_excerpt": ""
+      },
+      "notes": ""
+    }
+  ],
+  "summary": {
+    "phase_a_positive_auto_invocations": null,
+    "phase_a_negative_false_positives": null,
+    "phase_b_mean_score_a": null,
+    "phase_b_mean_score_b": null,
+    "phase_b_mean_score_lift": null,
+    "phase_b_paired_wins_b_over_a": null,
+    "phase_b_median_latency_ratio_b_over_a": null,
+    "phase_b_severe_hallucinations": null,
+    "final_decision": null,
+    "decision_notes": ""
+  }
+}

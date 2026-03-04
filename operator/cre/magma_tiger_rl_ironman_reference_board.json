@@ -1,0 +1,84 @@
+{
+  "schema": "reference_board_v1",
+  "purpose": "Reference-grounded drawing and visual planning before substantive art execution",
+  "lanes": [
+    {
+      "name": "subject_identity",
+      "description": "Brand, object, or character identity cues",
+      "references": [
+        {
+          "title": "tiger identity references",
+          "url": null,
+          "rationale": "Use authoritative or canonical images to lock the subject identity before drawing.",
+          "source_type": "search_query",
+          "query": "tiger official reference images"
+        },
+        {
+          "title": "Iron Man Marvel comic armor cues style identity references",
+          "url": null,
+          "rationale": "Use the named brand, franchise, or identity source to ground distinctive visual cues.",
+          "source_type": "search_query",
+          "query": "Iron Man Marvel comic armor cues official design reference"
+        }
+      ]
+    },
+    {
+      "name": "real_world_anatomy_or_form",
+      "description": "Ground-truth structure, anatomy, silhouette, or material references",
+      "references": [
+        {
+          "title": "tiger anatomy/form references",
+          "url": null,
+          "rationale": "Use real-world structure, silhouette, and proportions as the grounding layer.",
+          "source_type": "search_query",
+          "query": "real tiger anatomy anatomy reference"
+        }
+      ]
+    },
+    {
+      "name": "costume_or_style_family",
+      "description": "Clothing, era, movement, or stylistic references",
+      "references": [
+        {
+          "title": "Ralph Lauren fashion styling costume/style references",
+          "url": null,
+          "rationale": "Use the requested clothing, era, or style family to ground wardrobe and accessories.",
+          "source_type": "search_query",
+          "query": "Ralph Lauren fashion styling clothing reference"
+        }
+      ]
+    }
+  ],
+  "subject_brief": {
+    "one_sentence_goal": "Draw a tiger wearing Ralph Lauren-inspired fashion with Iron Man from Marvel comic design cues.",
+    "must_have_parts": [
+      "tiger face with stripes and muzzle",
+      "Ralph Lauren-inspired badge or fashion cue",
+      "Iron Man-style chest reactor and armor seams",
+      "full body visible on canvas"
+    ],
+    "must_avoid": [
+      "clipped figure",
+      "generic bear silhouette",
+      "unstyled plain black clothing"
+    ],
+    "style_notes": [
+      "Ground the drawing in references before adding detail.",
+      "Keep the full subject inside calibrated canvas margins.",
+      "Use a multi-pass build: silhouette, structure, detail, color, verification."
+    ]
+  },
+  "composition_plan": {
+    "primary_subject_bbox_goal": "occupy 35%-60% of drawable area unless task says otherwise",
+    "pose": "readable full-subject pose",
+    "camera_angle": "straight-on to slight three-quarter view",
+    "passes": [
+      "silhouette",
+      "anatomy",
+      "costume",
+      "detail",
+      "color",
+      "verification"
+    ]
+  }
+}

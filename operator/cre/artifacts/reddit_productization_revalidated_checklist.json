@@ -1,0 +1,53 @@
+{
+  "decision_points": [
+    {
+      "id": "delivery_model",
+      "question": "Will the Reddit product be delivered as hosted service, managed deployment, licensed source product, or source-transfer repo?",
+      "recommended_default": "hosted_or_managed",
+      "why": "minimizes IP leakage while maximizing operational control"
+    },
+    {
+      "id": "repo_boundary",
+      "question": "Is there a clean Reddit-only repository with no accidental carryover from concentric_study?",
+      "recommended_default": "required",
+      "why": "prevents over-disclosure of unrelated R&D assets"
+    },
+    {
+      "id": "background_ip",
+      "question": "Has background IP versus deliverable product code been explicitly inventoried?",
+      "recommended_default": "required",
+      "why": "supports professional commercial packaging and protects private core assets"
+    }
+  ],
+  "release_gates": [
+    "reddit_only_repo_boundary_validated",
+    "all_tests_pass",
+    "deployment_reproducibility_checked",
+    "sbom_generated",
+    "provenance_or_integrity_artifacts_prepared",
+    "support_policy_written",
+    "no_private_research_docs_shipped",
+    "no_old_run_artifacts_shipped",
+    "security_summary_written",
+    "known_limitations_written"
+  ],
+  "customer_packet": [
+    "product_overview",
+    "supported_use_cases_and_exclusions",
+    "architecture_summary",
+    "interfaces_and_configuration_guide",
+    "deployment_guide",
+    "security_summary",
+    "sbom",
+    "provenance_or_integrity_notes",
+    "support_and_update_policy",
+    "known_limitations"
+  ],
+  "non_deliverables": [
+    "full_concentric_study_repo",
+    "unrelated_site_automation",
+    "internal_research_memos_not_needed_for_reddit_product",
+    "historical_run_corpus",
+    "legacy_experimental_stacks_unless_used_by_reddit_product"
+  ]
+}

@@ -1,0 +1,153 @@
+[
+  {
+    "title": "ISO/IEC/IEEE 42010 Architecture Descriptions",
+    "url": "https://www.iso-architecture.org/ieee-1471/ads/",
+    "source_class": "architecture_standard",
+    "why_relevant": "Defines architecture-description rigor, viewpoints, and stakeholder-grounded documentation.",
+    "claims_supported": [
+      "doc truth",
+      "architecture surface classification"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "Documenting Software Architectures: Views and Beyond, Second Edition",
+    "url": "https://www.sei.cmu.edu/library/documenting-software-architectures-views-and-beyond-second-edition/",
+    "source_class": "architecture_guidance",
+    "why_relevant": "Supports separating authoritative views from supporting or duplicated docs.",
+    "claims_supported": [
+      "doc authority",
+      "current architecture surface"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "Architecture Reconstruction Guidelines, Third Edition",
+    "url": "https://www.sei.cmu.edu/library/architecture-reconstruction-guidelines-third-edition/",
+    "source_class": "architecture_reconstruction",
+    "why_relevant": "Supports reconstructing as-built architecture from code, tests, and artifacts.",
+    "claims_supported": [
+      "runtime truth audit",
+      "legacy/current boundary"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "Managing Technical Debt: Identify Technical Debt Items",
+    "url": "https://www.sei.cmu.edu/library/managing-technical-debt-identify-technical-debt-items/",
+    "source_class": "technical_debt",
+    "why_relevant": "Supports identifying stale or duplicative surfaces as debt candidates rather than deleting by instinct.",
+    "claims_supported": [
+      "dead-weight signal analysis"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "Got Technical Debt? Surfacing Elusive Technical Debt in Issue Trackers",
+    "url": "https://www.sei.cmu.edu/library/got-technical-debt-surfacing-elusive-technical-debt-in-issue-trackers/",
+    "source_class": "technical_debt",
+    "why_relevant": "Supports explicit evidence-backed debt signaling and review recommendations.",
+    "claims_supported": [
+      "dead-weight signal analysis"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "Why reproducible builds?",
+    "url": "https://reproducible-builds.org/docs/why/",
+    "source_class": "reproducibility",
+    "why_relevant": "Supports keeping generated artifacts and evidence surfaces classified distinctly from source of truth.",
+    "claims_supported": [
+      "generated vs current",
+      "artifact discipline"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "Making plans \u2014 reproducible-builds.org",
+    "url": "https://reproducible-builds.org/docs/plans/",
+    "source_class": "reproducibility",
+    "why_relevant": "Supports explicit plans for reproducible generated artifacts.",
+    "claims_supported": [
+      "generated vs current",
+      "artifact discipline"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "Hermeticity - Bazel",
+    "url": "https://docs.bazel.build/versions/master/hermeticity.html",
+    "source_class": "build_discipline",
+    "why_relevant": "Supports separating checked source from generated/build outputs.",
+    "claims_supported": [
+      "generated classification",
+      "dead-weight signals"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "OSWorld",
+    "url": "https://arxiv.org/abs/2404.07972",
+    "source_class": "gui_agent_research",
+    "why_relevant": "Supports evaluating whether GUI-agent claims in the repo remain scientifically coherent.",
+    "claims_supported": [
+      "scientific coherence",
+      "runtime truth"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "SeeAct",
+    "url": "https://arxiv.org/abs/2401.01614",
+    "source_class": "gui_agent_research",
+    "why_relevant": "Supports grounding and action-planning claims for the current project.",
+    "claims_supported": [
+      "scientific coherence",
+      "runtime truth"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "AppAgent",
+    "url": "https://arxiv.org/abs/2312.13771",
+    "source_class": "gui_agent_research",
+    "why_relevant": "Supports the research-first planning layer used by the repo.",
+    "claims_supported": [
+      "scientific coherence",
+      "research_agent role"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "GUI-explorer",
+    "url": "https://arxiv.org/abs/2505.16827",
+    "source_class": "gui_agent_research",
+    "why_relevant": "Supports exploration and site-knowledge acquisition claims.",
+    "claims_supported": [
+      "site knowledge",
+      "exploration loop"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "MCP-Atlas",
+    "url": "https://arxiv.org/abs/2602.00933",
+    "source_class": "evaluation_research",
+    "why_relevant": "Supports claims-based benchmark framing in the repo.",
+    "claims_supported": [
+      "benchmark evaluator",
+      "scientific coherence"
+    ],
+    "retrieved_date": "2026-03-03"
+  },
+  {
+    "title": "OWASP Top 10 for LLM Applications 2025",
+    "url": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+    "source_class": "security_guidance",
+    "why_relevant": "Supports security-surface classification and policy grounding.",
+    "claims_supported": [
+      "security truth audit"
+    ],
+    "retrieved_date": "2026-03-03"
+  }
+]

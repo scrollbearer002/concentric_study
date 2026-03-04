@@ -1,0 +1,413 @@
+{
+  "pilot_id": "context7-pilot-2026-03-04",
+  "generated_on": "2026-03-04",
+  "status": "setup_complete_waiting_for_api_key",
+  "objective": "Determine whether Context7 should remain an always-on rule-backed MCP for concentric_study by measuring selective invocation quality, answer-quality lift, latency cost, and hallucination risk.",
+  "local_environment": {
+    "repo_root": "/Users/christianpardo/Desktop/concentric_study",
+    "cursor_version": "2.6.11",
+    "cursor_basis_path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/artifacts/cursor_environment/latest_report.md",
+    "context7_config_path": "/Users/christianpardo/Desktop/concentric_study/.cursor/mcp.json",
+    "context7_rule_path": "/Users/christianpardo/Desktop/concentric_study/.cursor/rules/context7-docs.mdc",
+    "requires_env_var": "CONTEXT7_API_KEY",
+    "handshake_verified": false
+  },
+  "research_basis": [
+    {
+      "id": "SRC-C1",
+      "kind": "official_cursor_docs",
+      "url": "https://cursor.com/docs/context/mcp",
+      "why_it_matters": "Defines project-level MCP config, remote URL registration, headers, and env interpolation."
+    },
+    {
+      "id": "SRC-C2",
+      "kind": "official_context7_docs",
+      "url": "https://github.com/upstash/context7#installation",
+      "why_it_matters": "Defines the recommended remote Context7 Cursor install path and the rule-backed auto-invocation pattern."
+    },
+    {
+      "id": "SRC-C3",
+      "kind": "research_paper",
+      "url": "https://arxiv.org/abs/2602.00933",
+      "why_it_matters": "Supports claims-based partial-credit scoring plus tool-use diagnostics beyond binary pass/fail."
+    },
+    {
+      "id": "SRC-L1",
+      "kind": "repo_memo",
+      "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/CURSOR_MCP_LANDSCAPE_PHD.md",
+      "why_it_matters": "Establishes Context7 as the strongest first external MCP for this repo."
+    },
+    {
+      "id": "SRC-L2",
+      "kind": "repo_memo",
+      "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/MISSED_TOOL_WORKFLOW_VALUE_PHD.md",
+      "why_it_matters": "Documents current retrieval and workflow gaps this pilot is meant to test."
+    },
+    {
+      "id": "SRC-L3",
+      "kind": "repo_memo",
+      "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/PHASE_1_ENVIRONMENT_BENEFITS_PHD.md",
+      "why_it_matters": "Establishes the repo preference for bounded, evidence-backed upgrades instead of tool sprawl."
+    }
+  ],
+  "design": {
+    "study_type": "two_phase_within_subject_pilot",
+    "phases": [
+      {
+        "phase_id": "phase_a_selective_invocation",
+        "purpose": "Measure whether Context7 engages on the right prompts and stays off on the wrong ones.",
+        "questions_used": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4",
+          "Q5",
+          "Q6",
+          "Q7",
+          "Q8",
+          "Q9",
+          "Q10"
+        ],
+        "procedure": [
+          "Use a fresh chat for each question.",
+          "Keep Context7 enabled and the project rule active.",
+          "Do not append 'use context7'.",
+          "Record whether Context7 auto-invoked and whether that routing was appropriate."
+        ],
+        "metrics": [
+          "auto_invocation_rate_positive_controls",
+          "false_positive_invocation_count_negative_controls",
+          "appropriate_source_routing_score"
+        ]
+      },
+      {
+        "phase_id": "phase_b_paired_value",
+        "purpose": "Measure answer-quality and latency lift when Context7 is available.",
+        "questions_used": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4",
+          "Q5",
+          "Q6",
+          "Q7",
+          "Q8"
+        ],
+        "arms": {
+          "A": {
+            "label": "baseline_no_context7",
+            "setup": "Disable Context7 in Cursor MCP settings for the run.",
+            "rule_state": "Rule file remains in repo; tool is unavailable for this arm."
+          },
+          "B": {
+            "label": "context7_enabled",
+            "setup": "Enable Context7 with the project rule active.",
+            "rule_state": "Tool should auto-engage when the prompt is doc-sensitive."
+          },
+          "R": {
+            "label": "context7_rescue_optional",
+            "setup": "Only if arm B failed to auto-engage. Re-run with 'use context7' appended.",
+            "rule_state": "Diagnostic only; do not use for primary pass/fail."
+          }
+        },
+        "counterbalanced_order": {
+          "Q1": [
+            "A",
+            "B"
+          ],
+          "Q2": [
+            "B",
+            "A"
+          ],
+          "Q3": [
+            "B",
+            "A"
+          ],
+          "Q4": [
+            "A",
+            "B"
+          ],
+          "Q5": [
+            "A",
+            "B"
+          ],
+          "Q6": [
+            "B",
+            "A"
+          ],
+          "Q7": [
+            "B",
+            "A"
+          ],
+          "Q8": [
+            "A",
+            "B"
+          ]
+        },
+        "procedure": [
+          "Use fresh chats for every arm.",
+          "Keep the prompt text identical across A and B.",
+          "Use one fixed Cursor model for the full study.",
+          "Record latency from send to final answer.",
+          "If B does not auto-engage Context7, optionally run rescue arm R and record separately."
+        ],
+        "metrics": [
+          "paired_score_difference",
+          "paired_wins",
+          "median_latency_ratio",
+          "severe_hallucination_count",
+          "auto_engagement_rate"
+        ]
+      }
+    ]
+  },
+  "scoring": {
+    "positive_controls": {
+      "scale_max": 10,
+      "dimensions": [
+        {
+          "name": "factual_correctness",
+          "points": 4
+        },
+        {
+          "name": "version_sensitivity",
+          "points": 2
+        },
+        {
+          "name": "code_usefulness",
+          "points": 2
+        },
+        {
+          "name": "source_traceability",
+          "points": 1
+        },
+        {
+          "name": "uncertainty_discipline",
+          "points": 1
+        }
+      ],
+      "severe_hallucination_rule": "If the answer invents an API, migration rule, or source support, cap total score at 4."
+    },
+    "negative_controls": {
+      "scale_max": 10,
+      "dimensions": [
+        {
+          "name": "correct_source_routing",
+          "points": 4
+        },
+        {
+          "name": "factual_correctness",
+          "points": 3
+        },
+        {
+          "name": "traceability",
+          "points": 2
+        },
+        {
+          "name": "explicit_non_applicability",
+          "points": 1
+        }
+      ]
+    },
+    "severity_definitions": {
+      "severe_hallucination": [
+        "Nonexistent package API or method name presented as real.",
+        "Wrong migration guidance likely to break current repo code.",
+        "Claims a source says something that it does not say.",
+        "Uses external package docs to answer a repo-local negative control."
+      ]
+    }
+  },
+  "acceptance_criteria": {
+    "phase_a": {
+      "min_positive_auto_invocations": 6,
+      "positive_control_count": 8,
+      "max_negative_false_positive_invocations": 0,
+      "negative_control_count": 2
+    },
+    "phase_b": {
+      "min_context7_mean_score": 8.0,
+      "min_mean_score_lift": 1.0,
+      "min_paired_wins": 6,
+      "positive_control_count": 8,
+      "max_median_latency_ratio": 1.25,
+      "max_severe_hallucinations": 0
+    },
+    "decision_rule": {
+      "pass": "Keep the Context7 rule always on.",
+      "mixed": "Keep the server installed but downgrade to selective/manual use.",
+      "fail": "Disable the rule and keep Context7 only for occasional ad hoc lookups."
+    }
+  },
+  "question_bank": [
+    {
+      "id": "Q1",
+      "type": "positive_control",
+      "package": "google-genai",
+      "workflow_class": "research_intelligence",
+      "repo_anchor_paths": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/agent_core.py"
+      ],
+      "prompt": "Repo context: this project uses `from google import genai` and `client = genai.Client(api_key=...)`. Give the current Python `google-genai` pattern for a minimal text generation call using `client.models.generate_content`, with a short example that matches current SDK naming and cite the exact source you used.",
+      "expected_claims": [
+        "Uses the current `from google import genai` import surface.",
+        "Uses `genai.Client(...)` rather than the deprecated older package surface.",
+        "Uses `client.models.generate_content(...)`.",
+        "Names the source page or section."
+      ],
+      "why_in_bank": "High-value current-doc retrieval test for a package already used in the repo."
+    },
+    {
+      "id": "Q2",
+      "type": "positive_control",
+      "package": "google-genai",
+      "workflow_class": "research_intelligence",
+      "repo_anchor_paths": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/agent_infra/site_knowledge.py"
+      ],
+      "prompt": "Repo context: `operator/agent_infra/site_knowledge.py` uses Google Search grounding with `google.genai.types`. Show the current Python pattern for configuring a `GenerateContentConfig` with a Google Search tool for a grounded response, and cite the source page you used.",
+      "expected_claims": [
+        "Uses `GenerateContentConfig` from the current SDK.",
+        "Uses the current Google Search tool surface if still supported.",
+        "Shows configuration in code, not prose only.",
+        "Cites a source."
+      ],
+      "why_in_bank": "Tests whether Context7 improves current SDK-tooling guidance rather than generic SDK summaries."
+    },
+    {
+      "id": "Q3",
+      "type": "positive_control",
+      "package": "pydantic",
+      "workflow_class": "repo_retrieval",
+      "repo_anchor_paths": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/agent_core.py"
+      ],
+      "prompt": "This repo uses `pydantic` v2-style models. Give the current v2 pattern for defining a model with `BaseModel` and `Field`, validating a dict into the model, and explain the v2-preferred method names to use now. Cite the source page.",
+      "expected_claims": [
+        "Uses `BaseModel` and `Field` correctly.",
+        "Uses v2 validation method names such as `model_validate` when appropriate.",
+        "Avoids deprecated v1-only guidance as the main recommendation.",
+        "Cites a source."
+      ],
+      "why_in_bank": "Migration-sensitive package with real repo usage."
+    },
+    {
+      "id": "Q4",
+      "type": "positive_control",
+      "package": "pydantic",
+      "workflow_class": "repo_retrieval",
+      "repo_anchor_paths": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/agent_core.py"
+      ],
+      "prompt": "Give the current `pydantic` v2 serialization pattern for turning a model into a dict and JSON string, and note what older method names should no longer be the default recommendation. Cite the exact source used.",
+      "expected_claims": [
+        "Uses `model_dump` and `model_dump_json` as the preferred v2 methods.",
+        "Explains older v1 names as legacy or compatibility paths rather than the primary recommendation.",
+        "Provides a correct minimal example.",
+        "Cites a source."
+      ],
+      "why_in_bank": "Directly tests whether Context7 reduces stale pydantic v1 guidance."
+    },
+    {
+      "id": "Q5",
+      "type": "positive_control",
+      "package": "requests",
+      "workflow_class": "execution_environment",
+      "repo_anchor_paths": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/codex_client.py"
+      ],
+      "prompt": "This repo posts to a local HTTP service with `requests`. Give the current, source-backed Python pattern for a robust JSON POST using `requests` with timeout, `raise_for_status()`, and clean handling of connection failures. Cite the docs page you used.",
+      "expected_claims": [
+        "Uses `timeout=` explicitly.",
+        "Uses `raise_for_status()` after the request.",
+        "Handles connection-related exceptions sensibly.",
+        "Cites a source."
+      ],
+      "why_in_bank": "Moderate-volatility library question with immediate repo relevance."
+    },
+    {
+      "id": "Q6",
+      "type": "positive_control",
+      "package": "Pillow",
+      "workflow_class": "artifact_generation",
+      "repo_anchor_paths": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/screenshot_preprocessor.py"
+      ],
+      "prompt": "This repo uses `Pillow` for screenshot preprocessing. Give the current, source-backed pattern to open an image, normalize EXIF orientation, convert transparent RGBA content onto a white RGB background, and save the result. Cite the exact source page.",
+      "expected_claims": [
+        "Uses `Image.open(...)` correctly.",
+        "Uses `ImageOps.exif_transpose(...)` for orientation normalization.",
+        "Handles alpha compositing correctly before RGB conversion.",
+        "Cites a source."
+      ],
+      "why_in_bank": "Tests code-example freshness for an image-processing path already present in the repo."
+    },
+    {
+      "id": "Q7",
+      "type": "positive_control",
+      "package": "numpy",
+      "workflow_class": "verification_evaluation",
+      "repo_anchor_paths": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/agent_infra/verification_gate.py",
+        "/Users/christianpardo/Desktop/concentric_study/operator/agent_infra/visual_monitor.py"
+      ],
+      "prompt": "This repo uses `numpy` for image diffs. Give a short, current pattern to compute an absolute pixel difference between two RGB arrays and derive a boolean mask for changed pixels. Cite the exact source page you used.",
+      "expected_claims": [
+        "Uses `np.abs(...)` or an equivalent correct absolute-difference pattern.",
+        "Produces a boolean mask from a threshold comparison.",
+        "Keeps array-shape assumptions explicit.",
+        "Cites a source."
+      ],
+      "why_in_bank": "Checks whether Context7 gives precise, implementation-usable numerical examples."
+    },
+    {
+      "id": "Q8",
+      "type": "positive_control",
+      "package": "pytest",
+      "workflow_class": "verification_evaluation",
+      "repo_anchor_paths": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/cre/conftest.py"
+      ],
+      "prompt": "This repo conditionally skips integration tests when an external dependency is unavailable. Give the current pytest-recommended pattern for gating tests on a missing dependency or unavailable external service, with a short example and source citation.",
+      "expected_claims": [
+        "Mentions `pytest.importorskip` and or `pytest.skip` in the correct use case.",
+        "Keeps the recommendation aligned with external-dependency gating rather than mocking everything.",
+        "Cites a source."
+      ],
+      "why_in_bank": "Tests whether Context7 helps with current test-guidance questions that the repo actively uses."
+    },
+    {
+      "id": "Q9",
+      "type": "negative_control",
+      "package": null,
+      "workflow_class": "security_governance",
+      "repo_anchor_paths": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/agent_infra/host_tool_health.py"
+      ],
+      "prompt": "Answer from local repo evidence only: how does `HostToolHealth.evaluate()` decide `required_classes`, choose the `selected` provider for each tool class, and report missing required classes? Name the local file you used.",
+      "expected_claims": [
+        "Reads the local repo file rather than external docs.",
+        "Explains required-class determination and preference ordering correctly.",
+        "Names the local file."
+      ],
+      "why_in_bank": "Measures whether the rule avoids using external package docs when the answer is repo-local."
+    },
+    {
+      "id": "Q10",
+      "type": "negative_control",
+      "package": null,
+      "workflow_class": "coordination_orchestration",
+      "repo_anchor_paths": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/cre/CURSOR_MCP_LANDSCAPE_PHD.md",
+        "/Users/christianpardo/Desktop/concentric_study/operator/cre/artifacts/cursor_environment/latest_report.md"
+      ],
+      "prompt": "Answer using official Cursor sources and local environment evidence, not external package docs: what changed in Cursor 2.6 around MCP Apps and plugin team marketplaces, and what is locally available on this machine now?",
+      "expected_claims": [
+        "Uses official Cursor product sources rather than Context7 package docs.",
+        "Distinguishes platform capability from this machine's current local version.",
+        "States that this machine is on Cursor 2.6.11."
+      ],
+      "why_in_bank": "Measures whether the rule stays out of Cursor-product questions."
+    }
+  ]
+}

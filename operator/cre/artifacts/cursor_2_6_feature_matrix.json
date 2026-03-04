@@ -1,0 +1,299 @@
+{
+  "generated_on": "2026-03-04",
+  "cursor_version_local": "2.6.11",
+  "source_policy": "Primary official Cursor docs and changelog entries only for capability classification.",
+  "features": [
+    {
+      "feature_id": "CURSOR-001",
+      "name": "Project-local MCP config",
+      "cursor_release": "existing, documented by 2026 docs",
+      "official_sources": [
+        "https://docs.cursor.com/advanced/model-context-protocol"
+      ],
+      "implementation_bucket": "implement_now",
+      "implementation_form": "project .cursor/mcp.json",
+      "repo_fit": "high",
+      "implementation_status": "implemented",
+      "blocked_by": [],
+      "why": "Directly enables project-scoped read-only internal MCPs and controlled external MCP use."
+    },
+    {
+      "feature_id": "CURSOR-002",
+      "name": "Global MCP config",
+      "cursor_release": "existing, documented by 2026 docs",
+      "official_sources": [
+        "https://docs.cursor.com/advanced/model-context-protocol"
+      ],
+      "implementation_bucket": "implement_now",
+      "implementation_form": "document as fallback only",
+      "repo_fit": "medium",
+      "implementation_status": "not_needed",
+      "blocked_by": [],
+      "why": "Project-local config is preferred so repo MCP surfaces remain explicit and reviewable."
+    },
+    {
+      "feature_id": "CURSOR-003",
+      "name": "Plan mode",
+      "cursor_release": "2.4 plus 2026 CLI/editor improvements",
+      "official_sources": [
+        "https://cursor.com/changelog/2-4",
+        "https://cursor.com/changelog/cli-jan-16-2026"
+      ],
+      "implementation_bucket": "implement_now",
+      "implementation_form": "rules plus .cursor/plans artifacts",
+      "repo_fit": "high",
+      "implementation_status": "implemented",
+      "blocked_by": [],
+      "why": "This repo benefits from durable plans more than from ad hoc long chat threads."
+    },
+    {
+      "feature_id": "CURSOR-004",
+      "name": "Ask mode",
+      "cursor_release": "2026 CLI/editor mode system",
+      "official_sources": [
+        "https://cursor.com/changelog/cli-jan-16-2026"
+      ],
+      "implementation_bucket": "implement_now",
+      "implementation_form": "operating protocol",
+      "repo_fit": "high",
+      "implementation_status": "implemented",
+      "blocked_by": [],
+      "why": "Useful for architecture reading and debugging before edits."
+    },
+    {
+      "feature_id": "CURSOR-005",
+      "name": "Integrated browser controls",
+      "cursor_release": "2026 browser controls release family",
+      "official_sources": [
+        "https://cursor.com/en/changelog"
+      ],
+      "implementation_bucket": "implement_now",
+      "implementation_form": "browser-debug SOP and rule",
+      "repo_fit": "high",
+      "implementation_status": "implemented",
+      "blocked_by": [],
+      "why": "The repo is a visual browser agent, so evidence capture from browser state is first-order."
+    },
+    {
+      "feature_id": "CURSOR-006",
+      "name": "Debug mode",
+      "cursor_release": "2.6 changelog family",
+      "official_sources": [
+        "https://cursor.com/changelog/2-6"
+      ],
+      "implementation_bucket": "implement_now",
+      "implementation_form": "runtime debug protocol",
+      "repo_fit": "high",
+      "implementation_status": "implemented",
+      "blocked_by": [],
+      "why": "Useful if anchored by request IDs, traces, and clear failure classification."
+    },
+    {
+      "feature_id": "CURSOR-007",
+      "name": "One-click MCP auth and CLI MCP controls",
+      "cursor_release": "2026 CLI improvements",
+      "official_sources": [
+        "https://cursor.com/changelog/cli-jan-16-2026"
+      ],
+      "implementation_bucket": "implement_now",
+      "implementation_form": "governance memo and SOP",
+      "repo_fit": "medium_high",
+      "implementation_status": "implemented",
+      "blocked_by": [],
+      "why": "Supports disciplined external MCP operations and quick inspection of active servers."
+    },
+    {
+      "feature_id": "CURSOR-008",
+      "name": "Plugins marketplace",
+      "cursor_release": "2.5",
+      "official_sources": [
+        "https://cursor.com/changelog/2-5",
+        "https://cursor.com/docs/plugins"
+      ],
+      "implementation_bucket": "implement_after_stabilization",
+      "implementation_form": "future plugin packaging",
+      "repo_fit": "medium_high",
+      "implementation_status": "deferred",
+      "blocked_by": [
+        "internal MCP and rules not yet stable",
+        "repo is not a git worktree",
+        "plugin manifest should be re-verified at packaging time"
+      ],
+      "why": "Packaging is valuable, but only after the repo-local primitives stabilize."
+    },
+    {
+      "feature_id": "CURSOR-009",
+      "name": "Plugin bundle primitives",
+      "cursor_release": "2.5",
+      "official_sources": [
+        "https://cursor.com/changelog/2-5",
+        "https://cursor.com/docs/plugins"
+      ],
+      "implementation_bucket": "implement_after_stabilization",
+      "implementation_form": "future rules, commands, agents, hooks, MCP bundle",
+      "repo_fit": "medium_high",
+      "implementation_status": "deferred",
+      "blocked_by": [
+        "same as plugin packaging"
+      ],
+      "why": "Useful later, but premature now."
+    },
+    {
+      "feature_id": "CURSOR-010",
+      "name": "Sandbox network access controls",
+      "cursor_release": "2.5",
+      "official_sources": [
+        "https://cursor.com/changelog/2-5"
+      ],
+      "implementation_bucket": "implement_now",
+      "implementation_form": "external MCP rollout policy",
+      "repo_fit": "high",
+      "implementation_status": "implemented",
+      "blocked_by": [],
+      "why": "Important for browser-heavy and network-heavy agent behavior."
+    },
+    {
+      "feature_id": "CURSOR-011",
+      "name": "Async subagents",
+      "cursor_release": "2.5",
+      "official_sources": [
+        "https://cursor.com/changelog/2-5",
+        "https://cursor.com/changelog/2-4"
+      ],
+      "implementation_bucket": "implement_after_stabilization",
+      "implementation_form": "future custom Cursor agent roles",
+      "repo_fit": "medium",
+      "implementation_status": "deferred",
+      "blocked_by": [
+        "repo should stabilize rule and MCP surfaces first"
+      ],
+      "why": "Interesting for later multi-agent packaging, not the first repo integration move."
+    },
+    {
+      "feature_id": "CURSOR-012",
+      "name": "Skills",
+      "cursor_release": "2.4",
+      "official_sources": [
+        "https://cursor.com/changelog/2-4"
+      ],
+      "implementation_bucket": "implement_after_stabilization",
+      "implementation_form": "future plugin or skill packaging",
+      "repo_fit": "medium",
+      "implementation_status": "deferred",
+      "blocked_by": [
+        "need stable workflows first"
+      ],
+      "why": "Valuable later, but the repo already has stronger Python-native skill infrastructure."
+    },
+    {
+      "feature_id": "CURSOR-013",
+      "name": "Hooks",
+      "cursor_release": "2026 release family",
+      "official_sources": [
+        "https://cursor.com/en/changelog",
+        "https://cursor.com/changelog/2-5"
+      ],
+      "implementation_bucket": "implement_after_stabilization",
+      "implementation_form": "future plugin or runtime guard hooks",
+      "repo_fit": "medium",
+      "implementation_status": "deferred",
+      "blocked_by": [
+        "needs a stable operational loop first"
+      ],
+      "why": "Hooks are powerful but premature before governance settles."
+    },
+    {
+      "feature_id": "CURSOR-014",
+      "name": "MCP Apps",
+      "cursor_release": "2.6",
+      "official_sources": [
+        "https://cursor.com/changelog/2-6"
+      ],
+      "implementation_bucket": "implement_after_stabilization",
+      "implementation_form": "future internal observability UIs",
+      "repo_fit": "medium_high",
+      "implementation_status": "deferred",
+      "blocked_by": [
+        "internal MCP data surfaces should stabilize first"
+      ],
+      "why": "High-upside later for trace and benchmark UIs, but not the best first move."
+    },
+    {
+      "feature_id": "CURSOR-015",
+      "name": "Team marketplaces",
+      "cursor_release": "2.6",
+      "official_sources": [
+        "https://cursor.com/changelog/2-6"
+      ],
+      "implementation_bucket": "contingent_external",
+      "implementation_form": "admin-managed plugin distribution",
+      "repo_fit": "low",
+      "implementation_status": "deferred",
+      "blocked_by": [
+        "teams or enterprise admin control required"
+      ],
+      "why": "Real capability, but not repo-local work."
+    },
+    {
+      "feature_id": "CURSOR-016",
+      "name": "Cloud agents with computer use",
+      "cursor_release": "2026 cloud release family",
+      "official_sources": [
+        "https://cursor.com/blog/cloud-agents-computer-use"
+      ],
+      "implementation_bucket": "contingent_external",
+      "implementation_form": "account-level execution surface",
+      "repo_fit": "medium",
+      "implementation_status": "deferred",
+      "blocked_by": [
+        "account access",
+        "not a repo-local implementation surface"
+      ],
+      "why": "Potentially useful later, but not the strongest immediate repo integration."
+    },
+    {
+      "feature_id": "CURSOR-017",
+      "name": "Bugbot Autofix",
+      "cursor_release": "2.6 era",
+      "official_sources": [
+        "https://cursor.com/changelog/2-6"
+      ],
+      "implementation_bucket": "contingent_external",
+      "implementation_form": "PR review automation",
+      "repo_fit": "low",
+      "implementation_status": "deferred",
+      "blocked_by": [
+        "PR workflow and product access required"
+      ],
+      "why": "Not repo-local and not first-wave."
+    },
+    {
+      "feature_id": "CURSOR-018",
+      "name": "Pinned chats",
+      "cursor_release": "2.2-2.4 era",
+      "official_sources": [
+        "https://cursor.com/changelog/2-4"
+      ],
+      "implementation_bucket": "implement_now",
+      "implementation_form": "operating protocol guidance",
+      "repo_fit": "medium_high",
+      "implementation_status": "implemented",
+      "blocked_by": [],
+      "why": "Useful once durable plans and long-running investigations exist."
+    },
+    {
+      "feature_id": "CURSOR-019",
+      "name": "Read-only internal MCP servers",
+      "cursor_release": "enabled by MCP docs, implemented locally on 2026-03-04",
+      "official_sources": [
+        "https://docs.cursor.com/advanced/model-context-protocol"
+      ],
+      "implementation_bucket": "implement_now",
+      "implementation_form": "operator/cursor_integration/mcp",
+      "repo_fit": "high",
+      "implementation_status": "implemented",
+      "blocked_by": [],
+      "why": "Best leverage move for exposing repo-native trace and health evidence into Cursor."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "one_sentence_goal": "Draw a realistic barn owl wearing a vintage aviator jacket at sunset.",
+  "must_have_parts": [
+    "full barn owl body",
+    "owl face disk",
+    "aviator jacket"
+  ],
+  "must_avoid": [
+    "canvas clipping",
+    "generic costume drift",
+    "unreadable silhouette"
+  ],
+  "style_notes": [
+    "Ground the drawing in references before adding detail.",
+    "Keep the full subject inside calibrated canvas margins.",
+    "Use a multi-pass build: silhouette, structure, detail, color, verification."
+  ]
+}

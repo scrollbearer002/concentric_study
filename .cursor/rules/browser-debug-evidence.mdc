@@ -1,0 +1,18 @@
+---
+description: Require evidence-first behavior for browser and UI debugging tasks
+globs:
+alwaysApply: true
+---
+
+# Browser Debug Evidence
+
+For UI, browser, and visual-agent tasks:
+- capture screenshots before and after meaningful actions
+- use DOM or visible-state evidence, not memory, to justify the next step
+- identify the real interactive surface before assuming the action target
+- treat the integrated browser as a measurement tool for current state
+
+Do not claim a browser failure is understood until you have at least one of:
+- screenshot evidence
+- DOM evidence
+- a trace or Request ID that anchors the failure

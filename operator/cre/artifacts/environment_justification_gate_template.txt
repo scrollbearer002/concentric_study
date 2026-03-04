@@ -1,0 +1,17 @@
+Use the Environment Justification Gate before finalizing your answer.
+
+1. Identify the system of interest.
+2. Identify the actual local machine/runtime environment that matters here.
+3. Identify the repo-specific files, architecture, or artifacts that constrain the answer.
+4. Identify the exact task and stakeholder objective.
+5. Label important claims as:
+   - directly_supported
+   - inferred
+   - unknown
+
+Rules:
+- If environment evidence is missing but discoverable, inspect the local repo/machine first.
+- If environment evidence is missing and not discoverable, say so explicitly.
+- Do not present a generic category-level answer when the task is environment-specific.
+- Do not replace this checklist with a model-generated rubric.
+- Use this gate together with the recursive research loop and context-locked research filter.

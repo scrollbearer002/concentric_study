@@ -1,0 +1,165 @@
+{
+  "retrieved_date": "2026-03-04",
+  "local_cursor": {
+    "version": "2.6.11",
+    "bundle_version": "2.6.11",
+    "build_date": "2026-03-03T18:57:48.001Z",
+    "host_os": "macOS",
+    "host_os_version": "26.3",
+    "architecture": "arm64"
+  },
+  "platform_feature_gates": [
+    {
+      "feature": "Plugins",
+      "platform_status": "verified in Cursor 2.5 official blog and current docs",
+      "local_status": "available on local Cursor 2.6.11",
+      "risk": "install/setup and auth, not version gating"
+    },
+    {
+      "feature": "MCP Apps",
+      "platform_status": "officially announced in Cursor 2.6 changelog on 2026-03-03",
+      "local_status": "available on local Cursor 2.6.11",
+      "risk": "plugin can exist without full interactive UI value"
+    },
+    {
+      "feature": "Team Marketplaces",
+      "platform_status": "officially documented and announced for Teams/Enterprise",
+      "local_status": "local app is new enough on Cursor 2.6.11, but still requires eligible plan/admin controls",
+      "risk": "not an immediate local single-user gain"
+    },
+    {
+      "feature": "mcp.json server registration",
+      "platform_status": "officially documented in current Cursor MCP docs",
+      "local_status": "available now with setup",
+      "risk": "local auth, tool trust, and policy review still required"
+    }
+  ],
+  "tier_a_candidates": [
+    {
+      "candidate_id": "MCP-188",
+      "name": "Context7",
+      "kind": "cursor_plugin",
+      "requires_cursor_2_6_plus": false,
+      "usable_on_local_cursor": true,
+      "blocked_pending_upgrade": false,
+      "requires_oauth": false,
+      "needs_api_key_or_local_daemon": false,
+      "requires_team_or_enterprise_surface": false,
+      "security_risk": "low",
+      "safe_default_mode": "sandboxed pilot",
+      "notes": "Plugin-era Cursor already exists locally, so the main cost is install/auth rather than version gating."
+    },
+    {
+      "candidate_id": "MCP-184",
+      "name": "Parallel",
+      "kind": "cursor_plugin",
+      "requires_cursor_2_6_plus": false,
+      "usable_on_local_cursor": true,
+      "blocked_pending_upgrade": false,
+      "requires_oauth": false,
+      "needs_api_key_or_local_daemon": true,
+      "requires_team_or_enterprise_surface": false,
+      "security_risk": "medium",
+      "safe_default_mode": "sandboxed pilot",
+      "notes": "Usable on the current local Cursor baseline, but requires external service setup."
+    },
+    {
+      "candidate_id": "MCP-007",
+      "name": "Playwright",
+      "kind": "external_server",
+      "requires_cursor_2_6_plus": false,
+      "usable_on_local_cursor": true,
+      "blocked_pending_upgrade": false,
+      "requires_oauth": false,
+      "needs_api_key_or_local_daemon": false,
+      "requires_team_or_enterprise_surface": false,
+      "security_risk": "medium",
+      "safe_default_mode": "sandboxed pilot",
+      "notes": "Current local Cursor can use stdio MCP servers; this is a setup question, not a 2.6 feature gate."
+    },
+    {
+      "candidate_id": "MCP-183",
+      "name": "Langfuse",
+      "kind": "cursor_plugin",
+      "requires_cursor_2_6_plus": false,
+      "usable_on_local_cursor": true,
+      "blocked_pending_upgrade": false,
+      "requires_oauth": false,
+      "needs_api_key_or_local_daemon": true,
+      "requires_team_or_enterprise_surface": false,
+      "security_risk": "medium",
+      "safe_default_mode": "sandboxed pilot",
+      "notes": "Usable on the current local baseline with plugin setup and Langfuse access."
+    },
+    {
+      "candidate_id": "MCP-182",
+      "name": "Runlayer",
+      "kind": "cursor_plugin",
+      "requires_cursor_2_6_plus": false,
+      "usable_on_local_cursor": true,
+      "blocked_pending_upgrade": false,
+      "requires_oauth": false,
+      "needs_api_key_or_local_daemon": true,
+      "requires_team_or_enterprise_surface": false,
+      "security_risk": "medium",
+      "safe_default_mode": "sandboxed pilot",
+      "notes": "Usable on current Cursor with setup; no 2.6-only dependency is required for core value."
+    },
+    {
+      "candidate_id": "MCP-193",
+      "name": "concentric-trace-mcp",
+      "kind": "internal_opportunity",
+      "requires_cursor_2_6_plus": false,
+      "usable_on_local_cursor": true,
+      "blocked_pending_upgrade": false,
+      "requires_oauth": false,
+      "needs_api_key_or_local_daemon": false,
+      "requires_team_or_enterprise_surface": false,
+      "security_risk": "low",
+      "safe_default_mode": "read-only first",
+      "notes": "No local Cursor version blocker; requires building and registering the MCP server."
+    },
+    {
+      "candidate_id": "MCP-194",
+      "name": "concentric-benchmark-mcp",
+      "kind": "internal_opportunity",
+      "requires_cursor_2_6_plus": false,
+      "usable_on_local_cursor": true,
+      "blocked_pending_upgrade": false,
+      "requires_oauth": false,
+      "needs_api_key_or_local_daemon": false,
+      "requires_team_or_enterprise_surface": false,
+      "security_risk": "low",
+      "safe_default_mode": "read-only first",
+      "notes": "Requires server implementation, not a Cursor upgrade."
+    },
+    {
+      "candidate_id": "MCP-196",
+      "name": "concentric-health-mcp",
+      "kind": "internal_opportunity",
+      "requires_cursor_2_6_plus": false,
+      "usable_on_local_cursor": true,
+      "blocked_pending_upgrade": false,
+      "requires_oauth": false,
+      "needs_api_key_or_local_daemon": false,
+      "requires_team_or_enterprise_surface": false,
+      "security_risk": "low",
+      "safe_default_mode": "read-only first",
+      "notes": "Requires internal MCP implementation only."
+    },
+    {
+      "candidate_id": "MCP-195",
+      "name": "concentric-research-mcp",
+      "kind": "internal_opportunity",
+      "requires_cursor_2_6_plus": false,
+      "usable_on_local_cursor": true,
+      "blocked_pending_upgrade": false,
+      "requires_oauth": false,
+      "needs_api_key_or_local_daemon": false,
+      "requires_team_or_enterprise_surface": false,
+      "security_risk": "low",
+      "safe_default_mode": "read-only first",
+      "notes": "Needs implementation, but no local version gate."
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "last_updated": "2026-03-03",
+  "tool_classes": {
+    "runtime_python_selected": {
+      "required": true,
+      "prefer": ["operator_venv_python"]
+    },
+    "macos_ui_automation": {
+      "required": true,
+      "prefer": ["osascript_system_events"]
+    },
+    "native_event_backend": {
+      "required": true,
+      "prefer": ["pyobjc_native_stack"]
+    },
+    "screen_capture": {
+      "required": true,
+      "prefer": ["screencapture_cli"]
+    },
+    "browser_target": {
+      "required": false,
+      "prefer": ["safari_bundle"]
+    },
+    "credential_backend": {
+      "required": false,
+      "prefer": ["security_cli"]
+    },
+    "site_capture_windowed": {
+      "required": false,
+      "prefer": ["window_capture_stack"]
+    },
+    "a11y_semantic_backend": {
+      "required": false,
+      "prefer": ["macapptree_backend", "pyax_backend"]
+    },
+    "semantic_skill_embeddings": {
+      "required": false,
+      "prefer": ["sentence_transformers_backend"]
+    },
+    "legacy_openai_path": {
+      "required": false,
+      "prefer": ["legacy_openai_backend"]
+    }
+  },
+  "tools": {
+    "operator_venv_python": {
+      "description": "Project-selected Python runtime with the core operator dependencies installed.",
+      "provides": ["runtime_python_selected"],
+      "checks": [
+        {
+          "name": "venv_python_exists",
+          "type": "file_exists",
+          "path": "{{operator_python}}"
+        },
+        {
+          "name": "venv_python_version",
+          "type": "command",
+          "argv": ["{{operator_python}}", "-V"],
+          "expect_regex": "^Python 3\\."
+        },
+        {
+          "name": "venv_core_imports",
+          "type": "python_imports",
+          "executable": "{{operator_python}}",
+          "modules": ["pydantic", "requests", "PIL", "google.genai", "numpy", "scipy", "imagehash"]
+        }
+      ]
+    },
+    "pyobjc_native_stack": {
+      "description": "PyObjC-backed AppKit/Quartz native event substrate.",
+      "provides": ["native_event_backend"],
+      "checks": [
+        {
+          "name": "native_imports",
+          "type": "python_imports",
+          "executable": "{{operator_python}}",
+          "modules": ["AppKit", "Quartz"]
+        }
+      ]
+    },
+    "osascript_system_events": {
+      "description": "AppleScript + System Events automation path.",
+      "provides": ["macos_ui_automation"],
+      "checks": [
+        {
+          "name": "osascript_binary",
+          "type": "command_exists",
+          "command": "osascript"
+        },
+        {
+          "name": "system_events_probe",
+          "type": "command",
+          "argv": ["osascript", "-e", "tell application \"System Events\" to return true"],
+          "expect_regex": "^true\\s*$"
+        }
+      ]
+    },
+    "screencapture_cli": {
+      "description": "Native macOS screenshot capture CLI.",
+      "provides": ["screen_capture"],
+      "checks": [
+        {
+          "name": "screencapture_binary",
+          "type": "command_exists",
+          "command": "screencapture"
+        }
+      ]
+    },
+    "safari_bundle": {
+      "description": "Safari browser target for the visual web-agent runtime.",
+      "provides": ["browser_target"],
+      "checks": [
+        {
+          "name": "safari_bundle_exists",
+          "type": "file_exists",
+          "path": "{{safari_app}}"
+        }
+      ]
+    },
+    "security_cli": {
+      "description": "macOS Keychain CLI used by the credential vault path.",
+      "provides": ["credential_backend"],
+      "checks": [
+        {
+          "name": "security_binary",
+          "type": "command_exists",
+          "command": "security"
+        }
+      ]
+    },
+    "window_capture_stack": {
+      "description": "Front-window-scoped capture utilities used for window-local verification.",
+      "provides": ["site_capture_windowed"],
+      "checks": [
+        {
+          "name": "window_capture_import",
+          "type": "python_code",
+          "executable": "{{operator_python}}",
+          "code": "from window_capture import capture_front_window; print('ok')",
+          "expect_regex": "^ok\\s*$"
+        }
+      ]
+    },
+    "macapptree_backend": {
+      "description": "Preferred semantic a11y backend when installed.",
+      "provides": ["a11y_semantic_backend"],
+      "checks": [
+        {
+          "name": "macapptree_import",
+          "type": "python_imports",
+          "executable": "{{operator_python}}",
+          "modules": ["macapptree"]
+        }
+      ]
+    },
+    "pyax_backend": {
+      "description": "Fallback semantic a11y backend when installed.",
+      "provides": ["a11y_semantic_backend"],
+      "checks": [
+        {
+          "name": "pyax_import",
+          "type": "python_imports",
+          "executable": "{{operator_python}}",
+          "modules": ["pyax"]
+        }
+      ]
+    },
+    "sentence_transformers_backend": {
+      "description": "Dense embedding retrieval for semantic skill lookup.",
+      "provides": ["semantic_skill_embeddings"],
+      "checks": [
+        {
+          "name": "sentence_transformers_import",
+          "type": "python_imports",
+          "executable": "{{operator_python}}",
+          "modules": ["sentence_transformers"]
+        }
+      ]
+    },
+    "legacy_openai_backend": {
+      "description": "Legacy OpenAI-backed coordinator path retained for older flows.",
+      "provides": ["legacy_openai_path"],
+      "checks": [
+        {
+          "name": "openai_import",
+          "type": "python_imports",
+          "executable": "{{operator_python}}",
+          "modules": ["openai"]
+        }
+      ]
+    }
+  }
+}

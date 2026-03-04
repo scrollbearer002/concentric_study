@@ -1,0 +1,23 @@
+---
+description: Keep MCP usage bounded, explicit, and appropriate to the question
+globs:
+alwaysApply: true
+---
+
+# MCP Governance
+
+Use the smallest active MCP set that can solve the task.
+
+Current default guidance:
+- `context7` is for current third-party package and SDK docs
+- `concentric-health` is for repo-local environment and readiness facts
+- `concentric-trace` is for repo-local run and failure forensics
+
+Rules:
+- explicitly name the intended MCP when tool ambiguity is likely
+- avoid external-doc MCPs for repo-local, environment-local, or Cursor-product questions
+- treat tool-count pressure as real; do not enable more MCPs without a concrete need
+- prefer read-only internal MCPs before adding new external surfaces
+
+If a tool should not be used for the question, say so and use local files or
+live checks instead.

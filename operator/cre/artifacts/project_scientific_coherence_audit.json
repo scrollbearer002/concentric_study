@@ -1,0 +1,173 @@
+{
+  "generated_at": "2026-03-03",
+  "environment": {
+    "repo": "concentric_study",
+    "cwd": "/Users/christianpardo/Desktop/concentric_study",
+    "os": "macOS 26.3",
+    "arch": "arm64",
+    "editor": "Cursor 2.5.26",
+    "browser": "Safari",
+    "python_runtime": "./operator/venv/bin/python"
+  },
+  "test_surface": {
+    "command": "cd operator && ./venv/bin/python -m pytest cre/test_*.py -q",
+    "passed": 163,
+    "failed": 2,
+    "skipped": 3,
+    "warnings": 5,
+    "critical_failures": [
+      "cre/test_architecture_conformance.py::test_architecture_conformance_enforcement_passes",
+      "cre/test_architecture_conformance.py::test_facade_import_surface_is_not_growing"
+    ]
+  },
+  "primary_external_sources": [
+    {
+      "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+      "url": "https://arxiv.org/abs/2404.07972"
+    },
+    {
+      "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2303.11366"
+    },
+    {
+      "title": "AppAgent: Multimodal Agents as Smartphone Users",
+      "url": "https://arxiv.org/abs/2312.13771"
+    },
+    {
+      "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+      "url": "https://arxiv.org/abs/1908.10084"
+    },
+    {
+      "title": "MindGuard: Intrinsic Decision Inspection for Securing LLM Agents Against Metadata Poisoning",
+      "url": "https://arxiv.org/abs/2508.20412"
+    },
+    {
+      "title": "MCP-Atlas: A Large-Scale Benchmark for Tool-Use Competency with Real MCP Servers",
+      "url": "https://arxiv.org/abs/2602.00933"
+    },
+    {
+      "title": "CRAFIT: Continuous Reasoning and Agentic Feedback Tuning for Multimodal Text-to-Image Generation",
+      "url": "https://arxiv.org/abs/2512.20362"
+    },
+    {
+      "title": "GUI-explorer: Autonomous Exploration and Mining of Transition-aware Knowledge for GUI Agent",
+      "url": "https://arxiv.org/abs/2505.16827"
+    },
+    {
+      "title": "RAG-MCP: Mitigating Prompt Bloat in LLM Tool Selection via Retrieval-Augmented Generation",
+      "url": "https://arxiv.org/abs/2505.03275"
+    },
+    {
+      "title": "OWASP MCP Top 10",
+      "url": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/"
+    }
+  ],
+  "findings": [
+    {
+      "area": "Trace-centric observability",
+      "status": "directly_supported",
+      "confidence": "high",
+      "summary": "The trace-writer, diagnostic reader, and healing orchestrator form a real code-backed observability stack with unit tests and concrete run artifacts.",
+      "local_evidence": [
+        "operator/agent_infra/trace_writer.py",
+        "operator/agent_infra/diagnostic_reader.py",
+        "operator/agent_infra/healing_orchestrator.py",
+        "operator/cre/test_trace_writer.py",
+        "operator/cre/test_diagnostic_reader.py",
+        "operator/cre/test_healing_orchestrator.py"
+      ],
+      "external_evidence": [
+        "https://arxiv.org/abs/2404.07972",
+        "https://dl.acm.org/doi/10.1145/24039.24041"
+      ]
+    },
+    {
+      "area": "Skill learning and Bayesian trust",
+      "status": "directly_supported_with_doc_drift",
+      "confidence": "high",
+      "summary": "The skill library, semantic retrieval, and Bayesian trust tracker are implemented and tested, but some top-level docs still describe the old 'skip after 5 successes' policy instead of the current Beta-Binomial posterior gate.",
+      "local_evidence": [
+        "operator/agent_infra/skill_library.py",
+        "operator/agent_infra/action_trust.py",
+        "operator/cre/test_skill_library.py",
+        "operator/cre/test_action_trust.py",
+        "AGENTS.md",
+        "operator/cre/PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md"
+      ],
+      "external_evidence": [
+        "https://arxiv.org/abs/1908.10084",
+        "https://arxiv.org/abs/2505.03275"
+      ],
+      "required_correction": "Update AGENTS.md and project-description prose to match the posterior-based trust gate."
+    },
+    {
+      "area": "Mandatory gate / monitor / research enforcement",
+      "status": "implemented_but_overstated",
+      "confidence": "high",
+      "summary": "ResearchAgent, VisualMonitor, VerificationGate, and BenchmarkEvaluator are real modules and are wired into operator/agent.py, but they are not universally enforced across all entrypoints and traced tests. Current prose often describes them as mandatory or always-on system properties.",
+      "local_evidence": [
+        "operator/agent.py:644",
+        "operator/agent.py:1951",
+        "operator/agent.py:1979",
+        "operator/agent.py:2053",
+        "operator/cre/test_excalidraw_covt.py",
+        "operator/cre/test_login_flow.py",
+        "operator/cre/test_canva_draw.py"
+      ],
+      "external_evidence": [
+        "https://arxiv.org/abs/2312.13771",
+        "https://arxiv.org/abs/2512.20362",
+        "https://arxiv.org/abs/2602.00933"
+      ],
+      "required_correction": "Change repo-level wording from 'mandatory/always' to 'wired in the universal agent path and selected demos/tests' unless universal enforcement is actually added."
+    },
+    {
+      "area": "Architecture conformance",
+      "status": "partially_contradicted_by_current_repo_state",
+      "confidence": "high",
+      "summary": "The architectural layering model is meaningful, but the current repo state no longer fully satisfies its own conformance gate. The strongest architecture-health claims should therefore be written as target-state or mostly-holds, not fully-holds.",
+      "local_evidence": [
+        "operator/cre/test_architecture_conformance.py",
+        "operator/cre/project_understanding/tools/build_architecture_conformance.py",
+        "pytest result on 2026-03-03"
+      ],
+      "required_correction": "Refresh architecture docs and/or repair the drift before claiming the layering model is currently enforced."
+    },
+    {
+      "area": "Citation hygiene and validation tiers",
+      "status": "mixed",
+      "confidence": "medium",
+      "summary": "Most major cited papers and benchmarks are real and appropriate as direct or analogical support, but the repo does not consistently label when a citation is direct validation versus loose inspiration. Some newer references are credible but cross-domain (e.g. text-to-image or MCP tooling) and should be marked analogical. A few claims rely on citations that were not directly verified in this pass.",
+      "local_evidence": [
+        "AGENTS.md",
+        "operator/cre/PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md",
+        "DUAL_AGENT_LOOP_PLAN.md",
+        "module docstrings in operator/agent_infra/*.py"
+      ],
+      "external_evidence": [
+        "https://arxiv.org/abs/2404.07972",
+        "https://arxiv.org/abs/2303.11366",
+        "https://arxiv.org/abs/2508.20412",
+        "https://arxiv.org/abs/2602.00933",
+        "https://arxiv.org/abs/2512.20362",
+        "https://arxiv.org/abs/2411.17465"
+      ],
+      "required_correction": "Adopt explicit labels: direct support, analogical support, speculative/proposed."
+    },
+    {
+      "area": "Security claims",
+      "status": "broadly_coherent_but_benchmark_links_are_analogical",
+      "confidence": "medium",
+      "summary": "The sanitizer and credential-vault design are coherent for a macOS visual web agent, but several MCP-ecosystem benchmark and attack citations support analogous threat models rather than directly validating this exact local defense stack.",
+      "local_evidence": [
+        "operator/security/sanitizer.py",
+        "operator/security/credential_vault.py"
+      ],
+      "external_evidence": [
+        "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+        "https://arxiv.org/abs/2510.15994",
+        "https://arxiv.org/abs/2508.10991"
+      ]
+    }
+  ]
+}

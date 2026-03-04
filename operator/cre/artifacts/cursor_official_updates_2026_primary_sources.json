@@ -1,0 +1,158 @@
+[
+  {
+    "source_id": "SRC-01",
+    "title": "Software is changing",
+    "url": "https://www.youtube.com/watch?v=2SkrTnGMsr0",
+    "source_class": "official_video",
+    "published_date": "2026-02-26",
+    "retrieved_date": "2026-02-28",
+    "why_relevant": "Canonical transcript source for the claims under analysis.",
+    "claims_supported": [
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08"
+    ]
+  },
+  {
+    "source_id": "SRC-02",
+    "title": "Cloud Agents with Computer Use",
+    "url": "https://cursor.com/changelog/02-24-26/",
+    "source_class": "official_changelog_entry",
+    "published_date": "2026-02-24",
+    "retrieved_date": "2026-02-28",
+    "why_relevant": "Release ledger for Cursor 2.6, including cloud agents with computer use, agent plans, and cloud activity surfaces.",
+    "claims_supported": [
+      "C03",
+      "C04",
+      "C05",
+      "C06"
+    ]
+  },
+  {
+    "source_id": "SRC-03",
+    "title": "Cursor agents can now control their own computers",
+    "url": "https://cursor.com/blog/cloud-agents-computer-use",
+    "source_class": "official_blog_post",
+    "published_date": "2026-02-24",
+    "retrieved_date": "2026-02-28",
+    "why_relevant": "Primary explanation of remote browser, terminal, and code-editing capability for cloud agents.",
+    "claims_supported": [
+      "C03",
+      "C04",
+      "C05",
+      "C06"
+    ]
+  },
+  {
+    "source_id": "SRC-04",
+    "title": "A computer for every agent",
+    "url": "https://www.youtube.com/watch?v=6Nru5OQq9O4",
+    "source_class": "official_video",
+    "published_date": "2026-02-24",
+    "retrieved_date": "2026-02-28",
+    "why_relevant": "Official video framing that directly supports the 'own computers' part of the transcript.",
+    "claims_supported": [
+      "C04"
+    ]
+  },
+  {
+    "source_id": "SRC-05",
+    "title": "Cursor now shows you demos, not diffs",
+    "url": "https://www.youtube.com/watch?v=XbZvC4KTH68",
+    "source_class": "official_video",
+    "published_date": "2026-02-24",
+    "retrieved_date": "2026-02-28",
+    "why_relevant": "Direct official support for the idea that review increasingly includes demo artifacts rather than only textual diffs.",
+    "claims_supported": [
+      "C06",
+      "C07"
+    ]
+  },
+  {
+    "source_id": "SRC-06",
+    "title": "Bugbot Autofix",
+    "url": "https://cursor.com/changelog/02-26-26/",
+    "source_class": "official_changelog_entry",
+    "published_date": "2026-02-26",
+    "retrieved_date": "2026-02-28",
+    "why_relevant": "Release ledger for automatic PR issue fixing and review-loop automation.",
+    "claims_supported": [
+      "C06",
+      "C07"
+    ]
+  },
+  {
+    "source_id": "SRC-07",
+    "title": "Closing the code review loop with Bugbot Autofix",
+    "url": "https://cursor.com/blog/bugbot-autofix",
+    "source_class": "official_blog_post",
+    "published_date": "2026-02-26",
+    "retrieved_date": "2026-02-28",
+    "why_relevant": "Operational explanation of Bugbot Autofix spawning cloud agents to test changes and fix PR issues automatically.",
+    "claims_supported": [
+      "C06",
+      "C07"
+    ]
+  },
+  {
+    "source_id": "SRC-08",
+    "title": "Expanding our long-running agents research preview",
+    "url": "https://cursor.com/blog/long-running-agents",
+    "source_class": "official_blog_post",
+    "published_date": "2026-02-12",
+    "retrieved_date": "2026-02-28",
+    "why_relevant": "Primary evidence for reduced micromanagement over longer-running tasks and explicit rollout scope.",
+    "claims_supported": [
+      "C02",
+      "C03",
+      "C04"
+    ]
+  },
+  {
+    "source_id": "SRC-09",
+    "title": "The third era of AI software development",
+    "url": "https://cursor.com/blog/third-era",
+    "source_class": "official_blog_post",
+    "published_date": "2026-02-26",
+    "retrieved_date": "2026-02-28",
+    "why_relevant": "Product-direction framing for autonomous cloud agents taking on larger tasks over longer timescales.",
+    "claims_supported": [
+      "C01",
+      "C02",
+      "C03",
+      "C05"
+    ]
+  },
+  {
+    "source_id": "SRC-10",
+    "title": "Towards self-driving codebases",
+    "url": "https://cursor.com/blog/self-driving-codebases",
+    "source_class": "official_blog_post",
+    "published_date": "2026-02-05",
+    "retrieved_date": "2026-02-28",
+    "why_relevant": "Earlier research-preview framing for a multi-agent harness that pushes work beyond synchronous chat-style coding.",
+    "claims_supported": [
+      "C01",
+      "C02",
+      "C03"
+    ]
+  },
+  {
+    "source_id": "SRC-11",
+    "title": "Cursor 2.5",
+    "url": "https://cursor.com/blog/cursor-2-5",
+    "source_class": "official_blog_post",
+    "published_date": "2026-02-17",
+    "retrieved_date": "2026-02-28",
+    "why_relevant": "Supporting infrastructure source for plugins, async subagents, and network controls that make broader agent autonomy more plausible.",
+    "claims_supported": [
+      "C03",
+      "C05"
+    ]
+  }
+]

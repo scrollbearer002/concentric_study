@@ -1,0 +1,120 @@
+[
+  {
+    "experiment_id": "EXP-01",
+    "claim_id": "C04",
+    "experiment_name": "Cloud agent artifact review",
+    "environment": "Current Cursor cloud-agent surface",
+    "preconditions": [
+      "Account with access to cloud agents",
+      "Repository that can be safely modified in a disposable branch"
+    ],
+    "steps": [
+      "Launch a cloud agent task that requires browser interaction, terminal use, and code edits.",
+      "Observe whether the task runs in a remote environment rather than purely inside the local editor.",
+      "Inspect the resulting activity view for preview artifacts such as screenshots, desktop preview, logs, or execution trace."
+    ],
+    "expected_result": "The run clearly exposes remote computer-use evidence rather than only a final patch.",
+    "falsification_condition": "If the agent cannot use remote browser or terminal surfaces, or produces no remote-execution artifacts, the 'own computers' claim is overstated for the tested surface."
+  },
+  {
+    "experiment_id": "EXP-02",
+    "claim_id": "C07",
+    "experiment_name": "Bugbot Autofix workflow",
+    "environment": "Repository with PR integration and Bugbot enabled",
+    "preconditions": [
+      "A test PR with an issue Bugbot can plausibly flag",
+      "Access to the Bugbot review surface"
+    ],
+    "steps": [
+      "Open the PR and trigger Bugbot Autofix if the UI allows it.",
+      "Record whether a cloud agent is spawned.",
+      "Record whether Bugbot proposes a fix artifact, branch change, or patch for review."
+    ],
+    "expected_result": "Bugbot identifies an issue and offers or applies an automatically tested fix path rather than only a plain comment.",
+    "falsification_condition": "If Bugbot only comments without any fix-generation or cloud-agent behavior, the Autofix claim is not operationally present in the tested setup."
+  },
+  {
+    "experiment_id": "EXP-03",
+    "claim_id": "C02",
+    "experiment_name": "Long-running agent planning and intervention count",
+    "environment": "Cursor web app with long-running agents access",
+    "preconditions": [
+      "Ultra, Teams, or Enterprise seat with long-running agent access",
+      "A task large enough to require multiple substeps"
+    ],
+    "steps": [
+      "Assign a moderately complex task in the web app.",
+      "Measure how many clarifications or nudges are required before the agent reaches a reviewable result.",
+      "Compare against a synchronous editor session on the same task."
+    ],
+    "expected_result": "The long-running path requires materially fewer interventions than the synchronous path.",
+    "falsification_condition": "If intervention count is unchanged or higher, the reduced-micromanagement implication is weak for the tested workload."
+  },
+  {
+    "experiment_id": "EXP-04",
+    "claim_id": "C03",
+    "experiment_name": "Delegation depth across local and cloud flows",
+    "environment": "Editor agent and cloud-agent surfaces",
+    "preconditions": [
+      "Same repository accessible in both flows",
+      "A feature request that spans search, edits, and execution"
+    ],
+    "steps": [
+      "Run the task in the local editor flow.",
+      "Run the same task in the cloud-agent or long-running flow.",
+      "Compare amount of up-front decomposition, approval frequency, and completion quality."
+    ],
+    "expected_result": "The cloud or long-running path accepts broader intent and performs more end-to-end execution before asking for help.",
+    "falsification_condition": "If both flows require the same amount of step-by-step decomposition, the 'take an idea and run with it' claim is not operationally strong."
+  },
+  {
+    "experiment_id": "EXP-05",
+    "claim_id": "C05",
+    "experiment_name": "Live-feature versus diff-only output",
+    "environment": "Cloud-agent feature implementation task",
+    "preconditions": [
+      "Task with a visible UI or runtime result",
+      "Access to any preview or activity surface"
+    ],
+    "steps": [
+      "Ask the agent to implement a small, visible feature.",
+      "Inspect the review surface for runnable preview, screenshot, or demo artifacts.",
+      "Record whether the output is richer than a diff alone."
+    ],
+    "expected_result": "The agent returns demonstrable feature-level artifacts in addition to code changes.",
+    "falsification_condition": "If only a diff or PR appears with no preview-style evidence, the 'live features' claim remains aspirational for the tested path."
+  },
+  {
+    "experiment_id": "EXP-06",
+    "claim_id": "C06",
+    "experiment_name": "Demo-based review surface validation",
+    "environment": "Official Cursor review flow that claims demo/artifact support",
+    "preconditions": [
+      "Task or PR suitable for review",
+      "Access to the latest review UI"
+    ],
+    "steps": [
+      "Complete an agent run or PR review flow.",
+      "Record all review artifacts shown to the user.",
+      "Classify them as diff-only, demo/artifact-enhanced, or hybrid."
+    ],
+    "expected_result": "The flow exposes at least one artifact beyond plain diff text.",
+    "falsification_condition": "If review remains diff-only across the tested flow, the 'demos, not diffs' claim is overgeneralized."
+  },
+  {
+    "experiment_id": "EXP-07",
+    "claim_id": "C08",
+    "experiment_name": "Transcript fragment verification",
+    "environment": "Original official video playback",
+    "preconditions": [
+      "Access to the original YouTube video"
+    ],
+    "steps": [
+      "Re-watch the final seconds of the video slowly.",
+      "Check whether the phrase 'hitting I' is accurate or a transcription artifact.",
+      "Capture the actual UI action or conclude that none is clear."
+    ],
+    "expected_result": "Either a concrete UI action is identified or the transcript fragment is confirmed as too ambiguous to operationalize.",
+    "falsification_condition": "If no clear interaction can be confirmed, the claim must remain unresolved."
+  }
+]

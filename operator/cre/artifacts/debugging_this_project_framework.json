@@ -1,0 +1,290 @@
+{
+  "environment_basis": {
+    "repo_root": "/Users/christianpardo/Desktop/concentric_study",
+    "scope": "live concentric_study repo on this machine",
+    "test_baseline": {
+      "passed": 193,
+      "skipped": 3,
+      "warnings": 5
+    },
+    "architecture_conformance": {
+      "mode": "check",
+      "enforcement_passed": true,
+      "graph_digest": "baba844c630282c619b7184e7de120bc6283a11c85fdddb91882abedb120716b",
+      "rule_statuses": {
+        "AC001": "conforms_with_exceptions",
+        "AC002": "conforms",
+        "AC003": "conforms",
+        "AC004": "conforms",
+        "AC005": "conforms",
+        "AC006": "monitored_debt",
+        "AC007": "advisory"
+      }
+    },
+    "host_tool_health": {
+      "all_required_ready": true,
+      "selected": {
+        "runtime_python_selected": "operator_venv_python",
+        "macos_ui_automation": "osascript_system_events",
+        "native_event_backend": "pyobjc_native_stack",
+        "screen_capture": "screencapture_cli",
+        "browser_target": "safari_bundle",
+        "credential_backend": "security_cli"
+      }
+    }
+  },
+  "debugging_order": [
+    "substrate_truth",
+    "architecture_conformance_truth",
+    "task_surface_truth",
+    "perception_truth",
+    "interaction_action_truth",
+    "recovery_refinement_truth",
+    "verification_truth",
+    "artifact_reproducibility_truth",
+    "claim_discipline_documentation_truth",
+    "dead_weight_signal_to_noise_truth"
+  ],
+  "layers": [
+    {
+      "name": "substrate_truth",
+      "goal": "Prove the machine substrate and selected backends are healthy before any task-level diagnosis.",
+      "local_code_refs": [
+        "operator/agent_infra/host_tool_health.py:1",
+        "operator/agent_infra/host_tool_health.py:37",
+        "operator/agent_infra/host_tool_health.py:69",
+        "operator/agent.py:2315"
+      ],
+      "baseline_checks": [
+        "host_tool_health_summary",
+        "selected_backend_check",
+        "required_class_readiness"
+      ],
+      "common_failure_signatures": [
+        "screenshot_capture_failure",
+        "applescript_or_system_events_failure",
+        "focus_or_activation_failure",
+        "pyobjc_runtime_failure",
+        "missing_browser_bundle"
+      ],
+      "first_actions": [
+        "run host health summary",
+        "confirm selected backends",
+        "confirm required classes are ready"
+      ],
+      "stop_condition": "Do not move up-stack until required host capability classes are healthy or explicitly classified as unavailable."
+    },
+    {
+      "name": "architecture_conformance_truth",
+      "goal": "Verify that the live architecture/governance model is truthful before diagnosing module placement or structural regressions.",
+      "local_code_refs": [
+        "operator/cre/project_understanding/tools/build_architecture_conformance.py",
+        "operator/cre/test_architecture_conformance.py",
+        "operator/cre/project_understanding/ARCHITECTURE_DEBT_REGISTER.md"
+      ],
+      "baseline_checks": [
+        "pure conformance check",
+        "graph digest capture",
+        "AC006 monitored debt review"
+      ],
+      "common_failure_signatures": [
+        "reverse_layer_edge",
+        "shim_import_growth",
+        "facade_import_growth",
+        "stale_import_graph_assumption"
+      ],
+      "first_actions": [
+        "run architecture conformance in check mode",
+        "confirm no write mutation in check mode",
+        "review monitored debt separately from unexpected drift"
+      ],
+      "stop_condition": "Do not patch runtime architecture to satisfy stale documentation or stale artifacts."
+    },
+    {
+      "name": "task_surface_truth",
+      "goal": "Confirm that the live page/app surface is actually the surface the agent thinks it is working on.",
+      "local_code_refs": [
+        "operator/window_capture.py",
+        "operator/agent_infra/recovery.py:59",
+        "operator/agent_infra/visual_monitor.py:199"
+      ],
+      "evidence_artifacts": [
+        "operator/cre/BRILLIANT_LIVE_TEST_LOG.md",
+        "operator/cre/JSPAINT_DRAW_FAILURE_FORENSICS_PHD.md",
+        "operator/cre/FRESH_LIVE_ART_BENCHMARK_PHD.md"
+      ],
+      "common_failure_signatures": [
+        "unexpected_modal_or_dialog",
+        "reloaded_or_shifted_page_state",
+        "wrong_canvas_or_composer_layer",
+        "stale_replay_surface"
+      ],
+      "first_actions": [
+        "capture the front window",
+        "confirm page mode and step",
+        "verify no blocking overlays",
+        "verify actual work area and current surface state"
+      ],
+      "stop_condition": "Do not debug perception or action semantics against the wrong page/app state."
+    },
+    {
+      "name": "perception_truth",
+      "goal": "Validate that the project is seeing the intended front surface and aligning overlays or geometry correctly.",
+      "local_code_refs": [
+        "operator/visual_engine.py",
+        "operator/a11y_engine.py",
+        "operator/element_map.py",
+        "operator/window_capture.py"
+      ],
+      "common_failure_signatures": [
+        "overlay_misalignment",
+        "wrong_crop_or_canvas_export",
+        "sparse_or_irrelevant_a11y_tree",
+        "screenshot_geometry_disagrees_with_dom_geometry"
+      ],
+      "first_actions": [
+        "confirm screenshot is of the intended front window",
+        "confirm overlay alignment",
+        "compare screenshot-based geometry to DOM/window geometry"
+      ],
+      "stop_condition": "Prefer geometry truth over brittle screenshot heuristics when the former is available."
+    },
+    {
+      "name": "interaction_action_truth",
+      "goal": "Determine whether the intended semantic action and its native execution path are the right primitive for the live widget or surface.",
+      "local_code_refs": [
+        "operator/web_primitives.py:68",
+        "operator/web_primitives.py:95",
+        "operator/web_primitives.py:120",
+        "operator/agent_core.py:551",
+        "operator/agent_core.py:636",
+        "operator/agent_core.py:694",
+        "operator/agent_core.py:844"
+      ],
+      "common_failure_signatures": [
+        "occupied_slot_edit_failure",
+        "slider_success_but_controlled_widget_failure",
+        "pointer_lands_without_state_change",
+        "fixture_success_live_failure"
+      ],
+      "first_actions": [
+        "identify intended semantic action",
+        "verify mapping to action-space primitive",
+        "confirm target identity and coordinates from the live surface"
+      ],
+      "stop_condition": "Do not escalate force before proving the missing capability is mechanical rather than semantic."
+    },
+    {
+      "name": "recovery_refinement_truth",
+      "goal": "Verify that recovery changed state, not just produced a plausible diagnosis.",
+      "local_code_refs": [
+        "operator/agent_infra/recovery.py:42",
+        "operator/agent_infra/recovery.py:119",
+        "operator/agent_infra/recovery.py:196",
+        "operator/agent_infra/recovery.py:238"
+      ],
+      "common_failure_signatures": [
+        "correct_diagnosis_with_none_action",
+        "repeat_failure_without_state_change",
+        "postcondition_pass_but_surface_still_wrong"
+      ],
+      "first_actions": [
+        "inspect diagnostic screenshot and prompt",
+        "inspect selected recovery action",
+        "check whether postcondition verification ran",
+        "inspect visual monitor checkpoints around the recovery"
+      ],
+      "stop_condition": "A recovery is not successful unless it produces a meaningful state transition."
+    },
+    {
+      "name": "verification_truth",
+      "goal": "Ensure that success/failure judgments are being asked and measured correctly.",
+      "local_code_refs": [
+        "operator/agent_infra/verification_gate.py:1",
+        "operator/agent_infra/verification_gate.py:137",
+        "operator/agent.py:2289"
+      ],
+      "common_failure_signatures": [
+        "bad_run_marked_success",
+        "good_run_failed_by_wrong_question",
+        "major_step_drift_caught_only_at_end"
+      ],
+      "first_actions": [
+        "inspect decomposed constraints",
+        "inspect checkpoint schedule if present",
+        "check whether verification mode matches the task"
+      ],
+      "stop_condition": "Do not weaken final verification to make metrics look green."
+    },
+    {
+      "name": "artifact_reproducibility_truth",
+      "goal": "Confirm that traces, screenshots, exports, and conformance artifacts tell the truth and are reproducible.",
+      "local_code_refs": [
+        "operator/agent_infra/trace_writer.py:21",
+        "operator/agent_infra/trace_writer.py:71",
+        "operator/agent_infra/diagnostic_reader.py:57",
+        "operator/agent_infra/decision_graph.py:162"
+      ],
+      "common_failure_signatures": [
+        "trace_manifest_mismatch",
+        "screenshot_export_mismatch",
+        "stale_replay_artifact",
+        "verification_tool_mutates_checked_artifact"
+      ],
+      "first_actions": [
+        "confirm trace and manifest correspond to the same run",
+        "confirm exported target matches visible page/canvas",
+        "confirm read-only verification paths stay pure"
+      ],
+      "stop_condition": "Do not reason from artifacts that have not been proven to reflect the current live surface."
+    },
+    {
+      "name": "claim_discipline_documentation_truth",
+      "goal": "Prevent debugging against a fictional or overstated version of the project.",
+      "local_code_refs": [
+        "AGENTS.md",
+        "operator/cre/PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md",
+        "operator/cre/PROJECT_SCIENTIFIC_COHERENCE_AUDIT_PHD.md"
+      ],
+      "common_failure_signatures": [
+        "doc_says_always_but_tests_do_not",
+        "doc_assumes_universal_path_that_is_not_universal",
+        "summary_doc_outpaces_canonical_truth"
+      ],
+      "first_actions": [
+        "compare strong claims to live tests",
+        "compare docs to current imports and entrypoints",
+        "label claims by support tier"
+      ],
+      "stop_condition": "Do not debug the project the docs wish existed; debug the one the tests and code prove exists."
+    },
+    {
+      "name": "dead_weight_signal_to_noise_truth",
+      "goal": "Reduce diagnosis noise from memo/demo/artifact density without deleting anything during the debugging step.",
+      "local_code_refs": [
+        "operator/cre/WHOLE_PROJECT_TRUTH_AUDIT_PHD.md",
+        "operator/cre/DEAD_WEIGHT_SIGNALS_PHD.md",
+        "operator/cre/artifacts/dead_weight_signals.json"
+      ],
+      "common_failure_signatures": [
+        "too_many_candidate_truth_sources",
+        "orphaned_demo_outputs_confuse_diagnosis",
+        "stale_summary_docs_compete_with_canonical_docs"
+      ],
+      "first_actions": [
+        "classify files as current/legacy/experimental/generated/stale candidate",
+        "prefer authoritative docs and current artifacts",
+        "ignore orphaned demo outputs during first-pass diagnosis unless directly relevant"
+      ],
+      "stop_condition": "Do not let stale artifacts or memo sprawl set the debugging agenda."
+    }
+  ],
+  "repo_specific_antipatterns": [
+    "deliverable_substitution",
+    "wrong_surface_debugging",
+    "geometry_afterthought",
+    "screenshot_overreach",
+    "force_before_semantics",
+    "stale_truth_debugging"
+  ]
+}

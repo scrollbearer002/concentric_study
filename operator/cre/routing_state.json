@@ -1,0 +1,28 @@
+{
+  "learned_routes": {
+    "assert_visual_state": "pro"
+  },
+  "performance": {
+    "assert_visual_state": {
+      "total_calls": 509,
+      "total_errors": 170,
+      "ema_latency_ms": 76249.4,
+      "ema_error_rate": 0.329
+    },
+    "analyze_ui": {
+      "total_calls": 25,
+      "total_errors": 0,
+      "ema_latency_ms": 12004.9,
+      "ema_error_rate": 0.0
+    },
+    "extract_target": {
+      "total_calls": 163,
+      "total_errors": 0,
+      "ema_latency_ms": 10325.4,
+      "ema_error_rate": 0.0
+    }
+  },
+  "adaptations": [
+    "[ADAPT] Promoted assert_visual_state: Flash->Pro (error_rate=30.00% > 20%)"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "generated_on": "2026-03-04",
+  "cursor_version_local": "2.6.11",
+  "blockers": [
+    {
+      "blocker_id": "BLK-001",
+      "name": "Repo is not a git worktree",
+      "severity": "high",
+      "affects": [
+        "plugin packaging",
+        "PR-centric review flows",
+        "clean distribution workflows"
+      ],
+      "why": "The plan explicitly gates plugin packaging on a real git repo."
+    },
+    {
+      "blocker_id": "BLK-002",
+      "name": "Account or admin gating for cloud and team surfaces",
+      "severity": "high",
+      "affects": [
+        "cloud agents",
+        "Bugbot Autofix",
+        "team marketplaces",
+        "enterprise-only controls"
+      ],
+      "why": "These are real Cursor features, but not guaranteed locally for this repo."
+    },
+    {
+      "blocker_id": "BLK-003",
+      "name": "Tool-count pressure",
+      "severity": "medium",
+      "affects": [
+        "external MCP expansion",
+        "default tool routing quality"
+      ],
+      "why": "Active MCP sprawl can reduce tool selection quality and waste context budget."
+    },
+    {
+      "blocker_id": "BLK-004",
+      "name": "Plugin schema should be re-verified at packaging time",
+      "severity": "medium",
+      "affects": [
+        "future concentric-study plugin bundle"
+      ],
+      "why": "Plugin surfaces are still evolving and should not be hard-coded prematurely."
+    },
+    {
+      "blocker_id": "BLK-005",
+      "name": "Sandbox policy is defined but not centrally enforced in repo files",
+      "severity": "medium",
+      "affects": [
+        "external MCP pilots",
+        "browser-heavy command execution"
+      ],
+      "why": "Cursor sandbox controls live in product settings or dashboard surfaces, not only in tracked repo files."
+    },
+    {
+      "blocker_id": "BLK-006",
+      "name": "Context7 pilot verdict is not final yet",
+      "severity": "medium",
+      "affects": [
+        "external MCP rollout beyond the first pilot"
+      ],
+      "why": "The repo has the pilot rubric, but the evaluation result is not yet closed."
+    }
+  ]
+}

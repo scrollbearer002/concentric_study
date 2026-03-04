@@ -1,0 +1,104 @@
+[
+  {
+    "title": "Architecture descriptions — ISO/IEC/IEEE 42010",
+    "url": "https://www.iso-architecture.org/ieee-1471/ads/",
+    "source_class": "architecture_standard",
+    "why_relevant": "Provides the strongest framework for distinguishing architecture truth, stakeholder concerns, and documentation discipline in a layered system."
+  },
+  {
+    "title": "Documenting Software Architectures: Views and Beyond",
+    "url": "https://www.sei.cmu.edu/library/documenting-software-architectures-views-and-beyond-second-edition/",
+    "source_class": "architecture_documentation",
+    "why_relevant": "Supports the distinction between intended architecture, implemented architecture, and stakeholder-facing documentation."
+  },
+  {
+    "title": "Architecture Reconstruction Guidelines, Third Edition",
+    "url": "https://www.sei.cmu.edu/library/architecture-reconstruction-guidelines-third-edition/",
+    "source_class": "architecture_reconstruction",
+    "why_relevant": "Supports repo-specific reconstruction from live code, artifacts, and tests rather than assumption or stale documentation."
+  },
+  {
+    "title": "Managing Technical Debt — Identify Technical Debt Items",
+    "url": "https://www.sei.cmu.edu/library/managing-technical-debt-identify-technical-debt-items/",
+    "source_class": "technical_debt",
+    "why_relevant": "Supports treating monitored debt and stale surfaces as explicit governance objects rather than vague drift."
+  },
+  {
+    "title": "Got Technical Debt? Surfacing Elusive Technical Debt in Issue Trackers",
+    "url": "https://www.sei.cmu.edu/library/got-technical-debt-surfacing-elusive-technical-debt-in-issue-trackers/",
+    "source_class": "technical_debt",
+    "why_relevant": "Supports the separation of real current debt from unstructured noise in artifacts and documentation."
+  },
+  {
+    "title": "Why do Reproducible Builds matter?",
+    "url": "https://reproducible-builds.org/docs/why/",
+    "source_class": "reproducibility",
+    "why_relevant": "Grounds the artifact-truth and non-mutating verification requirements used in this repo's conformance and evidence discipline."
+  },
+  {
+    "title": "Reproducible Builds Plans",
+    "url": "https://reproducible-builds.org/docs/plans/",
+    "source_class": "reproducibility",
+    "why_relevant": "Supports stable evidence protocols and auditable artifact generation."
+  },
+  {
+    "title": "Hermeticity",
+    "url": "https://docs.bazel.build/versions/master/hermeticity.html",
+    "source_class": "build_reproducibility",
+    "why_relevant": "Supports the repo's pure-check versus explicit-mutation conformance philosophy and artifact trust."
+  },
+  {
+    "title": "OSWorld",
+    "url": "https://arxiv.org/abs/2404.07972",
+    "source_class": "gui_agent_benchmark",
+    "why_relevant": "Validates that real computer-use agent failures often originate in environment, perception, and operational mismatch rather than pure planning."
+  },
+  {
+    "title": "SeeAct",
+    "url": "https://arxiv.org/abs/2401.01614",
+    "source_class": "gui_agent_system",
+    "why_relevant": "Supports grounding-first debugging and hybrid reasoning over web surfaces."
+  },
+  {
+    "title": "AppAgent",
+    "url": "https://arxiv.org/abs/2312.13771",
+    "source_class": "gui_agent_system",
+    "why_relevant": "Supports pre-execution research, task-surface learning, and site/tool understanding before action."
+  },
+  {
+    "title": "GUI-explorer",
+    "url": "https://arxiv.org/abs/2505.16827",
+    "source_class": "gui_agent_exploration",
+    "why_relevant": "Supports bounded site/tool discovery and transition-aware debugging of interactive surfaces."
+  },
+  {
+    "title": "MCP-Atlas",
+    "url": "https://arxiv.org/abs/2602.00933",
+    "source_class": "evaluation_methodology",
+    "why_relevant": "Supports claims-based evaluation and debugging by explicit pass/fail criteria instead of narrative summary alone."
+  },
+  {
+    "title": "OWASP Top 10 for LLM Applications 2025",
+    "url": "https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/",
+    "source_class": "security_guidance",
+    "why_relevant": "Supports debugging security-related behavior and distinguishing runtime bugs from prompt/tooling attack surfaces."
+  },
+  {
+    "title": "Monitoring Distributed Systems",
+    "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+    "source_class": "monitoring_guidance",
+    "why_relevant": "Supports the use of visual monitoring, baseline signals, and first-check health instrumentation in this repo."
+  },
+  {
+    "title": "Allow accessibility apps to access your Mac",
+    "url": "https://support.apple.com/guide/mac-help/allow-accessibility-apps-to-access-your-mac-mh43185/mac",
+    "source_class": "platform_guidance",
+    "why_relevant": "Supports substrate-level debugging on this macOS machine where Apple Accessibility permissions are critical."
+  },
+  {
+    "title": "Control access to screen and system audio recording on Mac",
+    "url": "https://support.apple.com/guide/mac-help/control-access-to-screen-and-system-audio-recording-on-mac-mchld6aa7d23/mac",
+    "source_class": "platform_guidance",
+    "why_relevant": "Supports substrate-level debugging for screenshot and monitor failures on macOS."
+  }
+]

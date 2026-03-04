@@ -1,0 +1,173 @@
+{
+  "generated_on": "2026-03-03",
+  "source_project": "/Users/christianpardo/rust",
+  "target_project": "/Users/christianpardo/Desktop/concentric_study",
+  "port_first": [
+    {
+      "rank": 1,
+      "id": "host_tool_health_backend_selection",
+      "title": "Host-tool health discovery and backend selection",
+      "value": "high",
+      "blast_radius": "low",
+      "migration_risk": "low",
+      "parent_evidence": [
+        "~/rust/operator/tool_catalog.yaml",
+        "~/rust/operator/tool_status.py"
+      ],
+      "current_gap": "No explicit host-tool class health gate or preferred backend selection layer.",
+      "benefit": [
+        "explicit environment readiness",
+        "better startup diagnostics",
+        "fail-closed missing capability detection",
+        "cleaner degraded-mode behavior"
+      ]
+    },
+    {
+      "rank": 2,
+      "id": "bounded_curiosity_action_inventories",
+      "title": "Bounded curiosity with explicit action inventories",
+      "value": "very_high",
+      "blast_radius": "medium",
+      "migration_risk": "medium",
+      "parent_evidence": [
+        "~/rust/operator/health_contract.yaml",
+        "~/rust/operator/cursor_action_inventory.yaml",
+        "~/rust/operator/learn_explore.py",
+        "~/rust/operator/explore_analyze.py"
+      ],
+      "current_gap": "SiteKnowledge and ExplorationLoop exist, but lack explicit action frontier and mastery-contract structure.",
+      "benefit": [
+        "safer exploration on unknown sites",
+        "explicit undo and expectation contracts",
+        "mastery-based promotion from exploratory to trusted actions",
+        "auditable discovery frontier"
+      ]
+    },
+    {
+      "rank": 3,
+      "id": "canonical_runtime_baseline_reset",
+      "title": "Canonical runtime baseline and reset doctrine",
+      "value": "high",
+      "blast_radius": "medium",
+      "migration_risk": "medium",
+      "parent_evidence": [
+        "~/rust/CANONICAL_OPERATOR_STATE.md",
+        "~/rust/cursor-nav/verify_nav_baseline.sh",
+        "~/rust/operator/reset_cursor_baseline.sh"
+      ],
+      "current_gap": "Startup and recovery exist, but no single named whole-system baseline contract exists.",
+      "benefit": [
+        "deterministic preflight",
+        "single recovery target",
+        "clean environment drift classification",
+        "less ad hoc reset logic"
+      ]
+    }
+  ],
+  "port_later": [
+    {
+      "rank": 4,
+      "id": "operational_capability_registry",
+      "title": "Operational capability registry",
+      "value": "medium_high",
+      "blast_radius": "low",
+      "migration_risk": "low",
+      "parent_evidence": [
+        "~/rust/capabilities/registry.json",
+        "~/rust/capabilities/REGISTRY.md"
+      ],
+      "current_gap": "SkillLibrary tracks task skills, not environment-level proven powers with recheck commands.",
+      "benefit": [
+        "capability self-audit",
+        "demo clarity",
+        "evidence-backed operational powers",
+        "recheckable readiness claims"
+      ]
+    },
+    {
+      "rank": 5,
+      "id": "documentation_claim_drift_guards",
+      "title": "Documentation claims drift guards",
+      "value": "medium_high",
+      "blast_radius": "low",
+      "migration_risk": "low",
+      "parent_evidence": [
+        "~/rust/operator/report_claims_guard.py",
+        "~/rust/operator/report_snapshot_sync.py"
+      ],
+      "current_gap": "Major narrative docs are not generally guarded against snapshot drift.",
+      "benefit": [
+        "report integrity",
+        "lower doc drift",
+        "better artifact-to-doc alignment",
+        "credible long-form research outputs"
+      ]
+    },
+    {
+      "rank": 6,
+      "id": "attested_run_packs",
+      "title": "Attested run packs",
+      "value": "medium",
+      "blast_radius": "medium",
+      "migration_risk": "medium",
+      "parent_evidence": [
+        "~/rust/operator/mac_core_agent/README.md",
+        "~/rust/operator/mac_core_agent/verify.sh"
+      ],
+      "current_gap": "Rich traces exist, but not packaged as attested portable proof bundles.",
+      "benefit": [
+        "portable run evidence",
+        "external auditability",
+        "customer-facing proof packets",
+        "hash-checked artifact integrity"
+      ]
+    },
+    {
+      "rank": 7,
+      "id": "metaphor_guard",
+      "title": "Metaphor guard",
+      "value": "medium",
+      "blast_radius": "medium",
+      "migration_risk": "medium",
+      "parent_evidence": [
+        "~/rust/operator/metaphor_guard.sh",
+        "~/rust/METAPHOR_TO_RULES.md"
+      ],
+      "current_gap": "No explicit metaphor-to-rule interpreter exists.",
+      "benefit": [
+        "clearer operator intent handling",
+        "less ambiguous instruction execution"
+      ]
+    }
+  ],
+  "keep_in_parent": [
+    {
+      "rank": 99,
+      "id": "ai_bridge_protocol_core",
+      "title": "AI bridge protocol as central runtime",
+      "reason": "Lineage-critical but mismatched with concentric_study's visual-web-agent center of gravity.",
+      "parent_evidence": [
+        "~/rust/ai-bridge/PROTOCOL.md",
+        "~/rust/ai-bridge/conversation.jsonl"
+      ]
+    },
+    {
+      "rank": 99,
+      "id": "coach_control_wholesale",
+      "title": "Coach-control wholesale subsystem",
+      "reason": "Useful as pattern source, not as a subsystem to merge directly.",
+      "parent_evidence": [
+        "~/rust/coach-control/"
+      ]
+    }
+  ],
+  "recommended_phase_order": [
+    "host_tool_health_backend_selection",
+    "canonical_runtime_baseline_reset",
+    "bounded_curiosity_action_inventories",
+    "operational_capability_registry",
+    "documentation_claim_drift_guards",
+    "attested_run_packs",
+    "metaphor_guard"
+  ]
+}

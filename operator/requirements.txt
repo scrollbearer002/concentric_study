@@ -1,0 +1,14 @@
+# Compatibility umbrella for older docs and setup flows.
+# Canonical split:
+#   - requirements-base.txt
+#   - requirements-optional.txt
+#   - requirements-legacy.txt
+# This file intentionally keeps the legacy `requests` pin because older
+# CRE/Hammerspoon paths still rely on it.
+
+pyobjc-framework-Cocoa>=10.0
+pyobjc-framework-Quartz>=10.0
+google-genai>=0.2.0
+pydantic>=2.0.0
+Pillow>=10.0.0
+requests>=2.31.0

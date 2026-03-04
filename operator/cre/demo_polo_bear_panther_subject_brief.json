@@ -1,0 +1,22 @@
+{
+  "one_sentence_goal": "Draw a real-anatomy polar bear styled with Ralph Lauren identity cues and historical Black Panther Party-inspired clothing in a readable full-body composition.",
+  "must_have_parts": [
+    "full polar bear body",
+    "realistic bear head and muzzle proportions",
+    "Ralph Lauren / Polo identity cues",
+    "black beret",
+    "dark sunglasses",
+    "dark jacket silhouette"
+  ],
+  "must_avoid": [
+    "canvas clipping",
+    "generic costume drift",
+    "logo-free random fashion styling",
+    "Marvel/Wakanda suit assumptions unless explicitly requested"
+  ],
+  "style_notes": [
+    "Use real polar bear massing before costume detail.",
+    "Prefer a clean, iconic fashion silhouette over excessive line noise.",
+    "Keep the entire figure inside the calibrated canvas margins."
+  ]
+}

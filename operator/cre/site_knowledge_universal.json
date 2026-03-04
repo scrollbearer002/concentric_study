@@ -1,0 +1,839 @@
+{
+  "site_name": "excalidraw.com",
+  "site_url": "https://excalidraw.com",
+  "tools": {
+    "Selection": {
+      "tool_name": "Selection",
+      "shortcut": "V or 1",
+      "interaction_mode": "select",
+      "description": "Selects, moves, and resizes objects. Drag to create a selection box. Objects must be entirely within the box to be selected.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Rectangle": {
+      "tool_name": "Rectangle",
+      "shortcut": "R or 2",
+      "interaction_mode": "bounding_box",
+      "description": "Draws a rectangle. Click and drag to define the shape's size and position. Hold Shift to draw a perfect square.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Diamond": {
+      "tool_name": "Diamond",
+      "shortcut": "D or 3",
+      "interaction_mode": "bounding_box",
+      "description": "Draws a diamond shape. Click and drag to define the shape's size and position. Hold Shift to draw a perfect diamond.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Ellipse": {
+      "tool_name": "Ellipse",
+      "shortcut": "O or 4",
+      "interaction_mode": "bounding_box",
+      "description": "Draws an ellipse. Click and drag to define the shape's size and position. Hold Shift to draw a perfect circle.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Arrow": {
+      "tool_name": "Arrow",
+      "shortcut": "A or 5",
+      "interaction_mode": "path_trace",
+      "description": "Draws an arrow. Click and drag for a straight, two-point arrow. Click multiple times to create a multi-point arrow.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Line": {
+      "tool_name": "Line",
+      "shortcut": "L or 6",
+      "interaction_mode": "path_trace",
+      "description": "Draws a line. Click and drag for a straight, two-point line. Click multiple times to create a polyline.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Draw": {
+      "tool_name": "Draw",
+      "shortcut": "P or 7",
+      "interaction_mode": "path_trace",
+      "description": "A free-form drawing tool that creates hand-drawn style lines.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Text": {
+      "tool_name": "Text",
+      "shortcut": "T or 8",
+      "interaction_mode": "click_place",
+      "description": "Creates a text object. Click on the canvas to place the text box and start typing.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Insert Image": {
+      "tool_name": "Insert Image",
+      "shortcut": "9",
+      "interaction_mode": "toggle",
+      "description": "Opens a file dialog to select and insert an image onto the canvas.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Eraser": {
+      "tool_name": "Eraser",
+      "shortcut": "E",
+      "interaction_mode": "path_trace",
+      "description": "Deletes any object that its path crosses.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Hand (Panning)": {
+      "tool_name": "Hand (Panning)",
+      "shortcut": "H",
+      "interaction_mode": "toggle",
+      "description": "Allows moving the canvas by clicking and dragging. This mode is also activated by holding the Spacebar or the mouse wheel.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Frame": {
+      "tool_name": "Frame",
+      "shortcut": "F",
+      "interaction_mode": "bounding_box",
+      "description": "Creates a frame to group objects, which can be used as slides in a presentation.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Laser Pointer": {
+      "tool_name": "Laser Pointer",
+      "shortcut": "K",
+      "interaction_mode": "toggle",
+      "description": "Creates a temporary, non-drawing laser pointer effect for presentations.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "back_button": {
+      "tool_name": "back_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Navigates to the previous page in the browser history.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "forward_button": {
+      "tool_name": "forward_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Navigates to the next page in the browser history.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "address_bar": {
+      "tool_name": "address_bar",
+      "shortcut": "Cmd+L",
+      "interaction_mode": "click_type",
+      "description": "Displays the current URL and allows for entering a new URL or search query.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "reload_button": {
+      "tool_name": "reload_button",
+      "shortcut": "Cmd+R",
+      "interaction_mode": "click_place",
+      "description": "Reloads the current web page.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "add_tab_button": {
+      "tool_name": "add_tab_button",
+      "shortcut": "Cmd+T",
+      "interaction_mode": "click_place",
+      "description": "Opens a new browser tab.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "tab": {
+      "tool_name": "tab",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Switches to a different open web page.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "close_window_button": {
+      "tool_name": "close_window_button",
+      "shortcut": "Cmd+W",
+      "interaction_mode": "click_place",
+      "description": "Closes the current browser window.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "minimize_window_button": {
+      "tool_name": "minimize_window_button",
+      "shortcut": "Cmd+M",
+      "interaction_mode": "click_place",
+      "description": "Minimizes the current window to the Dock.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "maximize_window_button": {
+      "tool_name": "maximize_window_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Toggles the window between full-screen and its previous size.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "dock_icon": {
+      "tool_name": "dock_icon",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Launches or switches to an application from the macOS Dock.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "rules": [
+    {
+      "rule": "To change the properties (color, stroke, etc.) of an existing object, you must first select it using the Selection tool (V).",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To set properties for new objects, you can select a drawing tool (e.g., Rectangle) and then configure its properties from the left-hand panel *before* drawing.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To add text inside a shape, select the shape and press Enter or double-click it.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To create a multi-point line or arrow, select the tool and click at different points on the canvas instead of dragging.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To select multiple objects, either drag a selection box that completely encloses all objects or hold Shift and click on each object individually.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Clearing the canvas is an irreversible action. There is no way to restore a cleared canvas.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "The standard selection box only selects objects that are *entirely* contained within it, not just touching it.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Clearing the canvas via the menu or shortcut (Ctrl+Delete) is permanent and cannot be undone with the Undo command.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "When drawing shapes like rectangles or ellipses, holding Shift is required to maintain a 1:1 aspect ratio (to create a perfect square or circle).",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Pasting an image from your clipboard can be done directly onto the canvas with Ctrl/Cmd+V.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Exiting the text editor requires pressing Escape or clicking outside the text box. Simply pressing Enter will create a new line.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Arrows will automatically snap and bind to the edges of other shapes. This can be helpful but may require careful positioning if you want to avoid it.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    }
+  ],
+  "shortcuts": {
+    "CtrlOrCmd+Z": "Undo",
+    "CtrlOrCmd+Y": "Redo",
+    "CtrlOrCmd+C": "Copy",
+    "CtrlOrCmd+X": "Cut",
+    "CtrlOrCmd+V": "Paste",
+    "CtrlOrCmd+A": "Select all",
+    "Delete": "Delete selected elements",
+    "CtrlOrCmd+Delete": "Clear the canvas",
+    "Spacebar+drag": "Pan canvas",
+    "Wheel+drag": "Pan canvas",
+    "CtrlOrCmd+Enter": "Enter text editor or arrow editor",
+    "Escape": "Exit text editor; stop drawing multi-point line/arrow",
+    "Shift+drag": "Constrain to square/circle; draw straight line/arrow",
+    "CtrlOrCmd+click": "Deep select within a group",
+    "CtrlOrCmd+G": "Group selected elements",
+    "CtrlOrCmd+Shift+G": "Ungroup selected elements",
+    "Alt+drag": "Duplicate selected elements",
+    "PageUp": "Zoom in",
+    "PageDown": "Zoom out",
+    "CtrlOrCmd+=": "Zoom in",
+    "CtrlOrCmd+-": "Zoom out",
+    "Shift+1": "Zoom to fit all elements",
+    "Shift+2": "Zoom to selection",
+    "0": "Zoom to 100%",
+    "[": "Send to back",
+    "]": "Bring to front",
+    "Shift+[": "Send backward",
+    "Shift+]": "Bring forward",
+    "CtrlOrCmd+/": "Open command palette",
+    "?": "Show keyboard shortcuts dialog",
+    "Cmd+L": "Focus address bar",
+    "Cmd+T": "Open new tab",
+    "Cmd+W": "Close current tab/window",
+    "Cmd+R": "Reload page",
+    "Cmd+M": "Minimize window"
+  },
+  "modal_patterns": [
+    {
+      "trigger": "Clicking the 'Reset the canvas' button from the main menu (hamburger icon).",
+      "handler": "A confirmation dialog appears asking 'Are you sure?'. Click the 'OK' button or press Enter to confirm and clear the canvas. Click 'Cancel' or press Escape to dismiss."
+    },
+    {
+      "trigger": "Pressing Ctrl+Delete.",
+      "handler": "A confirmation dialog appears asking 'Are you sure?'. Click the 'OK' button or press Enter to confirm and clear the canvas. Click 'Cancel' or press Escape to dismiss."
+    },
+    {
+      "trigger": "Clicking the 'Save as image' button from the main menu.",
+      "handler": "An export dialog appears with options for PNG/SVG, background, and dark mode. Configure options and click the 'Export' button to trigger a file download dialog. Press Escape to close the export dialog."
+    },
+    {
+      "trigger": "Clicking 'Live collaboration' from the main menu.",
+      "handler": "A dialog appears to start a session. Click 'Start session' to generate a shareable link. Click 'Stop session' to end it. The dialog can be closed with the 'X' button or by pressing Escape."
+    }
+  ],
+  "button_map": {
+    "apple_menu_icon": {
+      "element_name": "apple_menu_icon",
+      "pixel_x": 120,
+      "pixel_y": 75,
+      "som_zone_id": 1,
+      "element_type": "icon",
+      "description": "Opens the Apple system menu."
+    },
+    "close_window_button": {
+      "element_name": "close_window_button",
+      "pixel_x": 120,
+      "pixel_y": 75,
+      "som_zone_id": 1,
+      "element_type": "button",
+      "description": "Closes the Safari window."
+    },
+    "minimize_window_button": {
+      "element_name": "minimize_window_button",
+      "pixel_x": 120,
+      "pixel_y": 75,
+      "som_zone_id": 1,
+      "element_type": "button",
+      "description": "Minimizes the Safari window."
+    },
+    "fullscreen_window_button": {
+      "element_name": "fullscreen_window_button",
+      "pixel_x": 120,
+      "pixel_y": 75,
+      "som_zone_id": 1,
+      "element_type": "button",
+      "description": "Toggles fullscreen mode for the Safari window."
+    },
+    "safari_menu": {
+      "element_name": "safari_menu",
+      "pixel_x": 120,
+      "pixel_y": 75,
+      "som_zone_id": 1,
+      "element_type": "button",
+      "description": "Opens the Safari application menu."
+    },
+    "file_menu": {
+      "element_name": "file_menu",
+      "pixel_x": 360,
+      "pixel_y": 75,
+      "som_zone_id": 2,
+      "element_type": "button",
+      "description": "Opens the File menu."
+    },
+    "edit_menu": {
+      "element_name": "edit_menu",
+      "pixel_x": 360,
+      "pixel_y": 75,
+      "som_zone_id": 2,
+      "element_type": "button",
+      "description": "Opens the Edit menu."
+    },
+    "back_button": {
+      "element_name": "back_button",
+      "pixel_x": 360,
+      "pixel_y": 75,
+      "som_zone_id": 2,
+      "element_type": "button",
+      "description": "Navigates to the previous page in browser history."
+    },
+    "forward_button": {
+      "element_name": "forward_button",
+      "pixel_x": 360,
+      "pixel_y": 75,
+      "som_zone_id": 2,
+      "element_type": "button",
+      "description": "Navigates to the next page in browser history."
+    },
+    "sidebar_button": {
+      "element_name": "sidebar_button",
+      "pixel_x": 360,
+      "pixel_y": 75,
+      "som_zone_id": 2,
+      "element_type": "button",
+      "description": "Toggles the browser sidebar."
+    },
+    "view_menu": {
+      "element_name": "view_menu",
+      "pixel_x": 600,
+      "pixel_y": 75,
+      "som_zone_id": 3,
+      "element_type": "button",
+      "description": "Opens the View menu."
+    },
+    "history_menu": {
+      "element_name": "history_menu",
+      "pixel_x": 600,
+      "pixel_y": 75,
+      "som_zone_id": 3,
+      "element_type": "button",
+      "description": "Opens the History menu."
+    },
+    "bookmarks_menu": {
+      "element_name": "bookmarks_menu",
+      "pixel_x": 840,
+      "pixel_y": 75,
+      "som_zone_id": 4,
+      "element_type": "button",
+      "description": "Opens the Bookmarks menu."
+    },
+    "develop_menu": {
+      "element_name": "develop_menu",
+      "pixel_x": 840,
+      "pixel_y": 75,
+      "som_zone_id": 4,
+      "element_type": "button",
+      "description": "Opens the Develop menu for web developers."
+    },
+    "window_menu": {
+      "element_name": "window_menu",
+      "pixel_x": 1080,
+      "pixel_y": 75,
+      "som_zone_id": 5,
+      "element_type": "button",
+      "description": "Opens the Window menu."
+    },
+    "help_menu": {
+      "element_name": "help_menu",
+      "pixel_x": 1080,
+      "pixel_y": 75,
+      "som_zone_id": 5,
+      "element_type": "button",
+      "description": "Opens the Help menu."
+    },
+    "downloads_button": {
+      "element_name": "downloads_button",
+      "pixel_x": 2520,
+      "pixel_y": 75,
+      "som_zone_id": 11,
+      "element_type": "button",
+      "description": "Shows recent downloads."
+    },
+    "share_button": {
+      "element_name": "share_button",
+      "pixel_x": 2760,
+      "pixel_y": 75,
+      "som_zone_id": 12,
+      "element_type": "button",
+      "description": "Opens the macOS share menu for the current page."
+    },
+    "new_tab_button": {
+      "element_name": "new_tab_button",
+      "pixel_x": 2760,
+      "pixel_y": 75,
+      "som_zone_id": 12,
+      "element_type": "button",
+      "description": "Opens a new browser tab."
+    },
+    "main_menu_button": {
+      "element_name": "main_menu_button",
+      "pixel_x": 120,
+      "pixel_y": 225,
+      "som_zone_id": 13,
+      "element_type": "button",
+      "description": "Opens the main menu for the Excalidraw application."
+    },
+    "tab_1": {
+      "element_name": "tab_1",
+      "pixel_x": 120,
+      "pixel_y": 225,
+      "som_zone_id": 13,
+      "element_type": "button",
+      "description": "Switches to the '45-Run Autonomous Agent Evolution...' tab."
+    },
+    "tab_2": {
+      "element_name": "tab_2",
+      "pixel_x": 840,
+      "pixel_y": 225,
+      "som_zone_id": 16,
+      "element_type": "button",
+      "description": "Switches to the 'Google Gemini' tab."
+    },
+    "tab_3": {
+      "element_name": "tab_3",
+      "pixel_x": 1320,
+      "pixel_y": 225,
+      "som_zone_id": 18,
+      "element_type": "button",
+      "description": "Switches to the 'Kleki - Paint Tool' tab."
+    },
+    "tab_4": {
+      "element_name": "tab_4",
+      "pixel_x": 2040,
+      "pixel_y": 225,
+      "som_zone_id": 21,
+      "element_type": "button",
+      "description": "Switches to the 'Start Page' tab."
+    },
+    "tab_5": {
+      "element_name": "tab_5",
+      "pixel_x": 2520,
+      "pixel_y": 225,
+      "som_zone_id": 23,
+      "element_type": "button",
+      "description": "Switches to the 'Excalidraw Whiteboard' tab."
+    },
+    "lock_tool": {
+      "element_name": "lock_tool",
+      "pixel_x": 1080,
+      "pixel_y": 375,
+      "som_zone_id": 29,
+      "element_type": "tool",
+      "description": "Selects the lock tool to prevent editing of selected elements."
+    },
+    "hand_tool": {
+      "element_name": "hand_tool",
+      "pixel_x": 1080,
+      "pixel_y": 375,
+      "som_zone_id": 29,
+      "element_type": "tool",
+      "description": "Selects the hand tool to pan the canvas."
+    },
+    "selection_tool": {
+      "element_name": "selection_tool",
+      "pixel_x": 1080,
+      "pixel_y": 375,
+      "som_zone_id": 29,
+      "element_type": "tool",
+      "description": "Selects the selection tool to move and resize elements."
+    },
+    "rectangle_tool": {
+      "element_name": "rectangle_tool",
+      "pixel_x": 1320,
+      "pixel_y": 375,
+      "som_zone_id": 30,
+      "element_type": "tool",
+      "description": "Selects the rectangle drawing tool."
+    },
+    "diamond_tool": {
+      "element_name": "diamond_tool",
+      "pixel_x": 1320,
+      "pixel_y": 375,
+      "som_zone_id": 30,
+      "element_type": "tool",
+      "description": "Selects the diamond drawing tool."
+    },
+    "ellipse_tool": {
+      "element_name": "ellipse_tool",
+      "pixel_x": 1320,
+      "pixel_y": 375,
+      "som_zone_id": 30,
+      "element_type": "tool",
+      "description": "Selects the ellipse drawing tool."
+    },
+    "arrow_tool": {
+      "element_name": "arrow_tool",
+      "pixel_x": 1560,
+      "pixel_y": 375,
+      "som_zone_id": 31,
+      "element_type": "tool",
+      "description": "Selects the arrow drawing tool."
+    },
+    "line_tool": {
+      "element_name": "line_tool",
+      "pixel_x": 1560,
+      "pixel_y": 375,
+      "som_zone_id": 31,
+      "element_type": "tool",
+      "description": "Selects the line drawing tool."
+    },
+    "draw_tool": {
+      "element_name": "draw_tool",
+      "pixel_x": 1560,
+      "pixel_y": 375,
+      "som_zone_id": 31,
+      "element_type": "tool",
+      "description": "Selects the free-draw (pen) tool."
+    },
+    "text_tool": {
+      "element_name": "text_tool",
+      "pixel_x": 1560,
+      "pixel_y": 375,
+      "som_zone_id": 31,
+      "element_type": "tool",
+      "description": "Selects the text tool to add text to the canvas."
+    },
+    "image_tool": {
+      "element_name": "image_tool",
+      "pixel_x": 1800,
+      "pixel_y": 375,
+      "som_zone_id": 32,
+      "element_type": "tool",
+      "description": "Selects the tool to insert an image."
+    },
+    "eraser_tool": {
+      "element_name": "eraser_tool",
+      "pixel_x": 1800,
+      "pixel_y": 375,
+      "som_zone_id": 32,
+      "element_type": "tool",
+      "description": "Selects the eraser tool."
+    },
+    "more_tools_button": {
+      "element_name": "more_tools_button",
+      "pixel_x": 1800,
+      "pixel_y": 375,
+      "som_zone_id": 32,
+      "element_type": "button",
+      "description": "Opens a menu with more tools."
+    },
+    "excalidraw_plus_button": {
+      "element_name": "excalidraw_plus_button",
+      "pixel_x": 2520,
+      "pixel_y": 375,
+      "som_zone_id": 35,
+      "element_type": "button",
+      "description": "Opens information or a sign-up for Excalidraw+."
+    },
+    "share_canvas_button": {
+      "element_name": "share_canvas_button",
+      "pixel_x": 2760,
+      "pixel_y": 375,
+      "som_zone_id": 36,
+      "element_type": "button",
+      "description": "Opens the sharing options for the canvas."
+    },
+    "live_collaboration_button": {
+      "element_name": "live_collaboration_button",
+      "pixel_x": 2760,
+      "pixel_y": 375,
+      "som_zone_id": 36,
+      "element_type": "button",
+      "description": "Starts or joins a live collaboration session."
+    },
+    "zoom_out_button": {
+      "element_name": "zoom_out_button",
+      "pixel_x": 120,
+      "pixel_y": 1575,
+      "som_zone_id": 121,
+      "element_type": "button",
+      "description": "Zooms out of the canvas."
+    },
+    "zoom_percentage": {
+      "element_name": "zoom_percentage",
+      "pixel_x": 120,
+      "pixel_y": 1575,
+      "som_zone_id": 121,
+      "element_type": "button",
+      "description": "Displays the current zoom level and can be clicked to open zoom options."
+    },
+    "zoom_in_button": {
+      "element_name": "zoom_in_button",
+      "pixel_x": 360,
+      "pixel_y": 1575,
+      "som_zone_id": 122,
+      "element_type": "button",
+      "description": "Zooms in on the canvas."
+    },
+    "reset_zoom_button": {
+      "element_name": "reset_zoom_button",
+      "pixel_x": 360,
+      "pixel_y": 1575,
+      "som_zone_id": 122,
+      "element_type": "button",
+      "description": "Resets the canvas zoom to 100%."
+    },
+    "ai_assistant_button": {
+      "element_name": "ai_assistant_button",
+      "pixel_x": 2760,
+      "pixel_y": 1575,
+      "som_zone_id": 132,
+      "element_type": "button",
+      "description": "Opens the AI assistant feature."
+    },
+    "help_button": {
+      "element_name": "help_button",
+      "pixel_x": 2760,
+      "pixel_y": 1575,
+      "som_zone_id": 132,
+      "element_type": "button",
+      "description": "Opens the help menu or documentation."
+    },
+    "finder_icon": {
+      "element_name": "finder_icon",
+      "pixel_x": 1080,
+      "pixel_y": 1725,
+      "som_zone_id": 137,
+      "element_type": "icon",
+      "description": "Opens the Finder application from the dock."
+    },
+    "mail_icon": {
+      "element_name": "mail_icon",
+      "pixel_x": 1080,
+      "pixel_y": 1725,
+      "som_zone_id": 137,
+      "element_type": "icon",
+      "description": "Opens the Mail application from the dock."
+    },
+    "safari_icon": {
+      "element_name": "safari_icon",
+      "pixel_x": 1320,
+      "pixel_y": 1725,
+      "som_zone_id": 138,
+      "element_type": "icon",
+      "description": "Switches to or opens the Safari application from the dock."
+    },
+    "messages_icon": {
+      "element_name": "messages_icon",
+      "pixel_x": 1320,
+      "pixel_y": 1725,
+      "som_zone_id": 138,
+      "element_type": "icon",
+      "description": "Opens the Messages application from the dock."
+    },
+    "app_store_icon": {
+      "element_name": "app_store_icon",
+      "pixel_x": 1560,
+      "pixel_y": 1725,
+      "som_zone_id": 139,
+      "element_type": "icon",
+      "description": "Opens the App Store application from the dock."
+    },
+    "launchpad_icon": {
+      "element_name": "launchpad_icon",
+      "pixel_x": 1560,
+      "pixel_y": 1725,
+      "som_zone_id": 139,
+      "element_type": "icon",
+      "description": "Opens the Launchpad to show all applications."
+    },
+    "system_settings_icon": {
+      "element_name": "system_settings_icon",
+      "pixel_x": 1800,
+      "pixel_y": 1725,
+      "som_zone_id": 140,
+      "element_type": "icon",
+      "description": "Opens the System Settings application from the dock."
+    },
+    "notes_icon": {
+      "element_name": "notes_icon",
+      "pixel_x": 1800,
+      "pixel_y": 1725,
+      "som_zone_id": 140,
+      "element_type": "icon",
+      "description": "Opens the Notes application from the dock."
+    },
+    "trash_icon": {
+      "element_name": "trash_icon",
+      "pixel_x": 2040,
+      "pixel_y": 1725,
+      "som_zone_id": 141,
+      "element_type": "icon",
+      "description": "Opens the Trash."
+    }
+  },
+  "research_notes": "COLOR WORKFLOW: To change the color of an object, first select the object(s) with the Selection tool. On the left-hand properties panel, two color swatches will be visible: 'Stroke' and 'Background color'. Click the 'Stroke' swatch to open the color picker for the object's outline. Click the 'Background color' swatch to open the color picker for the object's fill. The color picker provides a palette of preset colors, a custom color option via hex code input, and a color picker (eyedropper) tool to sample a color from anywhere on the canvas. Select the desired color to apply it instantly. The same workflow applies to setting colors before drawing a new shape.\nGOTCHA: The standard selection box only selects objects that are *entirely* contained within it, not just touching it.\nGOTCHA: Clearing the canvas via the menu or shortcut (Ctrl+Delete) is permanent and cannot be undone with the Undo command.\nGOTCHA: When drawing shapes like rectangles or ellipses, holding Shift is required to maintain a 1:1 aspect ratio (to create a perfect square or circle).\nGOTCHA: Pasting an image from your clipboard can be done directly onto the canvas with Ctrl/Cmd+V.\nGOTCHA: Exiting the text editor requires pressing Escape or clicking outside the text box. Simply pressing Enter will create a new line.\nGOTCHA: Arrows will automatically snap and bind to the edges of other shapes. This can be helpful but may require careful positioning if you want to avoid it."
+}

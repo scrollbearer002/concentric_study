@@ -1,0 +1,13 @@
+{
+  "primary_subject_bbox_goal": "occupy 35%-60% of drawable area unless task says otherwise",
+  "pose": "readable full-subject pose",
+  "camera_angle": "straight-on to slight three-quarter view",
+  "passes": [
+    "silhouette",
+    "anatomy",
+    "costume",
+    "detail",
+    "color",
+    "verification"
+  ]
+}

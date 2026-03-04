@@ -1,0 +1,13 @@
+{
+  "primary_subject_bbox_goal": "occupy 35%-60% of drawable area unless task says otherwise",
+  "pose": "perched three-quarter pose with readable wings and jacket silhouette",
+  "camera_angle": "slight three-quarter view",
+  "passes": [
+    "silhouette",
+    "anatomy",
+    "costume",
+    "detail",
+    "color",
+    "verification"
+  ]
+}

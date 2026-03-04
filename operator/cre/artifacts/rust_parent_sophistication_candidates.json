@@ -1,0 +1,117 @@
+{
+  "source_project": "/Users/christianpardo/rust",
+  "target_project": "/Users/christianpardo/Desktop/concentric_study",
+  "generated_on": "2026-03-03",
+  "candidates": [
+    {
+      "id": "tool_catalog_runtime_health",
+      "status": "recommended",
+      "priority": 1,
+      "value": "high",
+      "parent_evidence": [
+        "~/rust/operator/tool_catalog.yaml",
+        "~/rust/operator/tool_status.py"
+      ],
+      "target_gap": "No explicit host-tool class selection and health gate layer.",
+      "recommendation": "Add runtime host-tool health discovery and preferred backend selection."
+    },
+    {
+      "id": "bounded_curiosity_exploration_contracts",
+      "status": "recommended",
+      "priority": 1,
+      "value": "very_high",
+      "parent_evidence": [
+        "~/rust/operator/health_contract.yaml",
+        "~/rust/operator/cursor_action_inventory.yaml",
+        "~/rust/operator/learn_explore.py",
+        "~/rust/operator/explore_analyze.py"
+      ],
+      "target_gap": "ExplorationLoop exists, but lacks explicit action inventory mastery frontier and hard baseline-between-actions contract.",
+      "recommendation": "Add action-contract-driven exploration with undo paths, health bounds, and mastered frontier analysis."
+    },
+    {
+      "id": "canonical_runtime_baseline",
+      "status": "recommended",
+      "priority": 1,
+      "value": "high",
+      "parent_evidence": [
+        "~/rust/CANONICAL_OPERATOR_STATE.md",
+        "~/rust/cursor-nav/verify_nav_baseline.sh",
+        "~/rust/operator/reset_cursor_baseline.sh"
+      ],
+      "target_gap": "Startup and recovery exist, but there is no single named canonical runtime baseline contract.",
+      "recommendation": "Create a canonical runtime baseline and machine-verifiable preflight/reset path."
+    },
+    {
+      "id": "operational_capability_registry",
+      "status": "recommended",
+      "priority": 2,
+      "value": "medium_high",
+      "parent_evidence": [
+        "~/rust/capabilities/registry.json",
+        "~/rust/capabilities/REGISTRY.md"
+      ],
+      "target_gap": "SkillLibrary stores task success patterns, not environment-level proven powers with recheck commands.",
+      "recommendation": "Add a separate operational capability registry with evidence paths and verification commands."
+    },
+    {
+      "id": "doc_claim_integrity_gates",
+      "status": "recommended",
+      "priority": 2,
+      "value": "medium_high",
+      "parent_evidence": [
+        "~/rust/operator/report_claims_guard.py",
+        "~/rust/operator/report_snapshot_sync.py"
+      ],
+      "target_gap": "Generated artifacts exist, but major long-form reports are not generally guarded against snapshot drift.",
+      "recommendation": "Add claim/snapshot drift enforcement for flagship understanding and research docs."
+    },
+    {
+      "id": "attested_run_packs",
+      "status": "recommended",
+      "priority": 3,
+      "value": "medium",
+      "parent_evidence": [
+        "~/rust/operator/mac_core_agent/README.md",
+        "~/rust/operator/mac_core_agent/verify.sh"
+      ],
+      "target_gap": "Trace and evidence are rich, but not packaged as attested before/after run bundles.",
+      "recommendation": "Add optional attested run-pack export for demos, audits, and customer-facing proof."
+    },
+    {
+      "id": "metaphor_guard",
+      "status": "consider",
+      "priority": 3,
+      "value": "medium",
+      "parent_evidence": [
+        "~/rust/operator/metaphor_guard.sh",
+        "~/rust/METAPHOR_TO_RULES.md"
+      ],
+      "target_gap": "No explicit metaphor-to-executable-rule resolver in the current runtime.",
+      "recommendation": "Consider an operator-language guard for ambiguous informal instructions."
+    },
+    {
+      "id": "bridge_protocol_core",
+      "status": "do_not_port_wholesale",
+      "priority": 99,
+      "value": "historical",
+      "parent_evidence": [
+        "~/rust/ai-bridge/PROTOCOL.md",
+        "~/rust/ai-bridge/conversation.jsonl"
+      ],
+      "target_gap": "Different system center of gravity.",
+      "recommendation": "Treat as lineage context only, except for selective handoff patterns."
+    },
+    {
+      "id": "coach_control_wholesale",
+      "status": "do_not_port_wholesale",
+      "priority": 99,
+      "value": "historical",
+      "parent_evidence": [
+        "~/rust/coach-control"
+      ],
+      "target_gap": "Specialized to parent project's Cursor supervision workflow.",
+      "recommendation": "Extract patterns selectively; do not import the whole subsystem."
+    }
+  ]
+}

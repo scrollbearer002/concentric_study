@@ -1,0 +1,12 @@
+# Optional enhancements for better retrieval, perception, and trust math.
+# Install only when you need the feature.
+# Note: `macapptree` is a niche backend and may need its own environment
+# resolution on newer Python/macOS combinations.
+
+ImageHash>=4.3.0
+numpy>=2.0.0
+scipy>=1.14.0
+filetype>=1.2.0
+sentence-transformers>=5.0.0
+macapptree>=0.0.2
+pyax>=0.3.0

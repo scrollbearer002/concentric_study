@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "context7": {
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "${env:CONTEXT7_API_KEY}"
+      }
+    },
+    "concentric-health": {
+      "command": "zsh",
+      "args": [
+        "-lc",
+        "cd /Users/christianpardo/Desktop/concentric_study/operator && ./venv/bin/python -m cursor_integration.mcp.health_server"
+      ]
+    },
+    "concentric-trace": {
+      "command": "zsh",
+      "args": [
+        "-lc",
+        "cd /Users/christianpardo/Desktop/concentric_study/operator && ./venv/bin/python -m cursor_integration.mcp.trace_server"
+      ]
+    }
+  }
+}

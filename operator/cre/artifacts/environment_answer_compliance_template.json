@@ -1,0 +1,21 @@
+{
+  "timestamp_utc": "",
+  "task_summary": "",
+  "system_of_interest": "",
+  "local_environment": {
+    "machine": "",
+    "runtime": "",
+    "repo": "",
+    "apps": []
+  },
+  "repo_specific_evidence": [],
+  "stakeholder_objective": "",
+  "directly_supported": [],
+  "inferred": [],
+  "unknown": [],
+  "answer_mode": "environment_specific",
+  "status": "pass",
+  "failure_reasons": [],
+  "non_regression_classification": "not_applicable",
+  "notes": ""
+}

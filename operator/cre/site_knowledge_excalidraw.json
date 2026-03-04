@@ -1,0 +1,1013 @@
+{
+  "site_name": "Excalidraw",
+  "site_url": "https://excalidraw.com",
+  "tools": {
+    "Lock": {
+      "tool_name": "Lock",
+      "shortcut": "'Q' (toggle)",
+      "interaction_mode": "toggle",
+      "description": "Keeps the selected drawing tool active after use. Click again to disable.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Selection": {
+      "tool_name": "Selection",
+      "shortcut": "V or 1",
+      "interaction_mode": "select",
+      "description": "Selects, moves, resizes, and rotates elements. Can select a single element by clicking or multiple elements by dragging a bounding box.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Hand (Pan)": {
+      "tool_name": "Hand (Pan)",
+      "shortcut": "H",
+      "interaction_mode": "click_drag",
+      "description": "Moves the entire canvas. Can also be activated temporarily by holding the spacebar or middle mouse button/wheel.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Rectangle": {
+      "tool_name": "Rectangle",
+      "shortcut": "R or 2",
+      "interaction_mode": "bounding_box",
+      "description": "Draws a rectangle. Drag from a starting point to an ending point to define its size. Hold Shift for a perfect square.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Diamond": {
+      "tool_name": "Diamond",
+      "shortcut": "D or 3",
+      "interaction_mode": "bounding_box",
+      "description": "Draws a diamond shape. Drag to define its size. Hold Shift for a perfect diamond (square rotated 45 degrees).",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Ellipse": {
+      "tool_name": "Ellipse",
+      "shortcut": "O or 4",
+      "interaction_mode": "bounding_box",
+      "description": "Draws an ellipse. Drag to define its size. Hold Shift for a perfect circle.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Arrow": {
+      "tool_name": "Arrow",
+      "shortcut": "A or 5",
+      "interaction_mode": "path_trace",
+      "description": "Draws an arrow. Click and drag for a straight, two-point arrow. Click multiple times to create a multi-point arrow.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Line": {
+      "tool_name": "Line",
+      "shortcut": "L or 6",
+      "interaction_mode": "path_trace",
+      "description": "Draws a line. Click and drag for a straight, two-point line. Click multiple times to create a multi-point polyline.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Draw": {
+      "tool_name": "Draw",
+      "shortcut": "P or 7",
+      "interaction_mode": "path_trace",
+      "description": "Free-form drawing tool that creates a single continuous path as you drag the mouse.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Text": {
+      "tool_name": "Text",
+      "shortcut": "T or 8",
+      "interaction_mode": "click_place",
+      "description": "Creates a text element. Click on the canvas to place the text cursor and start typing. Alternatively, double-click anywhere on the canvas. You can also click and drag to define a fixed width for the text box before typing.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Insert Image": {
+      "tool_name": "Insert Image",
+      "shortcut": "9",
+      "interaction_mode": "click_place",
+      "description": "Opens a system file dialog to select and place an image onto the canvas.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Eraser": {
+      "tool_name": "Eraser",
+      "shortcut": "E",
+      "interaction_mode": "path_trace",
+      "description": "Deletes any element it touches while dragging the mouse.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Frame": {
+      "tool_name": "Frame",
+      "shortcut": "F",
+      "interaction_mode": "bounding_box",
+      "description": "Creates a frame to group elements together, which can be used as slides in a presentation.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "Laser Pointer": {
+      "tool_name": "Laser Pointer",
+      "shortcut": "K",
+      "interaction_mode": "path_trace",
+      "description": "Creates a temporary, fading red line to point at things on the canvas, useful for presentations.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "main_menu": {
+      "tool_name": "main_menu",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Opens the main application menu for file operations.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "stroke_color_picker": {
+      "tool_name": "stroke_color_picker",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Selects the stroke (outline) color for an object from a palette.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "background_color_picker": {
+      "tool_name": "background_color_picker",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Selects the background (fill) color for an object from a palette.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "stroke_width_selector": {
+      "tool_name": "stroke_width_selector",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Selects the stroke width (thin, medium, thick).",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "stroke_style_selector": {
+      "tool_name": "stroke_style_selector",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Selects the stroke style (solid, dashed, dotted).",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "sloppiness_selector": {
+      "tool_name": "sloppiness_selector",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Selects the drawing sloppiness style (architect, artist, cartoonist).",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "edge_style_selector": {
+      "tool_name": "edge_style_selector",
+      "shortcut": null,
+      "interaction_mode": "select",
+      "description": "Selects the style for line edges (sharp or round).",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "opacity_slider": {
+      "tool_name": "opacity_slider",
+      "shortcut": null,
+      "interaction_mode": "path_trace",
+      "description": "Adjusts the opacity of an object by dragging a slider.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "lock_tool": {
+      "tool_name": "lock_tool",
+      "shortcut": null,
+      "interaction_mode": "toggle",
+      "description": "Locks a selected object to prevent editing.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "pan_tool": {
+      "tool_name": "pan_tool",
+      "shortcut": "h",
+      "interaction_mode": "path_trace",
+      "description": "Moves the canvas view by clicking and dragging.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "selection_tool": {
+      "tool_name": "selection_tool",
+      "shortcut": "1",
+      "interaction_mode": "bounding_box",
+      "description": "Selects one or more objects.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "rectangle_tool": {
+      "tool_name": "rectangle_tool",
+      "shortcut": "2",
+      "interaction_mode": "bounding_box",
+      "description": "Draws a rectangle.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "diamond_tool": {
+      "tool_name": "diamond_tool",
+      "shortcut": "3",
+      "interaction_mode": "bounding_box",
+      "description": "Draws a diamond.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "ellipse_tool": {
+      "tool_name": "ellipse_tool",
+      "shortcut": "4",
+      "interaction_mode": "bounding_box",
+      "description": "Draws an ellipse.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "arrow_tool": {
+      "tool_name": "arrow_tool",
+      "shortcut": "5",
+      "interaction_mode": "path_trace",
+      "description": "Draws an arrow.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "line_tool": {
+      "tool_name": "line_tool",
+      "shortcut": "6",
+      "interaction_mode": "path_trace",
+      "description": "Draws a line.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "draw_tool": {
+      "tool_name": "draw_tool",
+      "shortcut": "7",
+      "interaction_mode": "path_trace",
+      "description": "Draws a free-form shape.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "text_tool": {
+      "tool_name": "text_tool",
+      "shortcut": "8",
+      "interaction_mode": "click_type",
+      "description": "Creates a text box.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "image_tool": {
+      "tool_name": "image_tool",
+      "shortcut": "9",
+      "interaction_mode": "click_place",
+      "description": "Inserts an image from a file.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "eraser_tool": {
+      "tool_name": "eraser_tool",
+      "shortcut": "0",
+      "interaction_mode": "path_trace",
+      "description": "Erases objects or parts of drawings.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "share_button": {
+      "tool_name": "share_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Opens a dialog to share the whiteboard.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "zoom_controls": {
+      "tool_name": "zoom_controls",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Zooms the canvas in or out.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "undo_button": {
+      "tool_name": "undo_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Reverts the last action.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    },
+    "redo_button": {
+      "tool_name": "redo_button",
+      "shortcut": null,
+      "interaction_mode": "click_place",
+      "description": "Re-applies the last undone action.",
+      "preconditions": [],
+      "postconditions": [],
+      "known_failures": [],
+      "success_count": 0,
+      "failure_count": 0
+    }
+  },
+  "rules": [
+    {
+      "rule": "To set properties for new elements (e.g., color, stroke style), ensure no elements are currently selected. Changes made to the properties panel on the left will then apply to all subsequent elements drawn.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To modify properties of existing elements, you must first select the element(s) using the 'Selection' tool. Then, changes made in the properties panel will apply only to the selected elements.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To draw a shape (Rectangle, Ellipse, Diamond), first select the corresponding tool from the toolbar (or use its shortcut), then click and drag on the canvas to define its boundaries.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To draw a path (Arrow, Line), select the tool, then either click-and-drag for a two-point path or click multiple points on the canvas for a multi-point path.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To clear the canvas, use the 'Ctrl+Delete' shortcut or navigate to the main menu and select 'Reset the canvas'. A confirmation dialog will appear which must be confirmed by clicking 'OK'.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    },
+    {
+      "rule": "If you change properties like color or stroke width while an element is selected, it only affects that element. If you want to set the default for new elements, you must deselect everything first.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Pasting images or dropping files onto the canvas can sometimes replace your entire drawing without a confirmation prompt, leading to data loss.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "The free-draw tool ('P') creates a single object with many points. For simple lines or arrows, use the dedicated 'Line' ('L') or 'Arrow' ('A') tools, as they are easier to edit.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Excalidraw saves work to the browser's local storage. Clearing browser data can result in the loss of unsaved drawings. Always save important work to a file.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Multi-point arrows and lines are created by clicking points, not dragging. Dragging will only create a two-point (straight) line or arrow.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "To type text inside a shape, you must first select the shape and then press 'Enter' or double-click inside it. Simply selecting the text tool and clicking inside a shape will create a new, separate text element on top of it.",
+      "source": "web_research",
+      "confidence": 0.95,
+      "supporting_runs": []
+    },
+    {
+      "rule": "Style properties (color, stroke, opacity, etc.) are set before drawing a new object, or can be changed for an existing object after selecting it.",
+      "source": "exploration",
+      "confidence": 0.8,
+      "supporting_runs": []
+    }
+  ],
+  "shortcuts": {
+    "Ctrl+Z": "Undo last action.",
+    "Ctrl+Y or Ctrl+Shift+Z": "Redo last action.",
+    "Ctrl+C": "Copy selected elements.",
+    "Ctrl+X": "Cut selected elements.",
+    "Ctrl+V": "Paste elements from clipboard.",
+    "Ctrl+A": "Select all elements.",
+    "Delete": "Delete selected elements.",
+    "Ctrl+D or Alt+Drag": "Duplicate selected elements.",
+    "Spacebar+Drag or MiddleMouse+Drag": "Pan the canvas.",
+    "Ctrl+Plus": "Zoom in.",
+    "Ctrl+Minus": "Zoom out.",
+    "Ctrl+0": "Zoom to 100%.",
+    "Shift+1": "Zoom to fit all elements.",
+    "Shift+2": "Zoom to selection.",
+    "Ctrl+G": "Group selected elements.",
+    "Ctrl+Shift+G": "Ungroup selected elements.",
+    "[": "Send selected elements to back.",
+    "Shift+[": "Send selected elements backward.",
+    "]": "Bring selected elements to front.",
+    "Shift+]": "Bring selected elements forward.",
+    "ArrowKeys": "Move selected elements by a small step.",
+    "Shift+ArrowKeys": "Move selected elements by a large step.",
+    "Ctrl+Enter": "Enter edit mode for selected shape/arrow/line.",
+    "Esc or Ctrl+Enter": "Finish editing text.",
+    "Ctrl+Delete": "Clear the entire canvas.",
+    "Shift+H": "Toggle grid mode.",
+    "Ctrl+'": "Toggle stats (for debugging).",
+    "Shift+?": "Show keyboard shortcuts help dialog.",
+    "Ctrl+S": "Save to current file (in desktop app/integration).",
+    "Ctrl+Shift+S": "Save as...",
+    "Ctrl+O": "Load a drawing from file.",
+    "Shift+Alt+C": "Copy to clipboard as PNG.",
+    "Ctrl+Alt+C": "Copy styles from selected element.",
+    "Ctrl+Alt+V": "Paste styles to selected element.",
+    "1": "selection_tool",
+    "2": "rectangle_tool",
+    "3": "diamond_tool",
+    "4": "ellipse_tool",
+    "5": "arrow_tool",
+    "6": "line_tool",
+    "7": "draw_tool",
+    "8": "text_tool",
+    "9": "image_tool",
+    "0": "eraser_tool"
+  },
+  "modal_patterns": [
+    {
+      "trigger": "Clicking 'Insert Image' tool (shortcut '9')",
+      "handler": "A system-native file selection dialog appears. The user must select an image file and confirm. Automation requires interacting with this native OS dialog, not a web element."
+    },
+    {
+      "trigger": "Clicking the menu icon (hamburger) and then 'Reset the canvas', or using shortcut 'Ctrl+Delete'",
+      "handler": "A confirmation dialog appears with the text 'This will clear the whole canvas. Are you sure?'. It has two buttons: 'OK' to confirm and 'Cancel' to dismiss. Automation must click 'OK' to proceed with clearing the canvas."
+    },
+    {
+      "trigger": "Clicking the menu icon and then 'Export image'",
+      "handler": "An export dialog appears with options for PNG/SVG, export background, dark mode, and embed scene. Automation needs to select the desired options and then click the 'Export' button, which will trigger a system file save dialog."
+    },
+    {
+      "trigger": "Pressing 'Shift+?'",
+      "handler": "A 'Keyboard shortcuts' dialog appears, listing all available shortcuts. It can be dismissed by clicking the 'X' in the top right corner or pressing the 'Esc' key."
+    }
+  ],
+  "button_map": {
+    "close_window_button": {
+      "element_name": "close_window_button",
+      "pixel_x": 120,
+      "pixel_y": 75,
+      "som_zone_id": 1,
+      "element_type": "button",
+      "description": "Closes the browser window."
+    },
+    "minimize_window_button": {
+      "element_name": "minimize_window_button",
+      "pixel_x": 120,
+      "pixel_y": 75,
+      "som_zone_id": 1,
+      "element_type": "button",
+      "description": "Minimizes the browser window."
+    },
+    "fullscreen_window_button": {
+      "element_name": "fullscreen_window_button",
+      "pixel_x": 120,
+      "pixel_y": 75,
+      "som_zone_id": 1,
+      "element_type": "button",
+      "description": "Toggles fullscreen mode for the browser window."
+    },
+    "back_button": {
+      "element_name": "back_button",
+      "pixel_x": 360,
+      "pixel_y": 75,
+      "som_zone_id": 2,
+      "element_type": "button",
+      "description": "Navigates to the previous page in the browser history."
+    },
+    "forward_button": {
+      "element_name": "forward_button",
+      "pixel_x": 360,
+      "pixel_y": 75,
+      "som_zone_id": 2,
+      "element_type": "button",
+      "description": "Navigates to the next page in the browser history."
+    },
+    "google_gemini_tab": {
+      "element_name": "google_gemini_tab",
+      "pixel_x": 360,
+      "pixel_y": 225,
+      "som_zone_id": 14,
+      "element_type": "button",
+      "description": "Switches to the Google Gemini tab."
+    },
+    "excalidraw_tab": {
+      "element_name": "excalidraw_tab",
+      "pixel_x": 600,
+      "pixel_y": 225,
+      "som_zone_id": 15,
+      "element_type": "button",
+      "description": "Switches to the Excalidraw tab."
+    },
+    "browser_share_button": {
+      "element_name": "browser_share_button",
+      "pixel_x": 2760,
+      "pixel_y": 75,
+      "som_zone_id": 12,
+      "element_type": "button",
+      "description": "Opens the browser's share menu."
+    },
+    "new_tab_button": {
+      "element_name": "new_tab_button",
+      "pixel_x": 2760,
+      "pixel_y": 75,
+      "som_zone_id": 12,
+      "element_type": "button",
+      "description": "Opens a new browser tab."
+    },
+    "main_menu_button": {
+      "element_name": "main_menu_button",
+      "pixel_x": 120,
+      "pixel_y": 375,
+      "som_zone_id": 25,
+      "element_type": "button",
+      "description": "Opens the main application menu for file operations."
+    },
+    "stroke_black_swatch": {
+      "element_name": "stroke_black_swatch",
+      "pixel_x": 120,
+      "pixel_y": 525,
+      "som_zone_id": 37,
+      "element_type": "swatch",
+      "description": "Sets the stroke color to black."
+    },
+    "stroke_red_swatch": {
+      "element_name": "stroke_red_swatch",
+      "pixel_x": 120,
+      "pixel_y": 525,
+      "som_zone_id": 37,
+      "element_type": "swatch",
+      "description": "Sets the stroke color to red."
+    },
+    "stroke_green_swatch": {
+      "element_name": "stroke_green_swatch",
+      "pixel_x": 120,
+      "pixel_y": 525,
+      "som_zone_id": 37,
+      "element_type": "swatch",
+      "description": "Sets the stroke color to green."
+    },
+    "stroke_blue_swatch": {
+      "element_name": "stroke_blue_swatch",
+      "pixel_x": 120,
+      "pixel_y": 525,
+      "som_zone_id": 37,
+      "element_type": "swatch",
+      "description": "Sets the stroke color to blue."
+    },
+    "stroke_yellow_swatch": {
+      "element_name": "stroke_yellow_swatch",
+      "pixel_x": 120,
+      "pixel_y": 525,
+      "som_zone_id": 37,
+      "element_type": "swatch",
+      "description": "Sets the stroke color to yellow."
+    },
+    "stroke_custom_color_picker": {
+      "element_name": "stroke_custom_color_picker",
+      "pixel_x": 360,
+      "pixel_y": 525,
+      "som_zone_id": 38,
+      "element_type": "button",
+      "description": "Opens a detailed color picker for the stroke."
+    },
+    "background_transparent_swatch": {
+      "element_name": "background_transparent_swatch",
+      "pixel_x": 120,
+      "pixel_y": 525,
+      "som_zone_id": 37,
+      "element_type": "swatch",
+      "description": "Sets the background color to transparent."
+    },
+    "background_red_swatch": {
+      "element_name": "background_red_swatch",
+      "pixel_x": 120,
+      "pixel_y": 525,
+      "som_zone_id": 37,
+      "element_type": "swatch",
+      "description": "Sets the background color to red."
+    },
+    "background_green_swatch": {
+      "element_name": "background_green_swatch",
+      "pixel_x": 120,
+      "pixel_y": 525,
+      "som_zone_id": 37,
+      "element_type": "swatch",
+      "description": "Sets the background color to green."
+    },
+    "background_blue_swatch": {
+      "element_name": "background_blue_swatch",
+      "pixel_x": 120,
+      "pixel_y": 525,
+      "som_zone_id": 37,
+      "element_type": "swatch",
+      "description": "Sets the background color to blue."
+    },
+    "background_yellow_swatch": {
+      "element_name": "background_yellow_swatch",
+      "pixel_x": 120,
+      "pixel_y": 525,
+      "som_zone_id": 37,
+      "element_type": "swatch",
+      "description": "Sets the background color to yellow."
+    },
+    "background_transparent_swatch_2": {
+      "element_name": "background_transparent_swatch_2",
+      "pixel_x": 360,
+      "pixel_y": 525,
+      "som_zone_id": 38,
+      "element_type": "swatch",
+      "description": "Sets the background color to transparent."
+    },
+    "stroke_width_thin_button": {
+      "element_name": "stroke_width_thin_button",
+      "pixel_x": 120,
+      "pixel_y": 675,
+      "som_zone_id": 49,
+      "element_type": "button",
+      "description": "Sets the stroke width to thin."
+    },
+    "stroke_width_medium_button": {
+      "element_name": "stroke_width_medium_button",
+      "pixel_x": 120,
+      "pixel_y": 675,
+      "som_zone_id": 49,
+      "element_type": "button",
+      "description": "Sets the stroke width to medium."
+    },
+    "stroke_width_thick_button": {
+      "element_name": "stroke_width_thick_button",
+      "pixel_x": 120,
+      "pixel_y": 675,
+      "som_zone_id": 49,
+      "element_type": "button",
+      "description": "Sets the stroke width to thick."
+    },
+    "stroke_style_solid_button": {
+      "element_name": "stroke_style_solid_button",
+      "pixel_x": 120,
+      "pixel_y": 825,
+      "som_zone_id": 61,
+      "element_type": "button",
+      "description": "Sets the stroke style to solid."
+    },
+    "stroke_style_dashed_button": {
+      "element_name": "stroke_style_dashed_button",
+      "pixel_x": 120,
+      "pixel_y": 825,
+      "som_zone_id": 61,
+      "element_type": "button",
+      "description": "Sets the stroke style to dashed."
+    },
+    "stroke_style_dotted_button": {
+      "element_name": "stroke_style_dotted_button",
+      "pixel_x": 120,
+      "pixel_y": 825,
+      "som_zone_id": 61,
+      "element_type": "button",
+      "description": "Sets the stroke style to dotted."
+    },
+    "sloppiness_architect_button": {
+      "element_name": "sloppiness_architect_button",
+      "pixel_x": 120,
+      "pixel_y": 975,
+      "som_zone_id": 73,
+      "element_type": "button",
+      "description": "Sets the drawing sloppiness to 'architect'."
+    },
+    "sloppiness_artist_button": {
+      "element_name": "sloppiness_artist_button",
+      "pixel_x": 120,
+      "pixel_y": 975,
+      "som_zone_id": 73,
+      "element_type": "button",
+      "description": "Sets the drawing sloppiness to 'artist'."
+    },
+    "sloppiness_cartoonist_button": {
+      "element_name": "sloppiness_cartoonist_button",
+      "pixel_x": 120,
+      "pixel_y": 975,
+      "som_zone_id": 73,
+      "element_type": "button",
+      "description": "Sets the drawing sloppiness to 'cartoonist'."
+    },
+    "edge_sharp_button": {
+      "element_name": "edge_sharp_button",
+      "pixel_x": 120,
+      "pixel_y": 1125,
+      "som_zone_id": 85,
+      "element_type": "button",
+      "description": "Sets the shape edges to be sharp."
+    },
+    "edge_round_button": {
+      "element_name": "edge_round_button",
+      "pixel_x": 120,
+      "pixel_y": 1125,
+      "som_zone_id": 85,
+      "element_type": "button",
+      "description": "Sets the shape edges to be rounded."
+    },
+    "opacity_slider": {
+      "element_name": "opacity_slider",
+      "pixel_x": 120,
+      "pixel_y": 1275,
+      "som_zone_id": 97,
+      "element_type": "slider",
+      "description": "Adjusts the opacity of the selected element."
+    },
+    "layers_button": {
+      "element_name": "layers_button",
+      "pixel_x": 120,
+      "pixel_y": 1425,
+      "som_zone_id": 109,
+      "element_type": "button",
+      "description": "Opens the layers panel."
+    },
+    "zoom_out_button": {
+      "element_name": "zoom_out_button",
+      "pixel_x": 120,
+      "pixel_y": 1575,
+      "som_zone_id": 121,
+      "element_type": "button",
+      "description": "Zooms out of the canvas."
+    },
+    "zoom_in_button": {
+      "element_name": "zoom_in_button",
+      "pixel_x": 120,
+      "pixel_y": 1575,
+      "som_zone_id": 121,
+      "element_type": "button",
+      "description": "Zooms in on the canvas."
+    },
+    "reset_zoom_button": {
+      "element_name": "reset_zoom_button",
+      "pixel_x": 360,
+      "pixel_y": 1575,
+      "som_zone_id": 122,
+      "element_type": "button",
+      "description": "Resets the canvas zoom to 100%."
+    },
+    "lock_tool": {
+      "element_name": "lock_tool",
+      "pixel_x": 1080,
+      "pixel_y": 375,
+      "som_zone_id": 29,
+      "element_type": "tool",
+      "description": "Locks the selected object to prevent editing."
+    },
+    "hand_tool": {
+      "element_name": "hand_tool",
+      "pixel_x": 1080,
+      "pixel_y": 375,
+      "som_zone_id": 29,
+      "element_type": "tool",
+      "description": "Selects the hand tool to pan the canvas."
+    },
+    "selection_tool": {
+      "element_name": "selection_tool",
+      "pixel_x": 1080,
+      "pixel_y": 375,
+      "som_zone_id": 29,
+      "element_type": "tool",
+      "description": "Selects the selection tool to move and resize objects."
+    },
+    "rectangle_tool": {
+      "element_name": "rectangle_tool",
+      "pixel_x": 1080,
+      "pixel_y": 375,
+      "som_zone_id": 29,
+      "element_type": "tool",
+      "description": "Selects the rectangle drawing tool."
+    },
+    "diamond_tool": {
+      "element_name": "diamond_tool",
+      "pixel_x": 1320,
+      "pixel_y": 375,
+      "som_zone_id": 30,
+      "element_type": "tool",
+      "description": "Selects the diamond drawing tool."
+    },
+    "ellipse_tool": {
+      "element_name": "ellipse_tool",
+      "pixel_x": 1320,
+      "pixel_y": 375,
+      "som_zone_id": 30,
+      "element_type": "tool",
+      "description": "Selects the ellipse drawing tool."
+    },
+    "arrow_tool": {
+      "element_name": "arrow_tool",
+      "pixel_x": 1320,
+      "pixel_y": 375,
+      "som_zone_id": 30,
+      "element_type": "tool",
+      "description": "Selects the arrow drawing tool."
+    },
+    "line_tool": {
+      "element_name": "line_tool",
+      "pixel_x": 1560,
+      "pixel_y": 375,
+      "som_zone_id": 31,
+      "element_type": "tool",
+      "description": "Selects the line drawing tool."
+    },
+    "draw_tool": {
+      "element_name": "draw_tool",
+      "pixel_x": 1560,
+      "pixel_y": 375,
+      "som_zone_id": 31,
+      "element_type": "tool",
+      "description": "Selects the free-draw (pencil) tool."
+    },
+    "text_tool": {
+      "element_name": "text_tool",
+      "pixel_x": 1560,
+      "pixel_y": 375,
+      "som_zone_id": 31,
+      "element_type": "tool",
+      "description": "Selects the text tool to add text to the canvas."
+    },
+    "image_tool": {
+      "element_name": "image_tool",
+      "pixel_x": 1800,
+      "pixel_y": 375,
+      "som_zone_id": 32,
+      "element_type": "button",
+      "description": "Opens a dialog to insert an image."
+    },
+    "eraser_tool": {
+      "element_name": "eraser_tool",
+      "pixel_x": 1800,
+      "pixel_y": 375,
+      "som_zone_id": 32,
+      "element_type": "tool",
+      "description": "Selects the eraser tool."
+    },
+    "more_tools_button": {
+      "element_name": "more_tools_button",
+      "pixel_x": 1800,
+      "pixel_y": 375,
+      "som_zone_id": 32,
+      "element_type": "button",
+      "description": "Opens a menu with more tools and shapes."
+    },
+    "excalidraw_plus_button": {
+      "element_name": "excalidraw_plus_button",
+      "pixel_x": 2520,
+      "pixel_y": 375,
+      "som_zone_id": 35,
+      "element_type": "button",
+      "description": "Opens information or a sign-up for Excalidraw+."
+    },
+    "share_button": {
+      "element_name": "share_button",
+      "pixel_x": 2760,
+      "pixel_y": 375,
+      "som_zone_id": 36,
+      "element_type": "button",
+      "description": "Opens the sharing and collaboration menu."
+    },
+    "export_button": {
+      "element_name": "export_button",
+      "pixel_x": 2760,
+      "pixel_y": 375,
+      "som_zone_id": 36,
+      "element_type": "button",
+      "description": "Opens the export menu."
+    },
+    "live_collaboration_button": {
+      "element_name": "live_collaboration_button",
+      "pixel_x": 2760,
+      "pixel_y": 1575,
+      "som_zone_id": 132,
+      "element_type": "button",
+      "description": "Opens the live collaboration session panel."
+    },
+    "help_button": {
+      "element_name": "help_button",
+      "pixel_x": 2760,
+      "pixel_y": 1575,
+      "som_zone_id": 132,
+      "element_type": "button",
+      "description": "Opens the help menu or documentation."
+    }
+  },
+  "research_notes": "COLOR WORKFLOW: To change the color of an element, first select the element. The properties panel will appear on the left. In this panel, there are two color swatches: 'Stroke' and 'Background'. Click the 'Stroke' swatch to open the color picker for the element's outline. Click the 'Background' swatch to open the color picker for the element's fill color. The color picker provides a palette of predefined colors, shades of the selected color, a hex code input, and a color picker tool to sample a color from anywhere on the screen. To set the default color for future shapes, deselect all elements by clicking on an empty area of the canvas, and then choose colors from the properties panel.\nGOTCHA: If you change properties like color or stroke width while an element is selected, it only affects that element. If you want to set the default for new elements, you must deselect everything first.\nGOTCHA: Pasting images or dropping files onto the canvas can sometimes replace your entire drawing without a confirmation prompt, leading to data loss.\nGOTCHA: The free-draw tool ('P') creates a single object with many points. For simple lines or arrows, use the dedicated 'Line' ('L') or 'Arrow' ('A') tools, as they are easier to edit.\nGOTCHA: Excalidraw saves work to the browser's local storage. Clearing browser data can result in the loss of unsaved drawings. Always save important work to a file.\nGOTCHA: Multi-point arrows and lines are created by clicking points, not dragging. Dragging will only create a two-point (straight) line or arrow.\nGOTCHA: To type text inside a shape, you must first select the shape and then press 'Enter' or double-click inside it. Simply selecting the text tool and clicking inside a shape will create a new, separate text element on top of it."
+}

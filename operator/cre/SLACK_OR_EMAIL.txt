@@ -1,0 +1,15 @@
+Codex Runtime Environment (CRE) — quick try
+
+Repo: /Users/christianpardo/rust
+(Replace with your clone path or GitHub URL if sharing.)
+
+1. Run the showcase (shows kernel liveness, latency, screenshot, state):
+   bash operator/cre/showcase.sh
+
+2. Read the one-pager (what CRE is, what it replaces, how to drive it):
+   operator/cre/SHOWCASE.md
+
+3. Optional — full test suite (Phases 0–7: benchmarks, kernel, vision, input, state, wait, bridge, validation):
+   bash operator/tests/run_cre_tests.sh
+
+Tip: If the kernel isn’t running, open Hammerspoon → Reload Config, then run the showcase again.

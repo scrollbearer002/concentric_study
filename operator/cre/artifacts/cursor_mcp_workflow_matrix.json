@@ -1,0 +1,6531 @@
+{
+  "retrieved_date": "2026-03-04",
+  "current_repo_gaps": [
+    {
+      "gap_id": "GAP-01",
+      "name": "Current documentation and repo retrieval inside Cursor",
+      "why_it_exists": "The repo already values research-first implementation, but current repo and doc lookup still rely heavily on shell search plus manual browsing.",
+      "local_evidence": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/cre/MISSED_TOOL_WORKFLOW_VALUE_PHD.md",
+        "/Users/christianpardo/Desktop/concentric_study/operator/cre/PHD_DECISION_PRACTICE.md"
+      ],
+      "desired_workflow_classes": [
+        "research_intelligence",
+        "repo_retrieval"
+      ]
+    },
+    {
+      "gap_id": "GAP-02",
+      "name": "Browser augmentation beyond the local Safari/macOS path",
+      "why_it_exists": "The runtime is strong on local macOS control, but a bounded external browser/testing surface could improve reproducibility and experiments.",
+      "local_evidence": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/cre/PHASE_1_ENVIRONMENT_BENEFITS_PHD.md",
+        "/Users/christianpardo/Desktop/concentric_study/operator/cre/MASTER_TOOL_LIST_PHD.md"
+      ],
+      "desired_workflow_classes": [
+        "execution_environment",
+        "verification_evaluation"
+      ]
+    },
+    {
+      "gap_id": "GAP-03",
+      "name": "Cursor-native observability and evaluation access",
+      "why_it_exists": "The repo has strong traces and evaluation artifacts, but they are not exposed as native Cursor tools.",
+      "local_evidence": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/cre/MISSED_TOOL_WORKFLOW_VALUE_PHD.md",
+        "/Users/christianpardo/Desktop/concentric_study/operator/cre/MASTER_TOOL_LIST_PHD.md"
+      ],
+      "desired_workflow_classes": [
+        "observability_forensics",
+        "verification_evaluation"
+      ]
+    },
+    {
+      "gap_id": "GAP-04",
+      "name": "MCP governance and secret discipline",
+      "why_it_exists": "Adopting more MCPs introduces governance, audit, and secret-handling pressure not covered by install convenience alone.",
+      "local_evidence": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/cre/PHASE_1_ENVIRONMENT_BENEFITS_PHD.md",
+        "/Users/christianpardo/Desktop/concentric_study/operator/agent_infra/tool_health_catalog.json"
+      ],
+      "desired_workflow_classes": [
+        "security_governance",
+        "observability_forensics"
+      ]
+    },
+    {
+      "gap_id": "GAP-05",
+      "name": "Visual artifact and review surfaces inside Cursor",
+      "why_it_exists": "The repo values screenshots, reference boards, and visual evidence, but current Cursor integration is version-gated for MCP Apps.",
+      "local_evidence": [
+        "/Users/christianpardo/Desktop/concentric_study/operator/cre/MISSED_TOOL_WORKFLOW_VALUE_PHD.md"
+      ],
+      "desired_workflow_classes": [
+        "artifact_generation"
+      ]
+    }
+  ],
+  "candidate_rows": [
+    {
+      "candidate_id": "MCP-001",
+      "name": "GitHub",
+      "kind": "external_server",
+      "workflow_classes": [
+        "repo_retrieval",
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 12,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "pilot"
+    },
+    {
+      "candidate_id": "MCP-002",
+      "name": "Slack",
+      "kind": "external_server",
+      "workflow_classes": [
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [],
+      "current_repo_assets": [
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-003",
+      "name": "Notion",
+      "kind": "external_server",
+      "workflow_classes": [
+        "coordination_orchestration",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-004",
+      "name": "Figma",
+      "kind": "external_server",
+      "workflow_classes": [
+        "artifact_generation",
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [
+        "GAP-05"
+      ],
+      "current_repo_assets": [
+        "reference boards / run artifacts",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 1,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "exclude"
+    },
+    {
+      "candidate_id": "MCP-005",
+      "name": "Context7",
+      "kind": "external_server",
+      "workflow_classes": [
+        "repo_retrieval",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "SkillLibrary / SemanticSkillIndex"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 38,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-006",
+      "name": "Linear",
+      "kind": "external_server",
+      "workflow_classes": [
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [],
+      "current_repo_assets": [
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-007",
+      "name": "Playwright",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "priority"
+    },
+    {
+      "candidate_id": "MCP-008",
+      "name": "shadcn/ui",
+      "kind": "external_server",
+      "workflow_classes": [
+        "repo_retrieval",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "SkillLibrary / SemanticSkillIndex"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-009",
+      "name": "Sentry",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-010",
+      "name": "Salesforce DX",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-011",
+      "name": "Supabase",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-012",
+      "name": "Vercel",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-013",
+      "name": "GitLab",
+      "kind": "external_server",
+      "workflow_classes": [
+        "repo_retrieval",
+        "security_governance",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex",
+        "VerificationGate / BenchmarkEvaluator",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 35,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-014",
+      "name": "PostHog",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-015",
+      "name": "Netlify",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-016",
+      "name": "Heroku",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-017",
+      "name": "Postman",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 38,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-018",
+      "name": "Prisma",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "repo_retrieval"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex",
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-019",
+      "name": "CAP",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-020",
+      "name": "SAP Fiori",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-021",
+      "name": "SAP Mobile Development Kit",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-022",
+      "name": "UI5 MCP Server",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-023",
+      "name": "MongoDB",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-024",
+      "name": "dbt Labs",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-025",
+      "name": "Atlassian",
+      "kind": "external_server",
+      "workflow_classes": [
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [],
+      "current_repo_assets": [
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-026",
+      "name": "DuckDB",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-027",
+      "name": "Braintrust",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence",
+        "security_governance",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "VerificationGate / BenchmarkEvaluator",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 43,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-028",
+      "name": "Browserbase",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 29,
+        "phd_upgrade_score": 12,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "pilot"
+    },
+    {
+      "candidate_id": "MCP-029",
+      "name": "Chrome DevTools",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 37,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-030",
+      "name": "ClickUp",
+      "kind": "external_server",
+      "workflow_classes": [
+        "coordination_orchestration",
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 35,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-031",
+      "name": "Convex",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-032",
+      "name": "Shopify",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-033",
+      "name": "snyk",
+      "kind": "external_server",
+      "workflow_classes": [
+        "repo_retrieval"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-034",
+      "name": "Hugging Face",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-035",
+      "name": "Wix",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-036",
+      "name": "Semgrep",
+      "kind": "external_server",
+      "workflow_classes": [
+        "repo_retrieval",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-037",
+      "name": "LaunchDarkly",
+      "kind": "external_server",
+      "workflow_classes": [
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-038",
+      "name": "Statsig",
+      "kind": "external_server",
+      "workflow_classes": [
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-039",
+      "name": "Endor Labs",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "repo_retrieval",
+        "research_intelligence",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "SkillLibrary / SemanticSkillIndex",
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 5,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 43,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-040",
+      "name": "InstantDB",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-041",
+      "name": "Tinybird",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-042",
+      "name": "Neon",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-043",
+      "name": "Socket",
+      "kind": "external_server",
+      "workflow_classes": [
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-044",
+      "name": "Pipedream",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-045",
+      "name": "Auth0",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-046",
+      "name": "Honeycomb",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-047",
+      "name": "PagerDuty",
+      "kind": "external_server",
+      "workflow_classes": [
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-048",
+      "name": "Graphite",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-049",
+      "name": "Railway",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-050",
+      "name": "Replicate",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 37,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-051",
+      "name": "AWS Documentation",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-052",
+      "name": "Select Star",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-053",
+      "name": "SonarQube",
+      "kind": "external_server",
+      "workflow_classes": [
+        "repo_retrieval"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-054",
+      "name": "MS Learn Docs",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-055",
+      "name": "Stripe",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-056",
+      "name": "PayPal",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-057",
+      "name": "Plaid",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 35,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-058",
+      "name": "firecrawl",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-059",
+      "name": "Corridor",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-060",
+      "name": "Amplitude",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 41,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-061",
+      "name": "Astro docs server",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence",
+        "security_governance",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "VerificationGate / BenchmarkEvaluator",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 41,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-062",
+      "name": "Mercado Pago",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 12,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-063",
+      "name": "Mercado Libre",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 12,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-064",
+      "name": "Apify",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-065",
+      "name": "Render",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-066",
+      "name": "Azure DevOps",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-067",
+      "name": "Webflow",
+      "kind": "external_server",
+      "workflow_classes": [
+        "repo_retrieval"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-068",
+      "name": "terraform",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-069",
+      "name": "vault",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-070",
+      "name": "Browser Use",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "repo_retrieval",
+        "research_intelligence",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "SkillLibrary / SemanticSkillIndex",
+        "web_primitives.py / capability_router.py",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 5,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 41,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-071",
+      "name": "Sanity",
+      "kind": "external_server",
+      "workflow_classes": [
+        "repo_retrieval"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-072",
+      "name": "Airwallex Developer MCP",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-073",
+      "name": "Dynatrace",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 39,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "transformational",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-074",
+      "name": "Arcade",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-075",
+      "name": "Embrace",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-076",
+      "name": "CodeSherlock",
+      "kind": "external_server",
+      "workflow_classes": [
+        "repo_retrieval",
+        "research_intelligence",
+        "security_governance",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "SkillLibrary / SemanticSkillIndex",
+        "VerificationGate / BenchmarkEvaluator",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 5,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 43,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-077",
+      "name": "Kyomi",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-078",
+      "name": "Pendo",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 41,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-079",
+      "name": "SearchAPI",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-080",
+      "name": "Defang",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-081",
+      "name": "WordPress.com",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-082",
+      "name": "Luciq",
+      "kind": "external_server",
+      "workflow_classes": [
+        "artifact_generation",
+        "observability_forensics",
+        "repo_retrieval",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03",
+        "GAP-04",
+        "GAP-05"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex",
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "VerificationGate / BenchmarkEvaluator",
+        "reference boards / run artifacts"
+      ],
+      "scores": {
+        "workflow_lift": 5,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 42,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-083",
+      "name": "alphaXiv",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-084",
+      "name": "Codve",
+      "kind": "external_server",
+      "workflow_classes": [
+        "repo_retrieval"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-085",
+      "name": "Arize AX",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 38,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-086",
+      "name": "MotherDuck",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-087",
+      "name": "Glean",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-088",
+      "name": "incident.io",
+      "kind": "external_server",
+      "workflow_classes": [
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-089",
+      "name": "Firebase",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-090",
+      "name": "Aikido Security",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-091",
+      "name": "Mixpanel",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-092",
+      "name": "Windsor.ai",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-093",
+      "name": "Circleback",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 39,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-094",
+      "name": "Tauri",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 35,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-095",
+      "name": "Vantage",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "observability_forensics",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "web_primitives.py / capability_router.py",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 41,
+        "phd_upgrade_score": 12,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-096",
+      "name": "Sidemail",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-097",
+      "name": "Databend",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-098",
+      "name": "Kubit",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-099",
+      "name": "CodeScene",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "repo_retrieval",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "SkillLibrary / SemanticSkillIndex",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 43,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-100",
+      "name": "Vale",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-101",
+      "name": "Fluid Attacks",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-102",
+      "name": "Clarity",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-103",
+      "name": "You.com",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-104",
+      "name": "TestDino",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 38,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-105",
+      "name": "Kernel",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-106",
+      "name": "Angular",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-107",
+      "name": "AWS",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-108",
+      "name": "Uno Platform",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-109",
+      "name": "DBHub",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-110",
+      "name": "CoreStory",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-111",
+      "name": "Ref",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 39,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-112",
+      "name": "Perplexity",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-113",
+      "name": "Checkmarx",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "security_governance",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "VerificationGate / BenchmarkEvaluator",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 38,
+        "phd_upgrade_score": 12,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-114",
+      "name": "SafeDep Vet",
+      "kind": "external_server",
+      "workflow_classes": [
+        "coordination_orchestration",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-115",
+      "name": "Elasticsearch",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-116",
+      "name": "Unleash",
+      "kind": "external_server",
+      "workflow_classes": [
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-117",
+      "name": "Tigris",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-118",
+      "name": "DevRev",
+      "kind": "external_server",
+      "workflow_classes": [
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [],
+      "current_repo_assets": [
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-119",
+      "name": "Mux",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-120",
+      "name": "Hex",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 41,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-121",
+      "name": "Stack Overflow",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-122",
+      "name": "Fellow",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-123",
+      "name": "LiveKit",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-124",
+      "name": "GrowthBook",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-125",
+      "name": "Octopus Deploy",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-126",
+      "name": "Builder.io",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-127",
+      "name": "DevExpress",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-128",
+      "name": "Cloudinary",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-129",
+      "name": "Cloudflare",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 39,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-130",
+      "name": "Shuttle",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-131",
+      "name": "ConfigCat",
+      "kind": "external_server",
+      "workflow_classes": [
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [],
+      "current_repo_assets": [
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-132",
+      "name": "Coralogix",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-133",
+      "name": "Svelte",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-134",
+      "name": "Scout APM",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 39,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-135",
+      "name": "Axiom",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-136",
+      "name": "Customer.io",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-137",
+      "name": "Bitly",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-138",
+      "name": "Devopness",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-139",
+      "name": "Jam",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 29,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-140",
+      "name": "Webvizio",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 29,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-141",
+      "name": "Supadata",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-142",
+      "name": "Bitrise",
+      "kind": "external_server",
+      "workflow_classes": [
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-143",
+      "name": "Harness",
+      "kind": "external_server",
+      "workflow_classes": [
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-144",
+      "name": "DryRun Security",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "research_intelligence",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 41,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-145",
+      "name": "OX Security",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-146",
+      "name": "Zapier",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-147",
+      "name": "Okahu",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 35,
+        "phd_upgrade_score": 12,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-148",
+      "name": "Scalekit",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-149",
+      "name": "Chakra UI",
+      "kind": "external_server",
+      "workflow_classes": [
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 1,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 26,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "exclude"
+    },
+    {
+      "candidate_id": "MCP-150",
+      "name": "Alpha Vantage",
+      "kind": "external_server",
+      "workflow_classes": [
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 33,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-151",
+      "name": "Amazon Devices Builder Tools",
+      "kind": "external_server",
+      "workflow_classes": [
+        "execution_environment",
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-152",
+      "name": "Tavily",
+      "kind": "external_server",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-153",
+      "name": "Airflow",
+      "kind": "external_server",
+      "workflow_classes": [
+        "observability_forensics",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 35,
+        "phd_upgrade_score": 8,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-154",
+      "name": "Slack",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "coordination_orchestration",
+        "execution_environment",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "web_primitives.py / capability_router.py",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 39,
+        "phd_upgrade_score": 11,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-155",
+      "name": "Figma",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "artifact_generation"
+      ],
+      "matched_gaps": [
+        "GAP-05"
+      ],
+      "current_repo_assets": [
+        "reference boards / run artifacts"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 11,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "pilot"
+    },
+    {
+      "candidate_id": "MCP-156",
+      "name": "Vercel",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 25,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-157",
+      "name": "Linear",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [],
+      "current_repo_assets": [
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-158",
+      "name": "Stripe",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "repo_retrieval"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 24,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-159",
+      "name": "Notion",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [],
+      "current_repo_assets": [
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-160",
+      "name": "PlanetScale",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment",
+        "observability_forensics",
+        "repo_retrieval",
+        "research_intelligence",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "SkillLibrary / SemanticSkillIndex",
+        "web_primitives.py / capability_router.py",
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 5,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 41,
+        "phd_upgrade_score": 13,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-161",
+      "name": "Clerk",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment",
+        "security_governance",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "VerificationGate / BenchmarkEvaluator",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 11,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-162",
+      "name": "Browserbase Functions",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "coordination_orchestration",
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 29,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-163",
+      "name": "Neon Postgres",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 29,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-164",
+      "name": "AWS",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 29,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-165",
+      "name": "Sentry",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 25,
+        "phd_upgrade_score": 12,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "pilot"
+    },
+    {
+      "candidate_id": "MCP-166",
+      "name": "Browserstack",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment",
+        "observability_forensics",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 13,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-167",
+      "name": "Cloudflare",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment",
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-168",
+      "name": "Convex",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-169",
+      "name": "Amplitude",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "artifact_generation",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-05"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "reference boards / run artifacts"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 9,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "pilot"
+    },
+    {
+      "candidate_id": "MCP-170",
+      "name": "Hugging Face",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "coordination_orchestration",
+        "research_intelligence",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "VerificationGate / BenchmarkEvaluator",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 39,
+        "phd_upgrade_score": 11,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-171",
+      "name": "PostHog",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "observability_forensics",
+        "research_intelligence",
+        "security_governance",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "VerificationGate / BenchmarkEvaluator",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 5,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 44,
+        "phd_upgrade_score": 13,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-172",
+      "name": "ClickHouse",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 27,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-173",
+      "name": "Databricks Skills",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-174",
+      "name": "Snowflake",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-175",
+      "name": "Supabase",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "coordination_orchestration",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "InputSanitizer / CredentialVault / HostToolHealth",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-176",
+      "name": "Hex",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "artifact_generation",
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-05"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "reference boards / run artifacts"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 36,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-177",
+      "name": "Prisma",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 34,
+        "phd_upgrade_score": 7,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-178",
+      "name": "Glean",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "coordination_orchestration",
+        "repo_retrieval",
+        "research_intelligence",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "SkillLibrary / SemanticSkillIndex",
+        "VerificationGate / BenchmarkEvaluator",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 5,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 41,
+        "phd_upgrade_score": 13,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-179",
+      "name": "Monday.com",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [],
+      "current_repo_assets": [
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-180",
+      "name": "Atlassian",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [],
+      "current_repo_assets": [
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 26,
+        "phd_upgrade_score": 11,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "pilot"
+    },
+    {
+      "candidate_id": "MCP-181",
+      "name": "Phantom Connect",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "research_intelligence",
+        "security_governance"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 1,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 11,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "exclude"
+    },
+    {
+      "candidate_id": "MCP-182",
+      "name": "Runlayer",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "security_governance",
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 13,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "priority"
+    },
+    {
+      "candidate_id": "MCP-183",
+      "name": "Langfuse",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "observability_forensics",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 32,
+        "phd_upgrade_score": 13,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "priority"
+    },
+    {
+      "candidate_id": "MCP-184",
+      "name": "Parallel",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "research_intelligence"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 30,
+        "phd_upgrade_score": 13,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "priority"
+    },
+    {
+      "candidate_id": "MCP-185",
+      "name": "Superpowers",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 27,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-186",
+      "name": "Compound Engineering",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "coordination_orchestration",
+        "execution_environment",
+        "repo_retrieval",
+        "research_intelligence",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "SkillLibrary / SemanticSkillIndex",
+        "web_primitives.py / capability_router.py",
+        "VerificationGate / BenchmarkEvaluator",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 5,
+        "research_lift": 5,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 1,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 40,
+        "phd_upgrade_score": 13,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "exclude"
+    },
+    {
+      "candidate_id": "MCP-187",
+      "name": "Create Plugin",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-188",
+      "name": "Context7",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "research_intelligence",
+        "repo_retrieval"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "SkillLibrary / SemanticSkillIndex"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 38,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "priority"
+    },
+    {
+      "candidate_id": "MCP-189",
+      "name": "tldraw",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "artifact_generation"
+      ],
+      "matched_gaps": [
+        "GAP-05"
+      ],
+      "current_repo_assets": [
+        "reference boards / run artifacts"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 28,
+        "phd_upgrade_score": 11,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "pilot"
+    },
+    {
+      "candidate_id": "MCP-190",
+      "name": "1Password",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "security_governance",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 1,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 29,
+        "phd_upgrade_score": 11,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "exclude"
+    },
+    {
+      "candidate_id": "MCP-191",
+      "name": "Continual Learning",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "execution_environment"
+      ],
+      "matched_gaps": [
+        "GAP-02"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 6,
+        "time_to_value": 3
+      },
+      "repo_fit": "low",
+      "upgrade_magnitude": "minimal",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "catalog_only"
+    },
+    {
+      "candidate_id": "MCP-192",
+      "name": "Cursor Team Kit",
+      "kind": "cursor_plugin",
+      "workflow_classes": [
+        "coordination_orchestration",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03"
+      ],
+      "current_repo_assets": [
+        "VerificationGate / BenchmarkEvaluator",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 5,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 4,
+        "local_readiness": 3,
+        "priority_score": 29,
+        "phd_upgrade_score": 11,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "pilot"
+    },
+    {
+      "candidate_id": "MCP-193",
+      "name": "concentric-trace-mcp",
+      "kind": "internal_opportunity",
+      "workflow_classes": [
+        "observability_forensics",
+        "verification_evaluation"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 38,
+        "phd_upgrade_score": 15,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "transformational",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "priority"
+    },
+    {
+      "candidate_id": "MCP-194",
+      "name": "concentric-benchmark-mcp",
+      "kind": "internal_opportunity",
+      "workflow_classes": [
+        "verification_evaluation",
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "VerificationGate / BenchmarkEvaluator"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 5,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 38,
+        "phd_upgrade_score": 15,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "transformational",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "priority"
+    },
+    {
+      "candidate_id": "MCP-195",
+      "name": "concentric-research-mcp",
+      "kind": "internal_opportunity",
+      "workflow_classes": [
+        "research_intelligence",
+        "artifact_generation"
+      ],
+      "matched_gaps": [
+        "GAP-01",
+        "GAP-05"
+      ],
+      "current_repo_assets": [
+        "ResearchAgent",
+        "reference boards / run artifacts"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 5,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 38,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "priority"
+    },
+    {
+      "candidate_id": "MCP-196",
+      "name": "concentric-health-mcp",
+      "kind": "internal_opportunity",
+      "workflow_classes": [
+        "security_governance",
+        "execution_environment",
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-02",
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "web_primitives.py / capability_router.py",
+        "TraceWriter / DiagnosticReader / VisualMonitor",
+        "InputSanitizer / CredentialVault / HostToolHealth"
+      ],
+      "scores": {
+        "workflow_lift": 4,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 37,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "priority"
+    },
+    {
+      "candidate_id": "MCP-197",
+      "name": "concentric-skill-mcp",
+      "kind": "internal_opportunity",
+      "workflow_classes": [
+        "repo_retrieval",
+        "coordination_orchestration"
+      ],
+      "matched_gaps": [
+        "GAP-01"
+      ],
+      "current_repo_assets": [
+        "SkillLibrary / SemanticSkillIndex",
+        "OuterLoop / RulesStore / ReflectionJournal"
+      ],
+      "scores": {
+        "workflow_lift": 3,
+        "research_lift": 2,
+        "operational_lift": 2,
+        "evaluation_lift": 2,
+        "security_compatibility": 5,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 32,
+        "phd_upgrade_score": 12,
+        "time_to_value": 3
+      },
+      "repo_fit": "medium_high",
+      "upgrade_magnitude": "moderate",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "pilot"
+    },
+    {
+      "candidate_id": "MCP-198",
+      "name": "concentric-visual-monitor-mcp",
+      "kind": "internal_opportunity",
+      "workflow_classes": [
+        "observability_forensics"
+      ],
+      "matched_gaps": [
+        "GAP-03",
+        "GAP-04"
+      ],
+      "current_repo_assets": [
+        "TraceWriter / DiagnosticReader / VisualMonitor"
+      ],
+      "scores": {
+        "workflow_lift": 2,
+        "research_lift": 2,
+        "operational_lift": 5,
+        "evaluation_lift": 2,
+        "security_compatibility": 3,
+        "adoption_friction": 3,
+        "evidence_quality": 5,
+        "local_readiness": 3,
+        "priority_score": 31,
+        "phd_upgrade_score": 14,
+        "time_to_value": 3
+      },
+      "repo_fit": "high",
+      "upgrade_magnitude": "substantial",
+      "local_feasibility": "needs_setup",
+      "recommended_status": "pilot"
+    }
+  ]
+}

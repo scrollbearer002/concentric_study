@@ -1,0 +1,36 @@
+---
+description: Use Context7 for current external package and framework docs
+globs:
+alwaysApply: true
+---
+
+# Context7 Scope Rule
+
+Use Context7 when the answer depends on current third-party package, framework,
+SDK, or API documentation.
+
+High-signal cases:
+- current setup or installation steps for external libraries
+- version-sensitive migrations or deprecations
+- up-to-date code examples for packages used in this repo
+- external API surface questions where stale model memory is a real risk
+
+Before using Context7:
+- identify the exact external package or SDK first
+- state the version when it is explicit; if not, say the version is inferred
+- prefer answers that match the package actually used in this repo
+
+Do not use Context7 for:
+- repo-local code, architecture, or runtime behavior
+- host or environment facts that should come from local files or live checks
+- Cursor product features, changelog details, pricing, or policy questions
+- general news, company facts, or non-library research
+
+When you do use Context7:
+- cite the exact library or SDK you used it for
+- reference the source page or section when possible
+- do not infer repo-specific behavior from external docs alone
+- say so plainly if Context7 coverage looks incomplete or generic
+
+If the question is repo-local or environment-local, read the local files first
+and treat Context7 as out of scope.

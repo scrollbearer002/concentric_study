@@ -1,0 +1,11 @@
+{
+  "primary_subject_bbox_goal": "occupy 35%-60% of drawable area unless task says otherwise",
+  "pose": "connected full-body hero pose with compact centered composition",
+  "camera_angle": "straight-on character poster view",
+  "passes": [
+    "outline",
+    "fill masses",
+    "detail",
+    "verification"
+  ]
+}

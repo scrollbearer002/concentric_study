@@ -1,0 +1,46 @@
+Deep research request.
+
+Primary source:
+- Official Cursor YouTube channel (`@cursor_ai`)
+- Video: `Software is changing`
+- Upload date: `2026-02-26`
+- URL: https://www.youtube.com/watch?v=2SkrTnGMsr0
+
+Task:
+1. Read the full transcript below.
+2. Do deep research on every concrete Cursor update, capability shift, workflow implication, or product-direction claim in this video.
+3. Distinguish clearly between:
+   - directly stated product updates
+   - likely implications/inferences
+   - open questions / unverifiable marketing claims
+4. Use current official sources first: Cursor blog, docs, changelog, official videos, official X posts if needed.
+5. Build a PhD-level memo with:
+   - exact list of claimed updates
+   - supporting or contradicting evidence
+   - what changed for users in practice
+   - risks, limitations, and unknowns
+   - recommended experiments to verify each update locally
+6. Prefer primary sources and include dates.
+7. If a claim cannot be verified, say that explicitly.
+
+Transcript:
+---
+To build software, you've always had to
+break down your ideas into [music] small
+bits of logic a computer could
+understand. If this, then that, run this
+loop.
+Even today, [music] as agents write code
+for you, your constant attention is
+required.
+Micromanagement is not the [music]
+future of software engineering.
+What if you could trust agents to take
+an idea and run with it?
+if they were free to explore [music] and
+try things in their own computers.
+What if your ideas came back as live
+features and reviewing [music] changes
+was as easy as hitting I
+[music]
+---

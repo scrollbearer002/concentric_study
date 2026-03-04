@@ -1,0 +1,662 @@
+---
+description: Rules for any agent working in the concentric_study project
+globs:
+alwaysApply: true
+---
+
+# Concentric Study — Agent Infrastructure Guide
+
+This project contains a dual-agent self-improving system for GUI automation.
+It has a structured infrastructure layer that you MUST understand before making changes.
+
+## Working standard: PhD-level research before implementation
+
+Assume the user's work is **serious by default**.
+Do not downgrade to a lightweight or first-pass workflow unless:
+- the task is clearly mechanical and low-risk, or
+- the user explicitly asks for speed over rigor.
+
+All answers in this repo must default to a **dedicated environment-specific justification**.
+That means the agent must anchor its reasoning to the actual:
+- system of interest
+- local machine/runtime environment
+- repo architecture
+- task context
+- stakeholder objective
+
+Do not answer at the generic category level when the user is operating inside a
+specific environment. If the user asks a simple question, still prefer the
+environment-specific answer over a generic one unless the user explicitly asks
+for an abstract, environment-agnostic explanation.
+
+Default behavior for this repo:
+- use the recursive PhD research loop by default
+- use the context-locked research filter by default
+- prefer evidence saturation over early closure
+- prefer environment-specific relevance over adjacent-domain analogy
+- prefer environment-specific justification over generic category advice
+- when using Safari for live web work, put the active Safari window into full screen by default unless the user explicitly asks otherwise
+- when using a new or weakly-known website/app surface, do a live reconnaissance/calibration pass before the first substantive action; do not treat screenshots as decoration or post-hoc justification
+
+The burden is on the agent to justify taking shortcuts, not on the user to keep
+repeating that rigor is required.
+
+All additions to this project must satisfy a **non-regression and bounded-growth rule**:
+- If a change touches the current core runtime, it must be justified by evidence from the actual environment and, where feasible, by a live run, regression test, or stronger machine-checked proof that the project is not being degraded.
+- If a proposed addition is speculative, high-risk, or not yet justified by live evidence, it should be introduced as an isolated branch of the project (separate module, feature gate, optional path, experimental artifact, or separate repo/product path) so it does not weaken what is already strong.
+- Never add new machinery that makes the current project harder to reason about, less reliable, or less verifiable without a clear environment-specific upside backed by evidence.
+- Default to protecting the strongest existing path over expanding surface area.
+- When recommending a new subsystem, explicitly state whether it is:
+  - `core enhancement with non-regression evidence`, or
+  - `isolated experimental branch to avoid weakening the core`.
+
+If non-regression cannot be shown yet, do not merge the change conceptually into
+the strong path. Keep it isolated until evidence justifies promotion.
+
+When a **bounded, evidence-backed correction chain** is active, continue it by
+default instead of stopping at "next correct move."
+
+This means:
+- If the next step is part of the same validated chain, do it.
+- Do NOT make the user repeat "proceed", "use PhD evidence", or "keep going"
+  when those expectations are already established by the repo rules and the
+  current task context.
+- Do NOT stop just to propose the next step if:
+  - the step is already justified by the current evidence,
+  - it stays within the same task/objective,
+  - it does not introduce a new high-risk branch, and
+  - it does not require a real stakeholder choice.
+
+You may stop and surface options only when at least one of these is true:
+- the chain is exhausted and no further evidence-backed step remains,
+- the next step would materially branch the project direction,
+- the next step would touch a high-risk area without non-regression evidence,
+- external information or user credentials are genuinely needed,
+- the user explicitly asks to pause, review, or choose.
+
+If you stop, say the **actual stop condition**, not merely "next correct move."
+The default posture in this repo is: continue the bounded correction chain until
+it is exhausted, blocked, or requires a meaningful user decision.
+
+When a **research branch** identifies a bounded, repo-safe enhancement path
+that is already justified by local evidence, do not stop at the memo or
+recommendation layer. Continue into the **first bounded implementation,
+fixture, replay, or demonstration step** that fits the same branch, unless:
+- doing so would touch a high-risk area without non-regression evidence,
+- the next step genuinely requires external credentials, new stakeholder scope,
+  or a project-direction choice, or
+- the user explicitly asks to stop at research only.
+
+In this repo, "research complete" is not a valid stopping point by itself when:
+- the branch objective is still active,
+- the first implementation or demo step is already clear,
+- and that step can be executed without weakening the strong current path.
+
+When the user is asking for a **live test, demo, showcase, example, show-off,
+or operational proof**, the default primary deliverable is an **operational
+result**, not a memo, showcase write-up, or recommendation.
+
+This means:
+- Do the live run, implementation, replay, or concrete artifact first when it
+  is feasible and safe in the current environment.
+- Documentation, analysis, or research may support the work, but they do NOT
+  replace the requested operational deliverable.
+- Do not substitute a markdown explanation, showcase file, or research memo
+  when the user actually asked to see the system perform.
+- In audience/demo contexts, prefer:
+  - executed result,
+  - live artifact,
+  - screenshot/video/log evidence,
+  - runnable proof,
+  over prose.
+
+If the user asks for improvement after a live result, the default sequence is:
+1. diagnose the exact operational failure,
+2. research the bounded fix if needed,
+3. implement the first justified fix or replay step,
+4. rerun the operational test,
+unless a real stop condition blocks the next step.
+
+When a real branch point exists, default to the **strongest evidence-backed
+move** for this repo and environment. Do not frame the strongest path as if it
+were merely one optional preference unless there is a genuine tradeoff the user
+must choose.
+
+This means:
+- If one path is clearly strongest by the current evidence, recommend it and
+  proceed unless a real stop condition applies.
+- Do NOT ask or imply "if you want the strongest move" when the repo rules,
+  user preferences, and current evidence already establish that preference.
+- Only surface multiple options symmetrically when they differ in stakeholder
+  priorities, risk, scope, or product direction in a way the user must decide.
+
+When the user asks you to do something, **research the best way to do it** before implementing:
+
+1. **Break down the task into parts and do each part to ~90%**
+   - Decompose the request into clear sub-tasks (e.g. design, data, implementation, tests, docs).
+   - For each sub-task, aim for high quality (treat “do the best” as ~90% of what’s achievable for that part), not just “good enough.”
+   - Don’t leave a sub-task half-done or skipped; complete and verify each part before moving on.
+
+2. **When you search or research, learn every step**
+   - Don’t skim: read and internalize each step of what you find (papers, docs, code).
+   - Summarize or note the key steps, assumptions, and trade-offs so they inform your design and implementation.
+   - If you use a source, understand the “why” and “how” well enough to explain or adapt it.
+
+3. **Literature and best practices**
+   - **Literature**: Relevant papers, preprints, and conference work (e.g. arXiv, ACM, NeurIPS, ICLR) that define state of the art or established best practice for the task.
+   - **Best practices**: Domain standards, existing implementations in the codebase or referenced in docs (e.g. ROADMAP_PHD_RESEARCH_MEMO.md, ALLOWLIST_PREACTION_IMPLEMENTATION_OUTLINE.md), and alignment with the project’s architecture.
+   - **Rigor**: Justify design choices with citations or clear reasoning; prefer approaches that are traceable, evaluable (e.g. ablation, metrics), and extensible.
+
+Do not jump straight to code. When appropriate: break down the task → research each part (learning every step) → implement each part to ~90% → verify.
+
+### Site Reconnaissance Before Action
+
+For unfamiliar or weakly-modeled websites/apps, the agent must not go straight
+to substantive interaction (drawing, editing, submitting, solving, etc.).
+
+Required first pass:
+- inspect the live surface state
+- identify the real interactive layer or canvas/widget actually receiving input
+- determine the usable work area from live geometry
+- identify visible tool state and overlays/modals
+- perform a tiny calibration/probe action
+- verify the effect on the **real target artifact**, not just the page screenshot
+
+This means:
+- screenshots are a measurement tool, not decoration
+- DOM geometry is a constraint, not a suggestion
+- if the target surface is not yet proven, the agent should not behave as if it is
+
+For drawing sites specifically:
+- measure the real drawable area
+- fit the planned drawing to that area before the first full stroke pass
+- reject clipped/partial results automatically
+
+For interactive learning/problem sites specifically:
+- identify whether the active surface is:
+  - standard input
+  - token/slot widget
+  - slider
+  - canvas-backed interactive
+  - controlled component
+- prove the mutation path on a tiny safe action before attempting the main task
+
+## Project Structure
+
+```
+concentric_study/
+├── operator/
+│   ├── agent_infra/              # SHARED INFRASTRUCTURE PACKAGE (Phases 1-5 + Outer Loop)
+│   │   ├── __init__.py           # Exports: TraceWriter, DiagnosticReader, HealingOrchestrator, SkillLibrary, OuterLoop, ActionTrustTracker
+│   │   ├── trace_writer.py       # Phase 1: Structured JSONL execution traces
+│   │   ├── diagnostic_reader.py  # Phase 2: Progressive disclosure trace reader
+│   │   ├── healing_orchestrator.py # Phase 3: Self-healing failure classification
+│   │   ├── skill_library.py      # Phase 5: Verified success storage with maturity gating + resolved_coords
+│   │   ├── action_trust.py       # VLM Opt: Adaptive verification skip (consecutive success tracker)
+│   │   └── outer_loop.py         # Phase A: Dual-agent outer loop (Monitor→Diagnose→Adapt→Test)
+│   ├── agent_core.py             # macOS GUI agent (Quartz events, screenshots)
+│   ├── visual_engine.py          # Set-of-Mark visual grounding engine
+│   ├── cre/
+│   │   ├── test_excalidraw_covt.py  # Main test: CONCENTRIC_TRIANGLES_CLEAN
+│   │   ├── runs/                    # Structured trace output (manifest.json + trace.jsonl per run)
+│   │   ├── skill_library.json       # Persistent skill library data
+│   │   ├── action_trust.json        # Trust tracker persistence (consecutive success counts)
+│   │   └── test_*.py                # Unit/integration tests for infrastructure
+│   ├── trace_writer.py           # Backward-compatible shim -> agent_infra
+│   ├── diagnostic_reader.py      # Backward-compatible shim -> agent_infra
+│   ├── healing_orchestrator.py   # Backward-compatible shim -> agent_infra
+│   └── skill_library.py          # Backward-compatible shim -> agent_infra
+```
+
+## Critical Rules
+
+### 1. DO NOT modify agent_infra/ modules without understanding the architecture
+
+The 5 modules in `agent_infra/` have a strict unidirectional dependency chain:
+- `trace_writer.py` has NO dependencies on other infra modules
+- `diagnostic_reader.py` reads trace files (no imports from infra)
+- `healing_orchestrator.py` imports DiagnosticReader
+- `skill_library.py` reads trace files (no imports from infra)
+- `outer_loop.py` imports DiagnosticReader, HealingOrchestrator, SkillLibrary (top-level integration)
+- `action_trust.py` has NO dependencies on other infra modules (standalone)
+
+DO NOT introduce circular dependencies. DO NOT change the TraceStep or manifest schema
+without updating ALL consumers (diagnostic_reader, healing_orchestrator, skill_library, outer_loop, and tests).
+
+### 2. How to run tests
+
+ALWAYS use the virtual environment:
+```bash
+cd operator && ./venv/bin/python -m pytest cre/test_*.py -v --tb=short
+```
+NEVER use system Python. NEVER use `sleep` + `grep` to monitor tests.
+
+### 3. How to monitor a running test
+
+Read the trace file as it's being written:
+```bash
+# Check latest run directory
+ls -lt operator/cre/runs/ | head -3
+
+# Read the live trace (each line is written as a step completes)
+cat operator/cre/runs/<run_id>/trace.jsonl
+
+# Check if manifest exists (means run is complete)
+ls operator/cre/runs/<run_id>/manifest.json
+```
+DO NOT use `sleep 70 && cat`. DO NOT use `ps aux | grep`.
+
+### 4. How to read test results
+
+Use the DiagnosticReader programmatically:
+```python
+from agent_infra import DiagnosticReader
+reader = DiagnosticReader("operator/cre/runs/<run_id>")
+print(reader.full_diagnostic())
+```
+Or for quick checks, read `manifest.json` directly — it has outcome, steps_summary, and error info.
+
+### 5. How to analyze failures
+
+Use the HealingOrchestrator:
+```python
+from agent_infra import HealingOrchestrator
+orch = HealingOrchestrator("operator/cre/runs")
+print(orch.get_diagnostic_for_code_agent("operator/cre/runs/<run_id>"))
+```
+This produces a classified failure report with recommended actions.
+
+### 6. How to ingest successful runs into the Skill Library
+
+```python
+from agent_infra import SkillLibrary
+lib = SkillLibrary("operator/cre")
+record = lib.ingest_from_trace("operator/cre/runs/<run_id>")
+# Returns None if the run failed (poisoning prevention)
+print(lib.get_summary())
+```
+
+### 7. Maturity Gating
+
+Skills have three tiers:
+- **candidate** (1 success): stored but NOT trusted for autonomous reuse
+- **proven** (3+ successes): safe for autonomous retrieval
+- **master** (5+ successes, 0 failures): eligible as few-shot exemplar
+
+Use `lib.retrieve_proven(task_id)` for autonomous reuse — it won't return candidate-tier skills.
+
+### 8. How to use the Dual-Agent Outer Loop
+
+The outer loop automates the Monitor → Diagnose → Adapt → Test cycle:
+```bash
+cd operator && ./venv/bin/python -m agent_infra.outer_loop --task CONCENTRIC_TRIANGLES_CLEAN
+```
+
+Or programmatically:
+```python
+from agent_infra import OuterLoop
+loop = OuterLoop(
+    task_id="CONCENTRIC_TRIANGLES_CLEAN",
+    test_script="operator/cre/test_excalidraw_covt.py",
+    runs_dir="operator/cre/runs",
+)
+result = loop.run()
+# result.outcome: "success" | "escalated" | "aborted" | "max_retries_exhausted"
+# result.escalation_path: path to ESCALATION.md if code agent repair is needed
+```
+
+When the loop writes `ESCALATION.md`, read it for a structured diagnosis:
+- Level 1 summary, Level 2 failure window, Level 3 step detail
+- Historical context from the ReflectionJournal
+- Suggested investigation areas
+
+### 9. Files you MUST NOT casually edit
+
+These files are architecture-critical. Understand the design before modifying:
+- `agent_infra/*.py` — shared infrastructure package
+- `cre/test_excalidraw_covt.py` — main test with integrated tracing
+- `cre/skill_library.json` — persistent skill data (modify only via SkillLibrary API)
+- `cre/runs/*/manifest.json` — provenance data (never edit manually)
+- `cre/runs/*/ESCALATION.md` — auto-generated escalation docs (read-only for code agent)
+- `cre/runs/reflection_journal.jsonl` — episodic memory (modify only via ReflectionJournal API)
+- `cre/action_trust.json` — trust tracker data (modify only via ActionTrustTracker API)
+
+### 10. Reflection Journal
+
+The outer loop maintains an episodic memory at `operator/cre/runs/reflection_journal.jsonl`.
+Each entry records what happened, what category of failure, and what lesson was learned.
+This prevents blind retries — the system references past failures before attempting again.
+
+### 11. Import convention
+
+Prefer the package import:
+```python
+from agent_infra import TraceWriter, DiagnosticReader, SkillLibrary, OuterLoop, ActionTrustTracker
+```
+The root-level shims (`operator/trace_writer.py` etc.) exist for backward compatibility only.
+
+### 12. Facts before each decision (PhD mindset)
+
+For non-trivial decisions (design, placement, refactor, policy, or doc structure):
+
+1. **Document context and evidence first** — List observable facts, constraints, and forces in value-neutral language; cite file:line, doc section, or run outcome where relevant.
+2. **Then state the decision** — Active voice ("We will …"); optionally set Status: proposed | accepted.
+3. **Then list consequences** — Positive, negative, and neutral effects.
+
+Do not state or implement the decision before writing down the context and evidence. If proposing a new doc or section, use the pattern: evidence table → primary placement with evidence → why not elsewhere → consequences → checklist.
+
+Full method, research citations, and template: **operator/cre/PHD_DECISION_PRACTICE.md**. Example in practice: **operator/cre/PLACEMENT_RESEARCH.md**.
+
+### 13. Research-first implementation (PhD execution protocol)
+
+Before implementing any non-trivial task, follow this structured workflow.
+Trivial tasks (rename, fix typo, add import, <3 line change) may skip to step 4.
+
+**Step 1 — TRIAGE (difficulty-aware routing)**
+Classify the task:
+- **Trivial**: Single-file, mechanical change. Skip to step 4.
+- **Moderate**: Multi-file or design choice involved. Do steps 2-4.
+- **Complex**: Architectural, cross-module, or unfamiliar domain. Do all steps.
+
+This prevents the "overthinking" penalty documented in ICoT (arXiv:2512.14048, AAAI-2026):
+simple tasks routed directly save 46% token overhead while complex tasks get full analysis.
+
+**Step 2 — ANALYZE (codebase interrogation)**
+Before writing any code, examine the project to answer:
+- What modules/files does this touch? Read them.
+- What patterns does the codebase already use for similar work?
+- What are the dependency constraints? (See Rule 1: unidirectional chain.)
+- Are there existing tests, traces, or skill library entries that inform the approach?
+- What has failed before? Check `reflection_journal.jsonl` and recent `runs/*/manifest.json`.
+
+Cite specific file:line references. Do NOT guess at architecture — verify it.
+
+**Step 3 — STRATEGIZE (plan before execution)**
+Based on the analysis, outline:
+- The specific approach and why it's optimal for THIS codebase (not generic best practice).
+- What alternatives were considered and why they're worse here.
+- What could go wrong (failure modes, edge cases, regressions).
+- Which tests will verify the change.
+
+This maps to Dynamic Cognitive Orchestration (OpenReview:1GoQe3r0Lv):
+separate the metacognitive planning phase from execution. The plan IS the deliverable
+of this step — do not start writing code until the plan is articulated.
+
+**Step 4 — EXECUTE (implement the strategy)**
+Only now write code. Follow the plan from step 3.
+After execution, verify: run relevant tests (Rule 2), check lints, read the diff.
+
+**Step 5 — REFLECT (metacognitive audit)**
+After implementation, briefly state:
+- Did the result match the plan? If not, why?
+- Any lessons for `reflection_journal.jsonl`?
+- Any new rules for `rules.jsonl`?
+
+Research basis: CodePlan (arXiv:2409.12452) shows 25.1% improvement from
+pseudocode planning before generation. CRISP (arXiv:2507.08037) proves
+explicit high-level plans enable smaller models to outperform larger ones.
+DCO achieves 89.2% on MATH by separating planning from execution.
+
+### 14. Website interaction: observe before assuming (Canva lesson)
+
+When asked to use a website to create or do something:
+
+1. **Read the page first.** Before clicking anything, extract the full page text
+   and list of available links/tools. Do NOT assume what a site offers based on
+   its name or reputation. Observe the actual UI.
+
+2. **Explore what's available without login.** Many sites gate some features behind
+   login but offer others freely. Check EVERY navigation link, dropdown, and tool
+   page before concluding "login required." The Canva Draw editor (`/draw/`) works
+   without login even though the main editor (`/design/new`) does not.
+
+3. **Interpret "create X on [site]" as "use the site's tools."** Do not default to
+   AI generators unless explicitly asked. "Create" means use the design/drawing/editing
+   tools the site provides. If ambiguous, ask which tools.
+
+4. **Login modals are not always blockers.** A "Log in to save" modal ≠ "Log in to use."
+   Try closing it (Escape, X button) before assuming the feature is gated.
+
+5. **After a failure, re-read the original instruction.** Do not retry the same strategy
+   with different coordinates. Question whether the strategy itself was wrong.
+
+6. **Verify focus before sending keystrokes.** Take a screenshot and confirm the correct
+   app/tab is frontmost before any Quartz keyboard events. Mail.app, Spotlight, and
+   other macOS apps can steal focus silently.
+
+Origin: Canva test failure (2026-02-25). 4 attempts, 0 successes, all caused by
+not reading the page, not exploring the site, and assuming login was required for
+all features when it was only required for saving.
+
+### 15. Recursive PhD research loop (first answer is a draft)
+
+For any non-trivial research, planning, architecture, or productization task,
+the first answer is NOT final. Treat it as a draft and run a recursive
+critique-and-reresearch loop before presenting the result as complete.
+
+**Required loop:**
+1. Produce the first draft from the best current evidence.
+2. Critique the draft for:
+   - weak claims
+   - missing primary sources
+   - unsupported inferences
+   - stale assumptions
+   - missing boundaries or constraints
+3. Re-research only the weak points using stronger sources.
+4. Revise the answer and state what changed.
+5. Repeat until a full pass produces no material improvement.
+
+**Stopping rule:**
+Stop only when a full critique-and-reresearch pass produces ALL of these:
+- no stronger primary source replaces an existing one
+- no claim changes status
+- no recommendation changes materially
+- no new major risk, boundary, exclusion, or implementation step is discovered
+
+This is the standard for "evidence saturation" in this repo. Do not stop merely
+because you have one plausible answer.
+
+Use:
+- `operator/cre/RECURSIVE_PHD_RESEARCH_LOOP.md`
+
+Research basis:
+- Self-Refine (arXiv:2303.17651): iterative self-feedback improves output quality
+- Chain-of-Verification (arXiv:2309.11495): verify independently after drafting
+- Self-Consistency (arXiv:2203.11171): avoid premature commitment to one path
+- Reflexion (OpenReview, NeurIPS 2023): explicit reflection improves future attempts
+- Saturation/sufficiency in qualitative analysis: stop when new passes stop producing material analytical change
+
+### 16. Context-locked research filter (do not let adjacent domains pollute the answer)
+
+For any non-trivial research task, define the research frame BEFORE gathering
+sources or revising answers.
+
+Minimum required frame:
+- `system_of_interest`
+- `domain`
+- `environment`
+- `task`
+- `stakeholder`
+- `success_criteria`
+- `excluded_adjacent_domains`
+- `transfer_rules`
+
+Every source must pass three checks before it is allowed to influence the answer:
+1. **Credibility** — official source, standards body, strong peer-reviewed work, or direct repo evidence
+2. **Relevance** — directly informs the current domain/environment/task
+3. **Usefulness** — materially changes or constrains the answer
+
+Tag important claims as one of:
+- `direct_in_domain_support`
+- `direct_environment_support`
+- `analogical_support`
+- `background_only`
+- `out_of_bounds`
+
+Rules:
+- Strong but irrelevant sources are NOT improvements.
+- Adjacent-domain evidence may be used only as analogy unless transfer is explicitly justified.
+- Do not answer the generic version of the question when the user asked for a situated answer inside a specific environment.
+- During recursive review, check for domain drift and remove or demote drifted evidence.
+
+Stop only when BOTH are true:
+1. no stronger in-bounds source changes the answer
+2. no additional in-bounds source materially improves the answer for the defined environment and task
+
+Use:
+- `operator/cre/CONTEXT_LOCKED_RESEARCH_FILTER_PHD.md`
+
+Research basis:
+- Anthropic prompt engineering: explicit context and structured prompts improve correctness
+- Google Re-Invoke: retrieval quality improves when irrelevant background context is filtered out
+- task-adaptive retrieval/query generation (arXiv:2409.16570)
+- REAR relevance-aware RAG (EMNLP 2024)
+- sufficient-context research from Google Research
+- domain-adaptation work showing out-of-domain transfer degrades retrieval quality
+
+### 17. Environment justification gate (required before every final answer)
+
+Before any final answer, run a **locked environment-justification gate**.
+This gate is mandatory for all work in this repo unless the user explicitly asks
+for an abstract, environment-agnostic answer.
+
+The gate must answer these five questions:
+1. What is the `system_of_interest` here?
+2. What local machine/runtime environment is actually in play?
+3. What repo architecture or project-specific evidence constrains the answer?
+4. What exact task and stakeholder objective is the answer serving?
+5. Which parts of the answer are `directly_supported`, `inferred`, or `unknown`?
+
+**Fail-closed behavior:**
+- If the answer cannot be grounded to the actual environment, do not present it as definitive.
+- First inspect the local repo/machine/runtime where possible.
+- If key environment evidence is missing, say what is missing and how that limits certainty.
+
+**Output rule:**
+- Serious answers should visibly reflect the environment-specific basis of the answer.
+- Short answers may do this in one sentence.
+- Longer answers should include a concise environment-specific basis, constraints, or evidence section when useful.
+- For non-trivial answers, include an explicit `Environment basis:` line or an equivalent clearly labeled sentence/section.
+- If the answer is intentionally abstract, say that explicitly and explain why the environment-specific gate was relaxed.
+
+**Rubric rule:**
+- Use the repo's human-authored environment checklist as the authoritative rubric.
+- Do NOT silently replace it with a model-generated rubric.
+- Model-generated criteria may assist critique, but they must not override the locked repo rubric.
+
+**Audit rule:**
+- For substantive research, planning, architecture, or implementation turns, the agent should be able to express the gate as a structured checklist entry.
+- If the answer cannot satisfy the checklist, the answer should self-fail or explicitly mark the missing evidence before presenting recommendations as definitive.
+- The repo's environment-justification audit artifacts are the canonical support layer for this gate:
+  - `operator/cre/artifacts/environment_answer_compliance_template.json`
+  - `operator/cre/tools/log_environment_compliance.py`
+  - `operator/cre/tools/review_environment_compliance.py`
+- Periodic review of misses is required; do not let repeated under-application remain invisible.
+
+Use:
+- `operator/cre/ENVIRONMENT_JUSTIFICATION_GATE_PHD.md`
+- `operator/cre/artifacts/environment_justification_gate_template.txt`
+
+Research basis:
+- Anthropic prompting docs: explicit context, structure, and success criteria improve correctness
+- OpenAI evaluation best practices: evaluation should be defined against explicit criteria, task-specific tests, and continuous review
+- Self-Refine (arXiv:2303.17651): iterative revision improves first drafts
+- Chain-of-Verification (arXiv:2309.11495): draft first, then verify independently
+- RubricBench (arXiv:2603.01562): model-generated rubrics still lag human-authored standards
+- Rubrics as an Attack Surface (arXiv:2602.13576): rubric drift can silently bias evaluation
+
+### 18. Research-first universal workflow (Research → Execute → Compare → Refine)
+
+Every non-trivial task MUST follow this four-phase pipeline. Do NOT begin
+execution without completing research. This is the primary workflow rule.
+
+**Phase 1 — RESEARCH THE SUBJECT**
+Before building anything, study what you're building:
+- Search for reference images of the target (screenshot them as ground truth)
+- If asked to create a visual: find examples of that visual, capture them
+- If asked to code a feature: find examples of that feature in other projects
+- Store references in the run directory. These ARE the acceptance criteria.
+
+Use: `ResearchAgent.research(task, site_url)` or manual web search + screenshots.
+
+**Phase 2 — RESEARCH THE METHOD**
+Study *how* to build it:
+- Search for tutorials, step-by-step guides, techniques
+- For visual tasks: learn anatomy, composition, color theory relevant to the subject
+- For code tasks: find similar implementations, design patterns, pitfalls
+- Produce a method brief: ordered steps + known pitfalls
+
+**Phase 3 — RESEARCH THE TOOLS + SOLVE THE EQUATION**
+Map method requirements to available tool capabilities:
+- Explore the target platform (Canva, Excalidraw, etc.) exhaustively
+- List every tool, shortcut, and interaction pattern
+- The EQUATION: (what I need to do) × (what tools I have) = optimal plan
+- Produce an execution plan that maps each method step to a specific tool action
+
+Use: `SiteKnowledge` + `ExplorationLoop` for tool inventory.
+
+**Phase 4 — EXECUTE WITH VISUAL MONITORING**
+Only NOW begin execution, with continuous feedback:
+- Start `VisualMonitor(interval_seconds=5)` for background screenshots
+- Execute the plan step by step
+- After each major step: `monitor.compare(reference_image)`
+- If similarity_score < threshold: identify what's wrong, refine, re-compare
+- Loop until output matches reference standard or max iterations
+
+The loop: `Execute → Screenshot → Compare to reference → Fix → Repeat`
+
+**Phase 5 — MANDATORY VERIFICATION GATE (NEVER SKIP)**
+After execution, you MUST run the VerificationGate. NEVER declare a task
+"done" or "complete" without passing through this gate. This is non-negotiable.
+
+1. Take a screenshot of the actual output
+2. Decompose the original request into verifiable constraints
+3. Judge each constraint: does the output actually satisfy it?
+4. If ANY constraint fails → identify specific deficiencies → fix → re-verify
+5. Only declare "done" when the gate returns PASSED
+
+The VerificationGate prevents the #1 agent failure mode: producing garbage
+and declaring "COMPLETE" without looking at what was actually produced.
+
+```python
+from agent_infra import VerificationGate
+gate = VerificationGate(
+    task_description="the original user request",
+    output_dir="runs/current/verification",
+)
+result = gate.verify()  # captures screenshot + judges
+if not result.passed:
+    # FIX the deficiencies, then verify again
+    for d in result.deficiencies:
+        print(f"FIX: {d}")
+    # ... fix ...
+    result = gate.verify(iteration=2)
+```
+
+**Infrastructure:**
+```python
+from agent_infra import ResearchAgent, VisualMonitor, VerificationGate
+researcher = ResearchAgent(output_dir="runs/current")
+brief = researcher.research(task="...", site_url="...")
+monitor = VisualMonitor(interval_seconds=5, output_dir="runs/current/monitor")
+monitor.start()
+# ... execute brief.execution_plan ...
+monitor.stop()
+gate = VerificationGate(task_description="...", output_dir="runs/current/verify")
+result = gate.verify()
+assert result.passed, f"NOT DONE: {result.deficiencies}"
+```
+
+Origin: Canva Draw failure (2026-02-25). Agent drew monochrome stick figures,
+declared "COMPLETE" without looking, user caught it. This gate prevents that.
+
+Research basis:
+- CRAFT (arXiv:2512.20362): constraint decomposition + targeted verification + stopping criteria
+- VisionDirector (arXiv:2512.19243): semantic verification and rollback after each edit
+- GUI-Shepherd (OpenReview 2025): process reward model as inference verifier (+5.1pt)
+- VISCO (CVPR 2025): LOOKBACK strategy — revisit image before critique (+13.5%)
+- Maestro (arXiv:2509.10704): MLLM-as-a-judge for output vs. intent comparison
+- AppAgent Phase 1 (arXiv:2312.13771): autonomous exploration before deployment
+- SeeAct (arXiv:2401.01614): external documentation grounding reduces hallucination 30-40%
+- MIRA (arXiv:2511.21087): iterative perception-reasoning-action with visual feedback
+- GUI-explorer (ACL 2025, arXiv:2505.16827): transition-aware knowledge extraction

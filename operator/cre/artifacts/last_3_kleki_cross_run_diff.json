@@ -1,0 +1,90 @@
+{
+  "runs": [
+    {
+      "run_id": "2b70a9a006b0",
+      "outcome": "failure",
+      "failure_step": null,
+      "failure_category": null,
+      "error_summary": null,
+      "num_steps": 42,
+      "claims_score": 0.46153846153846156,
+      "discovery_precision": 0.9761904761904762,
+      "recovery_rate": 1.0
+    },
+    {
+      "run_id": "f40e7d9ed9ab",
+      "outcome": "failure",
+      "failure_step": 2,
+      "failure_category": "action_failed",
+      "error_summary": "Visual Assertion Failed: Is the main Kleki canvas blank with no user-drawn marks visible? Ignore the right-side tool panel and browser chrome. Reply YES or NO.",
+      "num_steps": 5,
+      "claims_score": 0.4117647058823529,
+      "discovery_precision": 0.8,
+      "recovery_rate": 1.0
+    },
+    {
+      "run_id": "9d28b35cf1b0",
+      "outcome": "failure",
+      "failure_step": 3,
+      "failure_category": "action_failed",
+      "error_summary": "Visual Assertion Failed: Is the active Kleki drawing color now set to black or a close visual equivalent in the active color swatch? Reply YES or NO.",
+      "num_steps": 5,
+      "claims_score": 0.4117647058823529,
+      "discovery_precision": 0.8,
+      "recovery_rate": 1.0
+    }
+  ],
+  "fixed_frontiers": [
+    {
+      "run_id": "9d28b35cf1b0",
+      "class": "color_grounding",
+      "status_now": "historical_resolved"
+    },
+    {
+      "run_id": "f40e7d9ed9ab",
+      "class": "canvas_reset",
+      "status_now": "historical_resolved"
+    },
+    {
+      "run_id": "f40e7d9ed9ab",
+      "class": "recovery_policy",
+      "status_now": "historical_resolved"
+    }
+  ],
+  "open_frontiers": [
+    {
+      "run_id": "2b70a9a006b0",
+      "class": "geometry_primitive",
+      "status_now": "still_open"
+    },
+    {
+      "run_id": "2b70a9a006b0",
+      "class": "render_state",
+      "status_now": "still_open"
+    },
+    {
+      "run_id": "2b70a9a006b0",
+      "class": "plan_synthesis",
+      "status_now": "still_open"
+    },
+    {
+      "run_id": "2b70a9a006b0",
+      "class": "verification_granularity",
+      "status_now": "still_open"
+    },
+    {
+      "run_id": "2b70a9a006b0",
+      "class": "benchmark_claim_design",
+      "status_now": "still_open"
+    }
+  ],
+  "quality_backlog": [
+    "composition coverage too small",
+    "insufficient detail density",
+    "weak subject recognizability",
+    "poor facade structure",
+    "broken one-point perspective",
+    "linework reads as scribble/noise",
+    "scatter noise contaminates shading"
+  ]
+}

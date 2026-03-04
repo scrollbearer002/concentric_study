@@ -1,0 +1,78 @@
+{
+  "visual_assert|clear_canvas": {
+    "successes": 0,
+    "failures": 0
+  },
+  "set_stroke_color|": {
+    "successes": 0,
+    "failures": 0
+  },
+  "visual_assert|sleep": {
+    "successes": 17,
+    "failures": 0
+  },
+  "visual_assert|keystroke": {
+    "successes": 17,
+    "failures": 0
+  },
+  "set_stroke_color|black": {
+    "successes": 0,
+    "failures": 0
+  },
+  "visual_assert|draw_concentric_triangles": {
+    "successes": 0,
+    "failures": 0
+  },
+  "sanity_check|canvas_clear": {
+    "successes": 21,
+    "failures": 0
+  },
+  "startup|analyze_ui": {
+    "successes": 23,
+    "failures": 0
+  },
+  "set_stroke_color|red": {
+    "successes": 2,
+    "failures": 0
+  },
+  "visual_assert|drag_shape": {
+    "successes": 0,
+    "failures": 0
+  },
+  "set_stroke_color|blue": {
+    "successes": 1,
+    "failures": 0
+  },
+  "set_stroke_color|green": {
+    "successes": 0,
+    "failures": 0
+  },
+  "set_stroke_color|orange": {
+    "successes": 0,
+    "failures": 0
+  },
+  "visual_assert|set_stroke_color": {
+    "successes": 0,
+    "failures": 0
+  },
+  "visual_assert|draw_path": {
+    "successes": 0,
+    "failures": 0
+  },
+  "visual_assert|kleki_set_color": {
+    "successes": 0,
+    "failures": 0
+  },
+  "set_stroke_color|dark gray": {
+    "successes": 0,
+    "failures": 0
+  },
+  "visual_assert|kleki_clear_canvas": {
+    "successes": 0,
+    "failures": 0
+  },
+  "visual_assert|kleki_reset_render_state": {
+    "successes": 0,
+    "failures": 0
+  }
+}

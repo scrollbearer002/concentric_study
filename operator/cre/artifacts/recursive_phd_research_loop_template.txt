@@ -1,0 +1,24 @@
+Use a Recursive PhD Research Loop.
+
+Treat your first answer as a draft, not a final answer.
+After producing the first draft:
+1. Critique it aggressively for weak claims, missing primary sources, unsupported inferences, stale assumptions, and missing boundaries.
+2. Re-research only those weaknesses using stronger primary sources.
+3. Revise the answer.
+4. Repeat this loop until a full critique-and-reresearch pass produces no material improvement.
+
+Stop only when:
+- no stronger primary source replaces an existing one
+- no claim changes status
+- no recommendation changes materially
+- no new major risk, boundary, exclusion, or implementation step is discovered
+
+In the final output, include:
+- the final answer
+- what changed after recursive review
+- why you stopped
+- what new information would reopen the loop
+
+Do not present the first answer as final.
+Do not stop just because you have one plausible answer.
+Stop only at evidence saturation.

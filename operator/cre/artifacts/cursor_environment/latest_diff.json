@@ -1,0 +1,27 @@
+{
+  "added": {},
+  "changed": {
+    "app.build_date": {
+      "after": "2026-03-03T18:57:48.001Z",
+      "before": "2026-02-26T04:57:56.825Z"
+    },
+    "app.bundle_version": {
+      "after": "2.6.11",
+      "before": "2.5.26"
+    },
+    "app.commit": {
+      "after": "8c95649f251a168cc4bb34c89531fae7db4bd990",
+      "before": "7d96c2a03bb088ad367615e9da1a3fe20fbbc6a0"
+    },
+    "app.version": {
+      "after": "2.6.11",
+      "before": "2.5.26"
+    },
+    "runtime.electron": {
+      "after": "39.6.0",
+      "before": "39.4.0"
+    }
+  },
+  "has_changes": true,
+  "removed": {}
+}

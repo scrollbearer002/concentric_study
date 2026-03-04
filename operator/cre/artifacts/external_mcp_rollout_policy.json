@@ -1,0 +1,104 @@
+{
+  "generated_on": "2026-03-04",
+  "policy_name": "external_mcp_rollout_policy",
+  "default_principle": "Prefer local files first, read-only internal MCPs second, and external MCPs only for a proven remaining gap.",
+  "current_active_servers": [
+    "context7",
+    "concentric-health",
+    "concentric-trace"
+  ],
+  "rollout_order": [
+    {
+      "rank": 1,
+      "name": "Context7",
+      "task_scope": [
+        "current third-party package documentation",
+        "version-sensitive SDK guidance"
+      ],
+      "negative_controls": [
+        "repo-local code question",
+        "host environment question",
+        "Cursor feature question"
+      ],
+      "auth": "api_key",
+      "write_scope": "read_only"
+    },
+    {
+      "rank": 2,
+      "name": "Parallel",
+      "task_scope": [
+        "deep research",
+        "content extraction",
+        "source expansion"
+      ],
+      "negative_controls": [
+        "repo architecture question already answered by local files",
+        "run forensics question"
+      ],
+      "auth": "oauth_or_api_key",
+      "write_scope": "read_only_expected"
+    },
+    {
+      "rank": 3,
+      "name": "Playwright",
+      "task_scope": [
+        "deterministic browser automation",
+        "reproducible browser testing"
+      ],
+      "negative_controls": [
+        "repo-only question with no browser target",
+        "host environment question"
+      ],
+      "auth": "local_setup",
+      "write_scope": "browser_action_scope"
+    },
+    {
+      "rank": 4,
+      "name": "Langfuse",
+      "task_scope": [
+        "trace and evaluation observability"
+      ],
+      "negative_controls": [
+        "local run question answerable by concentric-trace",
+        "current package docs question"
+      ],
+      "auth": "oauth_or_api_key",
+      "write_scope": "read_write_service_scope"
+    },
+    {
+      "rank": 5,
+      "name": "Runlayer",
+      "task_scope": [
+        "MCP governance",
+        "policy and execution control"
+      ],
+      "negative_controls": [
+        "single-server local debugging",
+        "simple repo-local trace lookup"
+      ],
+      "auth": "service_setup",
+      "write_scope": "governance_control_scope"
+    }
+  ],
+  "sandbox_domain_allowlist_policy": {
+    "status": "defined",
+    "note": "Actual enforcement lives in Cursor settings or admin controls, not repo files alone.",
+    "domains": [
+      "mcp.context7.com",
+      "context7.com",
+      "docs.parallel.ai",
+      "parallel.ai",
+      "langfuse.com",
+      "docs.runlayer.com",
+      "runlayer.com"
+    ],
+    "playwright_rule": "allow only the target domains required by the active browser pilot"
+  },
+  "stop_conditions": [
+    "severe hallucination on an owned task",
+    "false-positive invocation on repo-local work",
+    "secret or policy boundary concern",
+    "tool-count or routing confusion",
+    "latency cost that exceeds observed quality lift"
+  ]
+}
