@@ -81,6 +81,8 @@ def test_level1_summary() -> None:
         _assert("FAILURE" in summary, "contains FAILURE marker")
         _assert("step 7" in summary, "identifies step 7 as failure")
         _assert("grounding_error" in summary, "contains failure category")
+        _assert("Task result:" in summary, "contains normalized task result line")
+        _assert("Final verification:" in summary, "contains normalized final verification line")
         _assert("Steps overview" in summary, "contains steps overview")
 
         token_est = reader.estimate_token_count(summary)
@@ -181,6 +183,7 @@ def test_analysis_helpers() -> None:
         _assert(reader.get_failure_step_data() is None, "no failure in success case")
         _assert(len(reader.get_all_failed_steps()) == 0, "no failed steps in success case")
         _assert(reader.get_success_rate() == 1.0, "100% success rate")
+        _assert(reader.get_outcome_semantics()["task_result"] == "accepted", "outcome semantics available")
 
 
 def test_token_budgets() -> None:

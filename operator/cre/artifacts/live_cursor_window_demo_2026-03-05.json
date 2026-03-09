@@ -1,0 +1,64 @@
+{
+  "run_date": "2026-03-05",
+  "timezone": "America/Los_Angeles",
+  "target_app": "Cursor",
+  "success": true,
+  "actions": [
+    {
+      "ts_iso": "2026-03-05T12:30:21.659412-08:00",
+      "action": "activate_app",
+      "detail": "Cursor"
+    },
+    {
+      "ts_iso": "2026-03-05T12:30:23.748833-08:00",
+      "action": "key_press",
+      "detail": "Cmd+N"
+    },
+    {
+      "ts_iso": "2026-03-05T12:30:24.643393-08:00",
+      "action": "window_bounds",
+      "detail": "left=0.0, top=0.0, right=1440.0, bottom=900.0"
+    },
+    {
+      "ts_iso": "2026-03-05T12:30:24.643475-08:00",
+      "action": "move_mouse",
+      "detail": "path_point_1=(432.0,198.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T12:30:25.595423-08:00",
+      "action": "move_mouse",
+      "detail": "path_point_2=(1065.6,198.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T12:30:26.520333-08:00",
+      "action": "move_mouse",
+      "detail": "path_point_3=(1065.6,558.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T12:30:27.486986-08:00",
+      "action": "move_mouse",
+      "detail": "path_point_4=(432.0,558.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T12:30:28.425331-08:00",
+      "action": "move_mouse",
+      "detail": "path_point_5=(777.6,360.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T12:30:29.380481-08:00",
+      "action": "click",
+      "detail": "editor_target=(777.6,360.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T12:30:29.628256-08:00",
+      "action": "type_text",
+      "detail": "typing payload in Cursor editor"
+    },
+    {
+      "ts_iso": "2026-03-05T12:30:32.548075-08:00",
+      "action": "screenshot",
+      "detail": "/Users/christianpardo/Desktop/concentric_study/operator/cre/artifacts/live_cursor_window_demo_2026-03-05.png"
+    }
+  ],
+  "screenshot_path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/artifacts/live_cursor_window_demo_2026-03-05.png"
+}

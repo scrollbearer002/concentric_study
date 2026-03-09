@@ -50,6 +50,7 @@ class ActionSpec:
     required_params: list[str] = field(default_factory=list)
     visual_assert: str = ""
     handler_key: str = ""  # maps to ACTION_HANDLERS key if it exists
+    planner_visible: bool = True  # surfaced to the universal planner by default
 
     def to_planner_schema(self) -> dict[str, Any]:
         """Produce schema the VLM planner can consume."""
@@ -322,6 +323,7 @@ COMPOUND_ACTIONS: list[ActionSpec] = [
         parameters={"domain": "str", "email_field_label": "str (optional)",
                      "password_field_label": "str (optional)"},
         handler_key="login_flow",
+        planner_visible=False,
     ),
 ]
 
@@ -383,15 +385,31 @@ class UnifiedActionSpace:
     def list_names(self) -> list[str]:
         return sorted(self._actions.keys())
 
+    def list_planner_names(self) -> list[str]:
+        """Return only the action names that are safe to expose to planners."""
+        return sorted(
+            spec.name
+            for spec in self._actions.values()
+            if spec.planner_visible
+        )
+
     def list_by_category(self, category: ActionCategory) -> list[ActionSpec]:
         return [a for a in self._actions.values() if a.category == category]
 
-    def to_planner_context(self, categories: list[ActionCategory] | None = None) -> str:
+    def to_planner_context(
+        self,
+        categories: list[ActionCategory] | None = None,
+        *,
+        include_non_planner_visible: bool = False,
+    ) -> str:
         """Generate a compact action schema string for VLM prompt injection.
 
         If categories is None, include all. Otherwise filter.
         """
-        specs = list(self._actions.values())
+        specs = [
+            spec for spec in self._actions.values()
+            if include_non_planner_visible or spec.planner_visible
+        ]
         if categories:
             specs = [s for s in specs if s.category in categories]
 
@@ -409,8 +427,42 @@ class UnifiedActionSpace:
             if spec.handler_key
         }
 
-    def to_planner_schema_list(self) -> list[dict[str, Any]]:
-        return [spec.to_planner_schema() for spec in self._actions.values()]
+    def planner_to_handler_key_map(self) -> dict[str, str]:
+        """Map planner-visible action names to dispatcher keys."""
+        return {
+            name: spec.handler_key
+            for name, spec in self._actions.items()
+            if spec.planner_visible and spec.handler_key
+        }
+
+    def conformance_report(self, live_handler_keys: set[str] | list[str]) -> dict[str, list[str]]:
+        """Compare planner-visible actions against the live dispatcher surface."""
+        handler_keys = set(live_handler_keys)
+        missing = [
+            name
+            for name, handler_key in sorted(self.planner_to_handler_key_map().items())
+            if handler_key not in handler_keys
+        ]
+        hidden = [
+            spec.name
+            for spec in sorted(self._actions.values(), key=lambda spec: spec.name)
+            if not spec.planner_visible
+        ]
+        return {
+            "missing_handler_actions": missing,
+            "hidden_actions": hidden,
+        }
+
+    def to_planner_schema_list(
+        self,
+        *,
+        include_non_planner_visible: bool = False,
+    ) -> list[dict[str, Any]]:
+        return [
+            spec.to_planner_schema()
+            for spec in self._actions.values()
+            if include_non_planner_visible or spec.planner_visible
+        ]
 
     def resolve_action(self, action_dict: dict[str, Any]) -> dict[str, Any]:
         """Normalize an action dict from VLM output to executor format.

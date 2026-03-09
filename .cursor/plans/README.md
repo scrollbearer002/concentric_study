@@ -14,6 +14,10 @@ Plan discipline:
 - preserve the exact decision question, not just the steps
 - include a Mermaid block when sequence or branching matters
 - update the plan when the branch meaningfully changes
+- include explicit pass/fail and stop/rollback criteria
+
+Suggested template:
+- `evidence-gated-task-template.md`
 
 Current plans:
 - `context7-pilot.md`
@@ -21,3 +25,6 @@ Current plans:
 - `add-internal-mcp.md`
 - `research-before-runtime.md`
 - `browser-task-triage.md`
+- `cursor-intelligence-bootstrap.md`
+- `cursor-intelligence-activation-2026-03-05.md`
+- `live-visual-control-demo-2026-03-05.md`

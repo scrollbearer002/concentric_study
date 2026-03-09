@@ -1,0 +1,69 @@
+{
+  "retrieved_date": "2026-03-04",
+  "sources": [
+    {
+      "source_id": "SRC-01",
+      "title": "Mind2Web: Towards a Generalist Agent for the Web",
+      "url": "https://arxiv.org/abs/2306.06070",
+      "source_class": "research_paper",
+      "published_date": "2023-06-11",
+      "why_relevant": "Establishes that realistic web generalization should be evaluated across diverse real websites rather than a single site script."
+    },
+    {
+      "source_id": "SRC-02",
+      "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+      "url": "https://arxiv.org/abs/2307.13854",
+      "source_class": "research_paper",
+      "published_date": "2023-07-25",
+      "why_relevant": "Supports capability-family benchmarking across heterogeneous websites and long-horizon tasks."
+    },
+    {
+      "source_id": "SRC-03",
+      "title": "VisualWebArena",
+      "url": "https://arxiv.org/abs/2401.13649",
+      "source_class": "research_paper",
+      "published_date": "2024-01-24",
+      "why_relevant": "Supports the need for multimodal evaluation when transfer depends on screenshots, dynamic DOMs, and visually grounded actions."
+    },
+    {
+      "source_id": "SRC-04",
+      "title": "Proton Pass browser extension guide",
+      "url": "https://proton.me/support/pass-browser-extension",
+      "source_class": "official_product_doc",
+      "published_date": "undated",
+      "why_relevant": "Confirms browser-extension-based autofill, save, and general login-management behavior for Proton Pass."
+    },
+    {
+      "source_id": "SRC-05",
+      "title": "How to save or create logins with Proton Pass",
+      "url": "https://proton.me/support/save-login-pass",
+      "source_class": "official_product_doc",
+      "published_date": "undated",
+      "why_relevant": "Confirms autosave and manual creation of login records in Proton Pass."
+    },
+    {
+      "source_id": "SRC-06",
+      "title": "How to create aliases with Proton Pass",
+      "url": "https://proton.me/support/proton-pass-hide-my-email-alias",
+      "source_class": "official_product_doc",
+      "published_date": "undated",
+      "why_relevant": "Confirms alias generation as a supported identity path during signup."
+    },
+    {
+      "source_id": "SRC-07",
+      "title": "Passkeys in Proton Pass",
+      "url": "https://proton.me/support/pass-use-passkeys",
+      "source_class": "official_product_doc",
+      "published_date": "undated",
+      "why_relevant": "Confirms that Proton Pass supports passkey creation and use."
+    },
+    {
+      "source_id": "SRC-08",
+      "title": "Authenticator and 2FA support in Proton Pass",
+      "url": "https://proton.me/support/pass-2fa-authenticator",
+      "source_class": "official_product_doc",
+      "published_date": "undated",
+      "why_relevant": "Confirms that Proton Pass can store and provide 2FA/TOTP values, which matters for real login completeness."
+    }
+  ]
+}

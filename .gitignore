@@ -43,5 +43,8 @@ operator/cre/**/*.png
 !operator/cre/jspaint_*_canvas.png
 !operator/cre/magma_*_final.png
 
+# Temp video/transcript working files
+.tmp_video/
+
 # macOS
 .DS_Store

@@ -13,6 +13,9 @@ Required behavior:
 - keep the plan tied to the actual repo objective, not a generic template
 - prefer Mermaid diagrams for workflows, branching logic, or multi-stage rollouts
 - update the saved plan when the branch meaningfully changes
+- include explicit pass/fail checkpoints before execution
+- include explicit stop conditions and rollback criteria for risky branches
+- include a named verification block with concrete commands or artifacts
 
 Use `/ask` instead of `/plan` only when the task is purely exploratory and no
 implementation branch has started yet.

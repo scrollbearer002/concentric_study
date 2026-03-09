@@ -124,6 +124,44 @@ def test_run_benchmark_evaluation_uses_default_claims_and_saves_result(tmp_path:
     assert (run_dir / "benchmark_result.json").exists()
 
 
+def test_run_benchmark_evaluation_prefers_normalized_task_result(tmp_path: Path):
+    run_dir = tmp_path / "runs" / "bench002"
+    run_dir.mkdir(parents=True)
+
+    manifest = {
+        "run_id": "bench002",
+        "task_id": "OPEN_PAGE",
+        "task_description": "Open the requested page",
+        "outcome": "success",
+        "outcome_semantics": {
+            "task_result": "accepted",
+            "execution_result": "success",
+            "final_verification": {"status": "not_run"},
+        },
+        "total_duration_ms": 42000,
+        "agent_config": {"url": "https://example.com"},
+    }
+    (run_dir / "manifest.json").write_text(json.dumps(manifest), encoding="utf-8")
+
+    trace_lines = [
+        {
+            "step": 1,
+            "action": {"type": "click", "parameters": {}},
+            "action_result": {"success": True},
+        },
+    ]
+    with open(run_dir / "trace.jsonl", "w", encoding="utf-8") as f:
+        for line in trace_lines:
+            f.write(json.dumps(line) + "\n")
+
+    trace_writer = _FakeTraceWriter(run_dir)
+    payload = _run_benchmark_evaluation(trace_writer, plan=[{"action": "click"}])
+
+    assert payload is not None
+    detail = {item["description"]: item for item in payload["claims_detail"]}
+    assert detail["Run outcome is success"]["satisfied"] is True
+
+
 def test_run_benchmark_evaluation_adds_art_specific_claims(tmp_path: Path):
     run_dir = tmp_path / "runs" / "art001"
     run_dir.mkdir(parents=True)

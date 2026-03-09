@@ -7,6 +7,7 @@ and args dict, returns a result dict.
 from __future__ import annotations
 
 import os
+import json
 import time
 import subprocess
 from pathlib import Path
@@ -25,10 +26,20 @@ _validate_coord_cache_entry = None
 _compute_region_phash = None
 get_screenshot_center = None
 nearest_neighbor_order = None
+_get_a11y_snapshot = None
 
 
-def inject_dependencies(trace_fn, exec_log_fn, pass_log_fn, validate_cache_fn, compute_phash_fn, get_center_fn, nn_order_fn):
-    global _trace, _exec_log_line, _pass_log_line, _validate_coord_cache_entry, _compute_region_phash, get_screenshot_center, nearest_neighbor_order
+def inject_dependencies(
+    trace_fn,
+    exec_log_fn,
+    pass_log_fn,
+    validate_cache_fn,
+    compute_phash_fn,
+    get_center_fn,
+    nn_order_fn,
+    a11y_snapshot_fn=None,
+):
+    global _trace, _exec_log_line, _pass_log_line, _validate_coord_cache_entry, _compute_region_phash, get_screenshot_center, nearest_neighbor_order, _get_a11y_snapshot
     _trace = trace_fn
     _exec_log_line = exec_log_fn
     _pass_log_line = pass_log_fn
@@ -36,6 +47,7 @@ def inject_dependencies(trace_fn, exec_log_fn, pass_log_fn, validate_cache_fn, c
     _compute_region_phash = compute_phash_fn
     get_screenshot_center = get_center_fn
     nearest_neighbor_order = nn_order_fn
+    _get_a11y_snapshot = a11y_snapshot_fn
 
 
 _COLOR_PICKER_FALLBACK_REGION = (0, 350, 500, 800)
@@ -247,10 +259,13 @@ def _handle_keystroke(ctx, args: dict) -> dict:
     if ctx.use_enterprise and ctx.agent:
         ctx.agent.enforce_app_focus("Safari")
     key = args.get("key", "")
-    _exec_log_line("action_keystroke", None, {"key": key})
-    print(f"  Sending keystroke: '{key}'")
+    modifiers = args.get("modifiers")  # e.g. ["cmd"] for Cmd+A
+    if isinstance(modifiers, str):
+        modifiers = [modifiers] if modifiers else None
+    _exec_log_line("action_keystroke", None, {"key": key, "modifiers": modifiers})
+    print(f"  Sending keystroke: '{key}'" + (f" modifiers={modifiers}" if modifiers else ""))
     if ctx.use_enterprise and ctx.agent:
-        ctx.agent.execute_keystroke(key)
+        ctx.agent.execute_keystroke(key, modifiers=modifiers)
         result = {"status": "ok"}
     else:
         result = ctx.client.keystroke(key)
@@ -259,6 +274,122 @@ def _handle_keystroke(ctx, args: dict) -> dict:
         _pass_log_line("select_pen", "PASS", "Pen tool (p)")
     time.sleep(0.3)
     return result
+
+
+def _handle_type_text(ctx, args: dict) -> dict:
+    text = str(args.get("text", ""))
+    if _exec_log_line:
+        _exec_log_line("action_type_text", None, {"chars": len(text)})
+    print(f"  Typing text payload ({len(text)} chars)")
+    if ctx.use_enterprise and ctx.agent:
+        ctx.agent.enforce_app_focus("Safari")
+        for char in text:
+            key = 36 if char == "\n" else 49 if char == " " else char
+            ctx.agent.execute_keystroke(key, app_focus=None)
+            time.sleep(0.03)
+        return {"status": "ok", "chars_typed": len(text)}
+
+    client = getattr(ctx, "client", None)
+    if client and hasattr(client, "keystroke"):
+        for char in text:
+            client.keystroke(char)
+            time.sleep(0.03)
+        return {"status": "ok", "chars_typed": len(text)}
+    return {"status": "skip", "reason": "no_typing_backend"}
+
+
+def _handle_scroll(ctx, args: dict) -> dict:
+    direction = str(args.get("direction", "down")).strip().lower()
+    amount = int(args.get("amount", 300) or 300)
+    if _exec_log_line:
+        _exec_log_line("action_scroll", None, {"direction": direction, "amount": amount})
+    if not (ctx.use_enterprise and ctx.agent):
+        return {"status": "skip", "reason": "enterprise_only"}
+
+    import Quartz
+
+    ctx.agent.enforce_app_focus("Safari")
+    line_delta = max(1, abs(amount) // 60)
+    vertical = 0
+    horizontal = 0
+    if direction == "up":
+        vertical = line_delta
+    elif direction == "down":
+        vertical = -line_delta
+    elif direction == "left":
+        horizontal = line_delta
+    elif direction == "right":
+        horizontal = -line_delta
+    else:
+        return {"status": "error", "error": f"unsupported_scroll_direction:{direction}"}
+
+    event = Quartz.CGEventCreateScrollWheelEvent(
+        None,
+        Quartz.kCGScrollEventUnitLine,
+        2,
+        vertical,
+        horizontal,
+    )
+    Quartz.CGEventPost(Quartz.kCGHIDEventTap, event)
+    time.sleep(0.2)
+    return {"status": "ok", "direction": direction, "amount": amount}
+
+
+def _handle_screenshot(ctx, args: dict) -> dict:
+    save_path = args.get("save_path")
+    if save_path:
+        target = Path(save_path)
+    else:
+        base_dir = Path(getattr(ctx, "cre_dir", Path("/tmp")))
+        base_dir.mkdir(parents=True, exist_ok=True)
+        target = base_dir / f"screenshot_{int(time.time() * 1000)}.png"
+    capture_front_window(target, owner_name="Safari", timeout_seconds=10)
+    return {"status": "ok", "path": str(target)}
+
+
+def _handle_a11y_snapshot(ctx, args: dict) -> dict:
+    app_name = str(args.get("app_name", "Safari") or "Safari")
+    snapshot = None
+    if _get_a11y_snapshot:
+        try:
+            snapshot = _get_a11y_snapshot(app_name)
+        except Exception as exc:
+            return {"status": "skip", "reason": "a11y_snapshot_failed", "error": str(exc)}
+    elif app_name == "Safari":
+        snapshot = (getattr(ctx, "ui_analysis", {}) or {}).get("a11y_elements")
+
+    if snapshot is None:
+        return {"status": "skip", "reason": "a11y_snapshot_unavailable"}
+
+    if isinstance(snapshot, dict):
+        payload = dict(snapshot)
+        payload.setdefault("backend", payload.get("source", "injected"))
+        payload.setdefault("total", 0)
+        payload.setdefault("interactive", 0)
+        payload.setdefault("labels", [])
+    else:
+        elements = list(snapshot or [])
+        interactive = [element for element in elements if getattr(element, "is_interactive", False)]
+        payload = {
+            "backend": "injected",
+            "total": len(elements),
+            "interactive": len(interactive),
+            "labels": [
+                getattr(element, "label", "")
+                for element in interactive[:50]
+                if getattr(element, "label", "")
+            ],
+        }
+
+    payload = {
+        **payload,
+    }
+    base_dir = Path(getattr(ctx, "cre_dir", Path("/tmp")))
+    base_dir.mkdir(parents=True, exist_ok=True)
+    output_path = base_dir / f"a11y_snapshot_{int(time.time() * 1000)}.json"
+    output_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    payload.update({"status": "ok", "path": str(output_path)})
+    return payload
 
 
 def _handle_clear_canvas(ctx, args: dict) -> dict:
@@ -614,6 +745,28 @@ def _handle_click(ctx, args: dict) -> dict:
     print(f"  Click executed: {result}")
     time.sleep(0.5)
     return result
+
+
+def _handle_go_back(ctx, args: dict) -> dict:
+    if _exec_log_line:
+        _exec_log_line("action_go_back", None, {})
+    script = """
+    tell application "Safari"
+        activate
+        tell front document to do JavaScript "history.back();"
+    end tell
+    """
+    result = subprocess.run(
+        ["osascript", "-e", script],
+        capture_output=True,
+        text=True,
+        timeout=10,
+        check=False,
+    )
+    if result.returncode != 0:
+        return {"status": "error", "error": result.stderr.strip() or "history_back_failed"}
+    time.sleep(0.8)
+    return {"status": "ok"}
 
 
 def _handle_fix_triangle_base(ctx, args: dict) -> dict:
@@ -1422,6 +1575,72 @@ def _handle_drag_shape(ctx, args: dict) -> dict:
     print(f"  Shape drawn: {result}")
     time.sleep(0.5)
     return result
+
+
+def _handle_draw_shape(ctx, args: dict) -> dict:
+    """Draw a semantic geometric shape from the unified planner surface."""
+    shape_type = str(args.get("shape_type", "rectangle")).strip().lower()
+    size = int(args.get("size", 120))
+    center_x = int(args.get("center_x", 0))
+    center_y = int(args.get("center_y", 0))
+
+    if shape_type in {"rectangle", "square"}:
+        return _handle_drag_shape(
+            ctx,
+            {
+                "tool_key": "2",
+                "width": size * 2,
+                "height": size * 2,
+                "offset_x": center_x,
+                "offset_y": center_y,
+            },
+        )
+    if shape_type in {"circle", "ellipse"}:
+        return _handle_drag_shape(
+            ctx,
+            {
+                "tool_key": "4",
+                "width": size * 2,
+                "height": size * 2,
+                "offset_x": center_x,
+                "offset_y": center_y,
+            },
+        )
+    if shape_type in {"diamond"}:
+        return _handle_drag_shape(
+            ctx,
+            {
+                "tool_key": "3",
+                "width": size * 2,
+                "height": size * 2,
+                "offset_x": center_x,
+                "offset_y": center_y,
+            },
+        )
+
+    if shape_type in {"triangle", "polygon"}:
+        import math
+
+        sides = max(3, int(args.get("sides", 3) or 3))
+        vertices = []
+        for index in range(sides):
+            angle = (-math.pi / 2) + (2 * math.pi * index / sides)
+            vertices.append(
+                [
+                    center_x + int(size * math.cos(angle)),
+                    center_y + int(size * math.sin(angle)),
+                ]
+            )
+        return _handle_draw_path(
+            ctx,
+            {
+                "vertices": vertices,
+                "closed": True,
+                "drag_delay": args.get("drag_delay", 0.05),
+            },
+        )
+
+    return {"status": "error", "error": f"unsupported_shape_type:{shape_type}"}
 
 
 def _handle_draw_circle(ctx, args: dict) -> dict:
@@ -3309,14 +3528,49 @@ def _handle_bmw_final(ctx, args: dict) -> dict:
     return {"status": "ok", "strokes": total_strokes}
 
 
+def _handle_bmw_details(ctx, args: dict) -> dict:
+    """Legacy alias for the old detail phase.
+
+    Preserves dispatchability while routing through the modern BMW middle passes.
+    """
+    form_result = _handle_bmw_form_blocking(ctx, args)
+    if form_result.get("status") != "ok":
+        return form_result
+    mechanical_result = _handle_bmw_mechanical(ctx, args)
+    if mechanical_result.get("status") != "ok":
+        return mechanical_result
+    return {
+        "status": "ok",
+        "strokes": int(form_result.get("strokes", 0)) + int(mechanical_result.get("strokes", 0)),
+        "phases": ["bmw_form_blocking", "bmw_mechanical"],
+    }
+
+
+def _handle_bmw_shading(ctx, args: dict) -> dict:
+    """Legacy alias for the old shading phase."""
+    lighting_result = _handle_bmw_lighting(ctx, args)
+    if lighting_result.get("status") != "ok":
+        return lighting_result
+    return {
+        "status": "ok",
+        "strokes": int(lighting_result.get("strokes", 0)),
+        "phases": ["bmw_lighting"],
+    }
+
+
 ACTION_HANDLERS = {
     "keystroke": _handle_keystroke,
+    "type_text": _handle_type_text,
+    "scroll": _handle_scroll,
+    "screenshot": _handle_screenshot,
+    "a11y_snapshot": _handle_a11y_snapshot,
     "clear_canvas": _handle_clear_canvas,
     "sleep": _handle_sleep,
     "refresh_canvas_center": _handle_refresh_canvas_center,
     "set_stroke_color": _handle_set_stroke_color,
     "click": _handle_click,
     "go_to_url": _handle_go_to_url,
+    "go_back": _handle_go_back,
     "fix_triangle_base": _handle_fix_triangle_base,
     "connect_colored_dots": _handle_connect_colored_dots,
     "draw_concentric_triangles": _handle_draw_concentric_triangles,
@@ -3324,6 +3578,7 @@ ACTION_HANDLERS = {
     "draw_path": _handle_draw_path,
     "draw_segments": _handle_draw_segments,
     "draw_circle": _handle_draw_circle,
+    "draw_shape": _handle_draw_shape,
     "drag_shape": _handle_drag_shape,
     "draw_eiffel_tower": _handle_draw_eiffel_tower,
     "draw_eiffel_landscape": _handle_draw_eiffel_landscape,
@@ -3339,6 +3594,8 @@ ACTION_HANDLERS = {
     "kleki_set_stabilizer": _handle_kleki_set_stabilizer,
     "kleki_reset_render_state": _handle_kleki_reset_render_state,
     "bmw_skeleton": _handle_bmw_skeleton,
+    "bmw_details": _handle_bmw_details,
+    "bmw_shading": _handle_bmw_shading,
     "bmw_form_blocking": _handle_bmw_form_blocking,
     "bmw_mechanical": _handle_bmw_mechanical,
     "bmw_lighting": _handle_bmw_lighting,
@@ -3356,16 +3613,18 @@ _SOM_DEPENDENT_ACTIONS = {
 _RECOVERY_KEYCODES = {"escape": 53, "enter": 36, "space": 49}
 _ACTION_EFFECT_CHECKS: dict[str, str | None] = {
     "clear_canvas": "Is the Excalidraw canvas now empty with no drawings visible? Reply YES or NO.",
-    "keystroke": None, "sleep": None, "refresh_canvas_center": None,
+    "keystroke": None, "type_text": None, "scroll": None, "screenshot": None,
+    "a11y_snapshot": None, "sleep": None, "refresh_canvas_center": None,
     "set_stroke_color": None,
     "draw_concentric_triangles": "Are there nested triangles drawn on the Excalidraw canvas? Reply YES or NO.",
     "draw_path": "Is there a shape drawn on the Excalidraw canvas? Reply YES or NO.",
     "draw_segments": None,
     "draw_circle": "Is there a circle or circular shape drawn on the Excalidraw canvas? Reply YES or NO.",
+    "draw_shape": None,
     "drag_shape": None,
     "draw_eiffel_tower": None,
     "draw_eiffel_landscape": None,
-    "click": None, "go_to_url": None, "fix_triangle_base": None, "connect_colored_dots": None,
+    "click": None, "go_to_url": None, "go_back": None, "fix_triangle_base": None, "connect_colored_dots": None,
     "draw_path_speed_test": None, "verify_success": None, "visual_assert": None,
     "browser_beforeunload_dialog": "Is the browser confirmation dialog asking whether to leave the page now gone? Reply YES or NO.",
     "kleki_clear_canvas": "Is the main drawing canvas now empty with no user-drawn marks visible? Reply YES or NO.",

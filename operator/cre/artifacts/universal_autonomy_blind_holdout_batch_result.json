@@ -1,0 +1,1622 @@
+{
+  "protocol_id": "UNIVERSAL_AUTONOMY_BLIND_BATCH_V1",
+  "run_id": "15f428b92a05",
+  "status": "success",
+  "site_order": [
+    {
+      "site_id": "wiki",
+      "name": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "expected_host_token": "wikipedia.org"
+    },
+    {
+      "site_id": "hn",
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com/",
+      "expected_host_token": "news.ycombinator.com"
+    },
+    {
+      "site_id": "arxiv",
+      "name": "arXiv",
+      "url": "https://arxiv.org/",
+      "expected_host_token": "arxiv.org"
+    },
+    {
+      "site_id": "python_docs",
+      "name": "Python Docs",
+      "url": "https://docs.python.org/3/",
+      "expected_host_token": "docs.python.org"
+    },
+    {
+      "site_id": "mdn",
+      "name": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/en-US/",
+      "expected_host_token": "developer.mozilla.org"
+    }
+  ],
+  "required_tasks": [
+    {
+      "task_id": "BATCH-001",
+      "family": "navigation_discovery",
+      "name": "navigate_home"
+    },
+    {
+      "task_id": "BATCH-002",
+      "family": "semantic_extraction",
+      "name": "probe_home_structure"
+    },
+    {
+      "task_id": "BATCH-003",
+      "family": "cross_page_transition",
+      "name": "follow_internal_link_1"
+    },
+    {
+      "task_id": "BATCH-004",
+      "family": "semantic_extraction",
+      "name": "probe_destination_1"
+    },
+    {
+      "task_id": "BATCH-005",
+      "family": "recovery_back_navigation",
+      "name": "back_to_home"
+    },
+    {
+      "task_id": "BATCH-006",
+      "family": "cross_page_transition",
+      "name": "follow_internal_link_2"
+    },
+    {
+      "task_id": "BATCH-007",
+      "family": "semantic_extraction",
+      "name": "probe_destination_2"
+    }
+  ],
+  "max_attempts_per_task": 2,
+  "code_mutation_during_batch": false,
+  "sites": {
+    "wiki": {
+      "site_id": "wiki",
+      "site_name": "Wikipedia",
+      "start_url": "https://en.wikipedia.org/wiki/Main_Page",
+      "expected_host_token": "wikipedia.org",
+      "tasks": {
+        "navigate_home": {
+          "task_id": "BATCH-001",
+          "family": "navigation_discovery",
+          "name": "navigate_home",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "wiki",
+              "task": "navigate_home",
+              "navigation": {
+                "success": true,
+                "href": "https://en.wikipedia.org/wiki/Main_Page",
+                "host": "en.wikipedia.org",
+                "pathname": "/wiki/Main_Page",
+                "title": "Wikipedia, the free encyclopedia",
+                "ready": "interactive",
+                "h1": "Main Page",
+                "links": 673
+              },
+              "cookie_banner": {
+                "success": false,
+                "reason": "no_cookie_button_match"
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/wiki__navigate_home__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_home_structure": {
+          "task_id": "BATCH-002",
+          "family": "semantic_extraction",
+          "name": "probe_home_structure",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "wiki",
+              "task": "probe_home_structure",
+              "probe": {
+                "href": "https://en.wikipedia.org/wiki/Main_Page",
+                "host": "en.wikipedia.org",
+                "pathname": "/wiki/Main_Page",
+                "title": "Wikipedia, the free encyclopedia",
+                "heading": "Main Page",
+                "body_chars": 9028,
+                "links": 673,
+                "forms": 6,
+                "buttons": 17,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/wiki__probe_home_structure__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "follow_internal_link_1": {
+          "task_id": "BATCH-003",
+          "family": "cross_page_transition",
+          "name": "follow_internal_link_1",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "wiki",
+              "task": "follow_internal_link_1",
+              "choose": {
+                "success": true,
+                "chosen_href": "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Main+Page",
+                "chosen_canonical": "https://en.wikipedia.org/w/index.php?title=Special:CreateAccount&returnto=Main+Page",
+                "chosen_text": "Create account",
+                "rank": 1
+              },
+              "wait": {
+                "href": "https://en.wikipedia.org/wiki/Main_Page",
+                "title": "Wikipedia, the free encyclopedia",
+                "links": 673,
+                "body_chars": 9028,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/wiki__follow_internal_link_1__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_destination_1": {
+          "task_id": "BATCH-004",
+          "family": "semantic_extraction",
+          "name": "probe_destination_1",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "wiki",
+              "task": "probe_destination_1",
+              "probe": {
+                "href": "https://en.wikipedia.org/wiki/Main_Page",
+                "host": "en.wikipedia.org",
+                "pathname": "/wiki/Main_Page",
+                "title": "Wikipedia, the free encyclopedia",
+                "heading": "Main Page",
+                "links": 673,
+                "paragraphs": 7,
+                "list_items": 566,
+                "code_blocks": 0,
+                "body_chars": 9028,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/wiki__probe_destination_1__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "back_to_home": {
+          "task_id": "BATCH-005",
+          "family": "recovery_back_navigation",
+          "name": "back_to_home",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "wiki",
+              "task": "back_to_home",
+              "back": {
+                "success": true
+              },
+              "wait": {
+                "href": "https://en.wikipedia.org/wiki/Main_Page",
+                "title": "Wikipedia, the free encyclopedia",
+                "normalized_href": "https://en.wikipedia.org/wiki/Main_Page",
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/wiki__back_to_home__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "follow_internal_link_2": {
+          "task_id": "BATCH-006",
+          "family": "cross_page_transition",
+          "name": "follow_internal_link_2",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "wiki",
+              "task": "follow_internal_link_2",
+              "choose": {
+                "success": true,
+                "chosen_href": "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page",
+                "chosen_canonical": "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page",
+                "chosen_text": "Log in",
+                "rank": 1
+              },
+              "wait": {
+                "href": "https://en.wikipedia.org/wiki/Main_Page",
+                "title": "Wikipedia, the free encyclopedia",
+                "links": 673,
+                "body_chars": 9028,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/wiki__follow_internal_link_2__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_destination_2": {
+          "task_id": "BATCH-007",
+          "family": "semantic_extraction",
+          "name": "probe_destination_2",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "wiki",
+              "task": "probe_destination_2",
+              "probe": {
+                "href": "https://en.wikipedia.org/wiki/Main_Page",
+                "host": "en.wikipedia.org",
+                "pathname": "/wiki/Main_Page",
+                "title": "Wikipedia, the free encyclopedia",
+                "heading": "Main Page",
+                "links": 673,
+                "paragraphs": 7,
+                "list_items": 566,
+                "code_blocks": 0,
+                "body_chars": 9028,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/wiki__probe_destination_2__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        }
+      },
+      "metrics": {
+        "task_count": 7,
+        "first_pass_success_count": 7,
+        "stabilized_success_count": 7,
+        "failed_count": 0,
+        "recovered_count": 0,
+        "initial_failure_count": 0,
+        "first_pass_success_rate": 1.0,
+        "stabilized_success_rate": 1.0,
+        "recovery_rate": 1.0
+      }
+    },
+    "hn": {
+      "site_id": "hn",
+      "site_name": "Hacker News",
+      "start_url": "https://news.ycombinator.com/",
+      "expected_host_token": "news.ycombinator.com",
+      "tasks": {
+        "navigate_home": {
+          "task_id": "BATCH-001",
+          "family": "navigation_discovery",
+          "name": "navigate_home",
+          "first_pass_success": false,
+          "attempt_count": 2,
+          "attempts": [
+            {
+              "site_id": "hn",
+              "task": "navigate_home",
+              "navigation": {
+                "success": true,
+                "href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements",
+                "host": "developer.mozilla.org",
+                "pathname": "/en-US/docs/Web/HTML/Reference/Elements",
+                "title": "HTML elements reference - HTML | MDN",
+                "ready": "complete",
+                "h1": "HTML elements reference",
+                "links": 662
+              },
+              "cookie_banner": {
+                "success": false,
+                "reason": "no_cookie_button_match"
+              },
+              "host_ok": false,
+              "success": false,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/hn__navigate_home__attempt1.png"
+              }
+            },
+            {
+              "site_id": "hn",
+              "task": "navigate_home",
+              "navigation": {
+                "success": true,
+                "href": "https://news.ycombinator.com/",
+                "host": "news.ycombinator.com",
+                "pathname": "/",
+                "title": "Hacker News",
+                "ready": "complete",
+                "h1": "",
+                "links": 226
+              },
+              "cookie_banner": {
+                "success": false,
+                "reason": "no_cookie_button_match"
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 2,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/hn__navigate_home__attempt2.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_home_structure": {
+          "task_id": "BATCH-002",
+          "family": "semantic_extraction",
+          "name": "probe_home_structure",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "hn",
+              "task": "probe_home_structure",
+              "probe": {
+                "href": "https://news.ycombinator.com/",
+                "host": "news.ycombinator.com",
+                "pathname": "/",
+                "title": "Hacker News",
+                "heading": "",
+                "body_chars": 3756,
+                "links": 226,
+                "forms": 1,
+                "buttons": 0,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/hn__probe_home_structure__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "follow_internal_link_1": {
+          "task_id": "BATCH-003",
+          "family": "cross_page_transition",
+          "name": "follow_internal_link_1",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "hn",
+              "task": "follow_internal_link_1",
+              "choose": {
+                "success": true,
+                "chosen_href": "https://news.ycombinator.com/news",
+                "chosen_canonical": "https://news.ycombinator.com/news",
+                "chosen_text": "Hacker News",
+                "rank": 1
+              },
+              "wait": {
+                "href": "https://news.ycombinator.com/",
+                "title": "Hacker News",
+                "links": 226,
+                "body_chars": 3756,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/hn__follow_internal_link_1__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_destination_1": {
+          "task_id": "BATCH-004",
+          "family": "semantic_extraction",
+          "name": "probe_destination_1",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "hn",
+              "task": "probe_destination_1",
+              "probe": {
+                "href": "https://news.ycombinator.com/news",
+                "host": "news.ycombinator.com",
+                "pathname": "/news",
+                "title": "Hacker News",
+                "heading": "",
+                "links": 226,
+                "paragraphs": 0,
+                "list_items": 0,
+                "code_blocks": 0,
+                "body_chars": 3771,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/hn__probe_destination_1__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "back_to_home": {
+          "task_id": "BATCH-005",
+          "family": "recovery_back_navigation",
+          "name": "back_to_home",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "hn",
+              "task": "back_to_home",
+              "back": {
+                "success": true
+              },
+              "wait": {
+                "href": "https://news.ycombinator.com/",
+                "title": "Hacker News",
+                "normalized_href": "https://news.ycombinator.com",
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/hn__back_to_home__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "follow_internal_link_2": {
+          "task_id": "BATCH-006",
+          "family": "cross_page_transition",
+          "name": "follow_internal_link_2",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "hn",
+              "task": "follow_internal_link_2",
+              "choose": {
+                "success": true,
+                "chosen_href": "https://news.ycombinator.com/newest",
+                "chosen_canonical": "https://news.ycombinator.com/newest",
+                "chosen_text": "new",
+                "rank": 1
+              },
+              "wait": {
+                "href": "https://news.ycombinator.com/",
+                "title": "Hacker News",
+                "links": 226,
+                "body_chars": 3756,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/hn__follow_internal_link_2__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_destination_2": {
+          "task_id": "BATCH-007",
+          "family": "semantic_extraction",
+          "name": "probe_destination_2",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "hn",
+              "task": "probe_destination_2",
+              "probe": {
+                "href": "https://news.ycombinator.com/newest",
+                "host": "news.ycombinator.com",
+                "pathname": "/newest",
+                "title": "New Links | Hacker News",
+                "heading": "",
+                "links": 257,
+                "paragraphs": 0,
+                "list_items": 0,
+                "code_blocks": 0,
+                "body_chars": 4230,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/hn__probe_destination_2__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        }
+      },
+      "metrics": {
+        "task_count": 7,
+        "first_pass_success_count": 6,
+        "stabilized_success_count": 7,
+        "failed_count": 0,
+        "recovered_count": 1,
+        "initial_failure_count": 1,
+        "first_pass_success_rate": 0.8571428571428571,
+        "stabilized_success_rate": 1.0,
+        "recovery_rate": 1.0
+      }
+    },
+    "arxiv": {
+      "site_id": "arxiv",
+      "site_name": "arXiv",
+      "start_url": "https://arxiv.org/",
+      "expected_host_token": "arxiv.org",
+      "tasks": {
+        "navigate_home": {
+          "task_id": "BATCH-001",
+          "family": "navigation_discovery",
+          "name": "navigate_home",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "arxiv",
+              "task": "navigate_home",
+              "navigation": {
+                "success": true,
+                "href": "https://arxiv.org/",
+                "host": "arxiv.org",
+                "pathname": "/",
+                "title": "arXiv.org e-Print archive",
+                "ready": "complete",
+                "h1": "",
+                "links": 258
+              },
+              "cookie_banner": {
+                "success": false,
+                "reason": "no_cookie_button_match"
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/arxiv__navigate_home__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_home_structure": {
+          "task_id": "BATCH-002",
+          "family": "semantic_extraction",
+          "name": "probe_home_structure",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "arxiv",
+              "task": "probe_home_structure",
+              "probe": {
+                "href": "https://arxiv.org/",
+                "host": "arxiv.org",
+                "pathname": "/",
+                "title": "arXiv.org e-Print archive",
+                "heading": "",
+                "body_chars": 5470,
+                "links": 258,
+                "forms": 3,
+                "buttons": 8,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/arxiv__probe_home_structure__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "follow_internal_link_1": {
+          "task_id": "BATCH-003",
+          "family": "cross_page_transition",
+          "name": "follow_internal_link_1",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "arxiv",
+              "task": "follow_internal_link_1",
+              "choose": {
+                "success": true,
+                "chosen_href": "https://arxiv.org/search/advanced",
+                "chosen_canonical": "https://arxiv.org/search/advanced",
+                "chosen_text": "Advanced Search",
+                "rank": 1
+              },
+              "wait": {
+                "href": "https://arxiv.org/",
+                "title": "arXiv.org e-Print archive",
+                "links": 258,
+                "body_chars": 5470,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/arxiv__follow_internal_link_1__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_destination_1": {
+          "task_id": "BATCH-004",
+          "family": "semantic_extraction",
+          "name": "probe_destination_1",
+          "first_pass_success": false,
+          "attempt_count": 2,
+          "attempts": [
+            {
+              "site_id": "arxiv",
+              "task": "probe_destination_1",
+              "probe": {
+                "href": "https://arxiv.org/search/advanced",
+                "host": "arxiv.org",
+                "pathname": "/search/advanced",
+                "title": "Advanced Search | arXiv e-print repository",
+                "heading": "",
+                "links": 0,
+                "paragraphs": 0,
+                "list_items": 0,
+                "code_blocks": 0,
+                "body_chars": 0,
+                "success": false
+              },
+              "host_ok": true,
+              "success": false,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/arxiv__probe_destination_1__attempt1.png"
+              }
+            },
+            {
+              "site_id": "arxiv",
+              "task": "probe_destination_1",
+              "probe": {
+                "href": "https://arxiv.org/search/advanced",
+                "host": "arxiv.org",
+                "pathname": "/search/advanced",
+                "title": "Advanced Search | arXiv e-print repository",
+                "heading": "Advanced Search",
+                "links": 21,
+                "paragraphs": 9,
+                "list_items": 25,
+                "code_blocks": 4,
+                "body_chars": 3422,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 2,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/arxiv__probe_destination_1__attempt2.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "back_to_home": {
+          "task_id": "BATCH-005",
+          "family": "recovery_back_navigation",
+          "name": "back_to_home",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "arxiv",
+              "task": "back_to_home",
+              "back": {
+                "success": true
+              },
+              "wait": {
+                "href": "https://arxiv.org/",
+                "title": "arXiv.org e-Print archive",
+                "normalized_href": "https://arxiv.org",
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/arxiv__back_to_home__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "follow_internal_link_2": {
+          "task_id": "BATCH-006",
+          "family": "cross_page_transition",
+          "name": "follow_internal_link_2",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "arxiv",
+              "task": "follow_internal_link_2",
+              "choose": {
+                "success": true,
+                "chosen_href": "https://arxiv.org/archive/astro-ph",
+                "chosen_canonical": "https://arxiv.org/archive/astro-ph",
+                "chosen_text": "Astrophysics",
+                "rank": 1
+              },
+              "wait": {
+                "href": "https://arxiv.org/",
+                "title": "arXiv.org e-Print archive",
+                "links": 258,
+                "body_chars": 5470,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/arxiv__follow_internal_link_2__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_destination_2": {
+          "task_id": "BATCH-007",
+          "family": "semantic_extraction",
+          "name": "probe_destination_2",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "arxiv",
+              "task": "probe_destination_2",
+              "probe": {
+                "href": "https://arxiv.org/archive/astro-ph",
+                "host": "arxiv.org",
+                "pathname": "/archive/astro-ph",
+                "title": "Astrophysics",
+                "heading": ">\nastro-ph",
+                "links": 79,
+                "paragraphs": 3,
+                "list_items": 25,
+                "code_blocks": 0,
+                "body_chars": 3036,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/arxiv__probe_destination_2__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        }
+      },
+      "metrics": {
+        "task_count": 7,
+        "first_pass_success_count": 6,
+        "stabilized_success_count": 7,
+        "failed_count": 0,
+        "recovered_count": 1,
+        "initial_failure_count": 1,
+        "first_pass_success_rate": 0.8571428571428571,
+        "stabilized_success_rate": 1.0,
+        "recovery_rate": 1.0
+      }
+    },
+    "python_docs": {
+      "site_id": "python_docs",
+      "site_name": "Python Docs",
+      "start_url": "https://docs.python.org/3/",
+      "expected_host_token": "docs.python.org",
+      "tasks": {
+        "navigate_home": {
+          "task_id": "BATCH-001",
+          "family": "navigation_discovery",
+          "name": "navigate_home",
+          "first_pass_success": false,
+          "attempt_count": 2,
+          "attempts": [
+            {
+              "site_id": "python_docs",
+              "task": "navigate_home",
+              "navigation": {
+                "success": true,
+                "href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements",
+                "host": "developer.mozilla.org",
+                "pathname": "/en-US/docs/Web/HTML/Reference/Elements",
+                "title": "HTML elements reference - HTML | MDN",
+                "ready": "complete",
+                "h1": "HTML elements reference",
+                "links": 662
+              },
+              "cookie_banner": {
+                "success": false,
+                "reason": "no_cookie_button_match"
+              },
+              "host_ok": false,
+              "success": false,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/python_docs__navigate_home__attempt1.png"
+              }
+            },
+            {
+              "site_id": "python_docs",
+              "task": "navigate_home",
+              "navigation": {
+                "success": true,
+                "href": "https://docs.python.org/3/",
+                "host": "docs.python.org",
+                "pathname": "/3/",
+                "title": "3.14.3 Documentation",
+                "ready": "complete",
+                "h1": "Python 3.14.3 documentation",
+                "links": 90
+              },
+              "cookie_banner": {
+                "success": false,
+                "reason": "no_cookie_button_match"
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 2,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/python_docs__navigate_home__attempt2.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_home_structure": {
+          "task_id": "BATCH-002",
+          "family": "semantic_extraction",
+          "name": "probe_home_structure",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "python_docs",
+              "task": "probe_home_structure",
+              "probe": {
+                "href": "https://docs.python.org/3/",
+                "host": "docs.python.org",
+                "pathname": "/3/",
+                "title": "3.14.3 Documentation",
+                "heading": "Python 3.14.3 documentation",
+                "body_chars": 2220,
+                "links": 90,
+                "forms": 3,
+                "buttons": 4,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/python_docs__probe_home_structure__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "follow_internal_link_1": {
+          "task_id": "BATCH-003",
+          "family": "cross_page_transition",
+          "name": "follow_internal_link_1",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "python_docs",
+              "task": "follow_internal_link_1",
+              "choose": {
+                "success": true,
+                "chosen_href": "https://docs.python.org/3/genindex.html",
+                "chosen_canonical": "https://docs.python.org/3/genindex.html",
+                "chosen_text": "index",
+                "rank": 1
+              },
+              "wait": {
+                "href": "https://docs.python.org/3/genindex.html",
+                "title": "Index \u2014 Python 3.14.3 documentation",
+                "links": 45,
+                "body_chars": 752,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/python_docs__follow_internal_link_1__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_destination_1": {
+          "task_id": "BATCH-004",
+          "family": "semantic_extraction",
+          "name": "probe_destination_1",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "python_docs",
+              "task": "probe_destination_1",
+              "probe": {
+                "href": "https://docs.python.org/3/genindex.html",
+                "host": "docs.python.org",
+                "pathname": "/3/genindex.html",
+                "title": "Index \u2014 Python 3.14.3 documentation",
+                "heading": "Index",
+                "links": 45,
+                "paragraphs": 3,
+                "list_items": 20,
+                "code_blocks": 0,
+                "body_chars": 752,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/python_docs__probe_destination_1__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "back_to_home": {
+          "task_id": "BATCH-005",
+          "family": "recovery_back_navigation",
+          "name": "back_to_home",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "python_docs",
+              "task": "back_to_home",
+              "back": {
+                "success": true
+              },
+              "wait": {
+                "href": "https://docs.python.org/3/",
+                "title": "3.14.3 Documentation",
+                "normalized_href": "https://docs.python.org/3",
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/python_docs__back_to_home__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "follow_internal_link_2": {
+          "task_id": "BATCH-006",
+          "family": "cross_page_transition",
+          "name": "follow_internal_link_2",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "python_docs",
+              "task": "follow_internal_link_2",
+              "choose": {
+                "success": true,
+                "chosen_href": "https://docs.python.org/3/py-modindex.html",
+                "chosen_canonical": "https://docs.python.org/3/py-modindex.html",
+                "chosen_text": "modules",
+                "rank": 1
+              },
+              "wait": {
+                "href": "https://docs.python.org/3/py-modindex.html",
+                "title": "Python Module Index \u2014 Python 3.14.3 documentation",
+                "links": 357,
+                "body_chars": 11486,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/python_docs__follow_internal_link_2__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_destination_2": {
+          "task_id": "BATCH-007",
+          "family": "semantic_extraction",
+          "name": "probe_destination_2",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "python_docs",
+              "task": "probe_destination_2",
+              "probe": {
+                "href": "https://docs.python.org/3/py-modindex.html",
+                "host": "docs.python.org",
+                "pathname": "/3/py-modindex.html",
+                "title": "Python Module Index \u2014 Python 3.14.3 documentation",
+                "heading": "Python Module Index",
+                "links": 357,
+                "paragraphs": 0,
+                "list_items": 20,
+                "code_blocks": 316,
+                "body_chars": 11486,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/python_docs__probe_destination_2__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        }
+      },
+      "metrics": {
+        "task_count": 7,
+        "first_pass_success_count": 6,
+        "stabilized_success_count": 7,
+        "failed_count": 0,
+        "recovered_count": 1,
+        "initial_failure_count": 1,
+        "first_pass_success_rate": 0.8571428571428571,
+        "stabilized_success_rate": 1.0,
+        "recovery_rate": 1.0
+      }
+    },
+    "mdn": {
+      "site_id": "mdn",
+      "site_name": "MDN Web Docs",
+      "start_url": "https://developer.mozilla.org/en-US/",
+      "expected_host_token": "developer.mozilla.org",
+      "tasks": {
+        "navigate_home": {
+          "task_id": "BATCH-001",
+          "family": "navigation_discovery",
+          "name": "navigate_home",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "mdn",
+              "task": "navigate_home",
+              "navigation": {
+                "success": true,
+                "href": "https://developer.mozilla.org/en-US/",
+                "host": "developer.mozilla.org",
+                "pathname": "/en-US/",
+                "title": "MDN Web Docs",
+                "ready": "complete",
+                "h1": "Resources for Developers,\nby Developers",
+                "links": 161
+              },
+              "cookie_banner": {
+                "success": false,
+                "reason": "no_cookie_button_match"
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/mdn__navigate_home__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_home_structure": {
+          "task_id": "BATCH-002",
+          "family": "semantic_extraction",
+          "name": "probe_home_structure",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "mdn",
+              "task": "probe_home_structure",
+              "probe": {
+                "href": "https://developer.mozilla.org/en-US/",
+                "host": "developer.mozilla.org",
+                "pathname": "/en-US/",
+                "title": "MDN Web Docs",
+                "heading": "Resources for Developers,\nby Developers",
+                "body_chars": 5031,
+                "links": 161,
+                "forms": 0,
+                "buttons": 9,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/mdn__probe_home_structure__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "follow_internal_link_1": {
+          "task_id": "BATCH-003",
+          "family": "cross_page_transition",
+          "name": "follow_internal_link_1",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "mdn",
+              "task": "follow_internal_link_1",
+              "choose": {
+                "success": true,
+                "chosen_href": "https://developer.mozilla.org/en-US/blog/",
+                "chosen_canonical": "https://developer.mozilla.org/en-US/blog",
+                "chosen_text": "Blog",
+                "rank": 1
+              },
+              "wait": {
+                "href": "https://developer.mozilla.org/en-US/",
+                "title": "MDN Web Docs",
+                "links": 161,
+                "body_chars": 5031,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/mdn__follow_internal_link_1__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_destination_1": {
+          "task_id": "BATCH-004",
+          "family": "semantic_extraction",
+          "name": "probe_destination_1",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "mdn",
+              "task": "probe_destination_1",
+              "probe": {
+                "href": "https://developer.mozilla.org/en-US/blog/",
+                "host": "developer.mozilla.org",
+                "pathname": "/en-US/blog/",
+                "title": "MDN Blog",
+                "heading": "Blog it better",
+                "links": 391,
+                "paragraphs": 79,
+                "list_items": 107,
+                "code_blocks": 0,
+                "body_chars": 20229,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/mdn__probe_destination_1__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "back_to_home": {
+          "task_id": "BATCH-005",
+          "family": "recovery_back_navigation",
+          "name": "back_to_home",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "mdn",
+              "task": "back_to_home",
+              "back": {
+                "success": true
+              },
+              "wait": {
+                "href": "https://developer.mozilla.org/en-US/",
+                "title": "MDN Web Docs",
+                "normalized_href": "https://developer.mozilla.org/en-US",
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/mdn__back_to_home__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "follow_internal_link_2": {
+          "task_id": "BATCH-006",
+          "family": "cross_page_transition",
+          "name": "follow_internal_link_2",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "mdn",
+              "task": "follow_internal_link_2",
+              "choose": {
+                "success": true,
+                "chosen_href": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                "chosen_canonical": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                "chosen_text": "CSS",
+                "rank": 1
+              },
+              "wait": {
+                "href": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                "title": "CSS: Cascading Style Sheets | MDN",
+                "links": 1347,
+                "body_chars": 6008,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/mdn__follow_internal_link_2__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        },
+        "probe_destination_2": {
+          "task_id": "BATCH-007",
+          "family": "semantic_extraction",
+          "name": "probe_destination_2",
+          "first_pass_success": true,
+          "attempt_count": 1,
+          "attempts": [
+            {
+              "site_id": "mdn",
+              "task": "probe_destination_2",
+              "probe": {
+                "href": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                "host": "developer.mozilla.org",
+                "pathname": "/en-US/docs/Web/CSS",
+                "title": "CSS: Cascading Style Sheets | MDN",
+                "heading": "CSS: Cascading Style Sheets",
+                "links": 1347,
+                "paragraphs": 33,
+                "list_items": 1372,
+                "code_blocks": 5,
+                "body_chars": 6008,
+                "success": true
+              },
+              "host_ok": true,
+              "success": true,
+              "attempt": 1,
+              "screenshot": {
+                "mode": "display",
+                "owner_name": "Safari",
+                "window_id": null,
+                "bounds": null,
+                "path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/modules/mdn__probe_destination_2__attempt1.png"
+              }
+            }
+          ],
+          "success": true
+        }
+      },
+      "metrics": {
+        "task_count": 7,
+        "first_pass_success_count": 7,
+        "stabilized_success_count": 7,
+        "failed_count": 0,
+        "recovered_count": 0,
+        "initial_failure_count": 0,
+        "first_pass_success_rate": 1.0,
+        "stabilized_success_rate": 1.0,
+        "recovery_rate": 1.0
+      }
+    }
+  },
+  "transfer_curve": [
+    {
+      "site_index": 1,
+      "site_id": "wiki",
+      "site_name": "Wikipedia",
+      "site_first_pass_success_rate": 1.0,
+      "site_stabilized_success_rate": 1.0,
+      "site_recovery_rate": 1.0,
+      "cumulative_first_pass_success_rate": 1.0,
+      "cumulative_stabilized_success_rate": 1.0,
+      "cumulative_recovery_rate": 1.0,
+      "cumulative_task_count": 7
+    },
+    {
+      "site_index": 2,
+      "site_id": "hn",
+      "site_name": "Hacker News",
+      "site_first_pass_success_rate": 0.8571428571428571,
+      "site_stabilized_success_rate": 1.0,
+      "site_recovery_rate": 1.0,
+      "cumulative_first_pass_success_rate": 0.9285714285714286,
+      "cumulative_stabilized_success_rate": 1.0,
+      "cumulative_recovery_rate": 1.0,
+      "cumulative_task_count": 14
+    },
+    {
+      "site_index": 3,
+      "site_id": "arxiv",
+      "site_name": "arXiv",
+      "site_first_pass_success_rate": 0.8571428571428571,
+      "site_stabilized_success_rate": 1.0,
+      "site_recovery_rate": 1.0,
+      "cumulative_first_pass_success_rate": 0.9047619047619048,
+      "cumulative_stabilized_success_rate": 1.0,
+      "cumulative_recovery_rate": 1.0,
+      "cumulative_task_count": 21
+    },
+    {
+      "site_index": 4,
+      "site_id": "python_docs",
+      "site_name": "Python Docs",
+      "site_first_pass_success_rate": 0.8571428571428571,
+      "site_stabilized_success_rate": 1.0,
+      "site_recovery_rate": 1.0,
+      "cumulative_first_pass_success_rate": 0.8928571428571429,
+      "cumulative_stabilized_success_rate": 1.0,
+      "cumulative_recovery_rate": 1.0,
+      "cumulative_task_count": 28
+    },
+    {
+      "site_index": 5,
+      "site_id": "mdn",
+      "site_name": "MDN Web Docs",
+      "site_first_pass_success_rate": 1.0,
+      "site_stabilized_success_rate": 1.0,
+      "site_recovery_rate": 1.0,
+      "cumulative_first_pass_success_rate": 0.9142857142857143,
+      "cumulative_stabilized_success_rate": 1.0,
+      "cumulative_recovery_rate": 1.0,
+      "cumulative_task_count": 35
+    }
+  ],
+  "metrics": {
+    "task_count": 35,
+    "first_pass_success_count": 32,
+    "stabilized_success_count": 35,
+    "failed_count": 0,
+    "recovered_count": 3,
+    "initial_failure_count": 3,
+    "first_pass_success_rate": 0.9142857142857143,
+    "stabilized_success_rate": 1.0,
+    "recovery_rate": 1.0
+  },
+  "gates": {
+    "first_pass_target_met": true,
+    "stabilized_target_met": true,
+    "recovery_target_met": true,
+    "all_targets_met": true
+  },
+  "diagnostic_path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05/diagnostic.txt",
+  "run_dir": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/15f428b92a05"
+}

@@ -1,0 +1,103 @@
+[
+  {
+    "source_id": "CRE-DOC-SRC-01",
+    "title": "ISO/IEC/IEEE 42010",
+    "publisher": "ISO Architecture Working Group",
+    "url": "https://www.iso-architecture.org/ieee-1471/",
+    "source_class": "standard",
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Defines architecture descriptions in terms of stakeholders, concerns, viewpoints, views, and correspondences rather than a flat document pile.",
+    "claims_supported": [
+      "Top-level documentation should be organized by concern and role.",
+      "Correspondences between documentation artifacts should be explicit."
+    ]
+  },
+  {
+    "source_id": "CRE-DOC-SRC-02",
+    "title": "Documenting Software Architectures in an Agile World",
+    "publisher": "Software Engineering Institute, Carnegie Mellon University",
+    "url": "https://www.sei.cmu.edu/library/documenting-software-architectures-in-an-agile-world/",
+    "source_class": "official_guidance",
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "SEI guidance that architecture documentation must be understandable and structured for stakeholder use.",
+    "claims_supported": [
+      "Architecture documentation should be readable and audience-shaped.",
+      "Not every document belongs in the same primary reading path."
+    ]
+  },
+  {
+    "source_id": "CRE-DOC-SRC-03",
+    "title": "A Practical Method for Documenting Software Architectures",
+    "publisher": "Software Engineering Institute, Carnegie Mellon University",
+    "url": "https://www.sei.cmu.edu/library/a-practical-method-for-documenting-software-architectures/",
+    "source_class": "official_guidance",
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Views and Beyond-oriented documentation method for selecting and packaging the documentation that stakeholders actually need.",
+    "claims_supported": [
+      "Documentation should be organized as a deliberate set of views.",
+      "Top-level architecture communication should be curated."
+    ]
+  },
+  {
+    "source_id": "CRE-DOC-SRC-04",
+    "title": "Requirements Tracing",
+    "publisher": "Communications of the ACM",
+    "url": "https://cacm.acm.org/research/requirements-tracing/",
+    "source_class": "journal_article",
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Supports explicit traceability across artifacts instead of informal memory.",
+    "claims_supported": [
+      "A machine-readable registry is justified for documentation traceability.",
+      "Cross-artifact relationships should be explicit."
+    ]
+  },
+  {
+    "source_id": "CRE-DOC-SRC-05",
+    "title": "Using AI to Augment Repository READMEs",
+    "publisher": "Software Engineering Institute, Carnegie Mellon University",
+    "url": "https://insights.sei.cmu.edu/blog/using-ai-to-augment-repository-readmes/",
+    "source_class": "official_research_blog",
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Supports generated repository summaries and README augmentation as useful derived artifacts rather than canonical authored truth by default.",
+    "claims_supported": [
+      "Generated summaries can be rebuildable support artifacts.",
+      "Generated inventories should be distinguished from canonical authored docs."
+    ]
+  },
+  {
+    "source_id": "CRE-DOC-SRC-06",
+    "title": "RepoSummary: Feature-Oriented Repository Summarization",
+    "publisher": "arXiv",
+    "url": "https://arxiv.org/abs/2406.09619",
+    "source_class": "research_paper",
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Repository summarization research supporting structured, task-aware summaries over raw flat code/document surfaces.",
+    "claims_supported": [
+      "Large repository surfaces benefit from curated summaries and structured entrypoints."
+    ]
+  },
+  {
+    "source_id": "CRE-DOC-SRC-07",
+    "title": "ModARO: Multi-Model Architecture Reconstruction and Analysis Framework",
+    "publisher": "arXiv",
+    "url": "https://arxiv.org/abs/2508.10967",
+    "source_class": "research_paper",
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Architecture reconstruction research supporting explicit structure recovery and layered model views.",
+    "claims_supported": [
+      "Architecture-facing repositories benefit from explicit recovered structure rather than flat file lists."
+    ]
+  },
+  {
+    "source_id": "CRE-DOC-SRC-08",
+    "title": "Documenting Architecture Decisions",
+    "publisher": "Cognitect",
+    "url": "https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions",
+    "source_class": "adr_guidance",
+    "retrieved_date": "2026-03-04",
+    "why_relevant": "Supports lightweight context -> decision -> consequences structure for documentation-governance choices.",
+    "claims_supported": [
+      "Documentation governance decisions should be explicitly recorded with rationale and consequences."
+    ]
+  }
+]

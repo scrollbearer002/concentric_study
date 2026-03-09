@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Concentric Control Room</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Concentric Control Room</h1>
+      <p class="subtitle">Live architecture, runtime, conformance, and legitimacy views for the republic.</p>
+    </div>
+    <div class="meta">
+      <div id="status-pill" class="pill">Loading</div>
+      <div id="updated-at" class="small">Waiting for first snapshot...</div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel full">
+      <div class="panel-head">
+        <h2>Master Systems Diagram</h2>
+        <div class="small">The republic as inputs, ministries, laws, outputs, feedback, and legitimacy.</div>
+      </div>
+      <div id="master-diagram" class="diagram"></div>
+    </section>
+
+    <section class="panel two-thirds">
+      <div class="panel-head">
+        <h2>Runtime Planes</h2>
+        <div class="small">Recovered execution-family structure from live run artifacts.</div>
+      </div>
+      <div id="runtime-context" class="small runtime-context">Runtime focus will appear here.</div>
+      <div id="runtime-diagram" class="diagram compact"></div>
+    </section>
+
+    <section class="panel one-third">
+      <div class="panel-head">
+        <h2>Control Metrics</h2>
+        <div class="small">Live constitutional health.</div>
+      </div>
+      <div id="metric-cards" class="cards"></div>
+    </section>
+
+    <section class="panel full">
+      <div class="panel-head">
+        <h2>Viewpoints + Focus</h2>
+        <div class="small">Choose a concern frame, then focus one ministry and let the rest of the room follow it.</div>
+      </div>
+      <div id="viewpoints" class="viewpoints"></div>
+      <div id="focus-summary" class="focus-summary"></div>
+    </section>
+
+    <section class="panel full">
+      <div class="panel-head">
+        <h2>Ministry Stations</h2>
+        <div class="small">What each station does, what tools it uses, and the metaphor that explains it.</div>
+      </div>
+      <div id="stations" class="stations"></div>
+    </section>
+
+    <section class="panel one-half">
+      <div class="panel-head">
+        <h2>Latest Run</h2>
+        <div class="small">Most recent live mission summary and tail of the trace.</div>
+      </div>
+      <div id="latest-run" class="run-summary"></div>
+      <pre id="trace-tail" class="log-box"></pre>
+    </section>
+
+    <section class="panel one-half">
+      <div class="panel-head">
+        <h2>Conformance + Legitimacy</h2>
+        <div class="small">Boundary discipline, warnings, and judge-calibration readiness.</div>
+      </div>
+      <div id="conformance" class="summary-box"></div>
+      <div id="legitimacy" class="summary-box"></div>
+    </section>
+
+    <section class="panel one-half">
+      <div class="panel-head">
+        <h2>Semantic Drilldown</h2>
+        <div class="small">Repo-aware Sourcegraph and Cody bridge for the currently focused ministry.</div>
+      </div>
+      <div id="sourcegraph" class="summary-box"></div>
+    </section>
+
+    <section class="panel one-half">
+      <div class="panel-head">
+        <h2>Canonical Atlas</h2>
+        <div class="small">Structurizr workspace, docs, ADRs, and static-site export for the republic.</div>
+      </div>
+      <div id="structurizr" class="summary-box"></div>
+    </section>
+
+    <section class="panel full">
+      <div class="panel-head">
+        <h2>Tool Hooks</h2>
+        <div class="small">What external windows can be attached to the project from this machine.</div>
+      </div>
+      <div id="tool-hooks" class="tool-hooks"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

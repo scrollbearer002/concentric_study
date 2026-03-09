@@ -1,0 +1,83 @@
+{
+  "site": "https://the-internet.herokuapp.com",
+  "date": "2026-03-04",
+  "final_run_id": "01f40bba880b",
+  "status": "success",
+  "counts": {
+    "passed": 41,
+    "failed": 0,
+    "excluded": 4,
+    "in_scope_total": 41,
+    "site_total_examples": 45
+  },
+  "excluded_auth_modules": {
+    "/basic_auth": "browser credential prompt",
+    "/digest_auth": "browser credential prompt",
+    "/login": "login form intentionally excluded from the no-login track",
+    "/download_secure": "secure download is auth-gated"
+  },
+  "evidence_runs": [
+    {
+      "run_id": "4e924c6a8999",
+      "status": "partial_failure",
+      "role": "first full-sweep attempt"
+    },
+    {
+      "run_id": "b959d3f96790",
+      "status": "partial_failure",
+      "role": "second attempt after hardening"
+    },
+    {
+      "run_id": "01f40bba880b",
+      "status": "success",
+      "role": "final full in-scope pass"
+    }
+  ],
+  "passed_modules": [
+    "abtest",
+    "add_remove_elements",
+    "broken_images",
+    "challenging_dom",
+    "checkboxes",
+    "context_menu",
+    "disappearing_elements",
+    "drag_and_drop",
+    "dropdown",
+    "dynamic_content",
+    "dynamic_controls",
+    "dynamic_loading",
+    "entry_ad",
+    "exit_intent",
+    "file_download",
+    "file_upload",
+    "floating_menu",
+    "forgot_password",
+    "frames_index",
+    "geolocation",
+    "horizontal_slider",
+    "hovers",
+    "iframe",
+    "infinite_scroll",
+    "inputs",
+    "javascript_alerts",
+    "javascript_error",
+    "jqueryui_menu",
+    "key_presses",
+    "large_deep_dom",
+    "multiple_windows",
+    "nested_frames",
+    "notification_messages",
+    "redirect_link",
+    "shadow_dom",
+    "shifting_content",
+    "slow_resources",
+    "sortable_data_tables",
+    "status_codes",
+    "tinymce",
+    "typos"
+  ],
+  "notes": [
+    "Geolocation used native-first strategy with injected provider fallback when needed.",
+    "File download uses page-discovered URLs with auxiliary HTTP retrieval strategy."
+  ]
+}

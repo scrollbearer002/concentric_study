@@ -1,0 +1,99 @@
+{
+  "site": "https://automationexercise.com",
+  "date": "2026-03-04",
+  "final_run_id": "f5712003d5b8",
+  "status": "success",
+  "counts": {
+    "passed": 54,
+    "failed": 0,
+    "excluded_auth": 1,
+    "excluded_meta": 1,
+    "excluded_total": 2,
+    "in_scope_total": 54,
+    "site_total_examples": 56
+  },
+  "excluded_auth_modules": {
+    "/login": "account login/signup flow excluded from no-login benchmark"
+  },
+  "excluded_meta_modules": {
+    "/api_list": "API docs surface outside no-login UI benchmark scope"
+  },
+  "evidence_runs": [
+    {
+      "run_id": "fff9740c5624",
+      "status": "partial_failure",
+      "role": "first full sweep; surfaced strict home-page string mismatch"
+    },
+    {
+      "run_id": "28a89ecb8718",
+      "status": "success",
+      "role": "second sweep after home detector fix; uncovered path-canonicalization accounting issue"
+    },
+    {
+      "run_id": "f5712003d5b8",
+      "status": "success",
+      "role": "final sweep after canonical path dedupe hardening"
+    }
+  ],
+  "passed_modules": [
+    "brand_products_Allen_Solly_Junior",
+    "brand_products_Babyhug",
+    "brand_products_Biba",
+    "brand_products_HandM",
+    "brand_products_Kookie_Kids",
+    "brand_products_Madame",
+    "brand_products_Mast_and_Harbour",
+    "brand_products_Polo",
+    "category_products_1",
+    "category_products_2",
+    "category_products_3",
+    "category_products_4",
+    "category_products_5",
+    "category_products_6",
+    "category_products_7",
+    "contact_us",
+    "home",
+    "product_details_1",
+    "product_details_11",
+    "product_details_12",
+    "product_details_13",
+    "product_details_14",
+    "product_details_15",
+    "product_details_16",
+    "product_details_18",
+    "product_details_19",
+    "product_details_2",
+    "product_details_20",
+    "product_details_21",
+    "product_details_22",
+    "product_details_23",
+    "product_details_24",
+    "product_details_28",
+    "product_details_29",
+    "product_details_3",
+    "product_details_30",
+    "product_details_31",
+    "product_details_33",
+    "product_details_35",
+    "product_details_37",
+    "product_details_38",
+    "product_details_39",
+    "product_details_4",
+    "product_details_40",
+    "product_details_41",
+    "product_details_42",
+    "product_details_43",
+    "product_details_5",
+    "product_details_6",
+    "product_details_7",
+    "product_details_8",
+    "products",
+    "test_cases",
+    "view_cart"
+  ],
+  "notes": [
+    "Home-page detector now accepts both 'AutomationExercise' and 'Automation Exercise' branding variants.",
+    "Scope classification canonicalizes and deduplicates URL paths (e.g., '&' vs '%26') before module execution.",
+    "The harness includes a cookie-banner accept helper to align with in-session consent overlays."
+  ]
+}

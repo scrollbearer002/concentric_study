@@ -1,0 +1,32 @@
+{
+  "artifact_id": "cursor_intelligence_bootstrap_baseline",
+  "version": "1.0.0",
+  "generated_date": "2026-03-05",
+  "generated_timezone": "America/Los_Angeles",
+  "objective": "Persist startup contract for Cursor Intelligence operations in concentric_study.",
+  "required_rules": [
+    ".cursor/rules/concentric-study.mdc",
+    ".cursor/rules/cursor-intelligence-charter.mdc",
+    ".cursor/rules/plan-artifact-discipline.mdc",
+    ".cursor/rules/browser-debug-evidence.mdc",
+    ".cursor/rules/mcp-governance.mdc",
+    ".cursor/rules/runtime-debug-discipline.mdc"
+  ],
+  "required_plans": [
+    ".cursor/plans/cursor-intelligence-bootstrap.md",
+    ".cursor/plans/evidence-gated-task-template.md"
+  ],
+  "startup_protocol": [
+    "Establish objective and constraints.",
+    "Collect environment and tool/MCP baseline facts.",
+    "Write a durable evidence-gated plan with pass/fail and stop conditions.",
+    "Execute smallest justified change set.",
+    "Run verification and record unresolved risks."
+  ],
+  "status": {
+    "rule_layer_ready": true,
+    "plan_layer_ready": true,
+    "artifact_tracking_ready": true
+  }
+}
+

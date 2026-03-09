@@ -1,0 +1,59 @@
+{
+  "run_date": "2026-03-05",
+  "timezone": "America/Los_Angeles",
+  "target_app": "TextEdit",
+  "success": true,
+  "actions": [
+    {
+      "ts_iso": "2026-03-05T11:39:37.662797-08:00",
+      "action": "activate_app",
+      "detail": "TextEdit"
+    },
+    {
+      "ts_iso": "2026-03-05T11:39:41.652462-08:00",
+      "action": "window_bounds",
+      "detail": "left=0.0, top=0.0, right=1440.0, bottom=900.0"
+    },
+    {
+      "ts_iso": "2026-03-05T11:39:41.656218-08:00",
+      "action": "move_mouse",
+      "detail": "path_point_1=(120.0,120.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T11:39:42.723463-08:00",
+      "action": "move_mouse",
+      "detail": "path_point_2=(1320.0,120.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T11:39:43.717182-08:00",
+      "action": "move_mouse",
+      "detail": "path_point_3=(1320.0,780.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T11:39:44.759361-08:00",
+      "action": "move_mouse",
+      "detail": "path_point_4=(120.0,780.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T11:39:45.884225-08:00",
+      "action": "move_mouse",
+      "detail": "path_point_5=(720.0,450.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T11:39:46.923861-08:00",
+      "action": "click",
+      "detail": "editor_center=(720.0,450.0)"
+    },
+    {
+      "ts_iso": "2026-03-05T11:39:47.181834-08:00",
+      "action": "type_text",
+      "detail": "typing demo payload into TextEdit"
+    },
+    {
+      "ts_iso": "2026-03-05T11:39:53.166210-08:00",
+      "action": "screenshot",
+      "detail": "/Users/christianpardo/Desktop/concentric_study/operator/cre/artifacts/live_visual_control_demo_2026-03-05.png"
+    }
+  ],
+  "screenshot_path": "/Users/christianpardo/Desktop/concentric_study/operator/cre/artifacts/live_visual_control_demo_2026-03-05.png"
+}

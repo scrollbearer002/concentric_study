@@ -42,23 +42,6 @@ from typing import Any, Callable
 logger = logging.getLogger(__name__)
 
 
-PHASE3_ACTION_HINTS = [
-    "click",
-    "type",
-    "key",
-    "scroll",
-    "wait",
-    "screenshot",
-    "assert_visual",
-    "draw_path",
-    "draw_segments",
-    "draw_shape",
-    "go_to_url",
-    "go_back",
-    "browser_beforeunload_dialog",
-]
-
-
 def _jsonify(value: Any) -> Any:
     """Recursively convert dataclasses into JSON-serializable objects."""
     if is_dataclass(value):
@@ -286,6 +269,13 @@ def evaluate_phase3_equation_gate(
             if mapping.action_type and mapping.action_type not in valid_actions
         }
     )
+    invalid_fallback_actions = sorted(
+        {
+            mapping.fallback_action_type
+            for mapping in solution.mappings
+            if mapping.fallback_action_type and mapping.fallback_action_type not in valid_actions
+        }
+    )
     high_risk_prefixes = ("draw_",)
     high_risk_actions = {"click", "type", "browser_beforeunload_dialog"}
     missing_fallbacks = sorted(
@@ -302,6 +292,7 @@ def evaluate_phase3_equation_gate(
     requirements = {
         "required_method_steps_covered": len(solution.uncovered_method_steps) == 0,
         "all_action_mappings_valid": len(invalid_actions) == 0,
+        "all_fallback_actions_valid": len(invalid_fallback_actions) == 0,
         "high_risk_fallbacks_present": len(missing_fallbacks) == 0,
         "solution_confidence_or_gaps_explicit": (
             solution.solution_confidence >= 0.6 or len(solution.tool_gaps) > 0
@@ -314,6 +305,7 @@ def evaluate_phase3_equation_gate(
         "uncovered_method_steps": list(solution.uncovered_method_steps),
         "tool_gaps": list(solution.tool_gaps),
         "invalid_action_types": invalid_actions,
+        "invalid_fallback_action_types": invalid_fallback_actions,
         "missing_fallbacks": missing_fallbacks,
         "solution_confidence": solution.solution_confidence,
         "requirements": requirements,
@@ -399,10 +391,15 @@ class ResearchAgent:
         print(brief.get_plan_summary())
     """
 
-    def __init__(self, output_dir: str | Path) -> None:
+    def __init__(self, output_dir: str | Path, planner_action_names: list[str] | None = None) -> None:
         self._output_dir = Path(output_dir)
         self._refs_dir = self._output_dir / "reference_images"
         self._refs_dir.mkdir(parents=True, exist_ok=True)
+        self._planner_action_names = list(planner_action_names or [])
+
+    def _phase3_action_hints(self) -> list[str]:
+        """Return planner action hints supplied by the composition root."""
+        return sorted({name for name in self._planner_action_names if name})
 
     def research(
         self,
@@ -957,7 +954,7 @@ class ResearchAgent:
                     for entry in tool_entries
                 )
                 + "\n\nValid action types:\n"
-                + "\n".join(f"  - {name}" for name in sorted(PHASE3_ACTION_HINTS))
+                + "\n".join(f"  - {name}" for name in self._phase3_action_hints())
                 + "\n\nSolve the equation by mapping each method step to one concrete tool and one concrete action."
                 + "\nReturn JSON with this schema:"
                 + ' {"mappings":[{"method_step_id":"","tool_name":"","action_type":"","action_parameters_hint":{},'

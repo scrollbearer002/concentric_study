@@ -48,6 +48,12 @@ _SENSITIVE_ACTIONS = {
     "execute_terminal",
     "download_file",
     "upload_file",
+    "retrieve_password_manager_secret",
+    "save_password_manager_secret",
+    "create_password_manager_login",
+    "generate_password",
+    "retrieve_totp_code",
+    "create_passkey",
 }
 
 
@@ -180,6 +186,10 @@ class HITLGuard:
         domain = context.get("domain", "")
         if domain and context.get("is_new_domain", False):
             reasons.append(f"Navigating to unverified domain: {domain}")
+
+        credential_provider = context.get("credential_provider", "")
+        if credential_provider:
+            reasons.append(f"Credential provider involved: {credential_provider}")
 
         return {
             "requires_approval": len(reasons) > 0,

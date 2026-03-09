@@ -1,0 +1,50 @@
+{
+  "protocol_id": "UNIVERSAL_AUTONOMY_READINESS_V1",
+  "generated_on": "2026-03-04",
+  "objective": "Measure unseen-site transfer as first-pass and stabilized-pass performance under bounded adaptation constraints.",
+  "holdout_strategy": {
+    "site_selection_policy": "Choose high-workflow-value, no-login, low-anti-bot sites not used by the current scripted benchmark family.",
+    "selected_site": "https://www.wikipedia.org",
+    "rationale": "Highest immediate workflow lift for research_intelligence and extraction reliability in BENCHMARK_STRATEGY_FOR_THIS_PROJECT_PHD."
+  },
+  "evaluation_contract": {
+    "max_attempts_per_task": 2,
+    "code_patch_budget_during_run": 0,
+    "task_outcome_definition": "A task is successful only if its task-specific semantic predicate passes.",
+    "exclusion_policy": "No silent exclusions; all skipped/blocked items require explicit reason."
+  },
+  "metrics": {
+    "first_pass_success_rate": {
+      "target": 0.7,
+      "description": "Fraction of tasks that pass on attempt 1."
+    },
+    "stabilized_success_rate": {
+      "target": 1.0,
+      "description": "Fraction of tasks that pass within max_attempts_per_task."
+    },
+    "recovery_rate": {
+      "target": 0.5,
+      "description": "Fraction of initial failures recovered by bounded retry."
+    },
+    "task_count_minimum": {
+      "target": 8,
+      "description": "Minimum number of pre-registered task modules."
+    }
+  },
+  "task_family_requirements": [
+    "navigation_discovery",
+    "semantic_extraction",
+    "in_page_state_transition",
+    "cross_page_transition",
+    "recovery_back_navigation",
+    "search_retargeting"
+  ],
+  "artifacts_required": [
+    "trace.jsonl",
+    "manifest.json",
+    "diagnostic.txt",
+    "holdout summary json",
+    "per-task module json",
+    "workflow memo"
+  ]
+}

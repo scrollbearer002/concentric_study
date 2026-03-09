@@ -8,8 +8,10 @@ The sequence in this memo has partially completed:
 
 - Step A was implemented in `operator/cre/project_understanding/SECTION_4_CONFORMANCE_ENFORCEMENT.md`
 - Step B was implemented in `operator/cre/project_understanding/SECTION_5_DYNAMIC_EXECUTION_ARCHITECTURE.md`
+- Step C was implemented in `operator/cre/project_understanding/SECTION_6_SCENARIO_BASED_ARCHITECTURE_EVALUATION.md`
 
-The active next step is now Step C: scenario-based architecture evaluation.
+The active next step is now Step D: targeted structure and evaluation work
+chosen by the scenario results.
 
 ## 1. Purpose
 

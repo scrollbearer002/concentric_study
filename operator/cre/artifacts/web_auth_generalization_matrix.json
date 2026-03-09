@@ -1,0 +1,158 @@
+{
+  "generated_on": "2026-03-04",
+  "source_run_id": "dbc28d8654b5",
+  "source_run_summary": "/Users/christianpardo/Desktop/concentric_study/operator/cre/runs/dbc28d8654b5/qa_practice_mastery_summary.json",
+  "thesis": "What transfers across websites is not a site script but a family of auth and interaction capabilities.",
+  "capability_families": [
+    {
+      "family_id": "existing_credential_login",
+      "learned_from": [
+        "register_accounts",
+        "ui_login"
+      ],
+      "observable_cues": [
+        "email or username field",
+        "password field",
+        "login copy such as sign in or log in"
+      ],
+      "preferred_provider_path": [
+        "proton_pass_existing_login",
+        "macos_keychain_fallback"
+      ],
+      "sensitive_actions": [
+        "retrieve_password_manager_secret",
+        "enter_password",
+        "submit_form"
+      ],
+      "transfer_claim": "The agent should recognize a generic login surface and retrieve an existing credential from an approved provider."
+    },
+    {
+      "family_id": "new_account_signup_and_save",
+      "learned_from": [
+        "register_accounts"
+      ],
+      "observable_cues": [
+        "email field",
+        "password + confirm password",
+        "signup copy such as create account or register"
+      ],
+      "preferred_provider_path": [
+        "proton_pass_generate_and_save",
+        "proton_pass_alias_and_save"
+      ],
+      "sensitive_actions": [
+        "generate_password",
+        "save_password_manager_secret",
+        "create_password_manager_login",
+        "submit_form"
+      ],
+      "transfer_claim": "The agent should treat signup as a credential-creation workflow, not only a form-fill workflow."
+    },
+    {
+      "family_id": "dynamic_dom_and_widget_recovery",
+      "learned_from": [
+        "dynamic_elements",
+        "self_healing"
+      ],
+      "observable_cues": [
+        "delayed content",
+        "ajax mutations",
+        "custom dropdowns",
+        "layout mutation after action"
+      ],
+      "preferred_provider_path": [],
+      "sensitive_actions": [],
+      "transfer_claim": "The agent should re-read the page state after mutation instead of assuming selectors remain stable."
+    },
+    {
+      "family_id": "shadow_iframe_window_navigation",
+      "learned_from": [
+        "shadow_dom",
+        "iframe_windows"
+      ],
+      "observable_cues": [
+        "iframe count > 0",
+        "shadow root host",
+        "secondary window or popup"
+      ],
+      "preferred_provider_path": [],
+      "sensitive_actions": [],
+      "transfer_claim": "The agent should recognize that the target surface may not be in the top-level DOM."
+    },
+    {
+      "family_id": "file_io_and_account_state",
+      "learned_from": [
+        "file_operations"
+      ],
+      "observable_cues": [
+        "upload control",
+        "download artifact",
+        "account-gated state"
+      ],
+      "preferred_provider_path": [],
+      "sensitive_actions": [
+        "download_file",
+        "upload_file"
+      ],
+      "transfer_claim": "Credential use often gates file actions, so auth state and artifact verification must be evaluated together."
+    },
+    {
+      "family_id": "secondary_factor_auth",
+      "learned_from": [],
+      "observable_cues": [
+        "verification code",
+        "2FA",
+        "authenticator app",
+        "one-time password"
+      ],
+      "preferred_provider_path": [
+        "proton_pass_totp"
+      ],
+      "sensitive_actions": [
+        "retrieve_totp_code",
+        "submit_form"
+      ],
+      "transfer_claim": "A real production login benchmark is incomplete unless it covers post-password factors."
+    },
+    {
+      "family_id": "passkey_enrollment",
+      "learned_from": [],
+      "observable_cues": [
+        "passkey",
+        "security key",
+        "create passkey"
+      ],
+      "preferred_provider_path": [
+        "proton_pass_passkey"
+      ],
+      "sensitive_actions": [
+        "create_passkey",
+        "submit_form"
+      ],
+      "transfer_claim": "The benchmark must treat passkeys as a first-class credential path, not an edge case."
+    }
+  ],
+  "benchmark_order": [
+    "existing_credential_login",
+    "new_account_signup_and_save",
+    "secondary_factor_auth",
+    "password_change_and_update",
+    "passkey_enrollment",
+    "dynamic_dom_and_widget_recovery",
+    "shadow_iframe_window_navigation"
+  ],
+  "negative_controls": [
+    "newsletter email capture form that should not trigger password-manager retrieval",
+    "search box that should not be treated as username entry",
+    "profile page that is already logged in and should not prompt new credential use"
+  ],
+  "governance_default": {
+    "all_secret_reads_require_hitl": true,
+    "all_secret_writes_require_hitl": true,
+    "new_domains_require_hitl": true,
+    "provider_preference": [
+      "proton_pass",
+      "macos_keychain"
+    ]
+  }
+}

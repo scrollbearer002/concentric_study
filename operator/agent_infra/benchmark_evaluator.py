@@ -374,10 +374,25 @@ class BenchmarkEvaluator:
                 return False, f"custom check error: {exc}"
 
         fn_name = claim.check_fn_name
+        semantics = manifest.get("outcome_semantics", {})
+        task_result = (
+            semantics.get("task_result")
+            if isinstance(semantics, dict)
+            else None
+        )
 
         if fn_name == "check_success":
-            ok = manifest.get("outcome") == "success"
-            return ok, f"outcome={manifest.get('outcome')}"
+            ok = (
+                task_result == "accepted"
+                if task_result is not None
+                else manifest.get("outcome") == "success"
+            )
+            evidence = (
+                f"task_result={task_result}"
+                if task_result is not None
+                else f"outcome={manifest.get('outcome')}"
+            )
+            return ok, evidence
 
         if fn_name == "check_duration_under":
             duration = manifest.get("total_duration_ms", float("inf"))

@@ -1,0 +1,99 @@
+{
+  "protocol_id": "UNIVERSAL_AUTONOMY_BLIND_BATCH_V1",
+  "generated_on": "2026-03-04",
+  "objective": "Estimate true cross-site transfer with frozen code and no in-run patching across a multi-site holdout batch.",
+  "evaluation_contract": {
+    "code_mutation_during_batch": false,
+    "max_attempts_per_task": 2,
+    "task_scope": "required_tasks_only",
+    "site_order_locked": true
+  },
+  "site_order": [
+    {
+      "site_id": "wiki",
+      "name": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Main_Page",
+      "expected_host_token": "wikipedia.org"
+    },
+    {
+      "site_id": "hn",
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com/",
+      "expected_host_token": "news.ycombinator.com"
+    },
+    {
+      "site_id": "arxiv",
+      "name": "arXiv",
+      "url": "https://arxiv.org/",
+      "expected_host_token": "arxiv.org"
+    },
+    {
+      "site_id": "python_docs",
+      "name": "Python Docs",
+      "url": "https://docs.python.org/3/",
+      "expected_host_token": "docs.python.org"
+    },
+    {
+      "site_id": "mdn",
+      "name": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/en-US/",
+      "expected_host_token": "developer.mozilla.org"
+    }
+  ],
+  "required_tasks": [
+    {
+      "task_id": "BATCH-001",
+      "family": "navigation_discovery",
+      "name": "navigate_home"
+    },
+    {
+      "task_id": "BATCH-002",
+      "family": "semantic_extraction",
+      "name": "probe_home_structure"
+    },
+    {
+      "task_id": "BATCH-003",
+      "family": "cross_page_transition",
+      "name": "follow_internal_link_1"
+    },
+    {
+      "task_id": "BATCH-004",
+      "family": "semantic_extraction",
+      "name": "probe_destination_1"
+    },
+    {
+      "task_id": "BATCH-005",
+      "family": "recovery_back_navigation",
+      "name": "back_to_home"
+    },
+    {
+      "task_id": "BATCH-006",
+      "family": "cross_page_transition",
+      "name": "follow_internal_link_2"
+    },
+    {
+      "task_id": "BATCH-007",
+      "family": "semantic_extraction",
+      "name": "probe_destination_2"
+    }
+  ],
+  "metrics": {
+    "first_pass_success_rate": {
+      "target": 0.65
+    },
+    "stabilized_success_rate": {
+      "target": 0.8
+    },
+    "recovery_rate": {
+      "target": 0.4
+    }
+  },
+  "required_artifacts": [
+    "trace.jsonl",
+    "manifest.json",
+    "diagnostic.txt",
+    "blind batch summary json",
+    "per-task module artifacts",
+    "transfer curve series"
+  ]
+}

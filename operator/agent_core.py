@@ -18,6 +18,7 @@ import logging
 from pydantic import BaseModel, Field
 from google import genai
 from google.genai import types
+from window_capture import get_frontmost_application_name as get_visible_frontmost_application_name
 
 # #region agent log
 def _trace(loc: str, msg: str, data: dict | None = None):
@@ -62,7 +63,12 @@ def _exec_log(event: str, detail: str | None = None, data: dict | None = None):
 
 try:
     import Quartz
-    from AppKit import NSWorkspace, NSScreen, NSApplicationActivateIgnoringOtherApps
+    from AppKit import (
+        NSWorkspace,
+        NSScreen,
+        NSApplicationActivateAllWindows,
+        NSApplicationActivateIgnoringOtherApps,
+    )
     from Cocoa import NSRunningApplication
 except ImportError:
     raise ImportError(
@@ -70,6 +76,28 @@ except ImportError:
     )
 
 logger = logging.getLogger(__name__)
+
+
+def pixel_to_global_from_capture(
+    pixel_x: float,
+    pixel_y: float,
+    *,
+    scale_factor: float,
+    screen_origin: tuple[float, float] = (0.0, 0.0),
+    capture_origin: tuple[float, float] | None = None,
+) -> tuple[float, float]:
+    """Convert screenshot-local pixels into global logical coordinates.
+
+    When the screenshot is a full-display capture, ``capture_origin`` is
+    omitted and the pixel origin is the primary-screen origin. When the
+    screenshot is a front-window capture, ``capture_origin`` must be the
+    window's logical top-left so the posted HID event lands on the same
+    visual surface the screenshot came from.
+    """
+    logical_x = pixel_x / scale_factor
+    logical_y = pixel_y / scale_factor
+    origin_x, origin_y = capture_origin if capture_origin is not None else screen_origin
+    return (origin_x + logical_x, origin_y + logical_y)
 
 
 class TargetExtraction(BaseModel):
@@ -222,9 +250,12 @@ class MacOSAgentCore:
         )
 
     def get_frontmost_application_name(self) -> str:
-        """Return the localized name of the frontmost application (for debugging focus)."""
-        front = self.workspace.frontmostApplication()
-        return (front.localizedName() or "Unknown") if front else "Unknown"
+        """Return the best visible frontmost-app signal available."""
+        front = get_visible_frontmost_application_name()
+        if front:
+            return front
+        workspace_front = self.workspace.frontmostApplication()
+        return (workspace_front.localizedName() or "Unknown") if workspace_front else "Unknown"
 
     def enforce_app_focus(
         self,
@@ -245,7 +276,8 @@ class MacOSAgentCore:
             try:
                 name = app.localizedName() or ""
                 if app_name_lower in name.lower():
-                    if app.activateWithOptions_(NSApplicationActivateIgnoringOtherApps):
+                    flags = NSApplicationActivateIgnoringOtherApps | NSApplicationActivateAllWindows
+                    if app.activateWithOptions_(flags):
                         activated = True
                         break
             except Exception:
@@ -255,21 +287,18 @@ class MacOSAgentCore:
 
         start_time = time.time()
         while (time.time() - start_time) < timeout_seconds:
-            active_app: NSRunningApplication | None = self.workspace.frontmostApplication()
-
-            if active_app and active_app.localizedName():
-                if app_name.lower() in active_app.localizedName().lower():
-                    logger.info("State Verified: '%s' is frontmost.", app_name)
-                    # #region agent log
-                    _debug_log("agent_core.py:enforce_app_focus", "focus_verified", {"requested": app_name, "frontmost_exact": active_app.localizedName()}, ["H2", "H4"])
-                    # #endregion
-                    time.sleep(0.55)  # macOS: let window server finish focus handoff before posting input (H2)
-                    return True
+            current = self.get_frontmost_application_name()
+            if current and app_name.lower() in current.lower():
+                logger.info("State Verified: '%s' is frontmost.", app_name)
+                # #region agent log
+                _debug_log("agent_core.py:enforce_app_focus", "focus_verified", {"requested": app_name, "frontmost_exact": current}, ["H2", "H4"])
+                # #endregion
+                time.sleep(0.55)  # macOS: let window server finish focus handoff before posting input (H2)
+                return True
 
             time.sleep(poll_interval)
 
-        front = self.workspace.frontmostApplication()
-        current = front.localizedName() if front else "Unknown"
+        current = self.get_frontmost_application_name()
         raise RuntimeError(
             f"State Failure: Expected '{app_name}', but '{current}' is active. Halting."
         )
@@ -637,7 +666,11 @@ Return a list of objects in the "dots" array, each with keys: color, x, y. Use t
             )
 
     def _pixel_to_global_quartz(
-        self, pixel_x: float, pixel_y: float
+        self,
+        pixel_x: float,
+        pixel_y: float,
+        *,
+        capture_origin: tuple[float, float] | None = None,
     ) -> tuple[float, float]:
         """
         Convert screenshot pixels to Quartz global coordinates.
@@ -648,21 +681,30 @@ Return a list of objects in the "dots" array, each with keys: color, x, y. Use t
             raise RuntimeError("No primary screen available")
         scale_factor = primary_screen.backingScaleFactor()
         screen_frame = primary_screen.frame()
-        logical_x = pixel_x / scale_factor
-        logical_y = pixel_y / scale_factor
-        global_x = screen_frame.origin.x + logical_x
-        global_y = screen_frame.origin.y + logical_y
-        return (global_x, global_y)
+        return pixel_to_global_from_capture(
+            pixel_x,
+            pixel_y,
+            scale_factor=scale_factor,
+            screen_origin=(screen_frame.origin.x, screen_frame.origin.y),
+            capture_origin=capture_origin,
+        )
 
     def execute_global_click(
-        self, local_pixel_x: int, local_pixel_y: int, app_focus: str | None = "Safari"
+        self,
+        local_pixel_x: int,
+        local_pixel_y: int,
+        app_focus: str | None = "Safari",
+        *,
+        capture_origin: tuple[float, float] | None = None,
     ) -> None:
         """
         Translates raw image pixels into global CoreGraphics coordinates and posts a click.
         JIT focus: coords and logging before enforce_app_focus; zero work between lock and post.
         """
         final_global_x, final_global_y = self._pixel_to_global_quartz(
-            float(local_pixel_x), float(local_pixel_y)
+            float(local_pixel_x),
+            float(local_pixel_y),
+            capture_origin=capture_origin,
         )
         logger.info(
             "Firing Quartz Native Click at Global [X:%s, Y:%s]",
@@ -695,14 +737,21 @@ Return a list of objects in the "dots" array, each with keys: color, x, y. Use t
             raise
 
     def execute_move_mouse(
-        self, local_pixel_x: int, local_pixel_y: int, app_focus: str | None = "Safari"
+        self,
+        local_pixel_x: int,
+        local_pixel_y: int,
+        app_focus: str | None = "Safari",
+        *,
+        capture_origin: tuple[float, float] | None = None,
     ) -> None:
         """
         Move the cursor to the given pixel coordinates without clicking.
         JIT focus: coords and logging before enforce_app_focus; then post move-only event.
         """
         final_global_x, final_global_y = self._pixel_to_global_quartz(
-            float(local_pixel_x), float(local_pixel_y)
+            float(local_pixel_x),
+            float(local_pixel_y),
+            capture_origin=capture_origin,
         )
         logger.info(
             "Moving mouse to Global [X:%s, Y:%s] (no click)",
@@ -736,30 +785,49 @@ Return a list of objects in the "dots" array, each with keys: color, x, y. Use t
         "G": 5, "g": 5,     # kVK_ANSI_G (Background color)
         "[": 33, "]": 30,   # Brush size shortcuts in apps that support them
         "0": 29, "1": 18, "2": 19, "3": 20, "4": 21, "5": 23, "6": 22, "7": 26, "8": 28, "9": 25,
-        "V": 9, "R": 15, "O": 31, "A": 0, "L": 37, "T": 17, "I": 34,
+        "V": 9, "v": 9, "R": 15, "O": 31, "A": 0, "a": 0, "L": 37, "T": 17, "I": 34,
     }
 
-    def execute_keystroke(self, key: int | str, app_focus: str | None = "Safari") -> None:
+    _MODIFIER_FLAGS: dict[str, int] = {
+        "cmd": getattr(Quartz, "kCGEventFlagMaskCommand", 0x100000),
+        "control": getattr(Quartz, "kCGEventFlagMaskControl", 0x40000),
+        "shift": getattr(Quartz, "kCGEventFlagMaskShift", 0x20000),
+        "alt": getattr(Quartz, "kCGEventFlagMaskAlternate", 0x80000),
+        "option": getattr(Quartz, "kCGEventFlagMaskAlternate", 0x80000),
+    }
+
+    def execute_keystroke(
+        self,
+        key: int | str,
+        app_focus: str | None = "Safari",
+        modifiers: list[str] | None = None,
+    ) -> None:
         """
         Synthesizes a native macOS keyboard event using Quartz.
-        Sends key with NO modifier (so 'P' -> keycode 35 without Shift = lowercase p).
+        Sends key with optional modifiers (e.g. modifiers=["cmd"] for Cmd+key).
         JIT focus: all prep (keycode, logging) before enforce_app_focus; zero work between lock and post.
         """
         # #region agent log
-        _trace("agent_core.py:execute_keystroke", "entry", {"key": str(key), "app_focus": app_focus})
+        _trace("agent_core.py:execute_keystroke", "entry", {"key": str(key), "app_focus": app_focus, "modifiers": modifiers})
         # #endregion
         keycode = int(key) if isinstance(key, int) else self._KEYCHAR_TO_KEYCODE.get(str(key), 35)
-        logger.info("Preparing Quartz keystroke (keycode=%s)...", keycode)
-        _debug_log("agent_core.py:execute_keystroke", "before_post_keystroke", {"key": str(key), "keycode": keycode}, ["H1", "H2", "H5"])
-        _exec_log("keystroke_prep", None, {"key": str(key), "keycode": keycode})
+        flags = 0
+        if modifiers:
+            for m in modifiers:
+                m_lower = (m or "").strip().lower()
+                if m_lower in self._MODIFIER_FLAGS:
+                    flags |= self._MODIFIER_FLAGS[m_lower]
+        logger.info("Preparing Quartz keystroke (keycode=%s, modifiers=%s)...", keycode, modifiers)
+        _debug_log("agent_core.py:execute_keystroke", "before_post_keystroke", {"key": str(key), "keycode": keycode, "flags": flags}, ["H1", "H2", "H5"])
+        _exec_log("keystroke_prep", None, {"key": str(key), "keycode": keycode, "modifiers": modifiers})
         if app_focus:
             self.enforce_app_focus(app_focus, timeout_seconds=2.0, poll_interval=0.05)
         try:
             _exec_log("keystroke_post", "key_down")
             event_down = Quartz.CGEventCreateKeyboardEvent(None, keycode, True)
             event_up = Quartz.CGEventCreateKeyboardEvent(None, keycode, False)
-            Quartz.CGEventSetFlags(event_down, 0)
-            Quartz.CGEventSetFlags(event_up, 0)
+            Quartz.CGEventSetFlags(event_down, flags)
+            Quartz.CGEventSetFlags(event_up, flags)
             Quartz.CGEventPost(Quartz.kCGHIDEventTap, event_down)
             time.sleep(0.05)
             Quartz.CGEventPost(Quartz.kCGHIDEventTap, event_up)
@@ -804,6 +872,7 @@ Return a list of objects in the "dots" array, each with keys: color, x, y. Use t
         center_y: int,
         app_focus: str | None = "Safari",
         drag_delay: float = 0.02,
+        capture_origin: tuple[float, float] | None = None,
     ) -> None:
         """
         Executes a native click-and-drag drawing motion using Quartz.
@@ -815,7 +884,11 @@ Return a list of objects in the "dots" array, each with keys: color, x, y. Use t
             return
         global_points: list[tuple[float, float]] = []
         for px, py in path_coordinates:
-            gx, gy = self._pixel_to_global_quartz(float(center_x + px), float(center_y + py))
+            gx, gy = self._pixel_to_global_quartz(
+                float(center_x + px),
+                float(center_y + py),
+                capture_origin=capture_origin,
+            )
             global_points.append((gx, gy))
         start_x, start_y = global_points[0]
         logger.info(
@@ -866,6 +939,7 @@ Return a list of objects in the "dots" array, each with keys: color, x, y. Use t
         modifier: str = "shift",
         app_focus: str | None = "Safari",
         drag_delay: float = 0.02,
+        capture_origin: tuple[float, float] | None = None,
     ) -> None:
         """Execute a drag path while holding a keyboard modifier.
 
@@ -888,12 +962,17 @@ Return a list of objects in the "dots" array, each with keys: color, x, y. Use t
                 center_y,
                 app_focus=app_focus,
                 drag_delay=drag_delay,
+                capture_origin=capture_origin,
             )
             return
 
         global_points: list[tuple[float, float]] = []
         for px, py in path_coordinates:
-            gx, gy = self._pixel_to_global_quartz(float(center_x + px), float(center_y + py))
+            gx, gy = self._pixel_to_global_quartz(
+                float(center_x + px),
+                float(center_y + py),
+                capture_origin=capture_origin,
+            )
             global_points.append((gx, gy))
 
         if app_focus:
@@ -954,6 +1033,7 @@ Return a list of objects in the "dots" array, each with keys: color, x, y. Use t
         center_y: int,
         app_focus: str | None = "Safari",
         drag_delay: float = 0.02,
+        capture_origin: tuple[float, float] | None = None,
     ) -> None:
         """
         Draws a polygon by releasing the mouse at every corner (one segment per edge).
@@ -967,7 +1047,11 @@ Return a list of objects in the "dots" array, each with keys: color, x, y. Use t
             return
         global_points: list[tuple[float, float]] = []
         for px, py in path_coordinates:
-            gx, gy = self._pixel_to_global_quartz(float(center_x + px), float(center_y + py))
+            gx, gy = self._pixel_to_global_quartz(
+                float(center_x + px),
+                float(center_y + py),
+                capture_origin=capture_origin,
+            )
             global_points.append((gx, gy))
         n = len(global_points)
         logger.info(

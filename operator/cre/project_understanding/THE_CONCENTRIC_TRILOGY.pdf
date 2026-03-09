@@ -1,0 +1,846 @@
+%PDF-1.4
+%����
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 26 0 R 28 0 R 30 0 R 32 0 R 34 0 R 36 0 R 38 0 R 40 0 R 42 0 R 44 0 R 46 0 R 48 0 R 50 0 R 52 0 R 54 0 R 56 0 R 58 0 R] /Count 27 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 985 >>
+stream
+BT /F2 20 Tf 1 0 0 1 54 699 Tm (The Concentric Trilogy) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 643 Tm (Preface) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 609 Tm (This document is a narrative rendering of the Concentric Study codebase. It is) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 594 Tm (intentionally written as a civic saga, using the metaphor of a city-state founded) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 579 Tm (by Christian, but it remains anchored to the real architecture and real changes in) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 564 Tm (the repository.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 530 Tm (Nothing in this trilogy should be read as a claim that events happened in history) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 515 Tm (beyond what is present in the code and documentation. The metaphor exists to make) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 500 Tm (the system legible. The underlying institutions are the actual subsystems of the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 485 Tm (project.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 1 of 27) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 50 >>
+stream
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 2 of 27) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 2024 >>
+stream
+BT /F2 20 Tf 1 0 0 1 54 699 Tm (Book I: The City on the Peninsula) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 643 Tm (Chapter 1: The Founder at the Edge) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 609 Tm (Before Concentric had ministries, archives, laws, or inspectors, it had a problem.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 575 Tm (Christian stood at the edge of a dangerous peninsula between human intention and) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 560 Tm (machine action. On one side stood the desires of a person using a computer:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 526 Tm (• go there) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 494 Tm (• click that) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 462 Tm (• draw this) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 430 Tm (• finish the task) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 398 Tm (• prove that it worked) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 366 Tm (On the other side stood the foreign territories of the modern graphical world:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 332 Tm (• browser tabs that shift without warning) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 300 Tm (• dialogs that appear only when they wish) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 268 Tm (• inaccessible controls hidden from naive automation) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 236 Tm (• drawing surfaces that demand geometry rather than forms) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 204 Tm (• pages whose visible surface and semantic structure do not fully agree) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 172 Tm (Most builders who face this peninsula decide to train a raiding party. They build a) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 157 Tm (script, a bot, a narrow workflow, a small automatic hand that can reach into one) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 142 Tm (territory and do one thing well.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 108 Tm (Christian chose a harder ambition. He did not want a raiding party. He wanted a) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 93 Tm (government.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 59 Tm (He wanted a state capable of sending an envoy into foreign lands, gathering) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 3 of 27) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 2422 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (evidence, surviving confusion, recovering from mistakes, learning from prior) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 708 Tm (missions, and knowing when success was real.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 674 Tm (That is how Concentric began.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 640 Tm (It did not begin as a single machine.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 606 Tm (It began as a city.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 554 Tm (Chapter 2: The First Walls) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 520 Tm (At first the city was an emergency settlement, then a fortified town, then a) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 505 Tm (capital in the making.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 471 Tm (Christian erected an Executive Office capable of taking a task and deciding how the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 456 Tm (city should respond. This office later came to live in operator/agent.py, but in) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 441 Tm (the life of the city it was known first by function, not filename. It was the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 426 Tm (chamber in which missions were recognized, classified, and dispatched.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 392 Tm (He then built surveyors, because no city can govern territory it cannot see. These) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 377 Tm (surveyors would later become the visual grounding engine, the accessibility engine,) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 362 Tm (the unified element map, and the window capture path. One looked at what the eye) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 347 Tm (could see. Another listened for what the system could semantically disclose.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 332 Tm (Another fused both into a map usable by policy and action.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 298 Tm (He built ministries of action, because law without hands is vanity. These) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 283 Tm (ministries would later be known as the action handlers, the agent core, and the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 268 Tm (recovery loop. They would take abstract intentions and turn them into gestures:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 234 Tm (• clicks) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 202 Tm (• drags) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 170 Tm (• keypresses) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 138 Tm (• path drawing) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 106 Tm (• palette changes) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 74 Tm (• tool changes) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 4 of 27) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 2598 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (• site-specific maneuvers) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 691 Tm (He built archives, because a state that acts without memory becomes a series of) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 676 Tm (disconnected accidents. These archives would become the trace writer, manifests,) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 661 Tm (diagnostic readers, benchmark evaluators, and the growing run corpus under) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 646 Tm (operator/cre/runs.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 612 Tm (He built an inspectorate, because motion alone is not victory. A mission can move) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 597 Tm (and still fail. A run can finish and still not satisfy the task.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 563 Tm (He built learning institutions, because a republic that never remembers must keep) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 548 Tm (paying tuition to failure.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 514 Tm (The result was not a script.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 480 Tm (It was a young state.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 428 Tm (Chapter 3: The Ministries of the Early Republic) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 394 Tm (As the city grew, its institutions acquired identities.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 360 Tm (The Executive Office became the place where a mission entered official life. If a) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 345 Tm (task involved a URL, a browser, a drawing surface, a verification requirement, or a) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 330 Tm (need for research, this office decided which parts of the city must be mobilized.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 296 Tm (The Legislature emerged in the action space. It was the place where public powers) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 281 Tm (were named. A state action is not real merely because a hand can do it. It becomes) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 266 Tm (politically meaningful when it is entered into the official code: the city says,) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 251 Tm ("this is a kind of thing we know how to ask for.") Tj ET
+BT /F1 11 Tf 1 0 0 1 54 217 Tm (The Planning Ministry emerged in the research agent. That ministry did not directly) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 202 Tm (move the world. Instead it studied:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 168 Tm (• what the task really was) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 136 Tm (• how similar tasks are commonly achieved) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 104 Tm (• what tools the target site appears to offer) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 72 Tm (• which path from desire to execution looks plausible) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 5 of 27) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 2777 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (The Survey Office emerged in the perception stack. This office tried to answer the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 708 Tm (oldest question in governance:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 674 Tm (What is actually there?) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 640 Tm (The Ministry of Interior and Public Works emerged in the action handlers. This was) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 625 Tm (the street-level bureaucracy of the republic. When the lawbook said "set the stroke) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 610 Tm (color," "draw a path," or "go back," it was this ministry that had to turn statute) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 595 Tm (into municipal force.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 561 Tm (The Emergency Authority emerged in recovery. That office existed because the city) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 546 Tm (was dealing with foreign territory, not sovereign land. Buttons moved. Elements) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 531 Tm (disappeared. Predictions failed. Assertions broke. The republic needed an agency) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 516 Tm (that specialized in "what now?") Tj ET
+BT /F1 11 Tf 1 0 0 1 54 482 Tm (The Ministry of Records emerged in tracing. It became the black box recorder, civil) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 467 Tm (registry, and official memory of the state.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 433 Tm (The Inspector General and the Supreme Inspectorate emerged later and more fully,) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 418 Tm (but their seeds were present from the start: no act should be beyond postmortem,) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 403 Tm (and no success claim should be immune from final review.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 369 Tm (Around all of this grew the university quarter, the proving grounds, and the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 354 Tm (archives under operator/cre. It held not only code, but field notes, studies,) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 339 Tm (results, research agendas, and evidence artifacts. Concentric was already becoming) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 324 Tm (more than a runtime. It was becoming a research republic.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 272 Tm (Chapter 4: The Great Strength of the Young City) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 238 Tm (The early city was not weak. Its problem was never lack of ingenuity.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 204 Tm (It had real strengths:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 170 Tm (• hybrid perception rather than naive pure-vision action) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 138 Tm (• OS-level control rather than brittle DOM-only assumptions) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 106 Tm (• tracing rather than blind execution) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 74 Tm (• recovery rather than single-shot failure) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 6 of 27) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 2441 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (• verification impulses rather than triumphalist self-reporting) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 691 Tm (• memory and trust machinery rather than permanent amnesia) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 659 Tm (These strengths matter because they explain why the city survived long enough to) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 644 Tm (reach constitutional questions.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 610 Tm (A weak city dies before it can ask deeper questions about legitimacy.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 576 Tm (A merely decorative research system never has to confront the difference between a) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 561 Tm (successful run and a trustworthy judgment, because it cannot do enough for the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 546 Tm (distinction to matter.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 512 Tm (Concentric did enough.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 478 Tm (That is why its problems became interesting.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 426 Tm (Chapter 5: The Founder's First Illusion) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 392 Tm (For a time, the city lived under a useful illusion:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 358 Tm (If the institutions existed, they were sufficiently aligned.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 324 Tm (This illusion is common among founders. It arises because building a capable state) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 309 Tm (is already difficult, and early progress is intoxicating. Tasks are completed.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 294 Tm (Screens are analyzed. Tools are selected. The envoy appears to move intelligently) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 279 Tm (through foreign lands. The archives grow. Recovery works just often enough to) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 264 Tm (inspire confidence.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 230 Tm (But institutional existence is not constitutional coherence.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 196 Tm (The lawbook may say one thing while the ministries can only partially enact it.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 162 Tm (The archive may record one kind of truth while the inspector implies another.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 128 Tm (The planner may propose a contingency that the city cannot truly execute.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 94 Tm (The judge may speak with authority long before the republic has earned the right to) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 79 Tm (trust that authority.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 7 of 27) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 2282 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (This was the city's first great lesson:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 689 Tm (capacity is not yet constitution.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 637 Tm (Chapter 6: The Broken Unity of Truth) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 603 Tm (Even before the later reforms, the founders of the city could sense a tension) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 588 Tm (between what action felt like and what success actually meant.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 554 Tm (One office might say the mission completed because steps were taken and the run) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 539 Tm (ended.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 505 Tm (Another might imply rejection because the final result did not satisfy the task.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 471 Tm (A third might show failures among substeps without clarifying whether those) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 456 Tm (failures were fatal, incidental, or part of a larger successful mission.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 422 Tm (This tension was not a bug of string formatting. It was a political fracture in the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 407 Tm (republic's truth system.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 373 Tm (A state cannot mature while three ministries speak three partial truths about one) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 358 Tm (mission.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 324 Tm (At this stage, that fracture had not yet been repaired. But the crack was there,) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 309 Tm (waiting.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 257 Tm (Chapter 7: The Judge Above the Streets) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 223 Tm (There is always one office in a republic that becomes more important than the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 208 Tm (citizen first realizes.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 174 Tm (In Concentric, that office was not the Executive.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 140 Tm (It was the final judge.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 106 Tm (This office would later be more fully formalized in the verification gate, but its) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 91 Tm (role existed as a constitutional intuition from the beginning:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 57 Tm (someone must stand after the dust settles and ask whether the city's claim of) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 8 of 27) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 19 0 R >>
+endobj
+21 0 obj
+<< /Length 2279 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (success should be believed.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 689 Tm (That office was dangerous precisely because it was necessary. Without it, the city) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 674 Tm (would drift into self-congratulation. With it, the city gained a stern conscience.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 659 Tm (But a conscience can still be wrong. A judge can still overrule correctly executed) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 644 Tm (missions or bless failures by mistake.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 610 Tm (The young city did not yet have the machinery to test its judge.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 576 Tm (That problem too was waiting.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 524 Tm (Chapter 8: The University District) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 490 Tm (Not every institution in the city acted directly.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 456 Tm (Some studied.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 422 Tm (Some wrote.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 388 Tm (Some compared, classified, and reconstructed.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 354 Tm (The university district of Concentric, represented by the research and project-) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 339 Tm (understanding materials, grew because Christian was not content to let the city) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 324 Tm (merely function. He wanted it to understand itself.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 290 Tm (That desire matters.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 256 Tm (Many powerful systems fail because they never become legible to themselves. They) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 241 Tm (produce acts but not theories. They accumulate code but not self-description. They) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 226 Tm (generate outcomes but not governable understanding.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 192 Tm (The university district changed that. It prepared the city for a later moment when) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 177 Tm (it would ask not just "What can we do?" but "What kind of republic are we) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 162 Tm (becoming?") Tj ET
+BT /F2 16 Tf 1 0 0 1 54 110 Tm (Chapter 9: The Peninsula Becomes a State) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 76 Tm (By the end of its first era, Concentric was already something rare.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 9 of 27) Tj ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 21 0 R >>
+endobj
+23 0 obj
+<< /Length 1904 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (It was not a single automation script. It was not merely a benchmark harness. It) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 708 Tm (was not just a bag of experiments.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 674 Tm (It was a layered state for embodied web action on macOS.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 640 Tm (It had a center of executive command, a lawbook, perception agencies, operational) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 625 Tm (ministries, recovery services, inspection machinery, archives, memory, and research) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 610 Tm (institutions.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 576 Tm (What it lacked was not substance.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 542 Tm (What it lacked was formal alignment.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 508 Tm (That absence would define the next age.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 456 Tm (Chapter 10: The Founder Looks Back) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 422 Tm (If Christian had stopped here, Concentric would still have been impressive. It) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 407 Tm (would have been the work of a builder with unusual range and unusual patience. It) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 392 Tm (would have acted in the world, learned from its runs, and left behind a visible) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 377 Tm (body of evidence.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 343 Tm (But if he had stopped here, the city would have remained what many strong systems) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 328 Tm (remain forever:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 294 Tm (a gifted frontier government with partial constitutional order.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 260 Tm (He did not stop.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 226 Tm (He asked the more dangerous question:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 192 Tm (What, exactly, is this city?) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 158 Tm (That question opened Book II.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 10 of 27) Tj ET
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 23 0 R >>
+endobj
+25 0 obj
+<< /Length 51 >>
+stream
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 11 of 27) Tj ET
+endstream
+endobj
+26 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 25 0 R >>
+endobj
+27 0 obj
+<< /Length 1894 >>
+stream
+BT /F2 20 Tf 1 0 0 1 54 699 Tm (Book II: The Constitutional Republic of Concentric) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 643 Tm (Chapter 1: The Great Census) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 609 Tm (Every serious republic eventually undertakes a census.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 575 Tm (Not merely of people, but of powers, districts, obligations, roads, and) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 560 Tm (institutions.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 526 Tm (Christian's Great Census was the act of forcing the city to describe itself in) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 511 Tm (architecture, subsystems, quality concerns, dependencies, and evidence paths. The) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 496 Tm (city stopped being only a lived experience for its founder and became something) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 481 Tm (documented, reconstructable, and debatable.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 447 Tm (This census produced not just notes but a constitutional literature:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 413 Tm (• architecture briefs) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 381 Tm (• next-step memoranda) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 349 Tm (• subsystem accounts) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 317 Tm (• scenario-based evaluations) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 285 Tm (• outcome-semantics analysis) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 253 Tm (• verification-calibration planning) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 221 Tm (In the life of the republic, this was the transition from custom to charter.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 187 Tm (The city now had a theory of itself.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 135 Tm (Chapter 2: The Discovery of Legal Drift) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 101 Tm (The census revealed the republic's first great constitutional defect.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 67 Tm (The lawbook and the streets were not perfectly aligned.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 12 of 27) Tj ET
+endstream
+endobj
+28 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 27 0 R >>
+endobj
+29 0 obj
+<< /Length 2550 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 708 Tm (The action space could present powers that the live dispatch machinery did not) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 693 Tm (fully realize. In other words, the public law of the republic claimed certain kinds) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 678 Tm (of action more broadly than the municipalities could reliably carry out.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 644 Tm (This was not a cosmetic concern.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 610 Tm (A republic that promises powers it cannot operationally dispatch invites a deeper) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 595 Tm (form of failure than a simple bug. It confuses policy with capacity. Its planners) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 580 Tm (can become eloquent in a language the bureaucracy cannot truly speak.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 546 Tm (Christian recognized the danger. The city needed not just more handlers or more) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 531 Tm (actions. It needed a more honest constitution.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 479 Tm (Chapter 3: The Public Law Is Narrowed) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 445 Tm (The decisive reform began in the lawbook.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 411 Tm (The republic introduced a distinction between actions that exist in the code and) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 396 Tm (actions that are publicly visible to the planner by default. This is one of the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 381 Tm (most important constitutional ideas in Concentric's history.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 347 Tm (Not every power the state knows about should automatically become ordinary planning) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 332 Tm (law.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 298 Tm (Some powers are historical. Some are guarded. Some are special procedures. Some are) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 283 Tm (compatibility layers.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 249 Tm (Only some belong in the planner-visible public code.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 215 Tm (This reform changed the character of the lawbook. It was no longer merely a) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 200 Tm (catalog. It became a filtered constitution for planning.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 166 Tm (Then came conformance reporting: the state gained the ability to ask, in mechanical) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 151 Tm (terms, whether the public powers exposed to planners actually map to live) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 136 Tm (ministries.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 102 Tm (This was the beginning of legal honesty.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 13 of 27) Tj ET
+endstream
+endobj
+30 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 29 0 R >>
+endobj
+31 0 obj
+<< /Length 2152 >>
+stream
+BT /F2 16 Tf 1 0 0 1 54 715 Tm (Chapter 4: The Streets Are Brought Into Line) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 681 Tm (A constitution that narrows the law without improving administration is only half) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 666 Tm (brave.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 632 Tm (Christian did the harder thing.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 598 Tm (He not only filtered the lawbook; he aligned the ministries.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 564 Tm (The street bureaucracy gained or regularized live support for actions that needed) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 549 Tm (to be real rather than merely declared:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 515 Tm (• type_text) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 483 Tm (• scroll) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 451 Tm (• screenshot) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 419 Tm (• a11y_snapshot) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 387 Tm (• go_back) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 355 Tm (• semantic draw_shape) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 323 Tm (• BMW-era compatibility actions) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 291 Tm (This is where one of the republic's most elegant civic acts occurred.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 257 Tm (draw_shape ceased to be an abstract legal expression and became a true municipal) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 242 Tm (procedure. The city could now speak in higher-level geometric concepts while still) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 227 Tm (grounding them in the concrete labor of tool selection, drag geometry, and) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 212 Tm (execution semantics.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 178 Tm (Older district names and compatibility paths were not simply erased. They were) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 163 Tm (federated into the new order. That mattered because republics do not become stable) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 148 Tm (by pretending their history never happened. They become stable by giving historical) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 133 Tm (names a lawful route into current governance.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 81 Tm (Chapter 5: The Constitution Learns to Fear Imaginary Escape Routes) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 14 of 27) Tj ET
+endstream
+endobj
+32 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 31 0 R >>
+endobj
+33 0 obj
+<< /Length 2632 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (The next problem was more subtle.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 689 Tm (The planner might propose a primary action that was valid, but rely on a fallback) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 674 Tm (action that the state could not truly execute.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 640 Tm (This is the kind of defect that flatters a republic while weakening it. The plan) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 625 Tm (looks robust because it contains contingencies. But the contingencies are) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 610 Tm (decorative if they rely on imaginary powers.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 576 Tm (So the city hardened its planning gate.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 542 Tm (Primary actions would be checked. Fallback actions would also be checked.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 508 Tm (With this reform, the state declared that emergency doctrine must obey the same) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 493 Tm (constitutional seriousness as ordinary planning. There would be no more pretend) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 478 Tm (reserve armies in the planning bureau.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 426 Tm (Chapter 6: The Secret Tunnels Are Sealed) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 392 Tm (Every old city has tunnels.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 358 Tm (Some were dug in haste. Some were clever once. Some exist because founders prefer) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 343 Tm (progress to ceremony.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 309 Tm (But a republic that wishes to survive refactoring cannot live forever on private) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 294 Tm (tunnels between ministries.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 260 Tm (In Concentric, certain dependencies crossed institutional lines too directly. Some) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 245 Tm (offices knew too much about lower layers. Some services reached down into) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 230 Tm (neighboring machinery through private assumptions instead of formal interfaces.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 196 Tm (Christian closed those tunnels.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 162 Tm (The action ministries stopped directly depending on lower perception machinery and) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 147 Tm (began receiving a lawful liaison instead.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 113 Tm (The executive capital became the proper site of injection.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 79 Tm (The planning ministry stopped presuming direct ownership of the action code and) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 64 Tm (instead received planner-visible legal vocabulary through the executive path.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 15 of 27) Tj ET
+endstream
+endobj
+34 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 33 0 R >>
+endobj
+35 0 obj
+<< /Length 2114 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 708 Tm (In software terms this was dependency repair.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 674 Tm (In constitutional terms it was the restoration of public institutions over private) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 659 Tm (corridors.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 607 Tm (Chapter 7: The Constitutional Court of Conformance) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 573 Tm (No amendment matters if no court can enforce it.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 539 Tm (So the republic established a court of conformance in tests. This court could ask:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 505 Tm (• Are planner-visible actions truly dispatchable?) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 473 Tm (• Are hidden actions still hidden?) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 441 Tm (• Are fallback mappings lawful?) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 409 Tm (• Do semantic wrappers still route through the live order?) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 377 Tm (With this court, the republic crossed a threshold from documented intention to) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 362 Tm (enforceable settlement.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 328 Tm (This is the moment when drift became not merely regrettable, but actionable.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 276 Tm (Chapter 8: The Night of the Three Ledgers) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 242 Tm (Once the law and the streets were brought closer into alignment, the city was ready) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 227 Tm (to confront its second great constitutional fracture.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 193 Tm (It had more than one official truth about outcome.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 159 Tm (One ledger emphasized execution. Another implied a manifest-level result. Another) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 144 Tm (reflected final verification.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 110 Tm (Yet another hinted through failed steps without clearly expressing whether the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 95 Tm (mission as a whole stood accepted or rejected.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 61 Tm (This was a sovereignty problem inside the archive.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 16 of 27) Tj ET
+endstream
+endobj
+36 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 35 0 R >>
+endobj
+37 0 obj
+<< /Length 1774 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 708 Tm (So the Ministry of Records was reformed.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 674 Tm (The republic introduced a normalized outcome semantics block separating:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 640 Tm (• task result) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 608 Tm (• execution result) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 576 Tm (• acceptance basis) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 544 Tm (• final verification) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 512 Tm (• step outcomes) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 480 Tm (• consistency conditions) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 448 Tm (This changed the ontology of civic truth.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 414 Tm (After the reform, the city could distinguish:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 380 Tm (• a mission that executed and was accepted) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 348 Tm (• a mission that executed but was rejected by final verification) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 316 Tm (• a mission whose execution failed before final judgment) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 284 Tm (• a mission that succeeded overall while still carrying non-fatal procedural) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 252 Tm (blemishes) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 218 Tm (The archive stopped being a set of overlapping ledgers and became a sovereign) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 203 Tm (registry.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 151 Tm (Chapter 9: The Auditors Learn the New Language) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 117 Tm (Reforming the archive alone is not enough. The offices that consume public truth) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 102 Tm (must obey the new settlement.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 68 Tm (So the Inspector General learned to read normalized outcome semantics.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 17 of 27) Tj ET
+endstream
+endobj
+38 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 37 0 R >>
+endobj
+39 0 obj
+<< /Length 1839 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 708 Tm (The benchmark treasury learned to score success according to normalized task result) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 693 Tm (rather than naïve surface outcome.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 659 Tm (This was a crucial difference. The republic's statistics office now spoke the same) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 644 Tm (constitutional language as the archive itself. Evaluation became more trustworthy) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 629 Tm (because it ceased relying on muddled inherited shorthand.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 577 Tm (Chapter 10: The Republic Becomes More Than Capable) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 543 Tm (By the end of these reforms, Concentric had become a different kind of state.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 509 Tm (Before, it was a high-capacity frontier government:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 475 Tm (• inventive) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 443 Tm (• strong) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 411 Tm (• layered) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 379 Tm (• experimentally rich) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 347 Tm (• partially improvised) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 315 Tm (After, it was becoming a constitutional republic of autonomous action:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 281 Tm (• more truthful in its lawbook) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 249 Tm (• more aligned in its ministries) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 217 Tm (• more disciplined in its dependency boundaries) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 185 Tm (• more coherent in its archive) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 153 Tm (• more enforceable in its conformance) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 121 Tm (Yet one final question remained above all the others.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 87 Tm (Could the republic trust its highest judge?) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 18 of 27) Tj ET
+endstream
+endobj
+40 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 39 0 R >>
+endobj
+41 0 obj
+<< /Length 121 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (That question opened Book III.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 19 of 27) Tj ET
+endstream
+endobj
+42 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 41 0 R >>
+endobj
+43 0 obj
+<< /Length 51 >>
+stream
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 20 of 27) Tj ET
+endstream
+endobj
+44 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 43 0 R >>
+endobj
+45 0 obj
+<< /Length 2217 >>
+stream
+BT /F2 20 Tf 1 0 0 1 54 699 Tm (Book III: The Coming Trial of the Six Sealed Dockets) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 643 Tm (Chapter 1: The Judge Above the Constitution) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 609 Tm (In every ambitious republic there comes a day when someone notices that one office) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 594 Tm (has silently risen above all the others.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 560 Tm (In Concentric, that office was the Supreme Inspectorate.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 526 Tm (Its function was simple in statement and terrifying in consequence:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 492 Tm (look at the final result and decide whether the republic's claim of success should) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 477 Tm (be believed.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 443 Tm (This office had to exist. Without it, the city would drown in self-report and) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 428 Tm (performance theater. A mission would count because it moved, not because it truly) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 413 Tm (satisfied the task.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 379 Tm (But because this office had to exist, it also had to be questioned.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 345 Tm (A judge that is never calibrated becomes a risk whether it is strict or lax. If it) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 330 Tm (over-rejects, the state learns fear and hesitation. If it under-rejects, the state) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 315 Tm (learns delusion.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 281 Tm (Christian saw this clearly.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 247 Tm (The republic had built a judge.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 213 Tm (Now it needed a way to judge the judge.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 161 Tm (Chapter 2: The Blind Court) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 127 Tm (The court for the judge was not built in the noisy district of active missions. It) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 112 Tm (rose in the quieter quarter where archives are reopened, protocols are debated, and) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 97 Tm (the republic asks what counts as evidence.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 63 Tm (The court's foundational principle was severe and beautiful:) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 21 of 27) Tj ET
+endstream
+endobj
+46 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 45 0 R >>
+endobj
+47 0 obj
+<< /Length 2568 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 708 Tm (the jurors must not see the inspector's verdict before forming their own.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 674 Tm (This is the Law of Blindness.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 640 Tm (It exists because authority distorts perception. If a human rater sees the machine) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 625 Tm (judge's conclusion first, the trial ceases to be a test of the judge and becomes a) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 610 Tm (referendum on authority. The republic wanted something cleaner.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 576 Tm (So the court created blind packets. Each packet would contain the task and the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 561 Tm (evidence needed for a human to decide. The inspector's own formal verdict would be) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 546 Tm (withheld.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 512 Tm (Then the court created adjudication packets, because a republic worthy of the name) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 497 Tm (does not assume two honest people will always agree. It prepares for disagreement) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 482 Tm (and gives disagreement lawful form.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 448 Tm (The court was ready.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 396 Tm (Chapter 3: The Six Sealed Dockets) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 362 Tm (When the archive was opened for calibration, the republic discovered not a grand) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 347 Tm (mountain of already judged history but a smaller, sharper set of matters.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 313 Tm (Six dockets.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 279 Tm (Six review records.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 245 Tm (Six packets capable of testing whether the inspector's authority corresponds to) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 230 Tm (human civic sight.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 196 Tm (The number matters.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 162 Tm (Six is small enough that each case feels personal. Six is large enough that the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 147 Tm (republic cannot dismiss the exercise as merely symbolic.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 113 Tm (Each docket is a prior mission translated into a case file. Somewhere in the past,) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 98 Tm (the envoy acted. Somewhere, a final verification artifact was produced. Now that) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 83 Tm (artifact waits in a new constitutional role: not simply as an old inspection, but) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 68 Tm (as evidence in the review of the inspectorate itself.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 22 of 27) Tj ET
+endstream
+endobj
+48 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 47 0 R >>
+endobj
+49 0 obj
+<< /Length 1512 >>
+stream
+BT /F2 16 Tf 1 0 0 1 54 690 Tm (Chapter 4: The Empty Jury Box) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 656 Tm (The most emotionally important object in the court is not a document.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 622 Tm (It is the empty jury box.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 588 Tm (Everything else exists:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 554 Tm (• the dockets) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 522 Tm (• the blind packets) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 490 Tm (• the adjudication packets) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 458 Tm (• the label templates) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 426 Tm (• the indexing machinery) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 394 Tm (• the agreement metrics) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 362 Tm (• the review-state ledger) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 330 Tm (But the jurors have not yet spoken.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 296 Tm (This emptiness is not a failure of preparation. It is the visible proof that the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 281 Tm (republic has advanced as far as internal reform can take it.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 247 Tm (Christian has already built:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 213 Tm (• the lawful process) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 181 Tm (• the evidence separation) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 149 Tm (• the adjudication path) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 117 Tm (• the metrics for agreement) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 85 Tm (He has not done the one thing he must not do:) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 23 of 27) Tj ET
+endstream
+endobj
+50 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 49 0 R >>
+endobj
+51 0 obj
+<< /Length 2084 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (become the jury himself.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 689 Tm (The empty box is the architecture of restraint.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 637 Tm (Chapter 5: The Two Jurors) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 603 Tm (The constitution of this court requires two independent human raters.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 569 Tm (That requirement transforms the meaning of the trial.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 535 Tm (One juror would tell the republic what one mind thought of one case.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 501 Tm (Two jurors let the republic ask a more demanding question:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 467 Tm (Is the evidence sufficiently legible that independent human judgment begins to) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 452 Tm (converge?) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 418 Tm (If they agree, the city gains more than a verdict. It gains evidence of shared) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 403 Tm (interpretability.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 369 Tm (If they disagree, the city learns something equally important. It learns where) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 354 Tm (ambiguity lives, where evidence is thin, or where the task itself may not yet be) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 339 Tm (stable enough for straightforward civic judgment.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 305 Tm (Thus the absent jurors are already characters in the drama. The whole court is) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 290 Tm (designed around their future arrival.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 238 Tm (Chapter 6: The Adjudicator's Chamber) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 204 Tm (No mature republic confuses disagreement with collapse.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 170 Tm (It provides a chamber above disagreement, not to erase it, but to resolve it when) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 155 Tm (the state needs a settled public truth.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 121 Tm (That chamber is adjudication.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 87 Tm (If the two jurors agree, the republic has a direct consensus path.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 24 of 27) Tj ET
+endstream
+endobj
+52 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 51 0 R >>
+endobj
+53 0 obj
+<< /Length 2475 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (If they diverge, the adjudicator enters. This officer does not invalidate the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 708 Tm (jurors. Instead the adjudicator performs a constitutional function:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 674 Tm (the conversion of unresolved divergence into an official ground truth against which) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 659 Tm (the inspector may be measured.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 625 Tm (This is one of the quiet strengths of the court. It was designed for a world in) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 610 Tm (which human judgment may itself be plural.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 558 Tm (Chapter 7: The Trial Already Changes the Republic) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 524 Tm (Even before a single juror has written a verdict, the existence of the trial has) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 509 Tm (already changed Concentric.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 475 Tm (The inspectorate no longer lives beyond review.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 441 Tm (The archives no longer merely preserve outcomes; they preserve future cases for) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 426 Tm (legitimacy studies.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 392 Tm (The executive no longer governs under the illusion that internal judgment alone is) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 377 Tm (enough.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 343 Tm (And Christian no longer stands merely as a builder of capability. He stands as a) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 328 Tm (builder of limits.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 294 Tm (This matters because republics are not defined only by what they can do.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 260 Tm (They are defined by what they permit to question them.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 208 Tm (Chapter 8: The Three Futures) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 174 Tm (On the eve of the trial, three futures stand in the hall of possibility.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 140 Tm (In the first future, the jurors agree with each other often and the machine judge) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 125 Tm (aligns well with that consensus. The republic gains warranted trust in its) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 110 Tm (inspectorate.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 76 Tm (In the second future, the jurors agree with each other but not with the judge. Then) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 61 Tm (the city learns that its highest office must be recalibrated, whether for harshness) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 25 of 27) Tj ET
+endstream
+endobj
+54 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 53 0 R >>
+endobj
+55 0 obj
+<< /Length 1867 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (or permissiveness.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 689 Tm (In the third future, the jurors often disagree, and adjudication becomes frequent.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 674 Tm (Then the republic learns that the deeper problem may not be only the judge, but the) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 659 Tm (ambiguity of the evidence and tasks themselves.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 625 Tm (Each future would teach something important.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 591 Tm (The real danger is not an unfavorable verdict.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 557 Tm (The real danger is unexamined authority.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 505 Tm (Chapter 9: Christian at the Threshold) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 471 Tm (This is where Christian now stands.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 437 Tm (Behind him is the city he founded:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 403 Tm (• the executive capital) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 371 Tm (• the survey ministries) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 339 Tm (• the planning bureau) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 307 Tm (• the operational streets) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 275 Tm (• the emergency services) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 243 Tm (• the archives) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 211 Tm (• the conformance court) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 179 Tm (• the unified public registry) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 147 Tm (Before him is not another obvious engineering task. Before him is the moment when) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 132 Tm (the republic must let truth enter from outside the machinery of its own government.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 98 Tm (That is why the threshold matters.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 64 Tm (Founders can build courts. They can write procedures. They can define lawful) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 26 of 27) Tj ET
+endstream
+endobj
+56 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 55 0 R >>
+endobj
+57 0 obj
+<< /Length 1847 >>
+stream
+BT /F1 11 Tf 1 0 0 1 54 723 Tm (evidence. They can protect blindness and design adjudication.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 689 Tm (But if they also claim the jury box, they empty legitimacy of meaning.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 655 Tm (Christian has not done that.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 621 Tm (So the court waits.) Tj ET
+BT /F2 16 Tf 1 0 0 1 54 569 Tm (Chapter 10: The Republic Waits for Speech) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 535 Tm (Night settles over Concentric.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 501 Tm (The six sealed dockets remain in the archive. The blind packets are ready. The) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 486 Tm (adjudication packets are ready. The index is written. The templates are blank. The) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 471 Tm (metrics wait in silence for human words.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 437 Tm (Nothing outwardly spectacular happens in the city that night.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 403 Tm (And yet it is among the most important nights in the republic's history.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 369 Tm (Because this is the night on which a founder proves that capability is not the same) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 354 Tm (thing as legitimacy.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 320 Tm (This is the night on which the highest judge in the state becomes reviewable.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 286 Tm (This is the night on which the city's machinery comes to the edge of a truth it) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 271 Tm (cannot honestly manufacture for itself.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 237 Tm (The question hangs over the republic like a bell not yet struck:) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 203 Tm (Can the judge be trusted?) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 169 Tm (The city listens.) Tj ET
+BT /F1 11 Tf 1 0 0 1 54 135 Tm (And waits.) Tj ET
+BT /F1 10 Tf 1 0 0 1 54 28 Tm (Page 27 of 27) Tj ET
+endstream
+endobj
+58 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 57 0 R >>
+endobj
+xref
+0 59
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000303 00000 n 
+0000000373 00000 n 
+0000000448 00000 n 
+0000001484 00000 n 
+0000001620 00000 n 
+0000001720 00000 n 
+0000001856 00000 n 
+0000003932 00000 n 
+0000004069 00000 n 
+0000006544 00000 n 
+0000006682 00000 n 
+0000009333 00000 n 
+0000009471 00000 n 
+0000012301 00000 n 
+0000012439 00000 n 
+0000014933 00000 n 
+0000015071 00000 n 
+0000017406 00000 n 
+0000017544 00000 n 
+0000019876 00000 n 
+0000020014 00000 n 
+0000021971 00000 n 
+0000022109 00000 n 
+0000022211 00000 n 
+0000022349 00000 n 
+0000024296 00000 n 
+0000024434 00000 n 
+0000027037 00000 n 
+0000027175 00000 n 
+0000029380 00000 n 
+0000029518 00000 n 
+0000032203 00000 n 
+0000032341 00000 n 
+0000034508 00000 n 
+0000034646 00000 n 
+0000036473 00000 n 
+0000036611 00000 n 
+0000038503 00000 n 
+0000038641 00000 n 
+0000038814 00000 n 
+0000038952 00000 n 
+0000039054 00000 n 
+0000039192 00000 n 
+0000041462 00000 n 
+0000041600 00000 n 
+0000044221 00000 n 
+0000044359 00000 n 
+0000045924 00000 n 
+0000046062 00000 n 
+0000048199 00000 n 
+0000048337 00000 n 
+0000050865 00000 n 
+0000051003 00000 n 
+0000052923 00000 n 
+0000053061 00000 n 
+0000054961 00000 n 
+trailer
+<< /Size 59 /Root 1 0 R >>
+startxref
+55099
+%%EOF

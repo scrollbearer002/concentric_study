@@ -163,7 +163,7 @@ def test_solve_equation_produces_covered_action_mappings(tmp_path: Path) -> None
         vlm_fn=None,
     )
 
-    gate = evaluate_phase3_equation_gate(solution, UnifiedActionSpace().list_names())
+    gate = evaluate_phase3_equation_gate(solution, UnifiedActionSpace().list_planner_names())
 
     assert isinstance(solution, EquationSolution)
     assert len(solution.mappings) == 3
@@ -185,7 +185,7 @@ def test_phase3_gate_rejects_invalid_actions() -> None:
         solution_confidence=0.9,
     )
 
-    gate = evaluate_phase3_equation_gate(solution, UnifiedActionSpace().list_names())
+    gate = evaluate_phase3_equation_gate(solution, UnifiedActionSpace().list_planner_names())
 
     assert gate["passed"] is False
     assert "all_action_mappings_valid" in gate["fail_reasons"]

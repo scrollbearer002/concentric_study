@@ -1,0 +1,281 @@
+{
+  "meta": {
+    "artifact_id": "concentric_study_phd_tool_intelligence",
+    "version": "1.1.0",
+    "generated_date": "2026-03-05",
+    "generated_timezone": "America/Los_Angeles",
+    "scope": "concentric_study only",
+    "purpose": "Machine-ingestible intelligence baseline for tooling, architecture, MCP surfaces, and operating protocol."
+  },
+  "environment_baseline": {
+    "cursor_version": "2.6.11",
+    "vscode_base": "1.105.1",
+    "electron": "39.6.0",
+    "macos_version": "26.3",
+    "macos_build": "25D125",
+    "architecture": "arm64",
+    "source": "operator/cre/artifacts/cursor_environment/latest_report.md"
+  },
+  "host_security_addendum": {
+    "source_type": "read_only_security_report_user_supplied",
+    "audit_date": "2026-03-05",
+    "key_findings": {
+      "platform_hardening_intact_claim": true,
+      "pending_updates_reported": [
+        "macOS 26.3.1",
+        "Command Line Tools for Xcode 26.3"
+      ],
+      "highest_impact_exposure_claims": [
+        "Chrome Remote Desktop installed/enabled/running",
+        "Remote-control host has ScreenCapture and Accessibility permissions",
+        "SMB Public Folder guest access reported"
+      ],
+      "credential_hygiene_claims": [
+        "Plaintext API secrets in ~/.zshrc"
+      ],
+      "privilege_amplification_claims": [
+        "Broad TCC grants for Cursor/Hammerspoon/Terminal-class automation tools"
+      ],
+      "compromise_assessment_claim": "No direct stealth malware/rootkit indicator found in the read-only audit"
+    },
+    "risk_interpretation": "Primary practical risk is authorized remote-control plus broad granted local privileges, not confirmed covert malware.",
+    "integration_note": "This addendum was appended after initial tool-intelligence generation to avoid security-context omission."
+  },
+  "tool_inventory": {
+    "total_tools": 67,
+    "status_counts": {
+      "current": 47,
+      "optional": 7,
+      "legacy": 8,
+      "historical_reference": 5
+    },
+    "category_counts": {
+      "internal_module": 35,
+      "python_dependency": 13,
+      "system_tool": 6,
+      "operational_script": 5,
+      "legacy_runtime": 3,
+      "historical_reference": 5
+    },
+    "source": "operator/cre/artifacts/master_tool_list.json"
+  },
+  "architecture": {
+    "agent_infra_exports": [
+      "TraceWriter",
+      "DiagnosticReader",
+      "HealingOrchestrator",
+      "SkillLibrary",
+      "SemanticSkillIndex",
+      "OuterLoop",
+      "ReflectionJournal",
+      "RulesStore",
+      "ActionTrustTracker",
+      "Summarizer",
+      "SiteKnowledge",
+      "ExplorationLoop",
+      "ToolAffordance",
+      "HostToolHealth",
+      "VisualMonitor",
+      "ResearchAgent",
+      "VerificationGate",
+      "DecisionDependenceAnalyzer",
+      "BenchmarkEvaluator"
+    ],
+    "health_model": {
+      "tool_classes_total": 10,
+      "required_class_ids": [
+        "runtime_python_selected",
+        "macos_ui_automation",
+        "native_event_backend",
+        "screen_capture"
+      ],
+      "preferred_default_providers": {
+        "runtime_python_selected": "operator_venv_python",
+        "macos_ui_automation": "osascript_system_events",
+        "native_event_backend": "pyobjc_native_stack",
+        "screen_capture": "screencapture_cli"
+      },
+      "source": "operator/agent_infra/tool_health_catalog.json"
+    },
+    "security_layers": [
+      "InputSanitizer",
+      "CredentialVault",
+      "HITLGuard",
+      "VerificationGate",
+      "ActionTrustTracker"
+    ]
+  },
+  "cursor_integration": {
+    "active_mcp_servers": [
+      "context7",
+      "concentric-health",
+      "concentric-trace"
+    ],
+    "implemented_read_only_mcp_servers": {
+      "concentric-health": {
+        "tools": [
+          "health_summary",
+          "check_tool_class",
+          "compare_environment_baselines",
+          "cursor_environment_snapshot"
+        ],
+        "activation_state": "active"
+      },
+      "concentric-trace": {
+        "tools": [
+          "list_recent_runs",
+          "get_run_manifest",
+          "get_run_summary",
+          "summarize_failure_chain",
+          "list_run_artifacts"
+        ],
+        "activation_state": "active"
+      },
+      "concentric-benchmark": {
+        "tools": [
+          "evaluate_run",
+          "compare_runs",
+          "latest_benchmark_summary"
+        ],
+        "activation_state": "implemented_not_active_by_default"
+      },
+      "concentric-research": {
+        "tools": [
+          "get_research_brief",
+          "search_research_notes",
+          "method_tool_map"
+        ],
+        "activation_state": "implemented_not_active_by_default"
+      }
+    },
+    "rules_files": [
+      ".cursor/rules/concentric-study.mdc",
+      ".cursor/rules/cursor-intelligence-charter.mdc",
+      ".cursor/rules/context7-docs.mdc",
+      ".cursor/rules/plan-artifact-discipline.mdc",
+      ".cursor/rules/browser-debug-evidence.mdc",
+      ".cursor/rules/mcp-governance.mdc",
+      ".cursor/rules/runtime-debug-discipline.mdc"
+    ],
+    "plans_files": [
+      ".cursor/plans/context7-pilot.md",
+      ".cursor/plans/debug-runtime-regression.md",
+      ".cursor/plans/add-internal-mcp.md",
+      ".cursor/plans/research-before-runtime.md",
+      ".cursor/plans/browser-task-triage.md",
+      ".cursor/plans/cursor-intelligence-bootstrap.md",
+      ".cursor/plans/evidence-gated-task-template.md",
+      ".cursor/plans/maze_report.md"
+    ],
+    "sources": [
+      ".cursor/mcp.json",
+      "operator/cursor_integration/mcp/health_server.py",
+      "operator/cursor_integration/mcp/trace_server.py",
+      "operator/cursor_integration/mcp/benchmark_server.py",
+      "operator/cursor_integration/mcp/research_server.py"
+    ]
+  },
+  "workflow_value_priorities": {
+    "high_value_enhancers": [
+      "ResearchAgent",
+      "Semantic retrieval for repository-level lookup",
+      "Lint/static diagnostic reads",
+      "VisualMonitor",
+      "BenchmarkEvaluator"
+    ],
+    "conditional_enhancers": [
+      "Bounded subagent exploration for targeted evidence gathering"
+    ],
+    "low_net_new_here": [
+      "Shell/file/edit wrappers that duplicate existing tool surfaces"
+    ],
+    "source": "operator/cre/MISSED_TOOL_WORKFLOW_VALUE_PHD.md"
+  },
+  "decision_protocol": {
+    "method": "Facts first -> Decision second -> Consequences third",
+    "non_trivial_task_sequence": [
+      "Verify host substrate readiness",
+      "Run pre-execution research pass",
+      "Execute with tracing and verification",
+      "Diagnose with DiagnosticReader and DDG-aware failure chain analysis",
+      "Benchmark and compare runs before declaring improvement"
+    ],
+    "source": "operator/cre/PHD_DECISION_PRACTICE.md"
+  },
+  "cursor_intelligence_bootstrap": {
+    "start_order": [
+      "Load .cursor/rules/cursor-intelligence-charter.mdc",
+      "Open .cursor/plans/cursor-intelligence-bootstrap.md",
+      "Copy .cursor/plans/evidence-gated-task-template.md for the live objective",
+      "Execute only after explicit pass/fail checkpoints and stop conditions"
+    ],
+    "intent": "Make Cursor operation deterministic, evidence-backed, and bounded."
+  },
+  "validation": {
+    "test_command": "cd operator && ./venv/bin/python -m pytest cursor_integration/tests -q",
+    "result": "6 passed in 0.25s",
+    "validation_date": "2026-03-05"
+  },
+  "source_register": [
+    {
+      "id": "SRC-001",
+      "path": "AGENTS.md",
+      "source_class": "repo_primary",
+      "why_relevant": "Canonical operating instructions and architecture constraints."
+    },
+    {
+      "id": "SRC-002",
+      "path": "operator/agent_infra/__init__.py",
+      "source_class": "repo_primary",
+      "why_relevant": "Definitive exported shared infrastructure components."
+    },
+    {
+      "id": "SRC-003",
+      "path": "operator/cre/artifacts/master_tool_list.json",
+      "source_class": "repo_primary",
+      "why_relevant": "Machine-readable definitive tool inventory."
+    },
+    {
+      "id": "SRC-004",
+      "path": "operator/agent_infra/tool_health_catalog.json",
+      "source_class": "repo_primary",
+      "why_relevant": "Health classes, requirements, and backend preferences."
+    },
+    {
+      "id": "SRC-005",
+      "path": ".cursor/mcp.json",
+      "source_class": "repo_primary",
+      "why_relevant": "Active MCP registration state in this workspace."
+    },
+    {
+      "id": "SRC-006",
+      "path": "operator/cursor_integration/mcp/*.py",
+      "source_class": "repo_primary",
+      "why_relevant": "Read-only internal MCP tool contracts."
+    },
+    {
+      "id": "SRC-007",
+      "path": "operator/cre/artifacts/cursor_environment/latest_report.md",
+      "source_class": "repo_primary",
+      "why_relevant": "Local Cursor and platform baseline facts."
+    },
+    {
+      "id": "SRC-008",
+      "path": "operator/cre/PHD_DECISION_PRACTICE.md",
+      "source_class": "repo_primary",
+      "why_relevant": "Evidence-first method for non-trivial decisions."
+    },
+    {
+      "id": "SRC-009",
+      "path": "operator/cre/MISSED_TOOL_WORKFLOW_VALUE_PHD.md",
+      "source_class": "repo_primary",
+      "why_relevant": "Workflow-impact ranking of tool classes."
+    },
+    {
+      "id": "SRC-010",
+      "path": "operator/cre/CONCENTRIC_STUDY_PHD_TOOL_INTELLIGENCE.md",
+      "source_class": "repo_primary",
+      "why_relevant": "Human-readable master memo mirrored by this JSON artifact."
+    }
+  ]
+}

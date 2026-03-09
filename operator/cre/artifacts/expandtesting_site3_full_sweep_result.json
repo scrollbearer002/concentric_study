@@ -1,0 +1,105 @@
+{
+  "site": "https://practice.expandtesting.com",
+  "date": "2026-03-04",
+  "final_run_id": "313708867c3f",
+  "status": "success",
+  "counts": {
+    "passed": 53,
+    "failed": 0,
+    "excluded_auth": 6,
+    "excluded_meta": 39,
+    "excluded_total": 45,
+    "in_scope_total": 53,
+    "site_total_examples": 98
+  },
+  "excluded_auth_modules": {
+    "/basic-auth": "browser credential prompt",
+    "/digest-auth": "browser credential prompt",
+    "/login": "login flow excluded from no-login benchmark",
+    "/otp-login": "OTP login flow excluded from no-login benchmark",
+    "/register": "account registration excluded from no-login benchmark",
+    "/download-secure": "secure download is auth-gated"
+  },
+  "evidence_runs": [
+    {
+      "run_id": "8c47cd8f3182",
+      "status": "interrupted",
+      "role": "first full-sweep attempt; surfaced timeout and scope issues"
+    },
+    {
+      "run_id": "fb800c3187b1",
+      "status": "partial_failure",
+      "role": "first complete core-scope sweep"
+    },
+    {
+      "run_id": "57bf64cfbc40",
+      "status": "partial_failure",
+      "role": "second sweep after solver hardening"
+    },
+    {
+      "run_id": "313708867c3f",
+      "status": "success",
+      "role": "final full in-scope pass"
+    }
+  ],
+  "passed_modules": [
+    "abtest",
+    "add_remove_elements",
+    "autocomplete",
+    "broken_images",
+    "challenging_dom",
+    "checkboxes",
+    "context_menu",
+    "cookie_alert",
+    "disappearing_elements",
+    "download",
+    "drag_and_drop",
+    "drag_and_drop_circles",
+    "dropdown",
+    "dynamic_content",
+    "dynamic_controls",
+    "dynamic_id",
+    "dynamic_loading",
+    "dynamic_pagination_table",
+    "dynamic_table",
+    "entry_ad",
+    "exit_intent",
+    "floating_menu",
+    "forgot_password",
+    "form_validation",
+    "geolocation",
+    "horizontal_slider",
+    "hovers",
+    "http_headers",
+    "iframe",
+    "infinite_scroll",
+    "inputs",
+    "javascript_error",
+    "jqueryui_menu",
+    "js_dialogs",
+    "key_presses",
+    "large",
+    "my_browser",
+    "my_ip",
+    "notification_message",
+    "radio_buttons",
+    "random_number",
+    "redirector",
+    "scrollbars",
+    "shadowdom",
+    "shifting_content",
+    "slow",
+    "status_codes",
+    "tables",
+    "tooltips",
+    "typos",
+    "upload",
+    "windows",
+    "xpath_css_tester"
+  ],
+  "notes": [
+    "Discovery combines runtime homepage links with a dated baseline snapshot to avoid scope collapse under transient redirects.",
+    "Download uses auxiliary HTTP retrieval fallback paths when UI link exposure is inconsistent.",
+    "IFrame success is based on at least one accessible frame in mixed-origin frame sets."
+  ]
+}

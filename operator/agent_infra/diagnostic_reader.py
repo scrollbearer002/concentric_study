@@ -61,6 +61,9 @@ class DiagnosticReader:
         to decide whether to drill deeper.
         """
         m = self._load_manifest()
+        semantics = m.get("outcome_semantics", {}) if isinstance(m.get("outcome_semantics"), dict) else {}
+        verification = semantics.get("final_verification", {}) if isinstance(semantics.get("final_verification"), dict) else {}
+        step_outcomes = semantics.get("step_outcomes", {}) if isinstance(semantics.get("step_outcomes"), dict) else {}
         lines = [
             f"=== RUN SUMMARY: {m['run_id']} ===",
             f"Task: {m['task_id']} — {m['task_description']}",
@@ -68,6 +71,24 @@ class DiagnosticReader:
             f"Steps: {m['num_steps']} | Duration: {m['total_duration_ms']}ms",
             f"Agent: {json.dumps(m.get('agent_config', {}))}",
         ]
+
+        if semantics:
+            lines.append(
+                "Task result: "
+                f"{str(semantics.get('task_result', 'unknown')).upper()} | "
+                f"Execution result: {str(semantics.get('execution_result', 'unknown')).upper()}"
+            )
+            lines.append(
+                "Final verification: "
+                f"{str(verification.get('status', 'not_run')).upper()} | "
+                f"Acceptance basis: {semantics.get('acceptance_basis', 'unknown')}"
+            )
+            lines.append(
+                "Step failures: "
+                f"{step_outcomes.get('failed', 0)} total | "
+                f"productive={step_outcomes.get('productive_failed', 0)} | "
+                f"meta={step_outcomes.get('meta_failed', 0)}"
+            )
 
         if m["outcome"] != "success":
             lines.append(f"FAILURE at step {m['failure_step']}: {m['failure_category']}")
@@ -170,9 +191,10 @@ class DiagnosticReader:
         concise action recommendation at the bottom.
         """
         m = self._load_manifest()
+        semantics = m.get("outcome_semantics", {}) if isinstance(m.get("outcome_semantics"), dict) else {}
         parts = [self.level1_summary()]
 
-        if m["outcome"] != "success":
+        if (m["outcome"] != "success") or semantics.get("task_result") == "rejected":
             parts.append("")
             parts.append(self.level2_failure_window(window=window))
             parts.append("")
@@ -195,6 +217,12 @@ class DiagnosticReader:
             if s["step"] == failure_step:
                 return s
         return None
+
+    def get_outcome_semantics(self) -> dict[str, Any]:
+        """Return the normalized outcome contract from the manifest."""
+        manifest = self._load_manifest()
+        payload = manifest.get("outcome_semantics", {})
+        return payload if isinstance(payload, dict) else {}
 
     def get_all_failed_steps(self) -> list[dict[str, Any]]:
         """Return all steps where action_result.success is False."""

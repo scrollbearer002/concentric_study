@@ -278,6 +278,7 @@ _inject_action_deps(
     _trace, _exec_log_line, _pass_log_line,
     _validate_coord_cache_entry, _compute_region_phash,
     get_screenshot_center, nearest_neighbor_order,
+    lambda app_name: __import__("a11y_engine").A11yEngine().extract(app_name),
 )
 _inject_recovery_deps(_trace, _exec_log_line, _pass_log_line)
 _inject_startup_deps(_exec_log_line, _pass_log_line, get_screenshot_center)

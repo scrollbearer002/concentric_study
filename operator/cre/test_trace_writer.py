@@ -92,6 +92,8 @@ def test_manifest_generation() -> None:
         _assert(manifest["failure_step"] is None, "no failure_step on success")
         _assert(manifest["failure_category"] is None, "no failure_category on success")
         _assert(manifest["error_summary"] is None, "no error_summary on success")
+        _assert(manifest["outcome_semantics"]["task_result"] == "accepted", "task_result is accepted")
+        _assert(manifest["outcome_semantics"]["final_verification"]["status"] == "not_run", "final verification not_run by default")
         _assert(len(manifest["steps_summary"]) == 3, "steps_summary has 3 entries")
         _assert(manifest["total_duration_ms"] >= 0, "total_duration_ms is non-negative")
         _assert("macos" in manifest["environment"]["os"], "environment.os is macos")
@@ -126,6 +128,7 @@ def test_failure_recording() -> None:
         _assert(manifest["failure_step"] == 2, "failure_step is 2")
         _assert(manifest["failure_category"] == "grounding_error", "failure_category correct")
         _assert(manifest["error_summary"] == "Color picker not found", "error_summary correct")
+        _assert(manifest["outcome_semantics"]["task_result"] == "rejected", "task_result is rejected on failure")
 
 
 def test_multistep_ordering() -> None:
@@ -190,6 +193,59 @@ def test_duplicate_failure_recording() -> None:
         _assert(manifest["error_summary"] == "first error", "first error summary preserved")
 
 
+def test_final_verification_failure_infers_canonical_failure_metadata() -> None:
+    print("\n--- Test 7: Final Verification Failure Semantics ---")
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tw = TraceWriter(tmpdir, task_id="test_verify_fail")
+
+        draw_step = tw.begin_step(1)
+        draw_step.action = {"type": "draw_path", "parameters": {}}
+        draw_step.action_result = {"success": True}
+        tw.end_step(draw_step)
+
+        verify_step = tw.begin_step(997)
+        verify_step.action = {"type": "final_verification_gate", "parameters": {}}
+        verify_step.action_result = {"success": False}
+        verify_step.post_state = {
+            "score": 0.4,
+            "verdict": "FAILED: subject not recognizable",
+            "deficiencies": ["subject not recognizable"],
+        }
+        tw.end_step(verify_step)
+
+        manifest = tw.finalize(outcome="failure")
+
+        _assert(manifest["failure_step"] == 997, "final verification step inferred as canonical failure")
+        _assert(manifest["failure_category"] == "verification_failed", "failure category inferred from final verification")
+        _assert("subject not recognizable" in manifest["error_summary"], "verification verdict used as error summary")
+        _assert(manifest["outcome_semantics"]["final_verification"]["status"] == "failed", "final verification status is failed")
+
+
+def test_success_with_meta_failure_is_explicit_in_outcome_semantics() -> None:
+    print("\n--- Test 8: Accepted Run With Meta Failure ---")
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tw = TraceWriter(tmpdir, task_id="test_meta_fail")
+
+        draw_step = tw.begin_step(1)
+        draw_step.action = {"type": "draw_path", "parameters": {}}
+        draw_step.action_result = {"success": True}
+        tw.end_step(draw_step)
+
+        audit_step = tw.begin_step(998)
+        audit_step.action = {"type": "metacognitive_audit", "parameters": {}}
+        audit_step.action_result = {"success": False}
+        tw.end_step(audit_step)
+
+        manifest = tw.finalize(outcome="success")
+
+        semantics = manifest["outcome_semantics"]
+        _assert(semantics["task_result"] == "accepted", "task_result remains accepted")
+        _assert(semantics["step_outcomes"]["failed"] == 1, "one failed step counted")
+        _assert(semantics["step_outcomes"]["productive_failed"] == 0, "no productive failures counted")
+        _assert(semantics["step_outcomes"]["meta_failed"] == 1, "one meta failure counted")
+        _assert(semantics["consistency"]["accepted_with_failed_steps"] is True, "accepted_with_failed_steps flag set")
+
+
 def main() -> int:
     print("=" * 60)
     print("PHASE 1 TESTS: TraceWriter")
@@ -202,6 +258,8 @@ def main() -> int:
         test_multistep_ordering,
         test_directory_structure,
         test_duplicate_failure_recording,
+        test_final_verification_failure_infers_canonical_failure_metadata,
+        test_success_with_meta_failure_is_explicit_in_outcome_semantics,
     ]
 
     passed = 0

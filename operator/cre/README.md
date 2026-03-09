@@ -1,53 +1,41 @@
-# Codex Runtime (CRE) kernel
+# CRE Research Surface
 
-Hammerspoon HTTP kernel on port 9999. Copy `codex_kernel.lua` to `~/.hammerspoon/init.lua` or require it from your existing init.
+`operator/cre/` is the repo's mixed research, evaluation, experiment, and
+legacy-operations layer. It is not a single subsystem. It contains:
 
-## Demo for colleagues
+- PhD memos about architecture, tooling, environment, and Cursor integration
+- test entrypoints and evaluation harnesses
+- curated evidence bundles and benchmark outputs
+- legacy setup notes and local operational remnants
 
-Run the **showcase** (liveness, latency, screenshot, state, full suite hint):
+The top-level surface is intentionally not flat in meaning. Use the curated
+index below instead of treating every file in this directory as equally current.
 
-```bash
-bash operator/cre/showcase.sh
-```
+## Start Here
 
-One-pager explaining what CRE does and what it replaces: [SHOWCASE.md](SHOWCASE.md).
+- [CANONICAL_RESEARCH_INDEX_PHD.md](CANONICAL_RESEARCH_INDEX_PHD.md)
+- [DOC_SURFACE_GOVERNANCE_PHD.md](DOC_SURFACE_GOVERNANCE_PHD.md)
+- [PHD_DECISION_PRACTICE.md](PHD_DECISION_PRACTICE.md)
+- [PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md](PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md)
+- [CURRENT_ARCHITECTURE_SURFACE_PHD.md](CURRENT_ARCHITECTURE_SURFACE_PHD.md)
 
-## Verify kernel (without `hs -c`)
+## Machine-Readable Index
 
-After reloading Hammerspoon:
+- [artifacts/cre_top_level_doc_registry.json](artifacts/cre_top_level_doc_registry.json)
 
-```bash
-curl -s http://127.0.0.1:9999
-curl -s -X POST http://127.0.0.1:9999 -H "Content-Type: application/json" -d '{"command":"ping"}'
-```
-
-**Ultimate HTTP-first test** (proves memory-resident AX access, no `hs` CLI):
-
-```bash
-curl -v -X POST http://127.0.0.1:9999 \
-     -H "Content-Type: application/json" \
-     -d '{"command": "dump_state", "args": {"app": "Finder"}}'
-```
-
-Expect `HTTP/1.1 200 OK` and JSON like `{"status":"ok","title":"Finder","window":"..."}`. This confirms: port bound before IPC, kernel queried Accessibility API in memory, no `hs` binary used, JSON over socket.
-
-Or run the script:
+## Regenerate The Index
 
 ```bash
-bash operator/cre/verify_kernel.sh
+python3 operator/cre/tools/build_cre_doc_registry.py
 ```
 
-Full CRE suite:
+## Legacy Kernel Note
 
-```bash
-bash operator/tests/run_cre_tests.sh
-```
+Older CRE-kernel files remain in this directory for provenance:
 
-## Optional: fix `hs` CLI when cliInstall returns false
+- `codex_kernel.lua`
+- `verify_kernel.sh`
+- `SHOWCASE.md`
 
-If you need `hs -A` or `hs -c` (e.g. for observe_run, window_orchestrator), run once in the Hammerspoon Console:
-
-1. `hs.ipc.cliUninstall(nil, true)`
-2. `hs.ipc.cliInstall(nil, true)`
-
-If it still returns false, fix permissions for `/usr/local/bin` and `/usr/local/share/man/man1` (see Hammerspoon docs). CRE tests that use only `curl` to 9999 do not depend on the CLI.
+They are not the primary documentation entrypoint for the current
+`concentric_study` architecture.

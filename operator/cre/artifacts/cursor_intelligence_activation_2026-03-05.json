@@ -1,0 +1,86 @@
+{
+  "artifact_id": "cursor_intelligence_activation",
+  "version": "1.0.0",
+  "activation_date": "2026-03-05",
+  "timezone": "America/Los_Angeles",
+  "scope": "concentric_study",
+  "objective": "Operationalize Cursor Intelligence bootstrap with evidence-gated startup protocol and live verification.",
+  "baseline": {
+    "cursor_environment_source": "operator/cre/artifacts/cursor_environment/latest_report.md",
+    "cursor_version": "2.6.11",
+    "vscode_base": "1.105.1",
+    "electron": "39.6.0",
+    "commit": "8c95649f251a168cc4bb34c89531fae7db4bd990",
+    "macos_version": "26.3",
+    "macos_build": "25D125",
+    "architecture": "arm64"
+  },
+  "active_mcp_servers": [
+    "context7",
+    "concentric-health",
+    "concentric-trace"
+  ],
+  "rule_set": [
+    ".cursor/rules/concentric-study.mdc",
+    ".cursor/rules/cursor-intelligence-charter.mdc",
+    ".cursor/rules/context7-docs.mdc",
+    ".cursor/rules/plan-artifact-discipline.mdc",
+    ".cursor/rules/browser-debug-evidence.mdc",
+    ".cursor/rules/mcp-governance.mdc",
+    ".cursor/rules/runtime-debug-discipline.mdc"
+  ],
+  "plan_set": [
+    ".cursor/plans/cursor-intelligence-bootstrap.md",
+    ".cursor/plans/evidence-gated-task-template.md",
+    ".cursor/plans/cursor-intelligence-activation-2026-03-05.md"
+  ],
+  "host_tool_health": {
+    "all_required_ready": true,
+    "missing_required": [],
+    "required_classes": [
+      "runtime_python_selected",
+      "macos_ui_automation",
+      "native_event_backend",
+      "screen_capture",
+      "browser_target"
+    ],
+    "selected": {
+      "runtime_python_selected": "operator_venv_python",
+      "macos_ui_automation": "osascript_system_events",
+      "native_event_backend": "pyobjc_native_stack",
+      "screen_capture": "screencapture_cli",
+      "browser_target": "safari_bundle",
+      "credential_backend": "security_cli"
+    }
+  },
+  "verification": {
+    "commands": [
+      "cd operator && ./venv/bin/python -m pytest cursor_integration/tests -q",
+      "cd operator && ./venv/bin/python -m pytest cre/test_cre_doc_registry.py -q"
+    ],
+    "results": [
+      {
+        "command": "cd operator && ./venv/bin/python -m pytest cursor_integration/tests -q",
+        "outcome": "pass",
+        "summary": "6 passed"
+      },
+      {
+        "command": "cd operator && ./venv/bin/python -m pytest cre/test_cre_doc_registry.py -q",
+        "outcome": "pass",
+        "summary": "5 passed"
+      }
+    ]
+  },
+  "startup_protocol": [
+    "Start /plan for any non-trivial objective.",
+    "Instantiate a task plan from .cursor/plans/evidence-gated-task-template.md.",
+    "Make pass/fail checkpoints and stop conditions explicit before edits.",
+    "Execute the smallest justified change set only.",
+    "Run verification commands and record unresolved risks."
+  ],
+  "status": {
+    "activation_complete": true,
+    "blocking_issues": []
+  }
+}
+

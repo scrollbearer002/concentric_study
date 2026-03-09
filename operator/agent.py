@@ -661,7 +661,14 @@ def _make_research_vlm_fn(agent):
     return _vlm
 
 
-def _run_pre_execution_research(agent, goal: str, url: str, site_knowledge, run_dir: Path | None):
+def _run_pre_execution_research(
+    agent,
+    goal: str,
+    url: str,
+    site_knowledge,
+    run_dir: Path | None,
+    planner_action_names: list[str] | None = None,
+):
     if not agent:
         return None
     try:
@@ -673,7 +680,10 @@ def _run_pre_execution_research(agent, goal: str, url: str, site_knowledge, run_
         from action_space import UnifiedActionSpace
 
         output_dir = run_dir or (Path(__file__).parent / "cre" / "research")
-        researcher = ResearchAgent(output_dir=output_dir)
+        researcher = ResearchAgent(
+            output_dir=output_dir,
+            planner_action_names=planner_action_names,
+        )
         brief = researcher.research(
             task=goal,
             site_url=url,
@@ -688,7 +698,7 @@ def _run_pre_execution_research(agent, goal: str, url: str, site_knowledge, run_
             raise RuntimeError(f"phase2_gate_failed: {phase2_gate.get('fail_reasons', [])}")
         phase3_gate = evaluate_phase3_equation_gate(
             getattr(brief, "equation_solution", None),
-            UnifiedActionSpace().list_names(),
+            UnifiedActionSpace().list_planner_names(),
         )
         setattr(agent, "_phase3_gate_result", phase3_gate)
         _exec_log("phase3_gate", None, phase3_gate)
@@ -2766,6 +2776,14 @@ def run(url: str, goal: str) -> int:
     # --- 7. Generate action plan ---
     action_space = UnifiedActionSpace()
 
+    def _a11y_snapshot_provider(app_name: str):
+        engine = capabilities.get(CapabilityKind.PERCEPTION_A11Y)
+        if engine:
+            return engine.extract(app_name)
+        if app_name == "Safari":
+            return (perception or {}).get("a11y_elements")
+        return None
+
     # Inject dependencies for existing modules
     from agent_infra.action_handlers import inject_dependencies as _inject_ah
     from agent_infra.recovery import inject_dependencies as _inject_rec
@@ -2773,6 +2791,7 @@ def run(url: str, goal: str) -> int:
         _trace, _exec_log, lambda *a, **k: None,
         _validate_coord_cache_entry, _compute_region_phash,
         _get_screenshot_center, _nearest_neighbor_order,
+        _a11y_snapshot_provider,
     )
     _inject_rec(_trace, _exec_log, lambda *a, **k: None)
 
@@ -2844,6 +2863,7 @@ def run(url: str, goal: str) -> int:
             url,
             site_knowledge,
             Path(trace_writer.run_dir) if trace_writer else None,
+            action_space.list_planner_names(),
         )
         phase2_gate = getattr(agent, "_phase2_gate_result", None) if agent else None
         if phase2_gate and not phase2_gate.get("passed", False):

@@ -35,6 +35,7 @@ Default behavior for this repo:
 - prefer evidence saturation over early closure
 - prefer environment-specific relevance over adjacent-domain analogy
 - prefer environment-specific justification over generic category advice
+- **work in Safari unless told otherwise**: for browser-based work (sandbox, live sites, demos, web automation), use Safari and the repo’s Safari/agent tooling by default; use the integrated Cursor browser (MCP) only when the user explicitly asks for it.
 - when using Safari for live web work, put the active Safari window into full screen by default unless the user explicitly asks otherwise
 - when using a new or weakly-known website/app surface, do a live reconnaissance/calibration pass before the first substantive action; do not treat screenshots as decoration or post-hoc justification
 

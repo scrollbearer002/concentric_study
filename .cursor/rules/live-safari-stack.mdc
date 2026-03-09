@@ -1,0 +1,20 @@
+---
+description: Use the full evidence-gated Safari stack for any visible browser click/task
+globs:
+alwaysApply: true
+---
+
+# Live Safari Stack (Mandatory for Visible Browser Tasks)
+
+For **any** task that drives the cursor to click or interact in Safari (aim trainers, puzzle sites, canvas, forms):
+
+1. **Use the full stack.** Do not default to `--skip-evidence` or ad hoc scripts.
+2. **Mission Control up (live profile):** `mission_control.py up live --json` before evidence. This brings up Phoenix + Control Room so the run is observable and the evidence pipeline works. For other profiles (architecture, full) see `MISSION_CONTROL_STACK_AND_PROFILES.md`.
+3. **Focus:** Hide Cursor (Cmd+H), then activate Safari. Clicks do not reach the page if Safari is not frontmost.
+4. **Evidence gate:** `mission_control.py evidence Safari --require-frontmost --capture --json` (or `_ensure_safari_ready()` in harnesses). Do not proceed until `ready_for_visible_task` is true.
+5. **Coordinates:** Convert DOM/client coords to screen-global using window bounds + content inset (or viewport origin). Do not use raw screenshot pixels as click coordinates.
+6. **Log evidence and viewport** in run artifacts for diagnosis.
+
+Reference: `operator/cre/project_understanding/LIVE_SAFARI_STACK_CHECKLIST.md`. For mission-control profiles and tools (Phoenix, Control Room, Structurizr, Sourcegraph): `operator/cre/project_understanding/MISSION_CONTROL_STACK_AND_PROFILES.md`.
+
+Reference harnesses: `human_benchmark_suite.py`, `mouse_accuracy_suite.py` (both use mission_control up, _ensure_safari_ready, bounds+inset, artifact log).

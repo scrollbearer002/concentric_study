@@ -104,6 +104,74 @@ def test_capture_front_window_fallback_can_include_cursor(monkeypatch, tmp_path:
     assert calls[0] == ["screencapture", "-x", "-C", str(out)]
 
 
+def test_front_window_info_preserves_zero_layer(monkeypatch):
+    fake_quartz = SimpleNamespace(
+        kCGWindowOwnerName="owner",
+        kCGWindowLayer="layer",
+        kCGWindowAlpha="alpha",
+        kCGWindowBounds="bounds",
+        kCGWindowNumber="window_id",
+        kCGWindowListOptionOnScreenOnly=1,
+        kCGNullWindowID=0,
+    )
+
+    monkeypatch.setattr(window_capture, "Quartz", fake_quartz)
+    monkeypatch.setattr(window_capture, "NSWorkspace", None)
+    monkeypatch.setattr(
+        window_capture,
+        "_onscreen_window_records",
+        lambda: [
+            {
+                "owner": "Safari",
+                "layer": 0,
+                "alpha": 1.0,
+                "window_id": 321,
+                "bounds": {"X": 0, "Y": 31, "Width": 1440, "Height": 782},
+            }
+        ],
+    )
+
+    result = window_capture.get_front_window_info("Safari")
+
+    assert result is not None
+    assert result["owner_name"] == "Safari"
+    assert result["window_id"] == 321
+
+
+def test_frontmost_application_name_prefers_quartz_visible_order(monkeypatch):
+    fake_quartz = SimpleNamespace(
+        kCGWindowOwnerName="owner",
+        kCGWindowLayer="layer",
+        kCGWindowAlpha="alpha",
+        kCGWindowBounds="bounds",
+        kCGWindowNumber="window_id",
+    )
+    monkeypatch.setattr(window_capture, "Quartz", fake_quartz)
+    monkeypatch.setattr(window_capture, "NSWorkspace", None)
+    monkeypatch.setattr(
+        window_capture,
+        "_onscreen_window_records",
+        lambda: [
+            {
+                "owner": "Cursor",
+                "layer": 0,
+                "alpha": 1.0,
+                "window_id": 1,
+                "bounds": {"X": 0, "Y": 31, "Width": 1440, "Height": 782},
+            },
+            {
+                "owner": "Safari",
+                "layer": 0,
+                "alpha": 1.0,
+                "window_id": 2,
+                "bounds": {"X": 0, "Y": 31, "Width": 1440, "Height": 782},
+            },
+        ],
+    )
+
+    assert window_capture.get_frontmost_application_name() == "Cursor"
+
+
 def test_visual_monitor_uses_window_capture_when_enabled(monkeypatch, tmp_path: Path):
     calls = []
 

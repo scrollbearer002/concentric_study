@@ -4,10 +4,10 @@
   },
   "performance": {
     "assert_visual_state": {
-      "total_calls": 509,
-      "total_errors": 170,
-      "ema_latency_ms": 76249.4,
-      "ema_error_rate": 0.329
+      "total_calls": 524,
+      "total_errors": 172,
+      "ema_latency_ms": 4460.5,
+      "ema_error_rate": 0.5116
     },
     "analyze_ui": {
       "total_calls": 25,
