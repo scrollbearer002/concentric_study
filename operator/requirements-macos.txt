@@ -1,0 +1,4 @@
+# macOS substrate dependencies.
+-r requirements-common.txt
+pyobjc-framework-Cocoa>=10.0
+pyobjc-framework-Quartz>=10.0

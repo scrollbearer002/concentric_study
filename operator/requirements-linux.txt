@@ -1,0 +1,6 @@
+# Linux substrate dependencies (Wayland/X11 hybrid path).
+-r requirements-common.txt
+keyring>=25.0.0
+secretstorage>=3.3.0
+playwright>=1.40.0
+dbus-next>=0.2.3
