@@ -46,5 +46,8 @@ operator/cre/**/*.png
 # Temp video/transcript working files
 .tmp_video/
 
+# Local legal/WC pilot corpus (never commit case files)
+wc_pilot/
+
 # macOS
 .DS_Store
