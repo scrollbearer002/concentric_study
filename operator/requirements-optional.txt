@@ -14,3 +14,8 @@ opentelemetry-api>=1.40.0
 opentelemetry-sdk>=1.40.0
 opentelemetry-exporter-otlp-proto-http>=1.40.0
 arize-phoenix-otel>=0.15.0
+
+# Magnitude-inspired local model setup TUI (operator/magnitude_setup/)
+textual>=1.0.0
+rich>=13.0.0
+psutil>=5.9.0
