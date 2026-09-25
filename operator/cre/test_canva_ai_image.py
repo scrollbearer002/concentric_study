@@ -16,6 +16,11 @@ from __future__ import annotations
 import subprocess
 import time
 
+import pytest
+
+# macOS-only: drives real macOS UI via the native Quartz/AppKit stack.
+pytest.importorskip("Quartz", reason="macOS-only GUI automation (requires pyobjc/Quartz)")
+
 import Quartz
 from AppKit import NSScreen
 

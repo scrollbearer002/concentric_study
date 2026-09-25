@@ -16,6 +16,11 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
+# macOS-only: agent_core imports the native Quartz/AppKit stack at import time.
+pytest.importorskip("Quartz", reason="macOS-only GUI automation (requires pyobjc/Quartz)")
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from agent_core import MacOSAgentCore

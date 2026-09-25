@@ -1,0 +1,4 @@
+{
+  "name": "concentric_study (Linux dev/test)",
+  "install": "bash .cursor/install.sh"
+}

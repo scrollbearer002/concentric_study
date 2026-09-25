@@ -1,0 +1,11 @@
+# Development and test dependencies for the Linux substrate.
+# Installs the cross-platform runtime plus the Linux-safe extras that the
+# pytest suite needs (numpy/scipy back the visual-monitor pixel comparison,
+# ImageHash/filetype back perception helpers). macOS-only GUI backends
+# (pyobjc/Quartz) are intentionally excluded — those tests cannot run here.
+-r requirements-linux.txt
+pytest>=8.0.0
+numpy>=2.0.0
+scipy>=1.14.0
+ImageHash>=4.3.0
+filetype>=1.2.0

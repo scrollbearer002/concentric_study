@@ -1,5 +1,10 @@
 from __future__ import annotations
 
+import pytest
+
+# macOS-only: agent_core imports the native Quartz/AppKit stack at import time.
+pytest.importorskip("Quartz", reason="macOS-only GUI automation (requires pyobjc/Quartz)")
+
 from agent_core import pixel_to_global_from_capture
 
 
