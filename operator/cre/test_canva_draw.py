@@ -19,6 +19,11 @@ import subprocess
 import sys
 import time
 
+import pytest
+
+# macOS-only: drives real macOS UI via the native Quartz stack.
+pytest.importorskip("Quartz", reason="macOS-only GUI automation (requires pyobjc/Quartz)")
+
 import Quartz
 
 sys.path.insert(0, str(__import__("pathlib").Path(__file__).parent.parent))
