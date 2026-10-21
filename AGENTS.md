@@ -386,7 +386,9 @@ Do not modify without understanding the design:
 |----------|---------|------|------|
 | **Facts Before Each Decision** | Design decisions (what/why) | Rule 12 | Any non-trivial design, placement, refactor, or policy choice |
 | **Research-First Implementation** | Implementation tasks (how) | Rule 13 | Any non-trivial build, feature, or code change |
+| **Decomposition Handbook** | Exhaustive topic trees (coordinator + workers) | Handbook | When the task is to take a system apart depth-first without overload |
 
 Rule 13 follows: **Triage → Analyze → Strategize → Execute → Reflect**.
 Trivial tasks (<3 lines, mechanical) skip to Execute.
 Full method and research citations: `operator/cre/PHD_DECISION_PRACTICE.md` §4.
+Coordinator+worker decomposition (budgets, funnel/refs, basement push): `operator/cre/DECOMPOSITION_HANDBOOK_PHD.md`. Master prompt: `operator/cre/artifacts/decomposition_handbook_master_prompt.txt`.

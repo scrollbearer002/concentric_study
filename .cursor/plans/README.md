@@ -7,6 +7,7 @@ Use these plans when:
 - the task mixes research and implementation
 - a browser/debugging loop needs explicit evidence capture
 - an MCP rollout or integration change needs a bounded path
+- the task needs an exhaustive topic/system tree (Decomposition Handbook: `operator/cre/DECOMPOSITION_HANDBOOK_PHD.md`; plan: `decomposition-handbook-protocol-f956.md`)
 
 Plan discipline:
 - start with `/plan` for non-trivial work

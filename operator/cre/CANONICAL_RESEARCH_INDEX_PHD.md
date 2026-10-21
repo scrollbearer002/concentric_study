@@ -2,8 +2,8 @@
 
 ## Context
 
-- Top-level textual surface under `operator/cre`: `125` files.
-- Markdown files in that surface: `118`.
+- Top-level textual surface under `operator/cre`: `126` files.
+- Markdown files in that surface: `121`.
 - The current top-level directory mixes canonical architecture memos, supporting audits, case-study writeups, historical status reports, and local operational notes.
 - Treating all of them as equally current creates documentation noise, source-of-truth drift, and weak onboarding.
 
@@ -53,15 +53,16 @@ This index is grounded in external architecture-documentation and repository-com
 
 ## Supporting Research
 
+- `DECOMPOSITION_HANDBOOK_PHD.md`
 - `ACADEMIC_VALIDATION.md`
 - `DEEP_DIVE_ADDENDUM.md`
 - `ESSAY_PROJECT_OVERLAP_PHD.md`
+- `CONCENTRIC_STUDY_PHD_TOOL_INTELLIGENCE.md`
 - `PHD_CHAT_TOOL_USE_RESEARCH.md`
 - `RECURSIVE_PHD_RESEARCH_LOOP.md`
 - `TOOLS_USED_IN_CHAT_PHD_RESEARCH.md`
 - `TOOL_CHEAT_SHEET_PHD.md`
 - `ALLOWLIST_PREACTION_IMPLEMENTATION_OUTLINE.md`
-- `CONCENTRIC_STUDY_PHD_TOOL_INTELLIGENCE.md`
 - `ROADMAP_PHD_RESEARCH_MEMO.md`
 - `CONTEXT_LOCKED_RESEARCH_FILTER_PHD.md`
 - `ENVIRONMENT_JUSTIFICATION_GATE_PHD.md`
@@ -69,7 +70,9 @@ This index is grounded in external architecture-documentation and repository-com
 - `RUST_TRANSFER_PRIORITY_ROADMAP_PHD.md`
 - `DEAD_WEIGHT_SIGNALS_PHD.md`
 - `ENVIRONMENT_COMPLIANCE_REVIEW_PHD.md`
+- `HIGH_VALUE_TOOL_ROLLOUT_PHD.md`
 - `WHOLE_PROJECT_TRUTH_AUDIT_PHD.md`
+- `DECISION_SUPPORT_TOOL_ADOPTION_PHD.md`
 - `PAST_TOOL_AWARENESS_AUDIT_PHD.md`
 - `TOOL_CONNECTIONS_DIAGRAM.md`
 - `VISUAL_REASONING_ENHANCEMENT_PHD.md`
@@ -79,7 +82,6 @@ This index is grounded in external architecture-documentation and repository-com
 - `BENCHMARK_STRATEGY_FOR_THIS_PROJECT_PHD.md`
 - `ENVIRONMENT_COMPLIANCE_AUTOMATION_PHD.md`
 - `FINAL_TOOL_COVERAGE_AUDIT_PHD.md`
-- `HIGH_VALUE_TOOL_ROLLOUT_PHD.md`
 - `WHAT_OTHERS_USE_TO_MASTER_VISUAL_BRANCH_PHD.md`
 - `AUTOMATION_EXERCISE_SITE4_FULL_SWEEP_PHD.md`
 - `EXPAND_TESTING_SITE3_FULL_SWEEP_PHD.md`
@@ -87,6 +89,7 @@ This index is grounded in external architecture-documentation and repository-com
 - `UITESTING_PLAYGROUND_SITE5_FULL_SWEEP_PHD.md`
 - `WEB_AUTH_AND_PROTON_PASS_GENERALIZATION_PHD.md`
 - `WIKIPEDIA_SITE6_UNIVERSAL_AUTONOMY_PHD.md`
+- `AI_JURY_API_KEYS.md`
 
 ## Case Studies
 
@@ -115,6 +118,7 @@ This index is grounded in external architecture-documentation and repository-com
 These are useful for provenance, but they should not be cited as the current source of truth without checking the core docs first.
 
 - `IQ_TEST_LIVE_RUN_LOG.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
+- `ULTIMATE_TESTS.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
 - `EXHAUSTIVE_CODE_RUN_REPORT.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
 - `EXECUTION_STATUS.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
 - `EXECUTION_SUMMARY.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
@@ -123,7 +127,6 @@ These are useful for provenance, but they should not be cited as the current sou
 - `FINAL_TEST_SUMMARY.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
 - `TEST_RESULTS.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
 - `BRILLIANT_LIVE_TEST_LOG.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
-- `ULTIMATE_TESTS.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
 - `EXECUTIVE_SUMMARY_PROJECT_TYPE_VERIFICATION.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
 - `FINAL_REPORT.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
 - `IMPLEMENTATION_SUMMARY.md`: superseded by `CANONICAL_RESEARCH_INDEX_PHD.md`, `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md`, `CURRENT_ARCHITECTURE_SURFACE_PHD.md`
@@ -159,11 +162,9 @@ These are useful for provenance, but they should not be cited as the current sou
 - `DEMO_CHECKLIST.md` -> suggested target `operator/cre/local_ops/`
 - `FOR_COLLEAGUE.md` -> suggested target `operator/cre/local_ops/`
 - `execution_log.txt` -> suggested target `operator/cre/history/logs/`
-- `debug-a16689.log` -> suggested target `operator/cre/history/logs/`
 - `magma_story.md` -> suggested target `operator/cre/history/logs/`
 - `SETUP_LOG.md` -> suggested target `operator/cre/history/logs/`
 - `concentric_triangles_clean_pass_log.txt` -> suggested target `operator/cre/history/logs/`
-- `agent_debug.log` -> suggested target `operator/cre/history/logs/`
 - `kleki_execution_log.txt` -> suggested target `operator/cre/history/logs/`
 - `test_excalidraw_execution_log.md` -> suggested target `operator/cre/history/logs/`
 
@@ -171,11 +172,11 @@ These are useful for provenance, but they should not be cited as the current sou
 
 - `canonical_core`: `20`
 - `canonical_snapshot`: `3`
-- `supporting_research`: `34`
+- `supporting_research`: `37`
 - `case_study`: `19`
 - `historical_report`: `35`
 - `local_operational`: `6`
-- `local_log`: `8`
+- `local_log`: `6`
 
 ## Machine-Readable Registry
 
@@ -192,24 +193,24 @@ python3 operator/cre/tools/build_cre_doc_registry.py
 ### `canonical_core`
 
 - `PROJECT_PHD_EXHAUSTIVE_DESCRIPTION.md` | refs `229` | action `keep_top_level` | target `operator/cre/`
-- `CANONICAL_RESEARCH_INDEX_PHD.md` | refs `93` | action `keep_top_level` | target `operator/cre/`
+- `CANONICAL_RESEARCH_INDEX_PHD.md` | refs `96` | action `keep_top_level` | target `operator/cre/`
 - `CURRENT_ARCHITECTURE_SURFACE_PHD.md` | refs `93` | action `keep_top_level` | target `operator/cre/`
-- `PHD_DECISION_PRACTICE.md` | refs `58` | action `keep_top_level` | target `operator/cre/`
-- `README.md` | refs `47` | action `keep_top_level` | target `operator/cre/`
+- `README.md` | refs `81` | action `keep_top_level` | target `operator/cre/`
+- `PHD_DECISION_PRACTICE.md` | refs `60` | action `keep_top_level` | target `operator/cre/`
 - `MISSED_TOOL_WORKFLOW_VALUE_PHD.md` | refs `33` | action `keep_top_level` | target `operator/cre/`
 - `MASTER_TOOL_LIST_PHD.md` | refs `32` | action `keep_top_level` | target `operator/cre/`
 - `PHASE_1_ENVIRONMENT_BENEFITS_PHD.md` | refs `27` | action `keep_top_level` | target `operator/cre/`
+- `CURSOR_MCP_LANDSCAPE_PHD.md` | refs `25` | action `keep_top_level` | target `operator/cre/`
 - `DEBUGGING_THIS_PROJECT_PHD.md` | refs `19` | action `keep_top_level` | target `operator/cre/`
 - `PLACEMENT_RESEARCH.md` | refs `18` | action `keep_top_level` | target `operator/cre/`
-- `CURSOR_MCP_LANDSCAPE_PHD.md` | refs `17` | action `keep_top_level` | target `operator/cre/`
+- `EXTERNAL_MCP_GOVERNANCE_PHD.md` | refs `16` | action `keep_top_level` | target `operator/cre/`
+- `DOC_SURFACE_GOVERNANCE_PHD.md` | refs `15` | action `keep_top_level` | target `operator/cre/`
 - `CURSOR_2_6_OPERATING_PROTOCOL_PHD.md` | refs `13` | action `keep_top_level` | target `operator/cre/`
 - `CURSOR_2_6_PROJECT_FIT_PHD.md` | refs `13` | action `keep_top_level` | target `operator/cre/`
-- `DOC_SURFACE_GOVERNANCE_PHD.md` | refs `13` | action `keep_top_level` | target `operator/cre/`
 - `PROJECT_SCIENTIFIC_COHERENCE_AUDIT_PHD.md` | refs `13` | action `keep_top_level` | target `operator/cre/`
 - `PROJECT_TOOLING_DEEP_AUDIT_PHD.md` | refs `12` | action `keep_top_level` | target `operator/cre/`
 - `CONTEXT7_PILOT_PHD.md` | refs `11` | action `keep_top_level` | target `operator/cre/`
 - `HOST_TOOL_HEALTH_DISCOVERY_PHD.md` | refs `11` | action `keep_top_level` | target `operator/cre/`
-- `EXTERNAL_MCP_GOVERNANCE_PHD.md` | refs `10` | action `keep_top_level` | target `operator/cre/`
 - `CURSOR_CLOUD_AND_TEAM_SURFACES_PHD.md` | refs `9` | action `keep_top_level` | target `operator/cre/`
 
 ### `canonical_snapshot`
@@ -220,15 +221,16 @@ python3 operator/cre/tools/build_cre_doc_registry.py
 
 ### `supporting_research`
 
+- `DECOMPOSITION_HANDBOOK_PHD.md` | refs `24` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `ACADEMIC_VALIDATION.md` | refs `23` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `DEEP_DIVE_ADDENDUM.md` | refs `21` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `ESSAY_PROJECT_OVERLAP_PHD.md` | refs `21` | action `retain_but_deemphasize` | target `operator/cre/reference/`
+- `CONCENTRIC_STUDY_PHD_TOOL_INTELLIGENCE.md` | refs `18` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `PHD_CHAT_TOOL_USE_RESEARCH.md` | refs `15` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `RECURSIVE_PHD_RESEARCH_LOOP.md` | refs `12` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `TOOLS_USED_IN_CHAT_PHD_RESEARCH.md` | refs `12` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `TOOL_CHEAT_SHEET_PHD.md` | refs `12` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `ALLOWLIST_PREACTION_IMPLEMENTATION_OUTLINE.md` | refs `11` | action `retain_but_deemphasize` | target `operator/cre/reference/`
-- `CONCENTRIC_STUDY_PHD_TOOL_INTELLIGENCE.md` | refs `11` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `ROADMAP_PHD_RESEARCH_MEMO.md` | refs `11` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `CONTEXT_LOCKED_RESEARCH_FILTER_PHD.md` | refs `10` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `ENVIRONMENT_JUSTIFICATION_GATE_PHD.md` | refs `10` | action `retain_but_deemphasize` | target `operator/cre/reference/`
@@ -236,7 +238,9 @@ python3 operator/cre/tools/build_cre_doc_registry.py
 - `RUST_TRANSFER_PRIORITY_ROADMAP_PHD.md` | refs `10` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `DEAD_WEIGHT_SIGNALS_PHD.md` | refs `9` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `ENVIRONMENT_COMPLIANCE_REVIEW_PHD.md` | refs `9` | action `retain_but_deemphasize` | target `operator/cre/reference/`
+- `HIGH_VALUE_TOOL_ROLLOUT_PHD.md` | refs `9` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `WHOLE_PROJECT_TRUTH_AUDIT_PHD.md` | refs `9` | action `retain_but_deemphasize` | target `operator/cre/reference/`
+- `DECISION_SUPPORT_TOOL_ADOPTION_PHD.md` | refs `8` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `PAST_TOOL_AWARENESS_AUDIT_PHD.md` | refs `8` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `TOOL_CONNECTIONS_DIAGRAM.md` | refs `8` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `VISUAL_REASONING_ENHANCEMENT_PHD.md` | refs `8` | action `retain_but_deemphasize` | target `operator/cre/reference/`
@@ -246,7 +250,6 @@ python3 operator/cre/tools/build_cre_doc_registry.py
 - `BENCHMARK_STRATEGY_FOR_THIS_PROJECT_PHD.md` | refs `6` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `ENVIRONMENT_COMPLIANCE_AUTOMATION_PHD.md` | refs `6` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `FINAL_TOOL_COVERAGE_AUDIT_PHD.md` | refs `6` | action `retain_but_deemphasize` | target `operator/cre/reference/`
-- `HIGH_VALUE_TOOL_ROLLOUT_PHD.md` | refs `6` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `WHAT_OTHERS_USE_TO_MASTER_VISUAL_BRANCH_PHD.md` | refs `6` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `AUTOMATION_EXERCISE_SITE4_FULL_SWEEP_PHD.md` | refs `5` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `EXPAND_TESTING_SITE3_FULL_SWEEP_PHD.md` | refs `5` | action `retain_but_deemphasize` | target `operator/cre/reference/`
@@ -254,6 +257,7 @@ python3 operator/cre/tools/build_cre_doc_registry.py
 - `UITESTING_PLAYGROUND_SITE5_FULL_SWEEP_PHD.md` | refs `5` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `WEB_AUTH_AND_PROTON_PASS_GENERALIZATION_PHD.md` | refs `5` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 - `WIKIPEDIA_SITE6_UNIVERSAL_AUTONOMY_PHD.md` | refs `5` | action `retain_but_deemphasize` | target `operator/cre/reference/`
+- `AI_JURY_API_KEYS.md` | refs `0` | action `retain_but_deemphasize` | target `operator/cre/reference/`
 
 ### `case_study`
 
@@ -280,6 +284,7 @@ python3 operator/cre/tools/build_cre_doc_registry.py
 ### `historical_report`
 
 - `IQ_TEST_LIVE_RUN_LOG.md` | refs `36` | action `move_to_archive` | target `operator/cre/history/`
+- `ULTIMATE_TESTS.md` | refs `16` | action `move_to_archive` | target `operator/cre/history/`
 - `EXHAUSTIVE_CODE_RUN_REPORT.md` | refs `15` | action `move_to_archive` | target `operator/cre/history/`
 - `EXECUTION_STATUS.md` | refs `13` | action `move_to_archive` | target `operator/cre/history/`
 - `EXECUTION_SUMMARY.md` | refs `13` | action `move_to_archive` | target `operator/cre/history/`
@@ -288,7 +293,6 @@ python3 operator/cre/tools/build_cre_doc_registry.py
 - `FINAL_TEST_SUMMARY.md` | refs `12` | action `move_to_archive` | target `operator/cre/history/`
 - `TEST_RESULTS.md` | refs `12` | action `move_to_archive` | target `operator/cre/history/`
 - `BRILLIANT_LIVE_TEST_LOG.md` | refs `10` | action `move_to_archive` | target `operator/cre/history/`
-- `ULTIMATE_TESTS.md` | refs `10` | action `move_to_archive` | target `operator/cre/history/`
 - `EXECUTIVE_SUMMARY_PROJECT_TYPE_VERIFICATION.md` | refs `9` | action `move_to_archive` | target `operator/cre/history/`
 - `FINAL_REPORT.md` | refs `9` | action `move_to_archive` | target `operator/cre/history/`
 - `IMPLEMENTATION_SUMMARY.md` | refs `9` | action `move_to_archive` | target `operator/cre/history/`
@@ -327,10 +331,8 @@ python3 operator/cre/tools/build_cre_doc_registry.py
 ### `local_log`
 
 - `execution_log.txt` | refs `34` | action `move_to_logs` | target `operator/cre/history/logs/`
-- `debug-a16689.log` | refs `17` | action `move_to_logs` | target `operator/cre/history/logs/`
 - `magma_story.md` | refs `13` | action `move_to_logs` | target `operator/cre/history/logs/`
 - `SETUP_LOG.md` | refs `11` | action `move_to_logs` | target `operator/cre/history/logs/`
 - `concentric_triangles_clean_pass_log.txt` | refs `10` | action `move_to_logs` | target `operator/cre/history/logs/`
-- `agent_debug.log` | refs `8` | action `move_to_logs` | target `operator/cre/history/logs/`
 - `kleki_execution_log.txt` | refs `7` | action `move_to_logs` | target `operator/cre/history/logs/`
 - `test_excalidraw_execution_log.md` | refs `6` | action `move_to_logs` | target `operator/cre/history/logs/`

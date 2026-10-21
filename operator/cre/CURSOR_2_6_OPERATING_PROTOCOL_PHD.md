@@ -15,6 +15,7 @@ Use `/plan` when:
 - the task spans multiple files
 - the task mixes research and implementation
 - the task involves rollout, debugging, or design choices
+- the task requires exhaustive topic/system decomposition (use `DECOMPOSITION_HANDBOOK_PHD.md` as the method)
 
 Use `/ask` when:
 - the goal is exploration only
