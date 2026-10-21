@@ -18,6 +18,8 @@ Copy this file for any non-trivial objective and rename it:
 
 ## 3) Plan and Checkpoints
 
+If the objective needs an exhaustive topic/system tree, split workstreams with the Decomposition Handbook (`operator/cre/DECOMPOSITION_HANDBOOK_PHD.md`): name branches, depth/breadth budgets, dedup registry, and merge-pass ownership before dispatch.
+
 1. checkpoint:
    - expected outcome:
    - pass condition:

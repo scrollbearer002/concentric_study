@@ -1,0 +1,46 @@
+{
+  "id": "decomposition_handbook",
+  "title": "The Decomposition Handbook",
+  "version": "1.1",
+  "path": "operator/cre/DECOMPOSITION_HANDBOOK_PHD.md",
+  "master_prompt": "operator/cre/artifacts/decomposition_handbook_master_prompt.txt",
+  "classification": "isolated_experimental_method_protocol",
+  "phases": [
+    "base_tree",
+    "recursive_deepening",
+    "basement_push",
+    "presentation"
+  ],
+  "defaults": {
+    "depth": 6,
+    "breadth": 8,
+    "workers": 3,
+    "deepen_delta": 3
+  },
+  "anti_overload": [
+    "depth_budget",
+    "breadth_budget",
+    "recursion_gate",
+    "funnel_rule_dedup_registry",
+    "counted_groups",
+    "leaf_rule",
+    "cross_branch_refs",
+    "one_branch_at_a_time",
+    "merge_pass",
+    "footer_honesty"
+  ],
+  "invoke": "Run the decomposition protocol on {TOPIC}. Depth {N}.",
+  "worked_example": {
+    "topic": "2015 Honda Odyssey EX-L",
+    "note": "Summarized in the handbook §11. Full tree/inventory artifacts are not present in this workspace; do not invent them.",
+    "corrections_applied": [
+      "engine J35Z8 not J35Y6",
+      "EX-L 17-inch wheels",
+      "48-element census is a floor not an assay"
+    ]
+  },
+  "non_regression": {
+    "do_not_modify": ["operator/agent_infra/"],
+    "runtime_status": "docs_and_prompt_stub_only"
+  }
+}

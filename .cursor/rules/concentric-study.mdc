@@ -137,6 +137,8 @@ When the user asks you to do something, **research the best way to do it** befor
    - Decompose the request into clear sub-tasks (e.g. design, data, implementation, tests, docs).
    - For each sub-task, aim for high quality (treat “do the best” as ~90% of what’s achievable for that part), not just “good enough.”
    - Don’t leave a sub-task half-done or skipped; complete and verify each part before moving on.
+   - When the objective is an exhaustive system/topic tree (not ordinary task breakdown), use the Decomposition Handbook: coordinator + workers, depth/breadth budgets, funnel refs, leaf rule, merge pass. Invoke: `Run the decomposition protocol on {TOPIC}. Depth {N}.`
+   - Use: `operator/cre/DECOMPOSITION_HANDBOOK_PHD.md` and `operator/cre/artifacts/decomposition_handbook_master_prompt.txt`.
 
 2. **When you search or research, learn every step**
    - Don’t skim: read and internalize each step of what you find (papers, docs, code).
@@ -358,6 +360,7 @@ Classify the task:
 - **Trivial**: Single-file, mechanical change. Skip to step 4.
 - **Moderate**: Multi-file or design choice involved. Do steps 2-4.
 - **Complex**: Architectural, cross-module, or unfamiliar domain. Do all steps.
+- **Exhaustive topic decomposition**: If the user asks to take a system apart into a deep structured tree, route to the Decomposition Handbook (coordinator/worker phases), not ad-hoc brainstorming. Use: `operator/cre/DECOMPOSITION_HANDBOOK_PHD.md`.
 
 This prevents the "overthinking" penalty documented in ICoT (arXiv:2512.14048, AAAI-2026):
 simple tasks routed directly save 46% token overhead while complex tasks get full analysis.
