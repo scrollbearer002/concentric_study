@@ -20,7 +20,7 @@ Produce an evidence-tagged, five-part modernization bible for VIN `1EA1F27294159
 ## Checkpoints
 1. VIN decode year/series stated with confidence
 2. OEM anatomy table with verification gates
-3. Primary 48V architecture selected with alternatives
+3. Primary 48V architecture selected with alternatives — **Lead 3 DONE** (`research/prowler_272_ev_rebuild/03_LEAD3_all_electric_offgrid_conversion.md`): Victron MultiPlus-II + 15–20 kWh LiFePO4 primary; power budget; solar/EVSE/HVAC/galley/running-gear; do-not-do; `[S]/[I]`/`[U]` tags
 4. Weight delta table nets positive payload margin under dual-axle class
 5. Canvas + markdown artifacts committed
 
