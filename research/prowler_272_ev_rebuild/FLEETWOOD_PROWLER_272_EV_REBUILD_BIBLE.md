@@ -229,26 +229,41 @@ Without envelope work, electric HVAC will punish the battery bank.
 
 ### 3.1 Connectivity & edge compute
 
+**Primary local-first path:** `Starlink Mini (bypass) + GL.iNet GL-X3000 (5G failover) → optional self-host bond → HA LAN`. Escalate to Peplink only if true multi-WAN bonding + support SLA is required. Avoid Cradlepoint/NetCloud unless a fleet already depends on it.
+
 | Layer | Choice | Notes |
 |---|---|---|
-| LEO sat | **Starlink Mini** roof mount; vibration-isolated; in-motion plan compliance | Mount with clear sky; cable to router WAN |
-| Cellular | **Peplink MAX** / Cradlepoint / GL.iNet 5G with external MIMO antennas | Bond Starlink + 5G; failover |
-| Edge | **Home Assistant OS** on HA Yellow **or** mini-PC (NUC-class) + PoE switch | Local automations; no cloud lock-in |
-| Matter / Thread | HA Matter Server + OTBR (Yellow / Connect ZBT-2) | Commission Thread devices locally |
+| LEO sat | **Starlink Mini** (~2.43 lb; **12–48 VDC**; typ. 15–40 W, ≤60 W) | Vibration-isolated roof mount; Ethernet → router WAN; **Bypass Mode**; in-motion needs Roam/Mobile Priority plan |
+| Cellular | **GL-X3000** dual-SIM 5G (budget) or **Peplink MAX BR1 / Transit Duo** (prosumer) + MIMO antennas | Failover/load-balance first; true aggregation via self-hosted OpenMPTCP/tailbond/FusionHub |
+| Edge | **Mini-PC HAOS** preferred (Frigate headroom); HA Yellow/Green OK for control-only | PoE switch; Mosquitto on-LAN; Tailscale/WireGuard optional remote |
+| Matter / Thread | HA Matter Server + OTBR (**Connect ZBT-2** or Yellow radio) | Local commission; some vendors still require cloud *first* pairing — pick devices that don’t |
+| NVR | **Frigate** + Coral TPU + go2rtc on mini-PC | RTSP cams only; vendor cloud disabled |
 | Victron bridge | Cerbo → MQTT → HA | Battery/solar as first-class entities |
-| Starlink via Peplink | Add WAN management route to `192.168.100.1` if dish bypassed | Documented HA/Peplink pattern |
+| Dish admin path | Static/management route to `192.168.100.1` when dish is bypassed behind router | Required for HA Starlink integration |
+
+```text
+Starlink Mini ──► GL-X3000 / Peplink ◄── 5G dual-SIM
+                      │
+                 Trailer LAN
+         ┌────────────┼────────────┐
+         ▼            ▼            ▼
+   HAOS mini-PC   Frigate+Coral   Cerbo (MQTT)
+         │
+   WLED / locks / ESPHome panels / level sensors
+```
 
 ### 3.2 Interior tech & UX
 
-- **Lighting:** Addressable RGBIC cove (WLED / ESP32) + tunable white circadian scenes in HA.  
-- **Privacy:** Motorized shades (primary) or **PDLC** film on selected windows (power draw + wiring complexity).  
-- **Work/gaming:** Fold-down or rail-mounted desk; ultrawide on **gas-spring arm**; concealed raceways; **USB-C PD 3.1 (140W)** outlets at desk/bed/lounge.  
-- **AV:** Soundbar + short-throw or ultra-short-throw projector on blackout scene; local media (Plex/Jellyfin on same mini-PC).  
-- **Access:** RV-rated **NFC/keypad** deadbolt + optional biometric (keep mechanical key override).  
-- **Security:** 360° / multi-cam (front hitch, rear, curbside, roadside) → NVR local SSD; tow-away geofence.  
-- **Leveling:** Lippert Ground Control / equivalent auto-level; HA status only (keep vendor controller for safety).  
+- **Lighting:** SK6812 **RGBW** cove via **WLED**/ESP32 + HA circadian Kelvin schedule (not rainbow party mode as default).  
+- **Privacy:** **Hybrid** — motorized cellular/blackout shades in sleep zones (thermal); **PDLC** (about 5 W/m² or less) for wet bath / projector wall (fails opaque = good privacy).  
+- **Work/gaming:** Fold-down or rail desk; ultrawide on **gas-spring arm** with transit lock; concealed raceways; **USB-C PD 3.1 140 W (28 V × 5 A)** via e-marked cables — practical path is dedicated 140 W brick/dock on a known circuit until true in-wall 140 W receptacles are common.  
+- **Touch UX:** Wall tablet (Fully Kiosk) and/or ESP32-S3 LVGL panels = coach OS; phone is remote.  
+- **AV:** Soundbar + short-throw projector; local media (Jellyfin/Plex on mini-PC); HA `media_player` preferred over Alexa-primary bars.  
+- **Access:** **Nuki** (or RV-rated equivalent) + ESPHome BLE/MQTT local path + NFC/keypad; mechanical key override mandatory.  
+- **Security:** Hitch/rear/curbside/roadside RTSP cams → Frigate; tow-away geofence; local SSD retention.  
+- **Leveling:** **Lippert Ground Control TT** (~$2.5–4.5k installed, heavier) or SteadyFast-class manual ($400–1.2k); HA status only — physical panel remains primary; never remote-actuate slides/awning.
 
-**UX principle:** One wall tablet (Fully Kiosk) = “coach OS”; phone is remote; cloud is optional sync, never required for lights/HVAC/locks.
+**UX principle:** Cloud is optional sync only. Lights, HVAC setpoints, locks, and dumps must work with WAN unplugged.
 
 ---
 
@@ -318,11 +333,12 @@ Without envelope work, electric HVAC will punish the battery bank.
 | Mini-split + bracket | +90 to −20 net vs old AC (often near wash) |
 | Compressor fridge | +60 to +100 |
 | Induction + convection | +40 to +70 |
-| Disc brake conversion | +40 to +80 |
-| Auto-level / jacks | +80 to +160 |
-| Smart tech + panels + cams | +30 to +60 |
+| Disc brake conversion | +20 to +80 (often near-neutral vs drums) |
+| Auto-level (GC TT class) | +150 to +300 |
+| Manual stabilizers (SteadyFast class) | +40 to +120 |
+| Smart tech + HA/NVR + panels + cams | +20 to +50 |
 | Insulation foam (net) | +40 to +120 |
-| **Subtotal additions** | **≈ +810 to +1,350** |
+| **Subtotal additions** | **≈ +810 to +1,450** |
 
 **Net:** Often **+0 to +400 lb** vs starting UVW for a disciplined build — **or worse if cabinetry isn’t lightweighted**. Battery location dominates tongue %.
 
@@ -361,6 +377,16 @@ Without envelope work, electric HVAC will punish the battery bank.
 | Interior finishes / cabinetry / furniture | $6k–$18k | $12k–$35k |
 | **Total** | **~$33k–$90k** | **~$62k–$146k** |
 
+#### Smart-stack detail (within the smart-tech line)
+
+| Slice | DIY parts | Notes |
+|---|---:|---|
+| Starlink Mini + GL-X3000 | ~$900–1,200 | Peplink path adds ~$1–2k hardware |
+| HA mini-PC + ZBT-2 + Coral + panels + WLED | ~$400–1,200 | Green-only control plane cheaper, less NVR headroom |
+| Cams + Frigate host extras | ~$300–800 | RTSP only |
+| Nuki + biometric/NFC path | ~$250–450 | Keep local BLE/MQTT |
+| Leveling SteadyFast → GC TT | ~$400–1,200 → $2,500–4,500 | Weight rises sharply with auto kits |
+
 Excludes donor trailer cost, shop rent, and “surprise rot” contingency (**add 15–30%**).
 
 ---
@@ -386,7 +412,9 @@ Excludes donor trailer cost, shop rent, and “surprise rot” contingency (**ad
 - PaulGilchrist/off-grid — Victron travel-trailer integration patterns (24V analog).  
 - divergent-futures/hw-slipstream — 48V Victron spine / aero all-electric trailer design values (greenfield analog).  
 - Home Assistant Thread/Matter/Starlink docs — local-first stack.  
-- HA core#95695 — Starlink Mini/dish behind Peplink routing pattern.
+- HA core#95695 — Starlink Mini/dish behind Peplink routing pattern.  
+- Lead research artifact `04_LEAD4_smart_tech_design_bom.md` — router tiers, Mini power/weight, Frigate/HA split, PDLC vs shades, BOM slices.  
+- Lead research artifact `03_LEAD3_all_electric_offgrid_conversion.md` — 48V conversion detail.
 
 ---
 
