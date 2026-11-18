@@ -2,10 +2,11 @@
 
 **Platform:** Bumper-pull tandem-axle travel trailer  
 **VIN:** `1EA1F272941595598`  
-**Factory identity (decoded):** Fleetwood WMI `1EA` · series token `272` · model-year code `4` → **2004** · plant `1` · serial `595598`  
+**Factory identity (decoded):** WMI `1EA` = **Fleetwood Enterprises / Fleetwood Travel Trailers** (NHTSA manufacture dump; **not** Fleetwood Folding Trailers / Somerset) · series token `272` · model-year code `4` → **2004** · plant `1` (unnamed) · serial `595598` · ISO check digit **valid**  
 **Title/insurance note:** Reported titled/insured as **2013** — treat as registration anomaly; **do not** use title year for OEM construction assumptions.  
 **Document class:** Engineering planning bible (not a stamped PE package)  
-**Environment basis:** US travel-trailer rebuild constrained by OEM stick-built shell mass, dual-axle GAWR class, and mobile lithium/NEC-adjacent practice. Remote OEM brochure/NHTSA APIs were unavailable in the research environment; exact sticker values are gated to physical inspection.
+**Environment basis:** US travel-trailer rebuild constrained by OEM stick-built shell mass, dual-axle GAWR class, and mobile lithium/NEC-adjacent practice. Live NHTSA vPIC / brochure hosts blocked; WMI confirmed via NHTSA manufacture dump mirror (`iotlabsltd/pyvin` `WMI_565.csv`). Exact sticker values gated to physical inspection.  
+**Lead 1 deep dive:** `research/prowler_272_ev_rebuild/01_LEAD1_oem_chassis_running_gear_construction.md`
 
 ### Confidence legend
 | Tag | Meaning |
@@ -24,12 +25,12 @@
 
 | Field | Value | Confidence |
 |---|---|---|
-| WMI | `1EA` — Fleetwood Enterprises trailer family | `vin_structural` |
+| WMI | `1EA` — **Fleetwood Enterprises / Travel Trailers** (Riverside/San Bernardino registrations). Folding Trailers used `1EB`/`4C*` Somerset codes — do not conflate | `vin_structural` + NHTSA WMI dump |
 | Series token | `272` embedded in VDS (`…1F272…`) → 272-series / ~27' floorplan family (27H/270-class) | `vin_structural` + `era_typical` |
-| Model year | Position 10 = `4` → **2004** | `vin_structural` |
-| Check digit / plant / serial | `9` / `1` / `595598` | `vin_structural` |
+| Model year | Position 10 = `4` → **2004** (ISO check digit `9` validates) | `vin_structural` |
+| Check digit / plant / serial | `9` / `1` / `595598` — plant name unresolved | `vin_structural` / plant `unknown_verify` |
 | Exact floorplan letter (H vs other) | Not recoverable from VIN alone | `unknown_verify` |
-| Exact UVW / GVWR / hitch | On federal certification label (door/entry) + VIN plate | `unknown_verify` |
+| Exact UVW / GVWR / hitch | On federal certification label (door/entry) + VIN plate — **brochure tables not retrieved** | `unknown_verify` |
 
 **Physical verification gate (do this before buying batteries):**
 1. Photograph federal certification label: GVWR, GAWR-each, tires/PSI, UVW if printed.
@@ -149,59 +150,67 @@ Prioritize these **before** any power or finish work:
 
 ### Design equation (this trailer)
 `(27' stick-built envelope)` × `(dual-axle ~7k-class GVWR)` × `(zero propane)` × `(HVAC + induction simultaneous)`  
-→ **48V LiFePO4 spine**, **5–6 kVA hybrid inverter**, **heat-pump HVAC**, **roof + deployable PV**, **weight-managed battery placement**.
+→ **48V LiFePO4 spine**, **5 kVA-class hybrid inverter**, **heat-pump HVAC**, **roof + deployable PV**, **weight-managed battery placement**.
+
+Detail research: `03_LEAD3_all_electric_offgrid_conversion.md`.
 
 ### 2.1 Recommended 48V high-capacity power architecture
 
 #### Primary recommendation (professional RV-grade)
 | Layer | Spec | Rationale |
 |---|---|---|
-| Battery | **16–20 kWh** LiFePO4 @ 48V nominal (e.g. 2× 48V 200Ah server-rack or RV-rated modules ≈ 19–20 kWh) | Covers overnight heat-pump + fridge + electronics; induction bursts via inverter |
-| Alternate compact | **10–12 kWh** if strictly fair-weather / shore-frequent | Lighter tongue; less autonomy |
-| Alternate expedition | **24–30 kWh** only if axle tags ≥4,400 lb ×2 **and** tongue model closes | Heavy; often wrong for OEM 3,500s |
-| Inverter/charger | **Victron MultiPlus-II 48/5000/70-50 2x120V** (US) or Quattro 48/5000 | True hybrid, PowerAssist, dual 120V, Cerbo ecosystem; mobile-proven |
-| Alt inverter | EG4 6000XP / similar 48V AIO | Lower $/W; heavier integration DIY burden; verify mobile vibration mounts |
-| Alt all-in-one kit | EcoFlow Power Kit / newer 2026 PowerOcean-class kits | Faster install; more cloud coupling — conflict with local-first unless bridged |
-| Solar charge | Victron **MPPT 150/70 or 250/70–100** (array Voc dependent) | Matches panel stringing |
-| BMS / telemetry | Module BMS + **Victron SmartShunt or Lynx Shunt** + **Cerbo GX / Ekrano** | Local MQTT → Home Assistant |
-| 12V house | Orion XS / Orion-Tr **48→12** isolated converter (30–60A) feeding cleaned 12V bus | Keep LED, pumps, brakes, fans on 12V |
-| Protection | Class-T or Mega fuse at pack, midnite/ Victron DC distribution, dual-pole battery disconnect, AFCI/GFCI on AC as required | Fail closed |
+| Battery | **Start 15 kWh**; busbar/space ready for **20 kWh** LiFePO4 @ 48V | Sweet spot for foam + heat-pump living; expand after CAT-scale |
+| Alternate compact | **10 kWh** mild/weekend / shore-frequent only | Lightest tongue |
+| Alternate expedition | **30 kWh** only after axle tags + tongue model clear | Dual-3500 class often cannot carry this |
+| Inverter/charger | **Victron MultiPlus-II 48/5000 2x120V** (US); Quattro if dual AC-in | PowerAssist; mobile/marine datasheet path; Cerbo ecosystem |
+| Floor inverter | MultiPlus-II **48/3000 2x120V** only if induction+HVAC concurrent is optional | Continuous HVAC+induction design case is ≥3–3.5 kW |
+| Alt inverter | EG4 12000XP / FlexBOSS (budget power) | Accept ~90–105 lb + higher idle; reinforce mounts |
+| Alt turnkey | EcoFlow Power Kit class | Fast UX; plan local-API / exit path |
+| Not primary | **Sol-Ark 15K** (~135 lb, ~90 W idle) | Stationary hybrid — wrong mass/idle for 27′ TT |
+| Solar charge | Victron **SmartSolar MPPT** (150/70 or 250/70–100; Voc-matched) | Separate MPPT; don’t force residential AIO string rules onto short roof |
+| Charge profile | Absorb ~**57.6 V** / float ~**55.2 V** (Victron Li defaults); no Pb equalize | Closed-loop BMS when available |
+| BMS / telemetry | Pack BMS + **Lynx / SmartShunt** + **Cerbo GX** | MQTT → Home Assistant |
+| 12V house | Orion XS / Orion-Tr **48→12** isolated (30–60A) | LED, pumps, brakes, fans |
+| Protection | Class-T at pack, Lynx/MidNite DC distro, dual-pole disconnect, GFCI/AFCI as required | Fail closed |
 
-**US shore / EVSE note:** Use inverter AC-in from **TT-30 or 14-50**. For J1772/NACS “shore,” use an **EVSE → portable 14-50 / hardwired charger input** strategy (you are charging the *house bank*, not a traction pack). Do not backfeed EVSE pins.
+**US shore / EVSE note:** `EVSE (J1772 or NACS→J1772 AC adapter) → TT-30/14-50 → MultiPlus AC-IN` with PowerControl amp limit. Charge the **house bank** only. Never wire CCS/NACS **DC** pins into the inverter/battery.
 
 #### Power budget (planning)
 
 | Mode | Loads | Demand |
 |---|---|---|
-| Idle / camping quiet | LED, router, HA, fridge compressor, USB | ~80–150 W |
-| Comfort cruise | Above + mini-split maintain | ~400–900 W (climate dependent) |
-| Peak coincident | Induction 1.8 kW + mini-split 1.0–1.5 kW + oven/microwave surge | **3.0–4.5 kW** → size inverter ≥5 kVA |
-| Daily energy (mild) | Comfort + cooking + work | ~6–10 kWh/day |
-| Daily energy (hot/cold extreme) | Heat pump hard work | ~12–18 kWh/day |
+| Idle | Inverter standby + fridge + controls + 12V bus | **80–180 W** |
+| Cruise | Above + mini-split part-load + laptops/Starlink | **600–1500 W** |
+| Peak coincident | HVAC high + induction + oven/microwave overlap | **3500–5500 W** |
+| Design continuous | HVAC + induction together | **≥3000–3500 W** → prefer **5 kVA** MultiPlus |
+| Daily mild | Comfort + cooking + work | **6–10 kWh/day** |
+| Daily hot/cold heavy | Heat-pump hard work + cooking | **12–20+ kWh/day** |
 
-**Autonomy target:** 16–20 kWh usable @ 80–90% DoD → **~1.0–1.5 days** without sun in mild weather; deployable PV + tow DC-DC extends.
+**Autonomy target:** 15 kWh (~13.5 usable) covers ~1 mild day; 20 kWh covers hotter HVAC days with solar/tow assist. Deployable PV + Orion XS transit top-up (~0.5–1.0 kW class into 48V) extends, not replaces, solar/shore.
 
 #### Solar & charging
 | Source | Target | Notes |
 |---|---|---|
-| Roof array | **1.2–2.0 kW** high-efficiency N-type/TOPCon (or bifacial if rack air gap) | 27' roof after vents ≈ limited; low-profile flush mounts; reinforce rafters |
-| Deployable | **800–1600 W** suitcase / blanket | Critical for trees / winter |
-| Tow vehicle DC-DC | Victron Orion XS **48V** or 12→48 boost architecture from dual-alt truck | Size to alternator thermal limits |
-| Shore | 30A PowerControl → upgrade inlet to **50A 14-50** when rewiring | PowerAssist covers peaks on 30A |
+| Roof array | **1.0–2.0 kW** RV-sized **N-type/TOPCon** | Usable roof often ~70–110 ft² after vents; reinforce rafters |
+| Avoid on roof | Residential 500–650 W bifacial modules | Too large/heavy; bifacial gain needs rear albedo |
+| Deployable | **800–1600 W** suitcase / blanket on 2nd MPPT | Trees / winter / shade parking |
+| Tow vehicle DC-DC | **Orion XS** (12→48 boost if truck is 12V) | Ignition sense + current limit; transit top-up only |
+| Shore | TT-30 PowerControl → upgrade inlet to **50A 14-50** when rewiring | PowerAssist covers peaks |
 
 ### 2.2 All-electric HVAC & thermal envelope
 
 | Remove | Replace |
 |---|---|
-| Roof AC (13.5k) | **Primary:** 12k–18k BTU **inverter mini-split** (high SEER / HSPF), outdoor unit on reinforced bumper or frame-tied bracket (see joshgubler analog: Pioneer ~400–1000 W) |
-| LP furnace | Mini-split heat pump + optional **48V DC rooftop heat pump** (Nomadic Cooling / Cruise N Comfort class) as redundant low-profile path |
+| Roof AC (13.5k) | **Primary:** **12k** (escalate 18k only if envelope weak) high-SEER2 **inverter mini-split**; outdoor on frame-tied bumper/side tray (~975–1500 W rated band by size) |
+| LP furnace | Same heat-pump; optional **48V DC** Nomadic / Cruise N Comfort **only after SKU run-watt datasheet** |
 | Fiberglass batts | **Closed-cell spray foam** or rigid polyiso + foam-in cavities; air-seal windows/doors |
+| RecPro “48V” assumption | Not verified this research pass — RecPro/Houghton-class units seen as **120V** rooftop; temporary only |
 
 **Envelope targets (inferred for stick-built rebuild):**
 - Walls: effective **R-15–R-21** with thermal-break strategy  
 - Roof: **R-21–R-30**  
 - Floor: **R-15–R-21** + sealed underbelly  
-Without envelope work, electric HVAC will punish the battery bank.
+Without envelope work, electric HVAC will punish the battery bank. Foam can hide wet timber — fix leaks first.
 
 ### 2.3 All-electric galley & water
 
@@ -398,13 +407,18 @@ Excludes donor trailer cost, shop rent, and “surprise rot” contingency (**ad
 ## Do-not-do list
 
 1. Do not keep polybutylene supply.  
-2. Do not hang 20 kWh on the A-frame.  
-3. Do not run induction + resistive water heater + old roof AC on a 3kVA inverter.  
+2. Do not hang the LiFePO4 bank on the A-frame.  
+3. Do not run induction + resistive water heater + old roof AC on a 3 kVA inverter.  
 4. Do not skip frame inspection before torsion axle drill pattern.  
 5. Do not cloud-lock locks/HVAC with no local fallback.  
 6. Do not claim 2013 construction methods because of title year.  
 7. Do not spray foam over active leaks.  
-8. Do not use residential non-mobile LiFePO4 without vibration/vent/fastening plan.
+8. Do not use residential non-mobile LiFePO4 without vibration/vent/fastening plan.  
+9. Do not feed CCS/NACS **DC** fast-charge pins into the house bank.  
+10. Do not default to residential 500–650 W roof panels on a 27′ stick-built roof.  
+11. Do not assume RecPro 48V rooftop SKUs without a datasheet.  
+12. Do not pick Sol-Ark 15K as the mobile primary inverter.  
+13. Do not buy 30 kWh until CAT-scale + GAWR prove it.
 
 ---
 
