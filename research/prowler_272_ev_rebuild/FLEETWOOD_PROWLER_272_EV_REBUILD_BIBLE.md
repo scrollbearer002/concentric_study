@@ -334,7 +334,8 @@ Starlink Mini ──► GL-X3000 / Peplink ◄── 5G dual-SIM
 | Water heater (tank gas/electric) | −60 to −90 |
 | Heavy wood cabinetry (partial) | −150 to −400 |
 | Generator (if any) | −100 to −250 |
-| **Subtotal removals** | **≈ −640 to −1,250** |
+| **Systems-only strip (LP + furnace + WH + absorption fridge + roof AC + range + power center + flooded battery)** | **≈ −455 to −725** (LR2 planning band) |
+| **Subtotal removals (incl. cabinetry gut)** | **≈ −640 to −1,250** |
 
 #### Additions (recommended package)
 
