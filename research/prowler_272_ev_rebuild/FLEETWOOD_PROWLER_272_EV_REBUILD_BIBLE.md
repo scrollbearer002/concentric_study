@@ -89,35 +89,39 @@ This generation of Prowler was a **budget/mid stick-and-tin** product, not a wel
 
 ### 1.3 OEM systems topology
 
+> **Deep dive (Lead Researcher 2):** tagged claims, NHTSA IDs, strip inventory →  
+> [`LR2_OEM_ELECTRICAL_PLUMBING_LP_HVAC.md`](./LR2_OEM_ELECTRICAL_PLUMBING_LP_HVAC.md)
+
 #### Electrical (factory)
-| Item | Era-typical | Confidence |
+| Item | Best current evidence | Confidence |
 |---|---|---|
-| Shore power | **30A / 120V** TT-30 most common for this size/era; 50A rare unless heavily optioned | `era_typical` |
-| Converter/charger | Integrated power center (WFCO / Progressive Dynamics / Magnetek-era) ~35–55A 12V | `era_typical` |
+| Shore power | **30A / 120V** TT-30 most common for this size/era; 50A rare unless heavily optioned. **VIN inlet = verify.** | `era_typical` / `unknown_verify` |
+| Converter/charger | Integrated power center; **2003 Prowler OEM documented at 45 A** (NHTSA complaint 10051783). Brand Magnetek / PD / WFCO = **nameplate**. Siemens Q breakers recall **04V145000** on 2004 Fleetwood TT incl. Prowler. | `direct` amps (sister year) + `era_typical` brand window |
 | House battery | Single Group 24/27 flooded lead-acid in tongue box or under dinette | `era_typical` |
-| 12V distribution | Automotive-style fuse block; wiring in walls/floor voids, often stapled | `era_typical` |
+| 12V distribution | Automotive-style fuse block; wiring in walls/floor voids, often stapled. **Pinched frame/floor wiring** documented on 2006 Prowler (complaint 10173668). | `era_typical` + `direct` failure mode |
 | 120V distribution | Breaker panel in power center; Romex-like NM in coach (mobile practice of era) | `era_typical` |
 | Chassis bonding | Frame bond + 7-pin trailer connector (lights, electric brakes, charge line ~16–18AWG weak) | `era_typical` |
 
 #### Plumbing
-| Item | Era-typical | Confidence |
+| Item | Best current evidence | Confidence |
 |---|---|---|
-| Fresh tank | ~30–50 gal depending floorplan | `era_typical` / `unknown_verify` |
-| Gray / black | ~25–45 gal each typical | `era_typical` / `unknown_verify` |
-| Supply | Transition era: many still **polybutylene** or early **PEX**; fittings crimp/clamp | `era_typical` |
+| Fresh / gray / black gallons | **No brochure recovered in research env.** Planning band ~30–50 / ~25–45 / ~25–45 gal — **not OEM fact for this VIN** | `unknown_verify` (+ `era_typical` band only) |
+| Tank locations | Fresh often forward/mid; gray/black mid-aft under bath/galley | `era_typical` / `unknown_verify` |
+| Supply | Transition era: **polybutylene or early PEX** — cut-test required; replace all with PEX in rebuild | `era_typical` / `unknown_verify` |
 | Drain | ABS DWV with P-traps; dump valves mid-curbside | `era_typical` |
 | Pump | 12V demand pump + accumulator sometimes | `era_typical` |
-| Water heater | **6-gal** LP/electric (Atwood/Suburban) common; some 10-gal | `era_typical` |
+| Water heater | **6-gal** LP/electric (Atwood/Suburban) common; some 10-gal — **dataplate** | `era_typical` / `unknown_verify` |
 
 #### LP / HVAC / appliances
-| Item | Era-typical | Confidence | Strip for EV? |
+| Item | Best current evidence | Confidence | Strip for EV? |
 |---|---|---|---|
-| LP bottles | Dual **20-lb** or **30-lb** on A-frame | `era_typical` | Yes — remove |
-| Regulator / copper-steel lines | Two-stage regulator → furnace, WH, range, fridge | `era_typical` | Yes — purge & remove |
-| Furnace | Forced-air LP **16–30k BTU** (Suburban/Atwood) | `era_typical` | Yes |
-| Roof AC | **13.5k BTU** Coleman-Mach / Duo-Therm class, loud | `era_typical` | Yes |
+| LP bottles | Dual **20-lb** or **30-lb** on A-frame — measure tray | `era_typical` / `unknown_verify` | Yes — remove |
+| Regulator / lines | Two-stage regulator → furnace, WH, range, fridge. Slide LP pinch recall **05V433000** (2004–05 **5th-wheel** Prowler) | `era_typical` + `direct` (5W subset) | Yes — purge & remove |
+| Furnace | Forced-air LP **16–30k BTU** (Suburban/Atwood) — **dataplate** | `era_typical` / `unknown_verify` | Yes |
+| Roof AC | **13.5k BTU** Coleman-Mach / Duo-Therm class common — **dataplate** | `era_typical` / `unknown_verify` | Yes |
 | Cooktop/oven | LP range | `era_typical` | Yes |
-| Refrigerator | Absorption Dometic/Norcold LP/120V/12V | `era_typical` | Yes |
+| Refrigerator | Absorption **Dometic** two-door (**RM2652 / RM2852** documented on 2003–04 Prowlers); Norcold also used in Fleetwood fleet. Recalls **07V120000**, **08V320000**, equip. **06E076** | `direct` | Yes |
+| Microwave | Samsung membrane-panel units on Fleetwood TT incl. Prowler — recall **03V452000** | `direct` | Strip / replace |
 | Water heater | LP/electric tank | `era_typical` | Yes (replace electric) |
 
 ### 1.4 Known weak points & inspection priorities (this generation)
@@ -407,6 +411,7 @@ Excludes donor trailer cost, shop rent, and “surprise rot” contingency (**ad
 ## Sources & analogs (non-exhaustive)
 
 - VIN structure decoded from `1EA1F272941595598` (WMI/year/series tokens).  
+- **LR2 systems topology:** [`LR2_OEM_ELECTRICAL_PLUMBING_LP_HVAC.md`](./LR2_OEM_ELECTRICAL_PLUMBING_LP_HVAC.md) — NHTSA recalls/complaints for Fleetwood Prowler MY≈2000–2006 (converter 45 A sister-year; Dometic RM2652/RM2852; Samsung MW; Siemens Q breakers; pinched chassis wiring; shore-fire complaint). Flat files: `flotwig/nhtsa-data`.  
 - Victron MultiPlus-II datasheet (48V high-power hybrid inverter class).  
 - joshgubler/trailer-build — 48V bank placement vs tongue weight; mini-split ~400–1000 W.  
 - PaulGilchrist/off-grid — Victron travel-trailer integration patterns (24V analog).  
